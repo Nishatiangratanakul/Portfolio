@@ -1,0 +1,136 @@
+/* CSS styles for the index page */
+.index {
+    margin: 0;
+    padding: 0;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-content-container {
+    border-top: none !important;
+}
+
+.content-container {
+    position: relative; /* Add relative positioning */
+}
+
+/* Create a pseudo-element for full-width border-bottom */
+.content-container:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make it full width */
+    height: 1.5px; /* Set the height of the line */
+    background-color: #E20909; /* Color of the line */
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media query for laptops */
+@media screen and (min-width: 600px) {
+    /* CSS styles for the index page */
+    .index {
+        margin: 0;
+        padding: 0;
+    }
+
+    .index-container {
+        padding-top: 0px;
+        padding-bottom: 10px; 
+    }
+
+    .text-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .title {
+        width: 33%;
+        padding-left: 7%;
+    }
+
+    .subject {
+        width: 33%;
+        padding-left: 14%;
+    }
+
+    .year {
+        width: 33%;
+        padding-left: 20%;
+    }
+
+    .custom-cursor {
+        position: fixed;
+        top: 50%; /* Position the cursor vertically at the center of the screen */
+        left: 50%; /* Position the cursor horizontally at the center of the screen */
+        transform: translate(-50%, -50%); /* Center the cursor precisely */
+        width: 150vw; /* Set the width of the cursor */
+        height: 40vh; /* Set the height of the cursor */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none; 
+        z-index: 9999; /* Ensure it's above other elements */
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+/* Media query for phones */
+@media screen and (max-width: 600px) {
+    /* CSS styles for the index page on phones */
+
+    main{
+        padding: 0;
+    }
+
+    .index-container{
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    .text-container {
+        padding-left: 2.5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title{
+        font-size: 12pt;
+    }
+
+    .subject{
+        font-size: 10pt;
+    }
+
+    .title,
+    .subject {
+        width: auto;
+        padding-left: 0;
+    }
+
+    .year {
+        display: none;
+    }
+
+    .content-container {
+        padding: 10px; /* Add padding to content container */
+    }
+
+    .icon {
+        padding-left: 2.5%;
+        width: 92.5vw; 
+        height: auto;
+        padding-bottom: .5vh;
+        padding-top: 1vh;
+    }
+}

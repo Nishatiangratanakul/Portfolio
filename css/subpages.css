@@ -1,0 +1,91 @@
+.subpages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally at the center */
+    text-align: left; /* Align text center */
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    justify-content: center; /* Center images horizontally */
+}
+
+/* Define the slow-gif class to slow down GIFs */
+.slow-gif {
+    animation: slow 2s steps(100) infinite; /* Adjust the animation duration to slow down the GIF */
+}
+
+@keyframes slow {
+    from { background-position: 0; }
+    to { background-position: -10000px; }
+}
+
+
+/* Media query for laptops */
+@media screen and (min-width: 600px) {
+    .subpages-container {
+        padding: 5% 15% 1%;
+    }
+    
+    .text-container {
+        max-width: 80vw;
+        padding-bottom: 2%;
+    }
+    
+    .project-title {
+        font-size: 46pt;
+        max-width: 100%; /* Ensure title doesn't overflow */
+        padding-bottom: 2%;
+    }
+    
+    .subject {    
+        max-width: 100%;
+        padding-bottom: 2%;
+    }
+    
+    .description {
+        max-width: 70ch;
+        padding-top: 2%;
+    }
+  
+    .img-container img {
+        width: 70vw; 
+        height: auto;
+        margin: 1%;
+    }    
+}
+
+/* Media query for phones */
+@media screen and (max-width: 600px) {
+    .subpages-container {
+        padding: 5% 5% 5%;
+    }
+    
+    .text-container {
+        max-width: 80vw;
+        padding-bottom: 2%;
+    }
+    
+    .project-title {
+        max-width: 100%; /* Ensure title doesn't overflow */
+        padding-bottom: 2%;
+    }
+    
+    .subject {    
+        max-width: 100%;
+        padding-bottom: 5%;
+    }
+    
+    .description {
+        max-width: 50ch;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+  
+    .img-container img {
+        width: 80vw; 
+        height: auto;
+        margin: 2%;
+    }
+}

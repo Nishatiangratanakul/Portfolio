@@ -1,0 +1,91 @@
+[
+    {
+        "title": "the joy luck supper club",
+        "subject": "print design",
+        "year": "2024",
+        "description": "The Joy Luck Supper Club is a social campaign aimed at supporting small businesses throughout NYC's Chinatown. The campaign features an event flyer and an interactive website map, both designed to draw attention to the vibrant culture and culinary delights of Chinatown. Drawing inspiration from the ephemera found in Chinatown, particularly takeout menus, the event flyer captures the essence of the bustling streets and diverse cuisine. Utilizing risograph printing, the designs exude warmth and authenticity, inviting locals and visitors alike to explore and support the rich tapestry of small businesses that define Chinatown's charm.",
+        "thumbnail": "thejoylucksupperclub/thumbnail.png",
+        "media1": "thejoylucksupperclub/media-1.png",
+        "media2": "thejoylucksupperclub/media-2.png",
+        "media3": "thejoylucksupperclub/media-3.png",
+        "media4": "thejoylucksupperclub/media-4.png",
+        "media5": "thejoylucksupperclub/media-5.png",
+        "media6": "thejoylucksupperclub/media-6.png",
+        "icon": "thejoylucksupperclub/icon.png"
+    },
+    {
+        "title": "what is a keeb",
+        "subject": "web design",
+        "year": "2024",
+        "description": "What is a Keeb? is a comprehensive digital collection showcasing a myriad of custom mechanical keyboard builds. From sleek and minimalist designs to bold and colorful creations, this collection celebrates the creativity and craftsmanship of keyboard enthusiasts worldwide. Each build tells a unique story, reflecting the personality and preferences of its creator. With high-resolution images and detailed descriptions, this website serves as both an inspiration and a resource for those passionate about mechanical keyboards, offering insights into the intricate world of custom keycap sets, switches, and DIY modifications.",
+        "thumbnail": "whatisakeeb/thumbnail.png",
+        "media1": "whatisakeeb/media-1.png",
+        "media2": "whatisakeeb/media-2.gif",
+        "media3": "whatisakeeb/media-3.png",
+        "media4": "whatisakeeb/media-4.png",
+        "icon": "whatisakeeb/icon.png"
+    },
+    {
+        "title": "conversations",
+        "subject": "zine design",
+        "year": "2024",
+        "description": "Conversations is a poignant exploration of familial bonds and the passage of time. This delicate book captures the intimate exchanges between the artist and their parents following their departure from home. Printed on translucent vellum paper and adorned with ephemeral inserts, the pages evoke a sense of nostalgia and fleeting memories. As readers journey through the book, they are enveloped in a tapestry of shared experiences, whispered confessions, and unspoken truths. Each turn of the page reveals a glimpse into the past, reminding us of the ephemeral nature of life and the enduring power of love.",
+        "thumbnail": "conversations/thumbnail.png",
+        "media1": "conversations/media-1.png",
+        "media2": "conversations/media-2.gif",
+        "media3": "conversations/media-3.png",
+        "media4": "conversations/media-4.gif",
+        "media5": "conversations/media-5.png",
+        "icon": "conversations/icon.png"
+    },
+    {
+        "title": "wang kar wai",
+        "subject": "book design",
+        "year": "2024",
+        "description": "Wang Kar Wai is a visually stunning tribute to the renowned filmmaker and his mesmerizing body of work. This lavish book explores Wang Kar Wai's distinctive use of color and framing, offering readers a deeper appreciation of his cinematic artistry. Bound in luxurious hardcover with a laser-cut design reminiscent of Wong's iconic visuals, the book transports viewers into a world of cinematic splendor. Drawing inspiration from the typography found in his films, as well as the sensory experience of watching his masterpieces unfold on screen, this book invites readers on a journey through the filmmaker's evocative storytelling and unparalleled vision.",
+        "thumbnail": "wangkarwai/thumbnail.png",
+        "media1": "wangkarwai/media-1.png",
+        "media2": "wangkarwai/media-2.gif",
+        "media3": "wangkarwai/media-3.png",
+        "media4": "wangkarwai/media-4.gif",
+        "media5": "wangkarwai/media-5.gif",
+        "icon": "wangkarwai/icon.png"
+    },
+    {
+        "title": "roshomon",
+        "subject": "web design",
+        "year": "2024",
+        "description": "Roshomon is an immersive web experience that brings Ryūnosuke Akutagawa's timeless tale to life in a captivating new format. Set against the backdrop of societal breakdown and calamity in Kyoto, the website delves into themes of morality, desperation, and the complexity of human nature. Through interactive storytelling and sensory elements, users are invited to navigate the moral dilemmas faced by the protagonist, mirroring the harsh realities of survival in a world engulfed by chaos. With a twist that challenges conventional storytelling norms, this website tries pushes the boundaries of digital narrative, offering users a thought-provoking exploration of the human condition.",
+        "thumbnail": "roshomon/thumbnail.png",
+        "media1": "roshomon/media-1.gif",
+        "media2": "roshomon/media-2.png",
+        "media3": "roshomon/media-3.png",
+        "media4": "roshomon/media-4.gif",
+        "media5": "roshomon/media-5.png",
+        "icon": "roshomon/icon.png"
+    },
+    {
+        "title": "the commute",
+        "subject": "web design",
+        "year": "2024",
+        "description": "The commute is a poetic web design that transforms the mundane into the extraordinary. Inspired by the artist's daily journey through the bustling cityscape, the website uses typography and layout to create a rhythmic visual narrative. Each page unfolds like a stanza in a poem, weaving together the sights and sounds of the urban landscape with a lyrical elegance. Through subtle animations and interactive elements, users are immersed in the ebb and flow of city life, experiencing moments of reflection and revelation amidst the chaos of the commute.",
+        "thumbnail": "thecommute/thumbnail.png",
+        "media1": "thecommute/media-1.png",
+        "media2": "thecommute/media-2.gif",
+        "media3": "thecommute/media-3.png",
+        "media4": "thecommute/media-4.png",
+        "icon": "thecommute/icon.png"
+    },
+    {
+        "title": "iconic ghibli food",
+        "subject": "web design",
+        "year": "2024",
+        "description": "Iconic Ghibli Food is a delightful homage to the mouth-watering cuisine featured in Studio Ghibli films. From the comforting bowls of ramen in ponyo to the delicious breakfast in Howl's Moving Castle, this simple website showcases the most iconic food moments from Ghibli's beloved animated classics. Through vibrant illustrations and tantalizing descriptions, viewers are transported into the enchanting world of Ghibli, where food serves as a catalyst for friendship, adventure, and discovery. Whether you're craving a taste of Totoro's homemade bento or Howl's famous breakfast spread, this website celebrates the enduring magic of food and film.",
+        "thumbnail": "iconicghiblifood/thumbnail.png",
+        "media1": "iconicghiblifood/media-1.gif",
+        "media2": "iconicghiblifood/media-2.png",
+        "media3": "iconicghiblifood/media-3.png",
+        "media4": "iconicghiblifood/media-4.png",
+        "icon": "iconicghiblifood/icon.gif"
+    }
+]
