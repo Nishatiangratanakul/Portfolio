@@ -1,59 +1,38 @@
-// Function to fetch images from the specified folder
 function fetchImages() {
-    // Directory path to the images
-    var directoryPath = '../assets/funshit';
+    console.log("Fetching images...");
 
-    // Create an XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
+    fetch('../funshit.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch JSON: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Images found in JSON:", data.images);
+            var imageFiles = data.images;
 
-    // Define the request
-    xhr.open('GET', directoryPath);
+            imageFiles.forEach(fileName => {
+                var imageUrl = '../assets/funshit/' + fileName; // Construct the full image URL
+                console.log("Checking image URL:", imageUrl);
 
-    // Set the responseType to document, as we're expecting HTML response
-    xhr.responseType = 'document';
+                // Create an image element to check if it loads
+                var img = new Image();
+                img.src = imageUrl;
 
-    // Define a callback function for when the request is completed
-    xhr.onload = function () {
-        // Check if the request was successful
-        if (xhr.status === 200) {
-            // Extract the response HTML document
-            var responseDocument = xhr.response;
-            // Get all anchor elements (links) from the response
-            var links = responseDocument.querySelectorAll('a');
+                img.onload = function() {
+                    console.log("Image loaded successfully:", imageUrl);
+                    img.classList.add('funshit-image'); // Add class for styling
+                    document.getElementById('mainSection').appendChild(img);
+                };
 
-            // Array to hold the file names of images
-            var imageFiles = [];
-
-            // Iterate through each link
-            links.forEach(function(link) {
-                // Get the href attribute (file name)
-                var fileName = link.getAttribute('href');
-                // Check if the file is an image (ending with .jpg, .jpeg, or .png)
-                if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png')) {
-                    imageFiles.push(fileName); // Add the file name to the array
-                }
+                img.onerror = function() {
+                    console.warn("Image not found:", imageUrl);
+                };
             });
-
-            // Shuffle the array to display images randomly
-            shuffle(imageFiles);
-
-            // Iterate through each image file
-            imageFiles.forEach(function (fileName) {
-                // Create image element
-                var image = document.createElement('img');
-                // Set the src attribute of the image
-                image.src = directoryPath + '/' + fileName; // Concatenate directory path and file name
-                // Add class to the image for styling purposes
-                image.classList.add('funshit-image');
-                // Append image to the main section
-                mainSection.appendChild(image);
-            });
-        } else {
-            // Handle the error if the request fails
-            console.error('Request failed: ' + xhr.status);
-        }
-    };
-
-    // Send the request
-    xhr.send();
+        })
+        .catch(error => console.error('Error:', error));
 }
+
+// Call the function to fetch images
+fetchImages();

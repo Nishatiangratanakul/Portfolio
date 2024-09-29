@@ -1,17 +1,15 @@
-/* Add this CSS to your main.css file or create a new CSS file */
-main.funshit {
+#mainSection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width */
-    gap: 10px; /* Adjust gap between grid items */
-    padding: 20px; /* Adjust padding around the grid */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
 }
 
 .funshit-image {
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.funshit-image img {
-    width: 100%; /* Ensure images take up full width of their container */
-    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
-    display: block; /* Make the image a block-level element */
+    max-width: 100%; /* Allow images to scale down */
+    max-height: 100%; /* Allow images to scale down */
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto 10px; /* Center horizontally and add margin below for spacing */
+    padding: 5%; /* Space within the cell */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }

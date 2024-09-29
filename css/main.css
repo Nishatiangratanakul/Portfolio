@@ -166,6 +166,7 @@ footer {
     footer {
         padding: 20px 100px 20px;
         border-top: 1.5px solid #E20909;
+        background-color: white;
     }
 
     .footer-content {
@@ -268,7 +269,7 @@ nav{
 footer {
     padding: 5% 5% 5%;
     border-top: 1.5px solid #E20909;
-}
+ }
 
 .footer-content {
     width: 100%;
