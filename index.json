@@ -1,5 +1,19 @@
 [
     {
+        "title": "kowloon",
+        "subject": "book design",
+        "year": "2025",
+        "description": "Kowloon is a dual-layered  book that contrasts the historical reality of the Kowloon Walled City with its fictionalized portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often depicted as a chaotic, futuristic labyrinth.Designed as two books within one, the piece features perforated pages that readers can tear open, revealing the hidden \"fiction\" layer beneath the \"reality\" section.  The \"reality\" section takes an academic, text-based approach, while the \"fiction\" layer is more image-driven, reflecting how history transforms into myth.",
+        "thumbnail": "kowloon/thumbnail.jpg",
+        "media1": "kowloon/media-1.jpg",
+        "media2": "kowloon/media-2.jpg",
+        "media3": "kowloon/media-3.jpg",
+        "media4": "kowloon/media-4.jpg",
+        "media5": "kowloon/media-5.jpg",
+        "media6": "kowloon/media-6.jpg",
+        "icon": "kowloon/icon.png"
+    }, 
+    {
         "title": "76 cones",
         "subject": "book design",
         "year": "2024",
