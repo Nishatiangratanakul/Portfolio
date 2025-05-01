@@ -12,6 +12,9 @@ function fetchImages() {
             console.log("Images found in JSON:", data.images);
             var imageFiles = data.images;
 
+            // Reverse the imageFiles array to load images in reverse order
+            imageFiles.reverse();
+
             imageFiles.forEach(fileName => {
                 var imageUrl = '../assets/funshit/' + fileName; // Construct the full image URL
                 console.log("Checking image URL:", imageUrl);
@@ -36,3 +39,4 @@ function fetchImages() {
 
 // Call the function to fetch images
 fetchImages();
+s
