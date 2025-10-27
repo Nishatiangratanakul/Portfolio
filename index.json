@@ -1,4 +1,28 @@
 [
+   {
+        "title": "contemplating death",
+        "subject": "book design",
+        "year": "2025",
+        "description": "This project is an exploration of mortality as a subject of contemplation rather than reaction. Often, we confront death through grief, loss, or tragedy: external events that force reflection. In this work, I sought to approach death on my own terms, to consider it holistically and without emotional catalysts. The resulting book is divided into six chapters that move from the most tangible forms of death to the most abstract, from grief and physical loss to dreams, spirituality, and the in-between. Structured through three recurring “voices” — white, gray, and black pages — the book invites readers into a cyclical process of questioning, absorbing, and reflecting. Each section prompts contemplation not only of death itself, but of how our understanding of mortality deepens our relationship with life.",
+        "thumbnail": "contemplatingdeath/thumbnail.jpg",
+        "media1": "contemplatingdeath/media-1.jpg",
+        "media2": "contemplatingdeath/media-2.gif",
+        "media3": "contemplatingdeath/media-3.gif",
+        "media4": "contemplatingdeath/media-4.jpg",
+        "media5": "contemplatingdeath/media-5.jpg",
+        "icon": "contemplatingdeath/icon.jpg"
+    },    
+    {
+        "title": "lego sans",
+        "subject": "typeface design",
+        "year": "2025",
+        "description": "Lego Sans is a modular typeface that emerged from the process of printing with Lego letterpress. Built using only two Lego pieces, a square and a quarter-circle, the type took shape through hands-on assembly and experimentation.",
+        "thumbnail": "legosans/thumbnail.jpg",
+        "media1": "legosans/media-1.jpg",
+        "media2": "legosans/media-2.gif",
+        "media3": "legosans/media-3.jpg",
+        "icon": "legosans/icon.jpg"
+    }, 
     {
         "title": "kowloon",
         "subject": "book design",
