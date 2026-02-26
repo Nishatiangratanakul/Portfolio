@@ -3,13 +3,14 @@
         "title": "contemplating death",
         "subject": "book design",
         "year": "2025",
-        "description": "This project is an exploration of mortality as a subject of contemplation rather than reaction. Often, we confront death through grief, loss, or tragedy: external events that force reflection. In this work, I sought to approach death on my own terms, to consider it holistically and without emotional catalysts. The resulting book is divided into six chapters that move from the most tangible forms of death to the most abstract, from grief and physical loss to dreams, spirituality, and the in-between. Structured through three recurring “voices” — white, gray, and black pages — the book invites readers into a cyclical process of questioning, absorbing, and reflecting. Each section prompts contemplation not only of death itself, but of how our understanding of mortality deepens our relationship with life.",
+        "description": "This project is an exploration of mortality as a subject of contemplation rather than reaction. Often, we confront death through grief, loss, or tragedy: external events that force reflection. In this work, I sought to approach death on my own terms, to consider it holistically and without emotional catalysts. The resulting book is divided into six chapters that move from the most tangible forms of death to the most abstract, from grief and physical loss to dreams, spirituality, and the in-between. Structured through three recurring “voices”—white, gray, and black pages—the book invites readers into a cyclical process of questioning, absorbing, and reflecting. Each section prompts contemplation not only of death itself, but of how our understanding of mortality deepens our relationship with life.",
         "thumbnail": "contemplatingdeath/thumbnail.jpg",
         "media1": "contemplatingdeath/media-1.jpg",
-        "media2": "contemplatingdeath/media-2.gif",
+        "media2": "contemplatingdeath/media-2.jpg",
         "media3": "contemplatingdeath/media-3.gif",
-        "media4": "contemplatingdeath/media-4.jpg",
-        "media5": "contemplatingdeath/media-5.jpg",
+        "media4": "contemplatingdeath/media-4.gif",
+        "media5": "contemplatingdeath/media-5.gif",
+        "media6": "contemplatingdeath/media-6.jpg",
         "icon": "contemplatingdeath/icon.jpg"
     },    
     {
@@ -64,7 +65,8 @@
         "media4": "thejoylucksupperclub/media-4.png",
         "media5": "thejoylucksupperclub/media-5.png",
         "media6": "thejoylucksupperclub/media-6.png",
-        "icon": "thejoylucksupperclub/icon.png"
+        "icon": "thejoylucksupperclub/icon.png",
+        "hidden": true
     },
     {
         "title": "what is a keeb",
@@ -89,7 +91,8 @@
         "media3": "conversations/media-3.png",
         "media4": "conversations/media-4.gif",
         "media5": "conversations/media-5.png",
-        "icon": "conversations/icon.png"
+        "icon": "conversations/icon.png",
+        "hidden": true
     },
     {
         "title": "wang kar wai",
@@ -127,7 +130,8 @@
         "media2": "thecommute/media-2.gif",
         "media3": "thecommute/media-3.png",
         "media4": "thecommute/media-4.png",
-        "icon": "thecommute/icon.png"
+        "icon": "thecommute/icon.png",
+        "hidden": true
     },
     {
         "title": "astrological calendar",
@@ -138,7 +142,8 @@
         "media1": "astrologicalcalendar/media-1.jpg",
         "media2": "astrologicalcalendar/media-2.jpg",
         "media3": "astrologicalcalendar/media-3.gif",
-        "icon": "astrologicalcalendar/icon.jpg"
+        "icon": "astrologicalcalendar/icon.jpg",
+        "hidden": true
     },
     {
         "title": "iconic ghibli food",
@@ -150,7 +155,8 @@
         "media2": "iconicghiblifood/media-2.png",
         "media3": "iconicghiblifood/media-3.png",
         "media4": "iconicghiblifood/media-4.png",
-        "icon": "iconicghiblifood/icon.gif"
+        "icon": "iconicghiblifood/icon.gif",
+        "hidden": true
     },
     {
         "title": "code-switching",
@@ -163,6 +169,7 @@
         "media3": "codeswitching/media-3.png",
         "media4": "codeswitching/media-4.jpg",
         "media5": "codeswitching/media-5.jpg",
-        "icon": "codeswitching/icon.jpg"
+        "icon": "codeswitching/icon.jpg",
+        "hidden": true
     }
 ]

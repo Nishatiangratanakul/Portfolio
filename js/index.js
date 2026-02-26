@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             data.forEach(item => {
+    if (item.hidden) return;
                 const contentContainer = document.createElement('a');
                 contentContainer.classList.add('content-container');
                 contentContainer.href = `subpages/${item.title.toLowerCase().replace(/\s/g, '-')}.html`;
