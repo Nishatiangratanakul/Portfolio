@@ -82,18 +82,6 @@
         "hidden": true
     },
     {
-        "title": "what is a keeb",
-        "subject": "web design",
-        "year": "2024",
-        "description": "What is a Keeb? is a fun and interactive digital collection of custom mechanical keyboards. The website features a sorting feature to help users explore builds by color, materials, and mods. To add an extra layer of engagement, the introductory blurb is coded as a typing test, making it a playful resource for both newcomers and enthusiasts passionate about the world of mechanical keyboards.",
-        "thumbnail": "whatisakeeb/thumbnail.png",
-        "media1": "whatisakeeb/media-1.png",
-        "media2": "whatisakeeb/media-2.gif",
-        "media3": "whatisakeeb/media-3.png",
-        "media4": "whatisakeeb/media-4.png",
-        "icon": "whatisakeeb/icon.png"
-    },
-    {
         "title": "conversations",
         "subject": "zine design",
         "year": "2024",
@@ -119,19 +107,6 @@
         "media4": "wangkarwai/media-4.gif",
         "media5": "wangkarwai/media-5.gif",
         "icon": "wangkarwai/icon.png"
-    },
-    {
-        "title": "roshomon",
-        "subject": "web design",
-        "year": "2024",
-        "description": "Roshomon is an immersive web experience that brings Ryūnosuke Akutagawa's short story Roshomon to a new format. Set against the backdrop of societal breakdown and calamity in Kyoto, the website delves into themes of morality, desperation, and the complexity of human nature. Through interactive storytelling and sensory elements, users are invited to navigate the moral dilemmas faced by the protagonist, mirroring the harsh realities of survival in a world engulfed by chaos. Designed only with typography the website challenges conventional storytelling norms and offers users a reflective exploration of the human condition.",
-        "thumbnail": "roshomon/thumbnail.png",
-        "media1": "roshomon/media-1.gif",
-        "media2": "roshomon/media-2.png",
-        "media3": "roshomon/media-3.png",
-        "media4": "roshomon/media-4.gif",
-        "media5": "roshomon/media-5.png",
-        "icon": "roshomon/icon.png"
     },
     {
         "title": "the commute",
