@@ -1,15 +1,22 @@
-#mainSection {
+/* Fun shit page: one column on phones, five on desktop. */
+
+.funshit-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 601px) {
+    .funshit-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 .funshit-image {
-    max-width: 100%; /* Allow images to scale down */
-    max-height: 100%; /* Allow images to scale down */
-    width: auto; /* Set width to auto */
-    height: auto; /* Set height to auto */
-    display: block; /* Ensure the image is treated as a block element */
-    margin: 0 auto 10px; /* Center horizontally and add margin below for spacing */
-    padding: 5%; /* Space within the cell */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto 10px;
+    padding: 5%;
 }

@@ -1,42 +1,19 @@
-function fetchImages() {
-    console.log("Fetching images...");
+// Fun shit page: shows every image listed in funshit.json, newest (last in the list) first.
 
-    fetch('../funshit.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch JSON: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Images found in JSON:", data.images);
-            var imageFiles = data.images;
+const grid = document.querySelector('.funshit-grid');
 
-            // Reverse the imageFiles array to load images in reverse order
-            imageFiles.reverse();
-
-            imageFiles.forEach(fileName => {
-                var imageUrl = '../assets/funshit/' + fileName; // Construct the full image URL
-                console.log("Checking image URL:", imageUrl);
-
-                // Create an image element to check if it loads
-                var img = new Image();
-                img.src = imageUrl;
-
-                img.onload = function() {
-                    console.log("Image loaded successfully:", imageUrl);
-                    img.classList.add('funshit-image'); // Add class for styling
-                    document.getElementById('mainSection').appendChild(img);
-                };
-
-                img.onerror = function() {
-                    console.warn("Image not found:", imageUrl);
-                };
-            });
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-// Call the function to fetch images
-fetchImages();
-s
+fetch('../funshit.json')
+    .then(response => response.json())
+    .then(data => {
+        data.images.slice().reverse().forEach(fileName => {
+            const img = document.createElement('img');
+            img.className = 'funshit-image';
+            img.src = `../assets/funshit/${fileName}`;
+            img.alt = '';
+            // funshit.json lists more names than there are files, so new images can just be dropped
+            // into assets/funshit; names with no file yet are removed here.
+            img.onerror = () => img.remove();
+            grid.appendChild(img);
+        });
+    })
+    .catch(error => console.error('Could not load funshit.json:', error));
