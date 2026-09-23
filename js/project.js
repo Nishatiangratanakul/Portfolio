@@ -38,18 +38,33 @@ function showProject(project) {
 
     mediaFiles.forEach((file, i) => {
         const src = `assets/${file}`;
-        let media;
-        if (file.toLowerCase().endsWith('.mp4')) {
-            // No controls, so it plays like a GIF. (defaultMuted sets the muted
-            // attribute too, which Safari needs before it will autoplay.)
-            media = document.createElement('video');
-            Object.assign(media, { src, autoplay: true, loop: true, muted: true, defaultMuted: true, playsInline: true });
-        } else {
-            media = document.createElement('img');
-            media.src = src;
-            media.alt = `${project.title}, image ${i + 1}`;
-            if (i > 0) media.loading = 'lazy'; // only download images as you scroll to them
-        }
+        const alt = `${project.title}, image ${i + 1}`;
+        const media = file.toLowerCase().endsWith('.mp4')
+            ? createLoopingVideo(src, alt)
+            : createImage(src, alt, i > 0); // only download later images as you scroll to them
         mediaContainer.appendChild(media);
     });
+}
+
+function createImage(src, alt, lazy) {
+    const image = document.createElement('img');
+    image.src = src;
+    image.alt = alt;
+    if (lazy) image.loading = 'lazy';
+    return image;
+}
+
+// Plays like a GIF: silent, looping, no controls. Each video has a still of its first frame
+// beside it (media-2.mp4 -> media-2-poster.jpg), shown while it loads and used instead if the
+// browser won't autoplay (e.g. iPhones in Low Power Mode), so a play button never appears.
+function createLoopingVideo(src, alt) {
+    const poster = src.replace(/\.mp4$/i, '-poster.jpg');
+    const video = document.createElement('video');
+    // defaultMuted sets the muted attribute too, which Safari needs before it will autoplay.
+    Object.assign(video, { src, poster, autoplay: true, loop: true, muted: true, defaultMuted: true, playsInline: true });
+    video.setAttribute('aria-label', alt);
+    video.play().catch(error => {
+        if (error.name === 'NotAllowedError') video.replaceWith(createImage(poster, alt, false));
+    });
+    return video;
 }
