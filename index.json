@@ -91,7 +91,8 @@
         "media2": "whatisakeeb/media-2.gif",
         "media3": "whatisakeeb/media-3.png",
         "media4": "whatisakeeb/media-4.png",
-        "icon": "whatisakeeb/icon.png"
+        "icon": "whatisakeeb/icon.png",
+        "hidden": true
     },
     {
         "title": "conversations",
@@ -131,7 +132,8 @@
         "media3": "roshomon/media-3.png",
         "media4": "roshomon/media-4.gif",
         "media5": "roshomon/media-5.png",
-        "icon": "roshomon/icon.png"
+        "icon": "roshomon/icon.png",
+        "hidden": true
     },
     {
         "title": "the commute",

@@ -1,109 +1,46 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const indexContainer = document.querySelector('.index-container');
-    const footer = document.querySelector('footer');
-    const customCursor = document.createElement('div'); // Create custom cursor element
-    customCursor.classList.add('custom-cursor');
-    indexContainer.appendChild(customCursor); // Append custom cursor to index container
+// Work page: builds the project list from index.json.
+// On desktop, hovering a row shows that project's icon large in the middle of the screen;
+// on phones the icon is shown above each row instead (see css/index.css).
 
-    const resizeObserver = new ResizeObserver(entries => {
-        const indexContainerHeight = entries[0].contentRect.height;
-        const viewportHeight = window.innerHeight;
-        const footerHeight = footer.offsetHeight;
+const projectList = document.querySelector('.project-list');
+const hoverPreview = document.createElement('div');
+hoverPreview.className = 'hover-preview';
+document.body.appendChild(hoverPreview);
 
-        if (indexContainerHeight + footerHeight < viewportHeight) {
-            footer.style.position = 'absolute';
-            footer.style.bottom = '0';
-        } else {
-            footer.style.position = 'relative';
-            footer.style.bottom = 'auto';
-        }
+fetch('index.json')
+    .then(response => response.json())
+    .then(projects => {
+        projects
+            .filter(project => !project.hidden)
+            .forEach(project => projectList.appendChild(createRow(project)));
+    })
+    .catch(error => console.error('Could not load index.json:', error));
+
+function createRow(project) {
+    const iconUrl = `assets/${project.icon}`;
+
+    const row = document.createElement('a');
+    row.className = 'content-container';
+    row.href = `project.html?p=${slugify(project.title)}`;
+    row.innerHTML = `
+        <img class="icon" src="${iconUrl}" alt="">
+        <div class="text-container">
+            <div class="title body"></div>
+            <div class="subject body"></div>
+            <div class="year body"></div>
+        </div>
+    `;
+    row.querySelector('.title').textContent = project.title;
+    row.querySelector('.subject').textContent = project.subject;
+    row.querySelector('.year').textContent = project.year;
+
+    row.addEventListener('mouseenter', () => {
+        hoverPreview.style.backgroundImage = `url("${iconUrl}")`;
+        hoverPreview.style.display = 'block';
+    });
+    row.addEventListener('mouseleave', () => {
+        hoverPreview.style.display = 'none';
     });
 
-    resizeObserver.observe(indexContainer);
-
-
-    // Fetch data from JSON and dynamically load content
-    fetch('index.json')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(item => {
-    if (item.hidden) return;
-                const contentContainer = document.createElement('a');
-                contentContainer.classList.add('content-container');
-                contentContainer.href = `subpages/${item.title.toLowerCase().replace(/\s/g, '-')}.html`;
-
-                const textContainer = document.createElement('div');
-                textContainer.classList.add('text-container');
-
-                const title = document.createElement('div');
-                const subject = document.createElement('div');
-                const year = document.createElement('div');
-
-                title.classList.add('title', 'info', 'body', 'space-grotesk');
-                subject.classList.add('subject', 'info', 'body', 'space-grotesk');
-                year.classList.add('year', 'info', 'body', 'space-grotesk');
-
-                title.textContent = item.title;
-                subject.textContent = item.subject;
-                year.textContent = item.year;
-
-                textContainer.appendChild(title);
-                textContainer.appendChild(subject);
-                textContainer.appendChild(year);
-
-                const imageContainer = document.createElement('tr');
-                imageContainer.classList.add('image-container');
-
-                const icon = document.createElement('img');
-                icon.classList.add('icon');
-                icon.src = `assets/${item.icon}`;
-                icon.alt = "icon";
-                
-
-                contentContainer.addEventListener('mouseenter', () => {
-                    customCursor.style.backgroundImage = `url(${icon.src})`;
-                    customCursor.style.display = 'block';
-                });
-
-                contentContainer.addEventListener('mouseleave', () => {
-                    customCursor.style.display = 'none';
-                });
-
-                imageContainer.appendChild(icon);
-
-                // Append image to the container for mobile breakpoint
-                if (window.innerWidth <= 600) {
-                    contentContainer.appendChild(icon);
-                }
-
-                contentContainer.appendChild(textContainer);
-
-                // Append image to the container for laptop breakpoint
-                if (window.innerWidth > 600) {
-                    contentContainer.appendChild(imageContainer);
-                }
-
-                indexContainer.appendChild(contentContainer);
-            });
-        });
-});
-
-// Function to create image element
-function createImageElement(imagePath) {
-    const image = document.createElement('img');
-    image.src = imagePath;
-
-    console.log('Creating image element for:', imagePath);
-
-    // Check if the file extension is .gif
-    if (imagePath.toLowerCase().endsWith('.gif')) {
-        console.log('Detected GIF:', imagePath);
-        // Add a class to the image to apply the animation
-        image.classList.add('slow-gif');
-        console.log('Applied slow-gif class to:', image);
-    }
-
-    return image;
+    return row;
 }
-
-

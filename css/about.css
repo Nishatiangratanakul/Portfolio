@@ -1,0 +1,57 @@
+/* About page. Phone styles first, then desktop overrides. */
+
+.landing {
+    padding: 10% 0;
+}
+
+.text-container-main {
+    margin: 0 0 5% 10%;
+    max-width: 80vw;
+}
+
+.text-container-main h1 {
+    margin-bottom: 8%;
+}
+
+.image-container-main {
+    padding-left: 10%;
+}
+
+.headshot {
+    max-width: 90%;
+    height: auto;
+}
+
+@media (min-width: 601px) {
+    .landing {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 53px 0;
+    }
+
+    .text-container-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 0 0 90px;
+        max-width: none;
+        padding-right: 20px;
+    }
+
+    .text-container-main h1 {
+        margin-bottom: 30px;
+    }
+
+    .image-container-main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-left: 20px;
+    }
+
+    .headshot {
+        max-width: 70%;
+    }
+}
