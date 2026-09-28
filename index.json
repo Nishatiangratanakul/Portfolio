@@ -12,7 +12,7 @@
             ["advisors", "Prin Limphongpand, Ingrid Chou"],
             ["production", "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"]
         ],
-        "deliverables": "A book holding all six conversations (the spoken), a series of data-visualization posters, one for each conversation (the unspoken), and fill-out letter packets handed out at book fairs, asking others to reflect for themselves.",
+        "deliverables": "A book holding all six conversations; two sets of data-visualization posters, one mapping what was spoken and one mapping what went unspoken, each poster paired with an origami; and fill-out letter packets handed out at book fairs, asking others to reflect for themselves.",
         "sections": [
             {
                 "layout": "pair",
@@ -27,6 +27,26 @@
             {
                 "layout": "pair",
                 "media": ["unspokendialogue/media-4.jpg", "unspokendialogue/media-6.jpg"]
+            },
+            {
+                "label": "posters",
+                "text": "Two sets of three posters. The spoken set maps what was said: the questions people asked, how they defined death and dying, and how often the words came up across 180 minutes of conversation. The unspoken set maps everything around the words: the silences, the rhythm of each conversation, and how emotions shifted within it. Each poster has its own origami."
+            },
+            {
+                "layout": "trio",
+                "media": [
+                    { "src": "unspokendialogue/poster-questions.jpg", "caption": "Spoken: the questions" },
+                    { "src": "unspokendialogue/poster-defining.jpg", "caption": "Spoken: defining death and dying" },
+                    { "src": "unspokendialogue/poster-180-minutes.jpg", "caption": "Spoken: death, die and dying in 180 minutes of conversation" }
+                ]
+            },
+            {
+                "layout": "trio",
+                "media": [
+                    { "src": "unspokendialogue/poster-silence.jpg", "caption": "Unspoken: speech and silence" },
+                    { "src": "unspokendialogue/poster-rhythm.jpg", "caption": "Unspoken: the rhythm of a conversation" },
+                    { "src": "unspokendialogue/poster-emotions.jpg", "caption": "Unspoken: changes in emotion within dialogue" }
+                ]
             },
             {
                 "label": "letter packets",
