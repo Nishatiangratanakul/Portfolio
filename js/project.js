@@ -18,6 +18,8 @@
 //                   { "layout": "viewer", "media": [{ "src": "big.mp4", "thumb": "small.jpg" }, …] }
 //                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
+//                   add "caption": "…" for one note under the whole block
+//                   text anywhere can use *italics* and [a link](#posters) to jump to a part of the page
 //                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
 
@@ -37,6 +39,9 @@ fetch('index.json')
     .catch(error => console.error('Could not load index.json:', error));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+// text can carry *italics* and [links](#posters) (to jump to a part of the page)
+const fmt = s => esc(s).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>').replace(/\*([^*]+)\*/g, '<em>$1</em>');
+const slugId = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 function showProject(project, visible) {
     document.title = `${project.title} · Nisha Tiangratanakul`;
@@ -71,9 +76,9 @@ function infoRow({ label, text, list, items }) {
     const body = list
         ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`
         : items
-        ? `<ul class="text bullets">${items.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
-        : `<div class="text">${esc(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;
-    return `<div class="row"><h2>${esc(label || '')}</h2>${body}</div>`;
+        ? `<ul class="text bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>`
+        : `<div class="text">${fmt(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;
+    return `<div class="row" id="${slugId(label || '')}"><h2>${esc(label || '')}</h2>${body}</div>`;
 }
 
 // no written sections yet: alternate one image with a pair side by side
@@ -118,13 +123,15 @@ function createSection(section, title) {
             figure.appendChild(media);
             markPortrait(media, figure);
             // on black, the note sits under the band, like every other note
-            if (caption && !section.dark) figure.insertAdjacentHTML('beforeend', `<figcaption>${esc(caption)}</figcaption>`);
+            if (caption && !section.dark) figure.insertAdjacentHTML('beforeend', `<figcaption>${fmt(caption)}</figcaption>`);
         }
         grid.appendChild(figure);
     });
     el.appendChild(grid);
     if (section.dark) items.filter(i => i.caption && section.layout !== 'gallery')
-        .forEach(i => el.insertAdjacentHTML('beforeend', `<figcaption>${esc(i.caption)}</figcaption>`));
+        .forEach(i => el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(i.caption)}</figcaption>`));
+    // one note for the whole block (e.g. a pair)
+    if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
     return el;
 }
 

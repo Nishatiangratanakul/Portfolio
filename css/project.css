@@ -50,7 +50,9 @@
 .bullets { list-style: none; padding: 0; margin: 0; }
 .bullets li { position: relative; padding-left: 1.1em; }
 .bullets li + li { margin-top: 0.5em; }
-.bullets li::before { content: "–"; position: absolute; left: 0; }
+.bullets li::before { content: "→"; position: absolute; left: 0; }
+.text a { text-decoration: underline; text-underline-offset: 2px; }
+.row { scroll-margin-top: 24px; }
 
 /* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
    on phones the list is indented under its heading */
@@ -264,6 +266,12 @@ figcaption {
     .text { max-width: 70ch; }
 
     .project-section { padding-bottom: 32px; }
+    /* notes under a full-width block start where the text column starts, and run to the edge */
+    .layout-full figcaption,
+    .project-section > figcaption {
+        margin-left: calc((100% - 48px) * 2 / 5 + 24px);
+        max-width: none;
+    }
 
     .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
 

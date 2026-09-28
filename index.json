@@ -1,57 +1,64 @@
 [
-   {
+    {
         "title": "unspoken dialogue",
         "subject": "book design",
         "year": "2026",
         "description": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations with people reflecting on these themes form a loose constellation of stories that circle around endings without resolving them. What emerges is less a single argument and more a durational encounter with how people speak, hesitate, redirect, and fall silent when asked to stay with death. By holding intimate narratives in a form that can be returned to, reread, and carried, the project opens a gentle, persistent space for reflection. In doing so, it suggests that design can accompany difficult conversations—not to solve or explain them, but to keep them possible, and keep them open.",
         "summary": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations form a loose constellation of stories that circle around endings without resolving them.",
         "details": [
-            ["role", "designer & producer"],
-            ["duration", "9 months"],
-            ["skills", "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"],
-            ["advisors", "Prin Limphongpand, Ingrid Chou"],
-            ["production", "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"]
+            [
+                "role",
+                "designer & producer"
+            ],
+            [
+                "duration",
+                "9 months"
+            ],
+            [
+                "skills",
+                "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
+            ],
+            [
+                "advisors",
+                "Prin Limphongpand, Ingrid Chou"
+            ],
+            [
+                "production",
+                "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"
+            ]
         ],
         "deliverables": [
-            "A book holding all six conversations: the transcripts, a chart for each person, and my closing thoughts on each.",
-            "Two sets of data-visualization posters, the spoken and the unspoken, each poster drawn from one conversation and paired with an origami.",
-            "Take-home letter packets, first handed out at Parsons Making Space 2026."
+            "A [book](#book) holding all six conversations: the transcripts, a chart for each person, and my closing thoughts on each, with an origami to fold.",
+            "A set of data-visualization [posters](#posters), the spoken and the unspoken, each drawn from one conversation.",
+            "Take-home [letter packets](#letter-packets), handed out at *Making Space 2026*."
         ],
         "hero": "unspokendialogue/hero.jpg",
         "sections": [
-            {
-                "label": "book",
-                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with my own closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying."
-            },
             {
                 "media": [
                     "unspokendialogue/book-grid.jpg"
                 ]
             },
             {
+                "label": "book",
+                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with my own closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying."
+            },
+            {
                 "media": [
-                    "unspokendialogue/book-closeup.jpg"
+                    "unspokendialogue/book-stack.jpg"
                 ]
             },
             {
                 "layout": "pair",
                 "media": [
-                    {
-                        "src": "unspokendialogue/media-2.jpg",
-                        "caption": "The introduction: all of us will die at some point, but the ways we think about it are never the same."
-                    },
-                    {
-                        "src": "unspokendialogue/book-cover-detail.jpg",
-                        "caption": "The cover chart layers all six conversations over each other."
-                    }
-                ]
+                    "unspokendialogue/book-cover-uv.jpg",
+                    "unspokendialogue/book-cover-detail.jpg"
+                ],
+                "caption": "Parts of the cover are printed in UV, so the chart only shows when the light catches it: a slight intangibility, like the line between what is spoken and what isn’t."
             },
             {
                 "media": [
-                    {
-                        "src": "unspokendialogue/media-3.mp4",
-                        "caption": "Each conversation opens with a chart of how that person thinks about death: practical, fearful, reflective, spiritual, secure."
-                    }
+                    "unspokendialogue/media-3.mp4"
                 ]
             },
             {
@@ -59,6 +66,15 @@
                     {
                         "src": "unspokendialogue/media-5.mp4",
                         "caption": "Fold-out pages sit over the transcript, like something left unsaid."
+                    }
+                ]
+            },
+            {
+                "dark": true,
+                "media": [
+                    {
+                        "src": "unspokendialogue/origami.jpg",
+                        "caption": "Each conversation’s closing section ends with an origami to fold, one for each person and chosen to echo their interview. Folding is meant to be meditative: less like making a wish, more like folding a thousand cranes for someone you care about."
                     }
                 ]
             },
@@ -115,17 +131,8 @@
                 ]
             },
             {
-                "dark": true,
-                "media": [
-                    {
-                        "src": "unspokendialogue/origami.jpg",
-                        "caption": "Each interview has its own origami: the pinwheel, dog, butterfly, bird, boat and fish. The back of every poster carries its folding instructions, so the poster can be torn down and folded."
-                    }
-                ]
-            },
-            {
                 "label": "letter packets",
-                "text": "At Making Space 2026, the Parsons fair where this work was first shown, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked whoever picked it up to sit with their own."
+                "text": "At *Making Space 2026*, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked people to sit with their own."
             },
             {
                 "layout": "viewer",
@@ -182,7 +189,7 @@
         "media6": "unspokendialogue/media-6.jpg",
         "icon": "unspokendialogue/icon.jpg",
         "preview": "unspokendialogue/preview.mp4"
-    }, 
+    },
     {
         "title": "contemplating death",
         "subject": "book design",

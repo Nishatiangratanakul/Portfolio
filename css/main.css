@@ -212,3 +212,5 @@ footer {
         height: 50px;
     }
 }
+
+html { scroll-behavior: smooth; }
