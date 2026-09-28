@@ -232,10 +232,7 @@
             {
                 "dark": true,
                 "media": [
-                    {
-                        "src": "contemplatingdeath/chapter-one.jpg",
-                        "caption": "The first chapter, spread by spread: white pages, then grey, then black."
-                    }
+                    "contemplatingdeath/chapter-one.jpg"
                 ]
             },
             {
@@ -266,15 +263,56 @@
                 ]
             },
             {
-                "layout": "pair",
+                "layout": "viewer",
+                "dark": true,
+                "caption": "*Physical Death* is French-folded: its images are hidden inside the folds, faint enough that you can only half see them, holding both the shock of it and the distance.",
                 "media": [
                     {
-                        "src": "contemplatingdeath/mourning-diary.mp4",
-                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
+                        "src": "contemplatingdeath/spread-196-197.jpg",
+                        "thumb": "contemplatingdeath/spread-196-197-tile.jpg"
                     },
                     {
-                        "src": "contemplatingdeath/french-fold.mp4",
-                        "caption": "*Physical Death* is French-folded: its images are hidden inside the folds, faint enough that you can only half see them, holding both the shock of it and the distance."
+                        "src": "contemplatingdeath/spread-184-185.jpg",
+                        "thumb": "contemplatingdeath/spread-184-185-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-188-189.jpg",
+                        "thumb": "contemplatingdeath/spread-188-189-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-200-201.jpg",
+                        "thumb": "contemplatingdeath/spread-200-201-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-212-213.jpg",
+                        "thumb": "contemplatingdeath/spread-212-213-tile.jpg"
+                    }
+                ]
+            },
+            {
+                "layout": "viewer",
+                "dark": true,
+                "caption": "Diagrams in the grey pages turn the readings into something visible, a first step towards the data-visualization posters of *Unspoken Dialogue*.",
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-42-43.jpg",
+                        "thumb": "contemplatingdeath/spread-42-43-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-48-49.jpg",
+                        "thumb": "contemplatingdeath/spread-48-49-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-156-157.jpg",
+                        "thumb": "contemplatingdeath/spread-156-157-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-162-163.jpg",
+                        "thumb": "contemplatingdeath/spread-162-163-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-174-175.jpg",
+                        "thumb": "contemplatingdeath/spread-174-175-tile.jpg"
                     }
                 ]
             },
@@ -282,8 +320,8 @@
                 "layout": "pair",
                 "media": [
                     {
-                        "src": "contemplatingdeath/diagrams.mp4",
-                        "caption": "Diagrams in the grey pages turn the readings into something visible, a first step towards the data-visualization posters of *Unspoken Dialogue*."
+                        "src": "contemplatingdeath/mourning-diary.mp4",
+                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
                     },
                     {
                         "src": "contemplatingdeath/colour.mp4",
