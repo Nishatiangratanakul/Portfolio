@@ -251,7 +251,7 @@
                 ]
             },
             {
-                "label": "six chapters",
+                "label": "chapters",
                 "items": [
                     "Contemplating Death",
                     "Mourning Death",
@@ -259,7 +259,8 @@
                     "Physical Death",
                     "Thresholds and Dreams",
                     "Sitting with Death"
-                ]
+                ],
+                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in."
             },
             {
                 "layout": "pair",
@@ -293,7 +294,8 @@
                         "src": "contemplatingdeath/spread-212-213.jpg",
                         "thumb": "contemplatingdeath/spread-212-213-tile.jpg"
                     }
-                ]
+                ],
+                "centred": true
             },
             {
                 "layout": "viewer",
@@ -320,7 +322,8 @@
                         "src": "contemplatingdeath/spread-174-175.jpg",
                         "thumb": "contemplatingdeath/spread-174-175-tile.jpg"
                     }
-                ]
+                ],
+                "centred": true
             },
             {
                 "label": "index",
@@ -345,7 +348,8 @@
                         "thumb": "contemplatingdeath/index-back-thumb.jpg",
                         "caption": "Index side"
                     }
-                ]
+                ],
+                "centred": true
             }
         ]
     },

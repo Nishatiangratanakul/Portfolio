@@ -137,8 +137,7 @@ figcaption {
 .layout-gallery button img { transition: opacity 0.15s; }
 .layout-gallery button:hover img { opacity: 0.85; }
 
-/* viewer: the big spot, then thumbnails (below on phones; on desktop a thin column laid over the
-   right edge, so the big picture stays centred in the whole black band) */
+/* viewer: the big spot, then thumbnails (below on phones, a column on the right on desktop) */
 .layout-viewer .section-media { gap: 12px; }
 .viewer-stage {
     aspect-ratio: 4 / 3;
@@ -209,15 +208,16 @@ figcaption {
 }
 
 .lb-bar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;   /* caption · arrows in the middle · count */
     align-items: baseline;
     gap: 16px;
     padding: 12px var(--gutter) 16px;
     font-size: 11pt;
 }
-.lb-nav { display: flex; gap: 14px; align-items: baseline; white-space: nowrap; }
-.lb-nav button {
+.lb-nav { display: flex; gap: 22px; align-items: baseline; }
+.lb-nav button,
+.lb-close {
     background: none;
     border: 0;
     padding: 0 2px;
@@ -225,7 +225,8 @@ figcaption {
     font: inherit;
     font-size: 14pt;
 }
-.lb-count { opacity: 0.6; }
+.lb-count { opacity: 0.6; justify-self: end; }
+.lb-close { position: absolute; top: 12px; right: var(--gutter); z-index: 1; font-size: 20pt; line-height: 1; }
 
 /* previous / next: plain text, no line above */
 .next-bar {
@@ -293,12 +294,13 @@ figcaption {
     .dark .section-media { padding: 40px; }
     .layout-row .section-media,
     .layout-gallery .section-media { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
-    .layout-viewer .section-media { display: block; position: relative; padding: 48px 140px; }
-    .viewer-stage { aspect-ratio: auto; height: min(72vh, 62vw); }
-    .viewer-thumbs {
-        position: absolute; right: 36px; top: 50%; transform: translateY(-50%);
-        width: 64px; grid-template-columns: none; gap: 8px;
-    }
+    .layout-viewer .section-media { grid-template-columns: minmax(0, 1fr) 84px; gap: 24px; align-items: start; }
+    .viewer-thumbs { grid-template-columns: none; gap: 10px; }
+    /* "centred": the big picture is centred in the whole black band (not beside the thumbnails),
+       no taller than most of the screen; the thumbnails sit over the right edge, from the top */
+    .centred.layout-viewer .section-media { display: block; position: relative; padding: 48px 140px; }
+    .centred .viewer-stage { aspect-ratio: auto; height: min(72vh, 62vw); }
+    .centred .viewer-thumbs { position: absolute; right: 36px; top: 48px; width: 64px; gap: 8px; }
     .has-columns .section-media { grid-auto-flow: row; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 32px; padding: 48px 12%; }
     .lb-stage { padding: 32px; }
 

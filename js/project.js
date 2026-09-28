@@ -19,7 +19,7 @@
 //                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
 //                   add "caption": "…" for one note under the whole block
-//                   add "upright": true to a pair of portrait pictures so they fit on screen
+//                   add "centred": true to a viewer to centre its picture in the whole band, thumbnails over the edge
 //                   an item with "back": "b.jpg" turns over when clicked
 //                   text anywhere can use *italics* and [a link](#posters) to jump to a part of the page
 //                   add "dark": true to put any image block on black
@@ -101,7 +101,7 @@ function createSection(section, title) {
         return row;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.upright ? ' upright' : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
@@ -192,7 +192,7 @@ function createFlip(front, back, alt) {
     return button;
 }
 
-// Full screen on black: < > (or arrow keys) to step, Esc or × to close.
+// Full screen on black: < > in the middle (or arrow keys) to step, Esc or × (top right) to close.
 // Clicking the image zooms in to about its real size; move the mouse (or drag on a phone) to look around.
 let lightbox;
 function openLightbox(items, start, title) {
@@ -202,15 +202,15 @@ function openLightbox(items, start, title) {
         lightbox.setAttribute('role', 'dialog');
         lightbox.setAttribute('aria-modal', 'true');
         lightbox.innerHTML = `
+            <button type="button" class="lb-close" aria-label="close">×</button>
             <div class="lb-stage"><img alt=""></div>
             <div class="lb-bar">
                 <p class="lb-caption"></p>
                 <div class="lb-nav">
-                    <span class="lb-count"></span>
                     <button type="button" data-step="-1" aria-label="previous">&lt;</button>
                     <button type="button" data-step="1" aria-label="next">&gt;</button>
-                    <button type="button" class="lb-close" aria-label="close">×</button>
                 </div>
+                <span class="lb-count"></span>
             </div>`;
         document.body.appendChild(lightbox);
     }
@@ -249,8 +249,8 @@ function openLightbox(items, start, title) {
     lightbox.querySelector('.lb-nav').onclick = e => {
         const b = e.target.closest('[data-step]');
         if (b) step(+b.dataset.step);
-        if (e.target.closest('.lb-close')) close();
     };
+    lightbox.querySelector('.lb-close').onclick = close;
     img.onclick = e => {
         const zoomed = stage.classList.toggle('zoomed');
         // zoom in on the spot that was clicked (mouse) or leave it for dragging (touch)
