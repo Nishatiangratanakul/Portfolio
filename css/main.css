@@ -3,7 +3,20 @@
 :root {
     --red: #E20909;
     --line: 1.5px solid var(--red);
+    --gutter: 5%; /* page side margins (100px on desktop, below) */
+    --black: #060708; /* the black behind the posters, origami and scans */
 }
+
+/* cursors, all in the site red: an arrow; a clear arrow over anything clickable;
+   a plus over things that open bigger (fun shit) */
+:root {
+    --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M2 2 L2 19 L6.5 14.6 L9.4 21.2 L12.4 19.9 L9.6 13.4 L15.8 13.4 Z' fill='%23E20909' stroke='white' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, auto;
+    --cursor-click: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M2 2 L2 19 L6.5 14.6 L9.4 21.2 L12.4 19.9 L9.6 13.4 L15.8 13.4 Z' fill='white' stroke='%23E20909' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, pointer;
+    --cursor-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M12 3v18M3 12h18' stroke='%23E20909' stroke-width='2'/%3E%3C/svg%3E") 12 12, zoom-in;
+}
+
+html { cursor: var(--cursor); }
+a, button { cursor: var(--cursor-click); }
 
 body {
     font-family: "Space Grotesk", monospace;
@@ -34,23 +47,54 @@ body {
     line-height: 1.5;
 }
 
-/* nav */
+/* header: name (home) on the left; work · fun shit · info on the right */
 
-nav {
+header {
+    border-bottom: var(--line);
+}
+
+.header-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 5%;
-    height: 1vh;
+    align-items: baseline;
+    padding: 16px var(--gutter);
+    font-size: 12pt;
+    line-height: 1.5;
 }
 
-.nav-link,
-.nav-line {
-    margin-top: 10px;
+.site-nav {
+    display: flex;
+    gap: 1.4em;
 }
 
-.nav-line {
-    border-top: var(--line);
+/* the page you're on, and info while it's open */
+.site-nav a[aria-current="page"],
+.info-toggle[aria-expanded="true"] {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+}
+
+.info {
+    display: grid;
+    gap: 28px;
+    padding: 8px var(--gutter) 28px;
+    font-size: 10pt;
+    line-height: 1.5;
+}
+
+.info[hidden] { display: none; }
+
+.info-bio { max-width: 58ch; }
+
+.info h2 { margin: 0 0 6px; }
+.info ul + h2 { margin-top: 22px; }
+
+.info-exhibitions li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 380px;
 }
 
 /* footer */
@@ -127,9 +171,21 @@ footer {
         font-size: 12pt;
     }
 
-    nav {
-        padding: 20px 100px;
-        height: 7vh;
+    :root {
+        --gutter: 100px;
+    }
+
+    .header-row {
+        padding: 22px var(--gutter) 20px;
+        font-size: 18pt;
+    }
+
+    /* bio on the left, lists on the right */
+    .info {
+        grid-template-columns: 3fr 2fr;
+        gap: 60px;
+        font-size: 12pt;
+        padding: 6px var(--gutter) 36px;
     }
 
     footer {
@@ -156,3 +212,5 @@ footer {
         height: 50px;
     }
 }
+
+html { scroll-behavior: smooth; }

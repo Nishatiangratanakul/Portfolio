@@ -4,7 +4,7 @@
 //  - Leave the page alone: confetti slowly appears all over the page, builds up, and stays.
 //    When you come back it disappears piece by piece, and your cursor (or finger, as you
 //    scroll) clears whatever it passes over.
-// Add ?confetti-test to any page URL to start the idle confetti after 3s instead of 30s.
+// Add ?confetti-test to any page URL to start the idle confetti after 3s instead of 60s.
 
 const testMode = new URLSearchParams(location.search).has('confetti-test');
 const isPhone = matchMedia('(max-width: 600px)');
@@ -19,7 +19,8 @@ const EDGE_OVERHANG = 15;
 // Pure randomness makes clumps and bare patches; this reads as "random" to the eye.
 const CANDIDATES = 5;
 
-const IDLE_AFTER = testMode ? 3000 : 30000; // ms without activity before it starts
+const IDLE_AFTER = testMode ? 3000 : 60000; // ms without activity before it starts (only counting
+                                            // time the page is actually in front of them)
 const IDLE_FILL_TIME = 180000;              // ms until a desktop screen is full; phones use the
                                             // same pace and fill sooner, as they hold fewer
 const IDLE_RAMP = 1.5;                      // >1 starts slower and speeds up; 1 is a steady pace
@@ -136,16 +137,28 @@ document.querySelector('.confetti-button').addEventListener('click', () => {
 
 let idleState = 'off'; // 'off' | 'falling' | 'full'
 let idleTimer = null;
+let idleWaited = 0;                // ms of on-screen time with no activity
 let fallTimer = null;
 let fallElapsed = 0;
 let pointer = { x: 0, y: 0 };      // last known mouse position (screen coordinates)
 let idleAnchor = { x: 0, y: 0 };   // where the mouse was when the confetti started
 const leaving = new Set();         // shapes waiting for their turn to disappear
 
+// The page counts as "in front of them" only when its tab is showing and its window has focus;
+// time spent in another tab or app doesn't count.
+const onScreen = () => !document.hidden && document.hasFocus();
+
 function restartIdleTimer() {
-    clearTimeout(idleTimer);
-    if (!reducedMotion.matches) {
-        idleTimer = setTimeout(startFalling, IDLE_AFTER);
+    idleWaited = 0;
+    if (!idleTimer && !reducedMotion.matches) idleTimer = setInterval(tickIdle, 500);
+}
+
+function tickIdle() {
+    if (idleState !== 'off' || !onScreen()) return;
+    idleWaited += 500;
+    if (idleWaited >= IDLE_AFTER) {
+        idleWaited = 0;
+        startFalling();
     }
 }
 
@@ -164,7 +177,7 @@ function startFalling() {
 // Adds shapes on a curve that starts as a sprinkle and speeds up. Phones and desktop follow
 // the same pace (per screen of page), each stopping at its own limit.
 function fall() {
-    if (document.hidden) return; // only count time while the page is actually on screen
+    if (!onScreen()) return; // only count time while the page is actually in front of them
     fallElapsed += 250;
     const perScreenSoFar = SHAPES_PER_SCREEN.desktop * Math.min(1, fallElapsed / IDLE_FILL_TIME) ** IDLE_RAMP;
     const target = Math.min(maxShapes(), Math.round(perScreenSoFar * screensOfPage()));
@@ -228,5 +241,8 @@ document.addEventListener('touchmove', onTouch, { passive: true });
 for (const type of ['pointerdown', 'keydown', 'wheel', 'scroll']) {
     document.addEventListener(type, onActivity, { passive: true });
 }
+// coming back to the tab or window counts as activity: the wait starts over
+window.addEventListener('focus', onActivity);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) onActivity(); });
 
 restartIdleTimer();
