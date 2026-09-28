@@ -7,7 +7,7 @@
 //   "hero":         "folder/image.jpg"   big image at the top (defaults to media1)
 //   "summary":      the "description" row (defaults to "description")
 //   "details":      [["role", "designer"], ["duration", "8 months"], …]   the "context" row
-//   "deliverables": "what it turned into"                              the "deliverables" row
+//   "deliverables": "what it turned into", or ["the book", "the posters", …] for a list
 //   "rows":         [{ "label": "…", "text": "…" } or { "label": "…", "list": [["a", "b"], …] }, …]
 //                   your own info rows instead of description · context · deliverables
 //   "sections":     the blocks below, in order. Each is either images or a text row:
@@ -46,7 +46,7 @@ function showProject(project, visible) {
     const rows = project.rows || [
         { label: 'description', text: project.summary || project.description },
         project.details && { label: 'context', list: project.details },
-        project.deliverables && { label: 'deliverables', text: project.deliverables },
+        project.deliverables && { label: 'deliverables', [Array.isArray(project.deliverables) ? 'items' : 'text']: project.deliverables },
     ].filter(Boolean);
 
     container.innerHTML = `
@@ -66,10 +66,12 @@ function showProject(project, visible) {
     showNextBar(project, visible);
 }
 
-// a label on the left, then text or a list across the other two columns
-function infoRow({ label, text, list }) {
+// a label on the left, then text, a two-column list, or bullet points across the other two columns
+function infoRow({ label, text, list, items }) {
     const body = list
         ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`
+        : items
+        ? `<ul class="text bullets">${items.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
         : `<div class="text">${esc(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;
     return `<div class="row"><h2>${esc(label || '')}</h2>${body}</div>`;
 }
@@ -112,24 +114,45 @@ function createSection(section, title) {
             button.addEventListener('click', () => openLightbox(items, i, title));
             figure.appendChild(button);
         } else {
-            figure.appendChild(createMedia(src, `${title}, image ${i + 1}`, true));
-            if (caption) figure.insertAdjacentHTML('beforeend', `<figcaption>${esc(caption)}</figcaption>`);
+            const media = createMedia(src, `${title}, image ${i + 1}`, true);
+            figure.appendChild(media);
+            markPortrait(media, figure);
+            // on black, the note sits under the band, like every other note
+            if (caption && !section.dark) figure.insertAdjacentHTML('beforeend', `<figcaption>${esc(caption)}</figcaption>`);
         }
         grid.appendChild(figure);
     });
     el.appendChild(grid);
+    if (section.dark) items.filter(i => i.caption && section.layout !== 'gallery')
+        .forEach(i => el.insertAdjacentHTML('beforeend', `<figcaption>${esc(i.caption)}</figcaption>`));
     return el;
 }
 
+// full-width blocks fill the width; only upright (portrait) pictures are held to the screen height
+function markPortrait(media, figure) {
+    const check = () => {
+        const w = media.naturalWidth || media.videoWidth, h = media.naturalHeight || media.videoHeight;
+        if (w && h) figure.classList.toggle('portrait', h > w);
+    };
+    media.addEventListener(media.tagName === 'VIDEO' ? 'loadedmetadata' : 'load', check);
+    check();
+}
+
 // viewer: one big image (the first item to start), with small thumbnails beside it; clicking a
-// thumbnail shows that item in the big spot
+// thumbnail shows that item in the big spot, and clicking a big picture opens it full screen to zoom
 function buildViewer(el, grid, items, title) {
     const stage = document.createElement('div');
     stage.className = 'viewer-stage';
     const thumbs = document.createElement('div');
     thumbs.className = 'viewer-thumbs';
+    const stills = items.filter(item => !item.src.toLowerCase().endsWith('.mp4'));
     const show = i => {
-        stage.replaceChildren(createMedia(items[i].src, items[i].caption || `${title}, image ${i + 1}`, false));
+        const media = createMedia(items[i].src, items[i].caption || `${title}, image ${i + 1}`, false);
+        if (media.tagName === 'IMG') {
+            media.classList.add('zoomable');
+            media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title));
+        }
+        stage.replaceChildren(media);
         thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
     };
     items.forEach((item, i) => {

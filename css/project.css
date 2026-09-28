@@ -46,6 +46,12 @@
 
 .text p + p { margin-top: 1em; }
 
+/* bullet points (e.g. deliverables) */
+.bullets { list-style: none; padding: 0; margin: 0; }
+.bullets li { position: relative; padding-left: 1.1em; }
+.bullets li + li { margin-top: 0.5em; }
+.bullets li::before { content: "–"; position: absolute; left: 0; }
+
 /* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
    on phones the list is indented under its heading */
 .context {
@@ -72,9 +78,9 @@
     height: auto;
 }
 
-/* a single tall image (e.g. portrait) never gets taller than the screen; it sits centred instead */
-.layout-full .section-media img,
-.layout-full .section-media video {
+/* a single image fills the width; an upright (portrait) one never gets taller than the screen and sits centred */
+.layout-full .portrait img,
+.layout-full .portrait video {
     width: auto;
     max-width: 100%;
     max-height: 90vh;
@@ -92,12 +98,13 @@ figcaption {
     background: var(--black);
     padding: 20px;
 }
-.dark figcaption { color: #fff; }
+.dark .section-media figcaption { color: #fff; }
+/* notes for a black block sit under it, in the normal colour */
+.dark > figcaption { margin-top: 10px; }
 /* a single image or loop on black fills the band edge to edge, so every black block is the same width */
 .dark.layout-full .section-media { padding: 0; }
 .dark.layout-full .section-media img,
 .dark.layout-full .section-media video { width: 100%; max-height: none; }
-.dark.layout-full figcaption { margin: 0; padding: 4px 20px 18px; }
 .layout-gallery .section-media { align-items: center; }
 
 /* a row: everything side by side (3 across on phones) */
@@ -119,14 +126,15 @@ figcaption {
 /* viewer: the big spot, then thumbnails (below on phones, a column on the right on desktop) */
 .layout-viewer .section-media { gap: 12px; }
 .viewer-stage {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .viewer-stage img,
 .viewer-stage video { max-width: 100%; max-height: 100%; width: auto; height: auto; }
-.viewer-thumbs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.viewer-stage .zoomable { cursor: var(--cursor-open); }
+.viewer-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px; }
 .viewer-thumbs button {
     padding: 0;
     border: 1px solid transparent;

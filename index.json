@@ -12,81 +12,165 @@
             ["advisors", "Prin Limphongpand, Ingrid Chou"],
             ["production", "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"]
         ],
-        "deliverables": "A book holding all six conversations; two sets of data-visualization posters, one mapping what was spoken and one mapping what went unspoken, each poster paired with an origami; and fill-out letter packets handed out at book fairs, asking others to reflect for themselves.",
+        "deliverables": [
+            "A book holding all six conversations: the transcripts, a chart for each person, and my closing thoughts on each.",
+            "Two sets of data-visualization posters, the spoken and the unspoken, each poster drawn from one conversation and paired with an origami.",
+            "Take-home letter packets, first handed out at Parsons Making Space 2026."
+        ],
         "hero": "unspokendialogue/hero.jpg",
         "sections": [
             {
-                "media": ["unspokendialogue/book-spreads.jpg"]
+                "label": "book",
+                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with my own closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying."
+            },
+            {
+                "media": [
+                    "unspokendialogue/book-grid.jpg"
+                ]
+            },
+            {
+                "media": [
+                    "unspokendialogue/book-closeup.jpg"
+                ]
             },
             {
                 "layout": "pair",
                 "media": [
-                    { "src": "unspokendialogue/media-2.jpg", "caption": "The introduction: all of us will die at some point, but the ways we think about it are never the same." },
-                    { "src": "unspokendialogue/media-3.mp4", "caption": "Each conversation opens with a chart of how that person thinks about death: practical, fearful, reflective, spiritual, secular." }
+                    {
+                        "src": "unspokendialogue/media-2.jpg",
+                        "caption": "The introduction: all of us will die at some point, but the ways we think about it are never the same."
+                    },
+                    {
+                        "src": "unspokendialogue/book-cover-detail.jpg",
+                        "caption": "The cover chart layers all six conversations over each other."
+                    }
                 ]
             },
             {
-                "media": ["unspokendialogue/book-pages.mp4"]
+                "media": [
+                    {
+                        "src": "unspokendialogue/media-3.mp4",
+                        "caption": "Each conversation opens with a chart of how that person thinks about death: practical, fearful, reflective, spiritual, secure."
+                    }
+                ]
             },
             {
-                "media": [{ "src": "unspokendialogue/media-5.mp4", "caption": "Fold-out pages sit over the transcript, like something left unsaid." }]
+                "media": [
+                    {
+                        "src": "unspokendialogue/media-5.mp4",
+                        "caption": "Fold-out pages sit over the transcript, like something left unsaid."
+                    }
+                ]
             },
             {
                 "layout": "pair",
-                "media": ["unspokendialogue/media-1.jpg", "unspokendialogue/book-cover-detail.jpg"]
-            },
-            {
-                "media": ["unspokendialogue/book-closeup.jpg"]
-            },
-            {
-                "layout": "pair",
-                "media": ["unspokendialogue/media-4.jpg", "unspokendialogue/media-6.jpg"]
+                "media": [
+                    "unspokendialogue/media-4.jpg",
+                    "unspokendialogue/media-6.jpg"
+                ]
             },
             {
                 "label": "posters",
                 "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data was my way of trying to understand it."
             },
             {
-                "layout": "gallery",
-                "columns": 3,
+                "layout": "viewer",
                 "dark": true,
                 "media": [
-                    { "src": "unspokendialogue/poster-questions.jpg", "thumb": "unspokendialogue/poster-questions-thumb.jpg", "caption": "Spoken: the questions" },
-                    { "src": "unspokendialogue/poster-defining.jpg", "thumb": "unspokendialogue/poster-defining-thumb.jpg", "caption": "Spoken: defining death and dying" },
-                    { "src": "unspokendialogue/poster-180-minutes.jpg", "thumb": "unspokendialogue/poster-180-minutes-thumb.jpg", "caption": "Spoken: death, die and dying in 115 minutes of conversation" },
-                    { "src": "unspokendialogue/poster-silence.jpg", "thumb": "unspokendialogue/poster-silence-thumb.jpg", "caption": "Unspoken: speech and silence" },
-                    { "src": "unspokendialogue/poster-rhythm.jpg", "thumb": "unspokendialogue/poster-rhythm-thumb.jpg", "caption": "Unspoken: the rhythm of a conversation" },
-                    { "src": "unspokendialogue/poster-emotions.jpg", "thumb": "unspokendialogue/poster-emotions-thumb.jpg", "caption": "Unspoken: changes in emotion within dialogue" }
+                    {
+                        "src": "unspokendialogue/posters-all.jpg",
+                        "thumb": "unspokendialogue/posters-all-thumb.jpg",
+                        "caption": "All six posters: spoken on top, unspoken below"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-questions.jpg",
+                        "thumb": "unspokendialogue/poster-questions-tile.jpg",
+                        "caption": "Spoken: the questions"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-defining.jpg",
+                        "thumb": "unspokendialogue/poster-defining-tile.jpg",
+                        "caption": "Spoken: defining death and dying"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-180-minutes.jpg",
+                        "thumb": "unspokendialogue/poster-180-minutes-tile.jpg",
+                        "caption": "Spoken: death, die and dying in 115 minutes of conversation"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-silence.jpg",
+                        "thumb": "unspokendialogue/poster-silence-tile.jpg",
+                        "caption": "Unspoken: speech and silence"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-rhythm.jpg",
+                        "thumb": "unspokendialogue/poster-rhythm-tile.jpg",
+                        "caption": "Unspoken: the rhythm of a conversation"
+                    },
+                    {
+                        "src": "unspokendialogue/poster-emotions.jpg",
+                        "thumb": "unspokendialogue/poster-emotions-tile.jpg",
+                        "caption": "Unspoken: changes in emotion within dialogue"
+                    }
                 ]
             },
             {
                 "dark": true,
-                "media": [{ "src": "unspokendialogue/origami.jpg", "caption": "Each interview has its own origami: the pinwheel, dog, butterfly, bird, boat and fish. The back of every poster carries the folding instructions for it, so the poster can be torn down and folded." }]
-            },
-            {
-                "layout": "gallery",
-                "columns": 2,
-                "dark": true,
                 "media": [
-                    { "src": "unspokendialogue/poster-defining.jpg", "thumb": "unspokendialogue/poster-defining-thumb.jpg", "caption": "Front: defining death and dying" },
-                    { "src": "unspokendialogue/poster-back.jpg", "thumb": "unspokendialogue/poster-back-thumb.jpg", "caption": "Back: the folding instructions" }
+                    {
+                        "src": "unspokendialogue/origami.jpg",
+                        "caption": "Each interview has its own origami: the pinwheel, dog, butterfly, bird, boat and fish. The back of every poster carries its folding instructions, so the poster can be torn down and folded."
+                    }
                 ]
             },
             {
                 "label": "letter packets",
-                "text": "At the Parsons thesis fair, visitors could take home a letter packet: a letter, a reflection card, a death graph, a prompt card and an origami to fold."
+                "text": "At Making Space 2026, the Parsons fair where this work was first shown, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked whoever picked it up to sit with their own."
             },
             {
                 "layout": "viewer",
                 "dark": true,
                 "media": [
-                    { "src": "unspokendialogue/packet.mp4", "thumb": "unspokendialogue/packet-loop-thumb.jpg", "caption": "Opening a letter packet" },
-                    { "src": "unspokendialogue/packet-envelope.jpg", "thumb": "unspokendialogue/packet-envelope-thumb.jpg", "caption": "The glassine envelope" },
-                    { "src": "unspokendialogue/packet-letter.jpg", "thumb": "unspokendialogue/packet-letter-thumb.jpg", "caption": "The letter" },
-                    { "src": "unspokendialogue/packet-reflection.jpg", "thumb": "unspokendialogue/packet-reflection-thumb.jpg", "caption": "Reflection card" },
-                    { "src": "unspokendialogue/packet-graph.jpg", "thumb": "unspokendialogue/packet-graph-thumb.jpg", "caption": "Death graph" },
-                    { "src": "unspokendialogue/packet-prompt.jpg", "thumb": "unspokendialogue/packet-prompt-thumb.jpg", "caption": "Prompt card" },
-                    { "src": "unspokendialogue/packet-origami-card.jpg", "thumb": "unspokendialogue/packet-origami-card-thumb.jpg", "caption": "Origami card" }
+                    {
+                        "src": "unspokendialogue/packet.mp4",
+                        "thumb": "unspokendialogue/packet-loop-thumb.jpg",
+                        "caption": "Opening a letter packet"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-all.jpg",
+                        "thumb": "unspokendialogue/packet-all-thumb.jpg",
+                        "caption": "Everything in the packet"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-envelope.jpg",
+                        "thumb": "unspokendialogue/packet-envelope-thumb.jpg",
+                        "caption": "The glassine envelope"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-letter.jpg",
+                        "thumb": "unspokendialogue/packet-letter-thumb.jpg",
+                        "caption": "The letter"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-reflection.jpg",
+                        "thumb": "unspokendialogue/packet-reflection-thumb.jpg",
+                        "caption": "Reflection card"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-graph.jpg",
+                        "thumb": "unspokendialogue/packet-graph-thumb.jpg",
+                        "caption": "Graph card: mapping your own relationship to death"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-prompt.jpg",
+                        "thumb": "unspokendialogue/packet-prompt-thumb.jpg",
+                        "caption": "Prompt card"
+                    },
+                    {
+                        "src": "unspokendialogue/packet-origami-card.jpg",
+                        "thumb": "unspokendialogue/packet-origami-card-thumb.jpg",
+                        "caption": "Origami card, torn apart"
+                    }
                 ]
             }
         ],
