@@ -263,6 +263,19 @@
                 ]
             },
             {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "contemplatingdeath/mourning-diary.mp4",
+                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
+                    },
+                    {
+                        "src": "contemplatingdeath/colour.mp4",
+                        "caption": "In the later chapters colour comes in, as death stops being something black and white."
+                    }
+                ]
+            },
+            {
                 "layout": "viewer",
                 "dark": true,
                 "caption": "*Physical Death* is French-folded: its images are hidden inside the folds, faint enough that you can only half see them, holding both the shock of it and the distance.",
@@ -313,19 +326,6 @@
                     {
                         "src": "contemplatingdeath/spread-174-175.jpg",
                         "thumb": "contemplatingdeath/spread-174-175-tile.jpg"
-                    }
-                ]
-            },
-            {
-                "layout": "pair",
-                "media": [
-                    {
-                        "src": "contemplatingdeath/mourning-diary.mp4",
-                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
-                    },
-                    {
-                        "src": "contemplatingdeath/colour.mp4",
-                        "caption": "In the later chapters colour comes in, as death stops being something black and white."
                     }
                 ]
             },
