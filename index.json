@@ -358,13 +358,196 @@
         "subject": "typeface design",
         "year": "2025",
         "description": "Lego Sans is a modular typeface that emerged from the process of printing with Lego letterpress. Built using only two Lego pieces, a square and a quarter-circle, the type took shape through hands-on assembly and experimentation.",
-        "summary": "A modular typeface that grew out of printing with Lego letterpress.",
-        "deliverables": "A typeface built from only two Lego pieces, a square and a quarter-circle, worked out through hands-on assembly and experimentation.",
+        "summary": "Lego Sans is a modular typeface that grew out of printing with Lego letterpress. Every letter is built from just two Lego pieces, a square and a quarter-circle, and the alphabet took shape through hands-on assembly and experimentation: set on a baseplate, inked, and pulled on a proof press.",
+        "deliverables": [
+            "A modular typeface built from two Lego pieces, for now in print only.",
+            "An alphabet book, one letter per page, printed by Lego letterpress."
+        ],
         "media1": "legosans/media-1.jpg",
         "media2": "legosans/media-2.mp4",
-        "media3": "legosans/media-3.jpg",
         "icon": "legosans/icon.jpg",
-        "preview": "legosans/preview.mp4"
+        "preview": "legosans/preview.mp4",
+        "details": [
+            [
+                "role",
+                "type designer & printer"
+            ],
+            [
+                "duration",
+                "5 weeks"
+            ],
+            [
+                "skills",
+                "type design, Illustrator, letterpress printing"
+            ],
+            [
+                "advisors",
+                "Advisor name, Advisor name"
+            ],
+            [
+                "production",
+                "Lego letterpress"
+            ]
+        ],
+        "sections": [
+            {
+                "media": [
+                    "legosans/media-2.mp4"
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "legosans/process-setting.jpg",
+                        "caption": "Each letter is set by hand on a Lego baseplate from squares and quarter-circles, working from the drawn alphabet."
+                    },
+                    {
+                        "src": "legosans/process-press.jpg",
+                        "caption": "The baseplate is locked into the proof press like a forme of type, inked and printed."
+                    }
+                ]
+            },
+            {
+                "layout": "gallery",
+                "columns": 5,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "legosans/letter-a.jpg",
+                        "thumb": "legosans/letter-a-thumb.jpg",
+                        "caption": "A"
+                    },
+                    {
+                        "src": "legosans/letter-b.jpg",
+                        "thumb": "legosans/letter-b-thumb.jpg",
+                        "caption": "B"
+                    },
+                    {
+                        "src": "legosans/letter-c.jpg",
+                        "thumb": "legosans/letter-c-thumb.jpg",
+                        "caption": "C"
+                    },
+                    {
+                        "src": "legosans/letter-d.jpg",
+                        "thumb": "legosans/letter-d-thumb.jpg",
+                        "caption": "D"
+                    },
+                    {
+                        "src": "legosans/letter-e.jpg",
+                        "thumb": "legosans/letter-e-thumb.jpg",
+                        "caption": "E"
+                    },
+                    {
+                        "src": "legosans/letter-f.jpg",
+                        "thumb": "legosans/letter-f-thumb.jpg",
+                        "caption": "F"
+                    },
+                    {
+                        "src": "legosans/letter-g.jpg",
+                        "thumb": "legosans/letter-g-thumb.jpg",
+                        "caption": "G"
+                    },
+                    {
+                        "src": "legosans/letter-h.jpg",
+                        "thumb": "legosans/letter-h-thumb.jpg",
+                        "caption": "H"
+                    },
+                    {
+                        "src": "legosans/letter-j.jpg",
+                        "thumb": "legosans/letter-j-thumb.jpg",
+                        "caption": "J"
+                    },
+                    {
+                        "src": "legosans/letter-k.jpg",
+                        "thumb": "legosans/letter-k-thumb.jpg",
+                        "caption": "K"
+                    },
+                    {
+                        "src": "legosans/letter-l.jpg",
+                        "thumb": "legosans/letter-l-thumb.jpg",
+                        "caption": "L"
+                    },
+                    {
+                        "src": "legosans/letter-m.jpg",
+                        "thumb": "legosans/letter-m-thumb.jpg",
+                        "caption": "M"
+                    },
+                    {
+                        "src": "legosans/letter-n.jpg",
+                        "thumb": "legosans/letter-n-thumb.jpg",
+                        "caption": "N"
+                    },
+                    {
+                        "src": "legosans/letter-o.jpg",
+                        "thumb": "legosans/letter-o-thumb.jpg",
+                        "caption": "O"
+                    },
+                    {
+                        "src": "legosans/letter-p.jpg",
+                        "thumb": "legosans/letter-p-thumb.jpg",
+                        "caption": "P"
+                    },
+                    {
+                        "src": "legosans/letter-q.jpg",
+                        "thumb": "legosans/letter-q-thumb.jpg",
+                        "caption": "Q"
+                    },
+                    {
+                        "src": "legosans/letter-r.jpg",
+                        "thumb": "legosans/letter-r-thumb.jpg",
+                        "caption": "R"
+                    },
+                    {
+                        "src": "legosans/letter-s.jpg",
+                        "thumb": "legosans/letter-s-thumb.jpg",
+                        "caption": "S"
+                    },
+                    {
+                        "src": "legosans/letter-t.jpg",
+                        "thumb": "legosans/letter-t-thumb.jpg",
+                        "caption": "T"
+                    },
+                    {
+                        "src": "legosans/letter-u.jpg",
+                        "thumb": "legosans/letter-u-thumb.jpg",
+                        "caption": "U"
+                    },
+                    {
+                        "src": "legosans/letter-v.jpg",
+                        "thumb": "legosans/letter-v-thumb.jpg",
+                        "caption": "V"
+                    },
+                    {
+                        "src": "legosans/letter-w.jpg",
+                        "thumb": "legosans/letter-w-thumb.jpg",
+                        "caption": "W"
+                    },
+                    {
+                        "src": "legosans/letter-x.jpg",
+                        "thumb": "legosans/letter-x-thumb.jpg",
+                        "caption": "X"
+                    },
+                    {
+                        "src": "legosans/letter-y.jpg",
+                        "thumb": "legosans/letter-y-thumb.jpg",
+                        "caption": "Y"
+                    },
+                    {
+                        "src": "legosans/letter-z.jpg",
+                        "thumb": "legosans/letter-z-thumb.jpg",
+                        "caption": "Z"
+                    }
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "legosans/process-drying.jpg",
+                    "legosans/process-prints.jpg"
+                ]
+            }
+        ]
     },
     {
         "title": "kowloon",

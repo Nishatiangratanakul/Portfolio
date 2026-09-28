@@ -57,6 +57,8 @@
 
 /* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
    on phones the list is indented under its heading */
+.context dd::first-letter { text-transform: uppercase; }   /* every answer starts with a capital, like the sentences */
+
 .context {
     display: grid;
     grid-template-columns: minmax(84px, max-content) minmax(0, 1fr);
@@ -238,6 +240,14 @@ figcaption {
 }
 .next-link.prev { justify-self: start; }
 .next-link.next { justify-self: end; }
+/* phones: previous and next side by side (long titles wrap onto two lines), top underneath */
+@media (max-width: 600px) {
+    .next-bar { grid-template-columns: 1fr 1fr; grid-template-areas: "prev next" "top top"; row-gap: 20px; }
+    .next-link.prev { grid-area: prev; }
+    .next-link.next { grid-area: next; }
+    .to-top { grid-area: top; justify-self: center; }
+    .next-link .label { display: block; text-wrap: balance; }
+}
 
 .next-link { position: relative; }
 .next-link.next { text-align: right; }
