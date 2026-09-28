@@ -80,6 +80,10 @@
     height: auto;
 }
 
+/* a full-width loop stays full width but never taller than most of the screen, so its note still fits
+   (a little of its top and bottom is trimmed on short screens) */
+.layout-full .section-media video { max-height: 78vh; object-fit: cover; }
+
 /* a single image fills the width; an upright (portrait) one never gets taller than the screen and sits centred */
 .layout-full .portrait img,
 .layout-full .portrait video {
@@ -248,7 +252,7 @@ figcaption {
     .title-row { padding-top: 24px; }
     /* as tall as the screen allows while the title still shows without scrolling */
     .hero img,
-    .hero video { height: calc(100vh - 230px); min-height: 380px; max-height: 1100px; }
+    .hero video { height: calc(100vh - 210px); min-height: 380px; max-height: 1150px; }
 
     .context {
         grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
