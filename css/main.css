@@ -6,6 +6,17 @@
     --gutter: 5%; /* page side margins (100px on desktop, below) */
 }
 
+/* cursors, all in the site red: an arrow; a clear arrow over anything clickable;
+   a plus over things that open bigger (fun shit) */
+:root {
+    --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M2 2 L2 19 L6.5 14.6 L9.4 21.2 L12.4 19.9 L9.6 13.4 L15.8 13.4 Z' fill='%23E20909' stroke='white' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, auto;
+    --cursor-click: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M2 2 L2 19 L6.5 14.6 L9.4 21.2 L12.4 19.9 L9.6 13.4 L15.8 13.4 Z' fill='white' stroke='%23E20909' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, pointer;
+    --cursor-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M12 3v18M3 12h18' stroke='%23E20909' stroke-width='2'/%3E%3C/svg%3E") 12 12, zoom-in;
+}
+
+html { cursor: var(--cursor); }
+a, button { cursor: var(--cursor-click); }
+
 body {
     font-family: "Space Grotesk", monospace;
     font-optical-sizing: auto;

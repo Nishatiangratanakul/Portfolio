@@ -5,7 +5,7 @@ Nisha Tiangratanakul's portfolio, [ntiang.com](https://ntiang.com). Plain HTML, 
 ## Where things live
 
 - `index.json`: every project (work list + project pages)
-- `funshit.json`: the fun shit images
+- `funshit.json`: the fun shit pieces
 - `js/site.js`: header, footer and the **about** text (bio, exhibitions & fairs, contact) at the top of the file
 - `assets/<project>/`: each project's images and videos
 
@@ -55,3 +55,13 @@ Each project is one entry in `index.json`. Only `title`, `year`, `description` a
 - **Videos:** use `.mp4`. They play silently on loop with no controls. Add a `-poster.jpg` of the first frame next to each (e.g. `media-3.mp4` → `media-3-poster.jpg`); it shows while loading and on phones that block autoplay.
 - **Hide a project** from the work list with `"hidden": true`. Its page still works if someone has the link.
 - **Previews:** replace `assets/<project>/preview.mp4` with your own loop, keeping the same name.
+
+## Adding to fun shit
+
+Put the images in `assets/funshit/`, then add a piece to `funshit.json`:
+
+```json
+{ "title": "tassel", "medium": "cord, thread, printed fabric", "year": "2024", "note": "a line or two about it", "images": ["image4.jpg", "image5.jpg"] }
+```
+
+`year` and `note` can be left as `""`. The page shows them in a new random order on every visit. `intro` at the top of the file is the text shown under "fun shit".

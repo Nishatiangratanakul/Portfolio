@@ -15,6 +15,23 @@
     <script src="../js/funshit.js" defer></script>
 </head>
 <body>
-    <main class="funshit-grid"></main>
+    <main class="funshit">
+        <!-- desktop: panel + grid -->
+        <div class="layout">
+            <aside class="panel"></aside>
+            <div class="grid"></div>
+        </div>
+        <!-- phones: one at a time -->
+        <div class="carousel cover">
+            <div class="cinfo"></div>
+            <div class="cstage"><img alt=""></div>
+            <div class="cnav"><button data-step="-1" aria-label="previous">&lt;</button><span class="count"></span><button class="prompt">tap to look through</button><button data-step="1" aria-label="next">&gt;</button></div>
+        </div>
+    </main>
+    <div class="viewer" role="dialog" aria-modal="true" hidden>
+        <button class="back">back</button>
+        <div class="stage"><img alt=""></div>
+        <div class="nav"><button data-step="-1" aria-label="previous">&lt;</button><span class="count"></span><button data-step="1" aria-label="next">&gt;</button></div>
+    </div>
 </body>
 </html>
