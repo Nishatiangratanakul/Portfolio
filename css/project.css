@@ -100,6 +100,13 @@ figcaption {
     max-width: 60ch;
 }
 
+/* a picture that turns over when clicked */
+.flip { display: block; width: 100%; padding: 0; border: 0; background: none; perspective: 2000px; cursor: var(--cursor-click); }
+.flip-inner { display: block; position: relative; transition: transform 0.7s ease; transform-style: preserve-3d; }
+.flip.flipped .flip-inner { transform: rotateY(180deg); }
+.flip img { display: block; width: 100%; height: auto; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip .flip-back { position: absolute; inset: 0; transform: rotateY(180deg); }
+
 /* "dark": the block sits on black, like the posters and origami */
 .dark .section-media {
     background: var(--black);
@@ -273,6 +280,10 @@ figcaption {
     .text { max-width: 70ch; }
 
     .project-section { padding-bottom: 32px; }
+    figcaption { font-size: 11pt; }
+    /* a pair of upright pictures: as tall as most of the screen, centred together */
+    .upright > figcaption { text-align: center; }
+    .upright.layout-pair .section-media { justify-content: center; grid-template-columns: repeat(2, min(calc((100% - 24px) / 2), calc(80vh * 0.68))); }
     /* notes under a full-width block run the whole width of the picture */
     .layout-full figcaption,
     .layout-pair figcaption,

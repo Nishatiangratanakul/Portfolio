@@ -265,14 +265,8 @@
             {
                 "layout": "pair",
                 "media": [
-                    {
-                        "src": "contemplatingdeath/mourning-diary.mp4",
-                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
-                    },
-                    {
-                        "src": "contemplatingdeath/colour.mp4",
-                        "caption": "In the later chapters colour comes in, as death stops being something black and white."
-                    }
+                    "contemplatingdeath/mourning-diary.mp4",
+                    "contemplatingdeath/colour.mp4"
                 ]
             },
             {
@@ -334,25 +328,16 @@
                 "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
             },
             {
-                "layout": "viewer",
-                "dark": true,
+                "layout": "pair",
                 "media": [
+                    "contemplatingdeath/index.mp4",
                     {
-                        "src": "contemplatingdeath/index.mp4",
-                        "thumb": "contemplatingdeath/index-loop-thumb.jpg",
-                        "caption": "The index poster"
-                    },
-                    {
-                        "src": "contemplatingdeath/index-front.jpg",
-                        "thumb": "contemplatingdeath/index-front-thumb.jpg",
-                        "caption": "Images side"
-                    },
-                    {
-                        "src": "contemplatingdeath/index-back.jpg",
-                        "thumb": "contemplatingdeath/index-back-thumb.jpg",
-                        "caption": "Index side"
+                        "src": "contemplatingdeath/index-front-card.jpg",
+                        "back": "contemplatingdeath/index-back-card.jpg"
                     }
-                ]
+                ],
+                "caption": "Click the poster to turn it over.",
+                "upright": true
             }
         ]
     },

@@ -19,6 +19,8 @@
 //                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
 //                   add "caption": "…" for one note under the whole block
+//                   add "upright": true to a pair of portrait pictures so they fit on screen
+//                   an item with "back": "b.jpg" turns over when clicked
 //                   text anywhere can use *italics* and [a link](#posters) to jump to a part of the page
 //                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
@@ -99,7 +101,7 @@ function createSection(section, title) {
         return row;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.upright ? ' upright' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
@@ -110,7 +112,8 @@ function createSection(section, title) {
         if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
         return el;
     }
-    items.forEach(({ src, thumb, caption }, i) => {
+    items.forEach((item, i) => {
+        const { src, thumb, caption } = item;
         const figure = document.createElement('figure');
         if (section.layout === 'gallery') {
             // a thumbnail that opens the full image
@@ -121,7 +124,7 @@ function createSection(section, title) {
             button.addEventListener('click', () => openLightbox(items, i, title));
             figure.appendChild(button);
         } else {
-            const media = createMedia(src, `${title}, image ${i + 1}`, true);
+            const media = item.back ? createFlip(src, item.back, caption || title) : createMedia(src, `${title}, image ${i + 1}`, true);
             figure.appendChild(media);
             markPortrait(media, figure);
             // on black, the note sits under the band, like every other note
@@ -176,6 +179,17 @@ function buildViewer(el, grid, items, title) {
     el.appendChild(grid);
     show(0);
     return el;
+}
+
+// a picture with a back: clicking turns it over (e.g. both sides of a poster)
+function createFlip(front, back, alt) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'flip';
+    button.setAttribute('aria-label', 'turn it over');
+    button.innerHTML = `<span class="flip-inner"><img class="flip-front" src="assets/${front}" alt="${esc(alt)}"><img class="flip-back" src="assets/${back}" alt="${esc(alt)}, back"></span>`;
+    button.addEventListener('click', () => button.classList.toggle('flipped'));
+    return button;
 }
 
 // Full screen on black: < > (or arrow keys) to step, Esc or × to close.
