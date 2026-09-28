@@ -10,7 +10,8 @@
         "media4": "unspokendialogue/media-4.jpg",
         "media5": "unspokendialogue/media-5.mp4",
         "media6": "unspokendialogue/media-6.jpg",
-        "icon": "unspokendialogue/icon.jpg"
+        "icon": "unspokendialogue/icon.jpg",
+        "preview": "unspokendialogue/preview.mp4"
     }, 
     {
         "title": "contemplating death",
@@ -22,7 +23,8 @@
         "media4": "contemplatingdeath/media-4.mp4",
         "media5": "contemplatingdeath/media-5.mp4",
         "media6": "contemplatingdeath/media-6.jpg",
-        "icon": "contemplatingdeath/icon.jpg"
+        "icon": "contemplatingdeath/icon.jpg",
+        "preview": "contemplatingdeath/preview.mp4"
     },    
     {
         "title": "lego sans",
@@ -32,7 +34,8 @@
         "media1": "legosans/media-1.jpg",
         "media2": "legosans/media-2.mp4",
         "media3": "legosans/media-3.jpg",
-        "icon": "legosans/icon.jpg"
+        "icon": "legosans/icon.jpg",
+        "preview": "legosans/preview.mp4"
     }, 
     {
         "title": "kowloon",
@@ -44,7 +47,8 @@
         "media3": "kowloon/media-3.mp4",
         "media4": "kowloon/media-4.mp4",
         "media5": "kowloon/media-5.jpg",
-        "icon": "kowloon/icon.jpg"
+        "icon": "kowloon/icon.jpg",
+        "preview": "kowloon/preview.mp4"
     }, 
     {
         "title": "76 cones",
@@ -59,7 +63,8 @@
         "media6": "76cones/media-6.mp4",
         "media7": "76cones/media-7.mp4",
         "media8": "76cones/media-8.jpg",
-        "icon": "76cones/icon.jpg"
+        "icon": "76cones/icon.jpg",
+        "preview": "76cones/preview.mp4"
     },
     {
         "title": "the joy luck supper club",
@@ -110,7 +115,8 @@
         "media3": "wangkarwai/media-3.jpg",
         "media4": "wangkarwai/media-4.mp4",
         "media5": "wangkarwai/media-5.mp4",
-        "icon": "wangkarwai/icon.jpg"
+        "icon": "wangkarwai/icon.jpg",
+        "preview": "wangkarwai/preview.mp4"
     },
     {
         "title": "roshomon",

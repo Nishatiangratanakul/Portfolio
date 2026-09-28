@@ -9,95 +9,80 @@ main {
 .project-list {
     display: flex;
     flex-direction: column;
-    padding-top: 1vh;
 }
 
-.content-container {
-    padding: 10px;
+/* phones: preview on top, then the title with the year at the end, then what it is */
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "preview preview"
+        "title year"
+        "format format";
+    column-gap: 14px;
+    padding: 16px var(--gutter) 14px;
     border-bottom: var(--line);
+    font-size: 11pt;
+    line-height: 1.45;
 }
 
-.icon {
-    width: 92.5vw;
+.row-preview {
+    grid-area: preview;
+    margin-bottom: 10px;
+}
+
+.row-preview video,
+.row-preview img {
+    display: block;
+    width: 100%;
     height: auto;
-    padding: 1vh 0 0.5vh 2.5%;
 }
 
-.text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 2.5%;
-}
-
-.title {
-    font-size: 12pt;
-}
-
-.subject {
-    font-size: 10pt;
-}
-
-.year {
-    display: none;
-}
+.year { grid-area: year; justify-self: end; }
+.title { grid-area: title; }
+.format { grid-area: format; font-size: 10pt; opacity: .75; }
 
 .hover-preview {
     display: none;
 }
 
 @media (min-width: 601px) {
-    .project-list {
-        padding-top: 0;
-    }
-
-    .content-container {
-        padding: 0;
-    }
-
-    .icon {
-        display: none;
-    }
-
-    .text-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .title,
-    .subject,
-    .year {
-        display: block;
-        width: 33%;
+    /* one line: title · what it is · year */
+    .project-row {
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-areas: "title format year";
+        column-gap: 24px;
+        padding: 12px var(--gutter);
         font-size: 12pt;
     }
 
-    .title {
-        padding-left: 7%;
+    .row-preview {
+        display: none;
     }
 
-    .subject {
-        padding-left: 14%;
+    .format {
+        font-size: 12pt;
+        opacity: 1;
     }
 
-    .year {
-        padding-left: 20%;
-    }
-
-    /* big icon shown in the middle of the screen while hovering a row */
+    /* the big looping preview in the middle of the screen while hovering a row */
     .hover-preview {
+        display: block;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 150vw;
-        height: 40vh;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        pointer-events: none;
+        pointer-events: none; /* never gets in the way of clicking the list */
         z-index: 1; /* above the page, below the confetti */
+    }
+
+    .hover-preview video,
+    .hover-preview img {
+        display: block;
+        object-fit: cover;
+    }
+
+    .hover-preview [hidden] {
+        display: none;
     }
 }
