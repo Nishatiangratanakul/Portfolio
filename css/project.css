@@ -97,6 +97,7 @@ figcaption {
 .dark.layout-full .section-media { padding: 0; }
 .dark.layout-full .section-media img,
 .dark.layout-full .section-media video { width: 100%; max-height: none; }
+.dark.layout-full figcaption { margin: 0; padding: 4px 20px 18px; }
 .layout-gallery .section-media { align-items: center; }
 
 /* a row: everything side by side (3 across on phones) */
@@ -114,6 +115,30 @@ figcaption {
 }
 .layout-gallery button img { transition: opacity 0.15s; }
 .layout-gallery button:hover img { opacity: 0.85; }
+
+/* viewer: the big spot, then thumbnails (below on phones, a column on the right on desktop) */
+.layout-viewer .section-media { gap: 12px; }
+.viewer-stage {
+    aspect-ratio: 3 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewer-stage img,
+.viewer-stage video { max-width: 100%; max-height: 100%; width: auto; height: auto; }
+.viewer-thumbs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.viewer-thumbs button {
+    padding: 0;
+    border: 1px solid transparent;
+    background: none;
+    cursor: var(--cursor-click);
+    opacity: 0.55;
+    transition: opacity 0.15s;
+}
+.viewer-thumbs button:hover,
+.viewer-thumbs button[aria-current="true"] { opacity: 1; }
+.viewer-thumbs button[aria-current="true"] { border-color: rgba(255, 255, 255, 0.6); }
+.viewer-thumbs img { display: block; width: 100%; height: auto; }
 
 .lightbox {
     position: fixed;
@@ -237,6 +262,8 @@ figcaption {
     .dark .section-media { padding: 40px; }
     .layout-row .section-media,
     .layout-gallery .section-media { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+    .layout-viewer .section-media { grid-template-columns: minmax(0, 1fr) 84px; gap: 24px; align-items: center; }
+    .viewer-thumbs { grid-template-columns: none; gap: 10px; }
     .has-columns .section-media { grid-auto-flow: row; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 32px; padding: 48px 12%; }
     .lb-stage { padding: 32px; }
 

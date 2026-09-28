@@ -15,6 +15,8 @@
 //                   { "layout": "gallery", "media": [{ "src": "big.jpg", "thumb": "small.jpg", "caption": "…" }, …] }
 //                     thumbnails in a row (or "columns": 3 for rows of three); clicking one opens it
 //                     full screen, where clicking again zooms in
+//                   { "layout": "viewer", "media": [{ "src": "big.mp4", "thumb": "small.jpg" }, …] }
+//                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
 //                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
@@ -98,6 +100,7 @@ function createSection(section, title) {
     if (section.columns) grid.style.setProperty('--cols', section.columns);
     if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
+    if (section.layout === 'viewer') return buildViewer(el, grid, items, title);
     items.forEach(({ src, thumb, caption }, i) => {
         const figure = document.createElement('figure');
         if (section.layout === 'gallery') {
@@ -115,6 +118,31 @@ function createSection(section, title) {
         grid.appendChild(figure);
     });
     el.appendChild(grid);
+    return el;
+}
+
+// viewer: one big image (the first item to start), with small thumbnails beside it; clicking a
+// thumbnail shows that item in the big spot
+function buildViewer(el, grid, items, title) {
+    const stage = document.createElement('div');
+    stage.className = 'viewer-stage';
+    const thumbs = document.createElement('div');
+    thumbs.className = 'viewer-thumbs';
+    const show = i => {
+        stage.replaceChildren(createMedia(items[i].src, items[i].caption || `${title}, image ${i + 1}`, false));
+        thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
+    };
+    items.forEach((item, i) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', item.caption || `image ${i + 1}`);
+        button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', true));
+        button.addEventListener('click', () => show(i));
+        thumbs.appendChild(button);
+    });
+    grid.append(stage, thumbs);
+    el.appendChild(grid);
+    show(0);
     return el;
 }
 

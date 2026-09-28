@@ -13,7 +13,11 @@
             ["production", "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"]
         ],
         "deliverables": "A book holding all six conversations; two sets of data-visualization posters, one mapping what was spoken and one mapping what went unspoken, each poster paired with an origami; and fill-out letter packets handed out at book fairs, asking others to reflect for themselves.",
+        "hero": "unspokendialogue/hero.jpg",
         "sections": [
+            {
+                "media": ["unspokendialogue/book-spreads.jpg"]
+            },
             {
                 "layout": "pair",
                 "media": [
@@ -22,7 +26,17 @@
                 ]
             },
             {
+                "media": ["unspokendialogue/book-pages.mp4"]
+            },
+            {
                 "media": [{ "src": "unspokendialogue/media-5.mp4", "caption": "Fold-out pages sit over the transcript, like something left unsaid." }]
+            },
+            {
+                "layout": "pair",
+                "media": ["unspokendialogue/media-1.jpg", "unspokendialogue/book-cover-detail.jpg"]
+            },
+            {
+                "media": ["unspokendialogue/book-closeup.jpg"]
             },
             {
                 "layout": "pair",
@@ -46,25 +60,27 @@
                 ]
             },
             {
-                "label": "origami",
-                "text": "Each poster comes from one interview, and each interview has its own origami. The back of every poster is printed with a grid, so it can be torn apart and folded."
+                "dark": true,
+                "media": [{ "src": "unspokendialogue/origami.jpg", "caption": "Each interview has its own origami: the pinwheel, dog, butterfly, bird, boat and fish. The back of every poster carries the folding instructions for it, so the poster can be torn down and folded." }]
             },
             {
+                "layout": "gallery",
+                "columns": 2,
                 "dark": true,
-                "media": ["unspokendialogue/origami.mp4"]
+                "media": [
+                    { "src": "unspokendialogue/poster-defining.jpg", "thumb": "unspokendialogue/poster-defining-thumb.jpg", "caption": "Front: defining death and dying" },
+                    { "src": "unspokendialogue/poster-back.jpg", "thumb": "unspokendialogue/poster-back-thumb.jpg", "caption": "Back: the folding instructions" }
+                ]
             },
             {
                 "label": "letter packets",
                 "text": "At the Parsons thesis fair, visitors could take home a letter packet: a letter, a reflection card, a death graph, a prompt card and an origami to fold."
             },
             {
-                "dark": true,
-                "media": ["unspokendialogue/packet.mp4"]
-            },
-            {
-                "layout": "gallery",
+                "layout": "viewer",
                 "dark": true,
                 "media": [
+                    { "src": "unspokendialogue/packet.mp4", "thumb": "unspokendialogue/packet-loop-thumb.jpg", "caption": "Opening a letter packet" },
                     { "src": "unspokendialogue/packet-envelope.jpg", "thumb": "unspokendialogue/packet-envelope-thumb.jpg", "caption": "The glassine envelope" },
                     { "src": "unspokendialogue/packet-letter.jpg", "thumb": "unspokendialogue/packet-letter-thumb.jpg", "caption": "The letter" },
                     { "src": "unspokendialogue/packet-reflection.jpg", "thumb": "unspokendialogue/packet-reflection-thumb.jpg", "caption": "Reflection card" },
