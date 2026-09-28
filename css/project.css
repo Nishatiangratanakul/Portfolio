@@ -1,62 +1,168 @@
-/* Project page. Phone styles first, then desktop overrides. */
+/* Project page. Phone styles first, then desktop overrides.
+   Desktop rows use the work list's columns (2fr 1fr 2fr, 24px apart):
+   a label in column 1, the content across columns 2–3. */
 
 .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5%;
+    padding: 20px var(--gutter) 0;
+    font-size: 11pt;
+    line-height: 1.5;
 }
 
-.text-container {
-    max-width: 80vw;
-    padding-bottom: 2%;
+/* title + year, on their own at the top */
+.title-row {
+    padding: 4px 0 20px;
 }
 
-.project-title {
-    padding-bottom: 2%;
+.title-row h1 {
+    font-size: 22pt;
+    line-height: 1.1;
 }
 
-.subject {
-    padding-bottom: 5%;
+.title-row .year {
+    margin-top: 2px;
 }
 
-.description {
-    max-width: 50ch;
-    padding: 2% 0 5%;
+.hero img,
+.hero video {
+    display: block;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
 }
 
-.media-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* info rows: overview · context · deliverables (or your own) */
+.project-info {
+    padding: 28px 0 12px;
 }
 
-.media-container > * {
-    width: 80vw;
+.row {
+    display: grid;
+    gap: 8px;
+    padding-bottom: 28px;
+}
+
+/* the row labels read as headings */
+.row h2 { font-weight: 600; }
+
+.text p + p { margin-top: 1em; }
+
+/* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
+   on phones the list is indented under its heading */
+.context {
+    display: grid;
+    grid-template-columns: minmax(84px, max-content) minmax(0, 1fr);
+    gap: 8px 16px;
+    padding-left: 14px;
+}
+
+/* images: one full width, or two across, with notes under them */
+.project-section {
+    padding-bottom: 20px;
+}
+
+.section-media {
+    display: grid;
+    gap: 20px;
+}
+
+.section-media img,
+.section-media video {
+    display: block;
+    width: 100%;
     height: auto;
-    margin: 2%;
 }
+
+figcaption {
+    font-size: 10pt;
+    margin-top: 8px;
+    max-width: 60ch;
+}
+
+/* previous / next: plain text, no line above */
+.next-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 0 32px;
+}
+
+.next-link { position: relative; }
+.next-link.next { text-align: right; }
+
+.peek { display: none; }
+
+.not-found { padding: 40px 0; }
 
 @media (min-width: 601px) {
     .project {
-        padding: 5% 15% 1%;
+        padding-top: 28px;
+        font-size: 12pt;
     }
 
-    .project-title {
-        font-size: 46pt;
+    .title-row {
+        padding: 0 0 24px;
     }
 
-    .subject {
-        padding-bottom: 2%;
+    .title-row h1 { font-size: 28pt; }
+
+    .project-info { padding: 40px 0 24px; }
+
+    /* desktop: the hero comes first, short enough that the title still shows on the first screen
+       (phones keep the title first) */
+    .project { display: flex; flex-direction: column; }
+    .hero { order: -1; }
+    .title-row { padding-top: 24px; }
+    .hero img,
+    .hero video { max-height: calc(100vh - 230px); }
+
+    .context {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        gap: 10px 24px;
+        padding-left: 0;
     }
 
-    .description {
-        max-width: 70ch;
-        padding-bottom: 0;
+    .row {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr); /* fixed widths: long text wraps instead of stretching a column */
+        column-gap: 24px;
+        padding-bottom: 40px;
     }
 
-    .media-container > * {
-        width: 70vw;
-        margin: 1%;
+    /* the content always takes columns 2–3 */
+    .row > :not(h2) { grid-column: 2 / 4; }
+    .text { max-width: 70ch; }
+
+    .project-section { padding-bottom: 32px; }
+
+    .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
+
+    .layout-pair .section-media {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+    }
+
+    /* hovering previous / next shows a small preview */
+    .peek {
+        display: block;
+        width: 220px;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: 5;
+    }
+    .next-link:hover .peek { visibility: visible; }
+
+    /* centred just above the link text */
+    .peek {
+        position: absolute;
+        bottom: calc(100% + 14px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .peek video,
+    .peek img {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 }

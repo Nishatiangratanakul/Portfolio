@@ -3,7 +3,31 @@
         "title": "unspoken dialogue",
         "subject": "book design",
         "year": "2026",
-        "description": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations with people reflecting on these themes form a loose constellation of stories that circle around endings without resolving them. What emerges is less a single argument and more a durational encounter with how people speak, hesitate, redirect, and fall silent when asked to stay with death. By holding intimate narratives in a form that can be returned to, reread, and carried, the project opens a gentle, persistent space for reflection. In doing so, it suggests that design can accompany difficult conversations—not to solve or explain them, but to keep them possible, and keep them open.",
+        "summary": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations form a loose constellation of stories that circle around endings without resolving them.",
+        "details": [
+            ["role", "designer, interviewer, editor"],
+            ["duration", "8 months"],
+            ["skills", "editorial design, interviewing, bookbinding"],
+            ["collaborators", "six conversation partners"],
+            ["printing", "digitally printed, perfect bound"]
+        ],
+        "deliverables": "A book of six transcribed conversations, each introduced by a chart of how that person thinks about death, with fold-out pages woven between the text. By holding these narratives in a form that can be returned to, reread, and carried, the book opens a gentle, persistent space for reflection.",
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    { "src": "unspokendialogue/media-2.jpg", "caption": "The introduction: all of us will die at some point, but the ways we think about it are never the same." },
+                    { "src": "unspokendialogue/media-3.mp4", "caption": "Each conversation opens with a chart of how that person thinks about death: practical, fearful, reflective, spiritual, secular." }
+                ]
+            },
+            {
+                "media": [{ "src": "unspokendialogue/media-5.mp4", "caption": "Fold-out pages sit over the transcript, like something left unsaid." }]
+            },
+            {
+                "layout": "pair",
+                "media": ["unspokendialogue/media-4.jpg", "unspokendialogue/media-6.jpg"]
+            }
+        ],
         "media1": "unspokendialogue/media-1.jpg",
         "media2": "unspokendialogue/media-2.jpg",
         "media3": "unspokendialogue/media-3.mp4",

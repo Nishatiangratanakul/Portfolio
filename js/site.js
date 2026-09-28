@@ -8,7 +8,7 @@ function slugify(title) {
     return title.toLowerCase().replace(/\s+/g, '-');
 }
 
-/* info: the "info" link in the header opens this. Edit your text here. */
+/* about: the "about" link in the header opens this. Edit your text here. */
 
 const INFO = {
     bio: 'Nisha is a New York–based designer working across books, print, and branding. Her process often begins with research and conversation. She’s drawn to shared human experience: the ways we talk (or don’t) about grief, the languages we switch between, and the tables we gather around. A graduate of Parsons School of Design, she’s happiest making things that bring people together, whether that’s a book, an event, or just a really good meal.',
@@ -37,7 +37,7 @@ document.body.insertAdjacentHTML('afterbegin', `
             <nav class="site-nav">
                 <a href="${ROOT}index.html">work</a>
                 <a href="${ROOT}funshit/index.html">fun shit</a>
-                <button class="info-toggle" aria-expanded="false" aria-controls="info">info</button>
+                <button class="info-toggle" aria-expanded="false" aria-controls="info">about</button>
             </nav>
         </div>
         <section class="info" id="info" hidden>
@@ -52,7 +52,7 @@ document.body.insertAdjacentHTML('afterbegin', `
     </header>
 `);
 
-// "info" opens and closes the info (and ?info in the URL opens it, e.g. from the old about page)
+// "about" opens and closes the info (and ?info in the URL opens it, e.g. from the old about page)
 const infoButton = document.querySelector('.info-toggle');
 const infoSection = document.getElementById('info');
 function setInfo(open) {
