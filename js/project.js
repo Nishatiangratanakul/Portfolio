@@ -13,7 +13,8 @@
 //   "sections":     the blocks below, in order. Each is either images or a text row:
 //                   { "layout": "full" | "pair" | "trio" | "row", "media": ["folder/a.jpg", { "src": "folder/b.mp4", "caption": "a note" }] }
 //                   { "layout": "gallery", "media": [{ "src": "big.jpg", "thumb": "small.jpg", "caption": "…" }, …] }
-//                     thumbnails in a row; clicking one opens it full screen, where clicking again zooms in
+//                     thumbnails in a row (or "columns": 3 for rows of three); clicking one opens it
+//                     full screen, where clicking again zooms in
 //                   { "label": "a new part", "text": "…" }
 //                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
@@ -94,6 +95,8 @@ function createSection(section, title) {
     el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
+    if (section.columns) grid.style.setProperty('--cols', section.columns);
+    if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
     items.forEach(({ src, thumb, caption }, i) => {
         const figure = document.createElement('figure');

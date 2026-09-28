@@ -29,20 +29,17 @@
                 "media": ["unspokendialogue/media-4.jpg", "unspokendialogue/media-6.jpg"]
             },
             {
-                "dark": true,
-                "media": ["unspokendialogue/posters.jpg"]
-            },
-            {
                 "label": "posters",
                 "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data was my way of trying to understand it."
             },
             {
                 "layout": "gallery",
+                "columns": 3,
                 "dark": true,
                 "media": [
                     { "src": "unspokendialogue/poster-questions.jpg", "thumb": "unspokendialogue/poster-questions-thumb.jpg", "caption": "Spoken: the questions" },
                     { "src": "unspokendialogue/poster-defining.jpg", "thumb": "unspokendialogue/poster-defining-thumb.jpg", "caption": "Spoken: defining death and dying" },
-                    { "src": "unspokendialogue/poster-180-minutes.jpg", "thumb": "unspokendialogue/poster-180-minutes-thumb.jpg", "caption": "Spoken: death, die and dying in 180 minutes of conversation" },
+                    { "src": "unspokendialogue/poster-180-minutes.jpg", "thumb": "unspokendialogue/poster-180-minutes-thumb.jpg", "caption": "Spoken: death, die and dying in 115 minutes of conversation" },
                     { "src": "unspokendialogue/poster-silence.jpg", "thumb": "unspokendialogue/poster-silence-thumb.jpg", "caption": "Unspoken: speech and silence" },
                     { "src": "unspokendialogue/poster-rhythm.jpg", "thumb": "unspokendialogue/poster-rhythm-thumb.jpg", "caption": "Unspoken: the rhythm of a conversation" },
                     { "src": "unspokendialogue/poster-emotions.jpg", "thumb": "unspokendialogue/poster-emotions-thumb.jpg", "caption": "Unspoken: changes in emotion within dialogue" }
@@ -50,25 +47,31 @@
             },
             {
                 "label": "origami",
-                "text": "Each poster has its own origami."
+                "text": "Each poster comes from one interview, and each interview has its own origami. The back of every poster is printed with a grid, so it can be torn apart and folded."
             },
             {
-                "layout": "row",
                 "dark": true,
-                "media": [
-                    { "src": "unspokendialogue/fold-pinwheel.mp4", "caption": "pinwheel · the questions" },
-                    { "src": "unspokendialogue/fold-dog.mp4", "caption": "dog · defining death and dying" },
-                    { "src": "unspokendialogue/fold-butterfly.mp4", "caption": "butterfly · 180 minutes" },
-                    { "src": "unspokendialogue/fold-bird.mp4", "caption": "bird · speech and silence" },
-                    { "src": "unspokendialogue/fold-fish.mp4", "caption": "fish · changes in emotion" }
-                ]
+                "media": ["unspokendialogue/origami.mp4"]
             },
             {
                 "label": "letter packets",
                 "text": "At the Parsons thesis fair, visitors could take home a letter packet: a letter, a reflection card, a death graph, a prompt card and an origami to fold."
             },
             {
+                "dark": true,
                 "media": ["unspokendialogue/packet.mp4"]
+            },
+            {
+                "layout": "gallery",
+                "dark": true,
+                "media": [
+                    { "src": "unspokendialogue/packet-envelope.jpg", "thumb": "unspokendialogue/packet-envelope-thumb.jpg", "caption": "The glassine envelope" },
+                    { "src": "unspokendialogue/packet-letter.jpg", "thumb": "unspokendialogue/packet-letter-thumb.jpg", "caption": "The letter" },
+                    { "src": "unspokendialogue/packet-reflection.jpg", "thumb": "unspokendialogue/packet-reflection-thumb.jpg", "caption": "Reflection card" },
+                    { "src": "unspokendialogue/packet-graph.jpg", "thumb": "unspokendialogue/packet-graph-thumb.jpg", "caption": "Death graph" },
+                    { "src": "unspokendialogue/packet-prompt.jpg", "thumb": "unspokendialogue/packet-prompt-thumb.jpg", "caption": "Prompt card" },
+                    { "src": "unspokendialogue/packet-origami-card.jpg", "thumb": "unspokendialogue/packet-origami-card-thumb.jpg", "caption": "Origami card" }
+                ]
             }
         ],
         "media1": "unspokendialogue/media-1.jpg",
