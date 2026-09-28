@@ -71,13 +71,11 @@ function showProject(project, visible) {
     showNextBar(project, visible);
 }
 
-// a label on the left, then text, a two-column list, or bullet points across the other two columns
+// a label on the left, then text and/or bullet points, or a two-column list, across the other two columns
 function infoRow({ label, text, list, items }) {
     const body = list
         ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join('')}</dl>`
-        : items
-        ? `<ul class="text bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>`
-        : `<div class="text">${fmt(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;
+        : `<div class="text">${text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : ''}${items ? `<ul class="bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}</div>`;
     return `<div class="row" id="${slugId(label || '')}"><h2>${esc(label || '')}</h2>${body}</div>`;
 }
 
