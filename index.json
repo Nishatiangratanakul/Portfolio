@@ -45,13 +45,13 @@
             },
             {
                 "media": [
-                    "unspokendialogue/book-stack.jpg"
+                    "unspokendialogue/media-6.jpg"
                 ]
             },
             {
                 "layout": "pair",
                 "media": [
-                    "unspokendialogue/book-cover-uv.jpg",
+                    "unspokendialogue/media-2.jpg",
                     "unspokendialogue/book-cover-detail.jpg"
                 ],
                 "caption": "Parts of the cover are printed in UV, so the chart only shows when the light catches it: a slight intangibility, like the line between what is spoken and what isn’t."
@@ -82,7 +82,7 @@
                 "layout": "pair",
                 "media": [
                     "unspokendialogue/media-4.jpg",
-                    "unspokendialogue/media-6.jpg"
+                    "unspokendialogue/book-what-do-we-miss.jpg"
                 ]
             },
             {

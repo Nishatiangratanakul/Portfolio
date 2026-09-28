@@ -266,12 +266,9 @@ figcaption {
     .text { max-width: 70ch; }
 
     .project-section { padding-bottom: 32px; }
-    /* notes under a full-width block start where the text column starts, and run to the edge */
+    /* notes under a full-width block run the whole width of the picture */
     .layout-full figcaption,
-    .project-section > figcaption {
-        margin-left: calc((100% - 48px) * 2 / 5 + 24px);
-        max-width: none;
-    }
+    .project-section > figcaption { max-width: none; }
 
     .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
 
