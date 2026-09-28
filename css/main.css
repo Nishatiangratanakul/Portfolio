@@ -4,6 +4,7 @@
     --red: #E20909;
     --line: 1.5px solid var(--red);
     --gutter: 5%; /* page side margins (100px on desktop, below) */
+    --black: #060708; /* the black behind the posters, origami and scans */
 }
 
 /* cursors, all in the site red: an arrow; a clear arrow over anything clickable;

@@ -11,8 +11,11 @@
 //   "rows":         [{ "label": "…", "text": "…" } or { "label": "…", "list": [["a", "b"], …] }, …]
 //                   your own info rows instead of description · context · deliverables
 //   "sections":     the blocks below, in order. Each is either images or a text row:
-//                   { "layout": "full" | "pair" | "trio", "media": ["folder/a.jpg", { "src": "folder/b.mp4", "caption": "a note" }] }
+//                   { "layout": "full" | "pair" | "trio" | "row", "media": ["folder/a.jpg", { "src": "folder/b.mp4", "caption": "a note" }] }
+//                   { "layout": "gallery", "media": [{ "src": "big.jpg", "thumb": "small.jpg", "caption": "…" }, …] }
+//                     thumbnails in a row; clicking one opens it full screen, where clicking again zooms in
 //                   { "label": "a new part", "text": "…" }
+//                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
 
 const slug = new URLSearchParams(location.search).get('p');
@@ -88,18 +91,101 @@ function createSection(section, title) {
         return row;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
-    (section.media || []).forEach((item, i) => {
-        const { src, caption } = typeof item === 'string' ? { src: item } : item;
+    const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
+    items.forEach(({ src, thumb, caption }, i) => {
         const figure = document.createElement('figure');
-        figure.appendChild(createMedia(src, `${title}, image ${i + 1}`, true));
-        if (caption) figure.insertAdjacentHTML('beforeend', `<figcaption>${esc(caption)}</figcaption>`);
+        if (section.layout === 'gallery') {
+            // a thumbnail that opens the full image
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.setAttribute('aria-label', `open ${caption || `image ${i + 1}`}`);
+            button.appendChild(createImage(`assets/${thumb || src}`, caption || `${title}, image ${i + 1}`, true));
+            button.addEventListener('click', () => openLightbox(items, i, title));
+            figure.appendChild(button);
+        } else {
+            figure.appendChild(createMedia(src, `${title}, image ${i + 1}`, true));
+            if (caption) figure.insertAdjacentHTML('beforeend', `<figcaption>${esc(caption)}</figcaption>`);
+        }
         grid.appendChild(figure);
     });
     el.appendChild(grid);
     return el;
+}
+
+// Full screen on black: < > (or arrow keys) to step, Esc or × to close.
+// Clicking the image zooms in to about its real size; move the mouse (or drag on a phone) to look around.
+let lightbox;
+function openLightbox(items, start, title) {
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.innerHTML = `
+            <div class="lb-stage"><img alt=""></div>
+            <div class="lb-bar">
+                <p class="lb-caption"></p>
+                <div class="lb-nav">
+                    <span class="lb-count"></span>
+                    <button type="button" data-step="-1" aria-label="previous">&lt;</button>
+                    <button type="button" data-step="1" aria-label="next">&gt;</button>
+                    <button type="button" class="lb-close" aria-label="close">×</button>
+                </div>
+            </div>`;
+        document.body.appendChild(lightbox);
+    }
+    const stage = lightbox.querySelector('.lb-stage');
+    const img = stage.querySelector('img');
+    let at = start;
+
+    const show = () => {
+        const item = items[at];
+        stage.classList.remove('zoomed');
+        img.src = `assets/${item.src}`;
+        img.alt = item.caption || `${title}, image ${at + 1}`;
+        lightbox.querySelector('.lb-caption').textContent = item.caption || '';
+        lightbox.querySelector('.lb-count').textContent = `${at + 1} / ${items.length}`;
+        [-1, 1].forEach(d => { new Image().src = `assets/${items[(at + d + items.length) % items.length].src}`; });
+    };
+    const step = d => { at = (at + d + items.length) % items.length; show(); };
+    const pan = e => {
+        if (!stage.classList.contains('zoomed')) return;
+        const r = stage.getBoundingClientRect();
+        stage.scrollLeft = (e.clientX - r.left) / r.width * (stage.scrollWidth - r.width);
+        stage.scrollTop = (e.clientY - r.top) / r.height * (stage.scrollHeight - r.height);
+    };
+    const close = () => {
+        lightbox.hidden = true;
+        document.documentElement.style.overflow = '';
+        removeEventListener('keydown', onKey);
+    };
+    const onKey = e => {
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowRight') step(1);
+        if (e.key === 'ArrowLeft') step(-1);
+    };
+
+    // fresh handlers each time it opens (this gallery's images)
+    lightbox.querySelector('.lb-nav').onclick = e => {
+        const b = e.target.closest('[data-step]');
+        if (b) step(+b.dataset.step);
+        if (e.target.closest('.lb-close')) close();
+    };
+    img.onclick = e => {
+        const zoomed = stage.classList.toggle('zoomed');
+        // zoom in on the spot that was clicked (mouse) or leave it for dragging (touch)
+        if (zoomed && e.pointerType !== 'touch') requestAnimationFrame(() => pan(e));
+    };
+    stage.onmousemove = pan;
+    stage.onclick = e => { if (e.target === stage) close(); };
+
+    lightbox.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    addEventListener('keydown', onKey);
+    show();
 }
 
 function createMedia(file, alt, lazy) {

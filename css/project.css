@@ -87,6 +87,91 @@ figcaption {
     max-width: 60ch;
 }
 
+/* "dark": the block sits on black, like the posters and origami */
+.dark .section-media {
+    background: var(--black);
+    padding: 20px;
+}
+.dark figcaption { color: #fff; }
+
+/* a row: everything side by side (3 across on phones) */
+.layout-row .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+/* gallery: thumbnails; each opens full screen */
+.layout-gallery .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.layout-gallery button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: var(--cursor-open);
+}
+.layout-gallery button img { transition: opacity 0.15s; }
+.layout-gallery button:hover img { opacity: 0.85; }
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    color: #fff;
+}
+.lightbox[hidden] { display: none; }
+
+.lb-stage {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.lb-stage img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: var(--cursor-open);
+}
+/* zoomed: the image at up to 2.5x the screen height; scrolls (and follows the mouse) inside the stage */
+.lb-stage.zoomed {
+    display: block;
+    overflow: auto;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.lb-stage.zoomed::-webkit-scrollbar { display: none; }
+.lb-stage.zoomed img {
+    max-width: none;
+    max-height: none;
+    height: 250vh;
+    display: block;
+    margin: 0 auto;
+    cursor: zoom-out;
+}
+
+.lb-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 12px var(--gutter) 16px;
+    font-size: 11pt;
+}
+.lb-nav { display: flex; gap: 14px; align-items: baseline; white-space: nowrap; }
+.lb-nav button {
+    background: none;
+    border: 0;
+    padding: 0 2px;
+    color: #fff;
+    font: inherit;
+    font-size: 14pt;
+}
+.lb-count { opacity: 0.6; }
+
 /* previous / next: plain text, no line above */
 .next-bar {
     display: flex;
@@ -143,6 +228,11 @@ figcaption {
     .project-section { padding-bottom: 32px; }
 
     .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
+
+    .dark .section-media { padding: 40px; }
+    .layout-row .section-media,
+    .layout-gallery .section-media { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+    .lb-stage { padding: 32px; }
 
     .layout-pair .section-media {
         grid-template-columns: 1fr 1fr;

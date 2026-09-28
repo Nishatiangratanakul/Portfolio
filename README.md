@@ -50,7 +50,8 @@ Each project is one entry in `index.json`. Only `title`, `year`, `description` a
 - **Work list:** shows `title`, then `format` (or `subject` if there's no format), then `year`. Hovering plays `preview` (or shows `icon`).
 - **Info rows** (under the title): `summary` → description, `details` → context, `deliverables` → deliverables. For different rows, use `"rows"` instead, in any order:
   `"rows": [{ "label": "description", "text": "…" }, { "label": "materials", "list": [["paper", "…"]] }]`
-- **Sections** (below) run in the order you list them. An image block is `full` (one), `pair` (two) or `trio` (three) across. Each image can be a plain path, or `{ "src": …, "caption": … }` for a note under it. A block with `label` + `text` and no `media` is a text row.
+- **Sections** (below) run in the order you list them. An image block is `full` (one), `pair` (two), `trio` (three) or `row` (all of them side by side) across. Each image can be a plain path, or `{ "src": …, "caption": … }` for a note under it. A block with `label` + `text` and no `media` is a text row. Add `"dark": true` to put an image block on black.
+- **Gallery:** `"layout": "gallery"` shows thumbnails in a row; clicking one opens it full screen (click again to zoom in, arrows to step through). Give each image a small `thumb` next to its full-size `src`: `{ "src": "a.jpg", "thumb": "a-thumb.jpg", "caption": "…" }`.
 - No `sections`? The `media1`, `media2`… images are laid out automatically, one then two across.
 - **Videos:** use `.mp4`. They play silently on loop with no controls. Add a `-poster.jpg` of the first frame next to each (e.g. `media-3.mp4` → `media-3-poster.jpg`); it shows while loading and on phones that block autoplay.
 - **Hide a project** from the work list with `"hidden": true`. Its page still works if someone has the link.
