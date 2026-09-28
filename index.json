@@ -1,5 +1,5 @@
 [
-    {
+     {
         "title": "unspoken dialogue",
         "subject": "book design",
         "year": "2026",
@@ -62,27 +62,18 @@
                 ]
             },
             {
-                "media": [
-                    {
-                        "src": "unspokendialogue/media-5.mp4",
-                        "caption": "Fold-out pages sit over the transcript, like something left unsaid."
-                    }
-                ]
-            },
-            {
-                "dark": true,
-                "media": [
-                    {
-                        "src": "unspokendialogue/origami.jpg",
-                        "caption": "Each conversation’s closing section ends with an origami to fold, one for each person and chosen to echo their interview. Folding is meant to be meditative: less like making a wish, more like folding a thousand cranes for someone you care about."
-                    }
-                ]
-            },
-            {
                 "layout": "pair",
                 "media": [
                     "unspokendialogue/media-4.jpg",
                     "unspokendialogue/book-what-do-we-miss.jpg"
+                ]
+            },
+            {
+                "media": [
+                    {
+                        "src": "unspokendialogue/media-5.mp4",
+                        "caption": "Each conversation’s closing section ends with an origami to fold, one for each person and chosen to echo their interview. Folding is meant to be meditative: less like making a wish, more like folding a thousand cranes for someone you care about."
+                    }
                 ]
             },
             {
@@ -127,6 +118,15 @@
                         "src": "unspokendialogue/poster-emotions.jpg",
                         "thumb": "unspokendialogue/poster-emotions-tile.jpg",
                         "caption": "Unspoken: changes in emotion within dialogue"
+                    }
+                ]
+            },
+            {
+                "dark": true,
+                "media": [
+                    {
+                        "src": "unspokendialogue/origami.jpg",
+                        "caption": "Each poster with the origami from the same conversation."
                     }
                 ]
             },

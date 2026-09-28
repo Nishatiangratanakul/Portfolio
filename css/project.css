@@ -246,8 +246,9 @@ figcaption {
     .project { display: flex; flex-direction: column; }
     .hero { order: -1; }
     .title-row { padding-top: 24px; }
+    /* as tall as the screen allows while the title still shows without scrolling */
     .hero img,
-    .hero video { max-height: calc(100vh - 230px); }
+    .hero video { height: calc(100vh - 230px); min-height: 380px; max-height: 1100px; }
 
     .context {
         grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
