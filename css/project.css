@@ -274,6 +274,7 @@ figcaption {
     .project-section { padding-bottom: 32px; }
     /* notes under a full-width block run the whole width of the picture */
     .layout-full figcaption,
+    .layout-pair figcaption,
     .project-section > figcaption { max-width: none; }
 
     .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }

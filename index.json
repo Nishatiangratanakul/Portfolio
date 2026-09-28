@@ -242,9 +242,9 @@
                 "label": "three voices",
                 "text": "Every chapter moves through three kinds of pages, each doing a different job:",
                 "items": [
-                    "White pages pose the question, opening each chapter with image and a few quiet lines.",
-                    "Grey pages widen it, bringing in voices from outside to inform and complicate it.",
-                    "Black pages turn it inward, a reflection that sits with what came before."
+                    "White pages pose the question, opening each chapter with images.",
+                    "Grey pages widen it, bringing in outside voices to inform.",
+                    "Black pages turn inward, with a reflection."
                 ]
             },
             {
@@ -259,107 +259,37 @@
                 "items": [
                     "Contemplating Death: an opening that sets up the cycle.",
                     "Mourning Death: grief, and how it moves through time.",
-                    "Spiritual Death: what different beliefs hold happens after.",
-                    "Physical Death: the body, kept at a distance.",
-                    "Thresholds and Dreams: the space between living and dying.",
-                    "Sitting with Death: staying with it, rather than resolving it."
+                    "Spiritual Death: the different beliefs about what happens after death.",
+                    "Physical Death: the body, the most real side of death, and the book’s turning point.",
+                    "Thresholds and Dreams: the space between reality and whatever comes next.",
+                    "Sitting with Death: understanding that the subject doesn’t end, and is lifelong."
                 ]
             },
             {
-                "dark": true,
+                "layout": "pair",
                 "media": [
-                    "contemplatingdeath/mourning-diary.mp4"
-                ],
-                "caption": "In *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
+                    {
+                        "src": "contemplatingdeath/mourning-diary.mp4",
+                        "caption": "In the chapter *Mourning Death*, Roland Barthes’ *Mourning Diary*, kept for two years after his mother’s death, runs one entry per page beneath photographs of the same woods through the seasons."
+                    },
+                    {
+                        "src": "contemplatingdeath/french-fold.mp4",
+                        "caption": "*Physical Death* is French-folded: its images are hidden inside the folds, faint enough that you can only half see them, holding both the shock of it and the distance."
+                    }
+                ]
             },
             {
-                "layout": "viewer",
-                "dark": true,
+                "layout": "pair",
                 "media": [
                     {
-                        "src": "contemplatingdeath/spread-196-197.jpg",
-                        "thumb": "contemplatingdeath/spread-196-197-tile.jpg"
+                        "src": "contemplatingdeath/diagrams.mp4",
+                        "caption": "Diagrams in the grey pages turn the readings into something visible, a first step towards the data-visualization posters of *Unspoken Dialogue*."
                     },
                     {
-                        "src": "contemplatingdeath/spread-184-185.jpg",
-                        "thumb": "contemplatingdeath/spread-184-185-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-188-189.jpg",
-                        "thumb": "contemplatingdeath/spread-188-189-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-200-201.jpg",
-                        "thumb": "contemplatingdeath/spread-200-201-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-212-213.jpg",
-                        "thumb": "contemplatingdeath/spread-212-213-tile.jpg"
+                        "src": "contemplatingdeath/colour.mp4",
+                        "caption": "In the later chapters colour comes in, as death stops being something black and white."
                     }
-                ],
-                "caption": "In *Physical Death*, the images are hidden inside French-folded pages, faint enough to only half see: the shock of it, held at a distance."
-            },
-            {
-                "layout": "viewer",
-                "dark": true,
-                "media": [
-                    {
-                        "src": "contemplatingdeath/spread-42-43.jpg",
-                        "thumb": "contemplatingdeath/spread-42-43-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-48-49.jpg",
-                        "thumb": "contemplatingdeath/spread-48-49-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-156-157.jpg",
-                        "thumb": "contemplatingdeath/spread-156-157-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-162-163.jpg",
-                        "thumb": "contemplatingdeath/spread-162-163-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-174-175.jpg",
-                        "thumb": "contemplatingdeath/spread-174-175-tile.jpg"
-                    }
-                ],
-                "caption": "Diagrams in the grey pages turn the readings into something visible, a first step towards the data-visualization posters of *Unspoken Dialogue*."
-            },
-            {
-                "layout": "viewer",
-                "dark": true,
-                "media": [
-                    {
-                        "src": "contemplatingdeath/spread-232-233.jpg",
-                        "thumb": "contemplatingdeath/spread-232-233-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-226-227.jpg",
-                        "thumb": "contemplatingdeath/spread-226-227-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-228-229.jpg",
-                        "thumb": "contemplatingdeath/spread-228-229-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-234-235.jpg",
-                        "thumb": "contemplatingdeath/spread-234-235-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-236-237.jpg",
-                        "thumb": "contemplatingdeath/spread-236-237-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-270-271.jpg",
-                        "thumb": "contemplatingdeath/spread-270-271-tile.jpg"
-                    },
-                    {
-                        "src": "contemplatingdeath/spread-272-273.jpg",
-                        "thumb": "contemplatingdeath/spread-272-273-tile.jpg"
-                    }
-                ],
-                "caption": "In the later chapters colour comes in, as death stops being something black and white."
+                ]
             },
             {
                 "label": "index",
