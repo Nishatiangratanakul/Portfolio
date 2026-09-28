@@ -105,7 +105,11 @@ function createSection(section, title) {
     if (section.columns) grid.style.setProperty('--cols', section.columns);
     if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
-    if (section.layout === 'viewer') return buildViewer(el, grid, items, title);
+    if (section.layout === 'viewer') {
+        buildViewer(el, grid, items, title);
+        if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
+        return el;
+    }
     items.forEach(({ src, thumb, caption }, i) => {
         const figure = document.createElement('figure');
         if (section.layout === 'gallery') {
