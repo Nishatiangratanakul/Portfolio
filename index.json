@@ -252,14 +252,13 @@
             },
             {
                 "label": "six chapters",
-                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in.",
                 "items": [
-                    "Contemplating Death: an opening that sets up the cycle.",
-                    "Mourning Death: grief, and how it moves through time.",
-                    "Spiritual Death: the different beliefs about what happens after death.",
-                    "Physical Death: the body, the most real side of death, and the book’s turning point.",
-                    "Thresholds and Dreams: the space between reality and whatever comes next.",
-                    "Sitting with Death: understanding that the subject doesn’t end, and is lifelong."
+                    "Contemplating Death",
+                    "Mourning Death",
+                    "Spiritual Death",
+                    "Physical Death",
+                    "Thresholds and Dreams",
+                    "Sitting with Death"
                 ]
             },
             {
@@ -328,16 +327,25 @@
                 "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
             },
             {
-                "layout": "pair",
+                "layout": "viewer",
+                "dark": true,
                 "media": [
-                    "contemplatingdeath/index.mp4",
                     {
-                        "src": "contemplatingdeath/index-front-card.jpg",
-                        "back": "contemplatingdeath/index-back-card.jpg"
+                        "src": "contemplatingdeath/index.mp4",
+                        "thumb": "contemplatingdeath/index-loop-thumb.jpg",
+                        "caption": "The index poster"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-front.jpg",
+                        "thumb": "contemplatingdeath/index-front-thumb.jpg",
+                        "caption": "Images side"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-back.jpg",
+                        "thumb": "contemplatingdeath/index-back-thumb.jpg",
+                        "caption": "Index side"
                     }
-                ],
-                "caption": "Click the poster to turn it over.",
-                "upright": true
+                ]
             }
         ]
     },

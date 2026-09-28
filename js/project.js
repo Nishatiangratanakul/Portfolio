@@ -171,7 +171,7 @@ function buildViewer(el, grid, items, title) {
         const button = document.createElement('button');
         button.type = 'button';
         button.setAttribute('aria-label', item.caption || `image ${i + 1}`);
-        button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', true));
+        button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', false)); // small; load straight away
         button.addEventListener('click', () => show(i));
         thumbs.appendChild(button);
     });
