@@ -74,7 +74,7 @@ function showProject(project, visible) {
 // a label on the left, then text, a two-column list, or bullet points across the other two columns
 function infoRow({ label, text, list, items }) {
     const body = list
-        ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`
+        ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join('')}</dl>`
         : items
         ? `<ul class="text bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>`
         : `<div class="text">${fmt(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;

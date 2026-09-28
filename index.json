@@ -1,5 +1,5 @@
 [
-     {
+    {
         "title": "unspoken dialogue",
         "subject": "book design",
         "year": "2026",
@@ -24,7 +24,11 @@
             ],
             [
                 "production",
-                "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"
+                "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges, tape binding"
+            ],
+            [
+                "related",
+                "[contemplating death](project.html?p=contemplating-death), the first exploration for this project"
             ]
         ],
         "deliverables": [
@@ -197,15 +201,302 @@
         "year": "2025",
         "description": "This project is an exploration of mortality as a subject of contemplation rather than reaction. Often, we confront death through grief, loss, or tragedy: external events that force reflection. In this work, I sought to approach death on my own terms, to consider it holistically and without emotional catalysts. The resulting book is divided into six chapters that move from the most tangible forms of death to the most abstract, from grief and physical loss to dreams, spirituality, and the in-between. Structured through three recurring “voices”—white, gray, and black pages—the book invites readers into a cyclical process of questioning, absorbing, and reflecting. Each section prompts contemplation not only of death itself, but of how our understanding of mortality deepens our relationship with life.",
         "summary": "An exploration of mortality as a subject of contemplation rather than reaction. Instead of meeting death through grief or tragedy, this project approaches it on my own terms: holistically, and without an emotional catalyst.",
-        "deliverables": "A book in six chapters, moving from the most tangible forms of death (grief, physical loss) to the most abstract (dreams, spirituality, the in-between). White, gray, and black pages act as three recurring voices that take the reader through questioning, absorbing, and reflecting.",
+        "deliverables": [
+            "A [book](#three-voices) in six chapters, from the most tangible forms of death to the most abstract.",
+            "A double-sided [index](#index) poster cataloguing every image in the book."
+        ],
         "media1": "contemplatingdeath/media-1.jpg",
         "media2": "contemplatingdeath/media-2.jpg",
-        "media4": "contemplatingdeath/media-4.mp4",
-        "media5": "contemplatingdeath/media-5.mp4",
         "media6": "contemplatingdeath/media-6.jpg",
         "icon": "contemplatingdeath/icon.jpg",
-        "preview": "contemplatingdeath/preview.mp4"
-    },    
+        "preview": "contemplatingdeath/preview.mp4",
+        "hero": "contemplatingdeath/hero.jpg",
+        "details": [
+            [
+                "role",
+                "designer & editor"
+            ],
+            [
+                "duration",
+                "1 month"
+            ],
+            [
+                "skills",
+                "image research, editing & sequencing, writing, InDesign, Photoshop, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Prin Limphongpand, Ingrid Chou"
+            ],
+            [
+                "production",
+                "laser print, risograph (black pages), large-format plotter (index poster); three paper stocks; sewn signatures, Swiss-bound into the cover"
+            ],
+            [
+                "related",
+                "the first exploration for my thesis, [unspoken dialogue](project.html?p=unspoken-dialogue)"
+            ]
+        ],
+        "sections": [
+            {
+                "dark": true,
+                "media": [
+                    "contemplatingdeath/media-6.jpg"
+                ]
+            },
+            {
+                "label": "three voices",
+                "text": "Each chapter moves through three kinds of pages. White pages question: short poetic lines of my own, paired with found images. Grey pages absorb: outside readings that give another perspective. Black, risograph pages reflect: my own writing, looking back on the chapter. Together they trace a path from question to information to reflection, for me while making it and for whoever reads it.\n\nThe cycle bends as the book goes on: some chapters lose their grey pages, some are only reflection."
+            },
+            {
+                "media": [
+                    "contemplatingdeath/flip-through.mp4"
+                ]
+            },
+            {
+                "label": "contemplating death",
+                "text": "The first chapter sets up the cycle: questions and images, then *Questions for Me About Dying*, then the first reflection."
+            },
+            {
+                "layout": "gallery",
+                "columns": 3,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-6-7.jpg",
+                        "thumb": "contemplatingdeath/spread-6-7-thumb.jpg",
+                        "caption": "White: questions and found images"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-18-19.jpg",
+                        "thumb": "contemplatingdeath/spread-18-19-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-42-43.jpg",
+                        "thumb": "contemplatingdeath/spread-42-43-thumb.jpg",
+                        "caption": "Grey: a diagram drawn from the reading"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-48-49.jpg",
+                        "thumb": "contemplatingdeath/spread-48-49-thumb.jpg",
+                        "caption": "Grey"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-58-59.jpg",
+                        "thumb": "contemplatingdeath/spread-58-59-thumb.jpg",
+                        "caption": "Black: reflection"
+                    }
+                ]
+            },
+            {
+                "label": "mourning death",
+                "text": "Roland Barthes’ *Mourning Diary*, the notes he kept for two years after his mother’s death, runs one entry per page beside photographs of the same patch of woods taken across the seasons, so time passes on the page as it does in the diary."
+            },
+            {
+                "dark": true,
+                "media": [
+                    "contemplatingdeath/mourning-diary.mp4"
+                ]
+            },
+            {
+                "layout": "gallery",
+                "columns": 3,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-62-63.jpg",
+                        "thumb": "contemplatingdeath/spread-62-63-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-70-71.jpg",
+                        "thumb": "contemplatingdeath/spread-70-71-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-78-79.jpg",
+                        "thumb": "contemplatingdeath/spread-78-79-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-126-127.jpg",
+                        "thumb": "contemplatingdeath/spread-126-127-thumb.jpg",
+                        "caption": "Black: reflection"
+                    }
+                ]
+            },
+            {
+                "label": "spiritual death",
+                "text": "Readings from the *Tibetan Book of the Dead*, with diagrams I drew to make its ideas easier to hold."
+            },
+            {
+                "layout": "gallery",
+                "columns": 3,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-132-133.jpg",
+                        "thumb": "contemplatingdeath/spread-132-133-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-138-139.jpg",
+                        "thumb": "contemplatingdeath/spread-138-139-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-150-151.jpg",
+                        "thumb": "contemplatingdeath/spread-150-151-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-156-157.jpg",
+                        "thumb": "contemplatingdeath/spread-156-157-thumb.jpg",
+                        "caption": "Grey: the five aggregates"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-162-163.jpg",
+                        "thumb": "contemplatingdeath/spread-162-163-thumb.jpg",
+                        "caption": "Grey: dependent origination"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-174-175.jpg",
+                        "thumb": "contemplatingdeath/spread-174-175-thumb.jpg",
+                        "caption": "Grey: the bardos"
+                    }
+                ]
+            },
+            {
+                "label": "physical death",
+                "text": "This chapter is French-folded. The pages carry only a few words, and the images sit inside the folds, faint enough that you can only half see them. It keeps physical death more of a feeling than something shown."
+            },
+            {
+                "layout": "gallery",
+                "columns": 2,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-196-197.jpg",
+                        "thumb": "contemplatingdeath/spread-196-197-thumb.jpg",
+                        "caption": "French-folded pages"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-200-201.jpg",
+                        "thumb": "contemplatingdeath/spread-200-201-thumb.jpg",
+                        "caption": "French-folded pages"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-212-213.jpg",
+                        "thumb": "contemplatingdeath/spread-212-213-thumb.jpg",
+                        "caption": "French-folded pages"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-222-223.jpg",
+                        "thumb": "contemplatingdeath/spread-222-223-thumb.jpg",
+                        "caption": "Black: reflection"
+                    }
+                ]
+            },
+            {
+                "label": "thresholds and dreams",
+                "text": "Dreams, visitations and the space between: *Do the Dead Visit Us in Our Dreams?*, *The Thin Veil* and *The SAM Visitation*."
+            },
+            {
+                "layout": "gallery",
+                "columns": 3,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-226-227.jpg",
+                        "thumb": "contemplatingdeath/spread-226-227-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-228-229.jpg",
+                        "thumb": "contemplatingdeath/spread-228-229-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-232-233.jpg",
+                        "thumb": "contemplatingdeath/spread-232-233-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-234-235.jpg",
+                        "thumb": "contemplatingdeath/spread-234-235-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-236-237.jpg",
+                        "thumb": "contemplatingdeath/spread-236-237-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-246-247.jpg",
+                        "thumb": "contemplatingdeath/spread-246-247-thumb.jpg",
+                        "caption": "Grey"
+                    }
+                ]
+            },
+            {
+                "label": "sitting with death",
+                "text": "The last chapter is mostly reflection, ending on quiet landscapes."
+            },
+            {
+                "layout": "gallery",
+                "columns": 2,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-262-263.jpg",
+                        "thumb": "contemplatingdeath/spread-262-263-thumb.jpg",
+                        "caption": "Black: reflection"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-264-265.jpg",
+                        "thumb": "contemplatingdeath/spread-264-265-thumb.jpg",
+                        "caption": "Reflection"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-268-269.jpg",
+                        "thumb": "contemplatingdeath/spread-268-269-thumb.jpg",
+                        "caption": "White"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-270-271.jpg",
+                        "thumb": "contemplatingdeath/spread-270-271-thumb.jpg",
+                        "caption": "White"
+                    }
+                ]
+            },
+            {
+                "label": "index",
+                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
+            },
+            {
+                "layout": "viewer",
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/index.mp4",
+                        "thumb": "contemplatingdeath/index-loop-thumb.jpg",
+                        "caption": "The index poster"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-front.jpg",
+                        "thumb": "contemplatingdeath/index-front-thumb.jpg",
+                        "caption": "Images side"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-back.jpg",
+                        "thumb": "contemplatingdeath/index-back-thumb.jpg",
+                        "caption": "Index side"
+                    }
+                ]
+            }
+        ]
+    },
     {
         "title": "lego sans",
         "subject": "typeface design",
@@ -218,7 +509,7 @@
         "media3": "legosans/media-3.jpg",
         "icon": "legosans/icon.jpg",
         "preview": "legosans/preview.mp4"
-    }, 
+    },
     {
         "title": "kowloon",
         "subject": "book design",
@@ -233,7 +524,7 @@
         "media5": "kowloon/media-5.jpg",
         "icon": "kowloon/icon.jpg",
         "preview": "kowloon/preview.mp4"
-    }, 
+    },
     {
         "title": "76 cones",
         "subject": "book design",
