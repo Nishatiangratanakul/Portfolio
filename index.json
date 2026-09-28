@@ -1,5 +1,5 @@
 [
-     {
+    {
         "title": "unspoken dialogue",
         "subject": "book design",
         "year": "2026",
@@ -24,7 +24,7 @@
             ],
             [
                 "production",
-                "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"
+                "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges, tape binding"
             ]
         ],
         "deliverables": [
@@ -196,16 +196,163 @@
         "subject": "book design",
         "year": "2025",
         "description": "This project is an exploration of mortality as a subject of contemplation rather than reaction. Often, we confront death through grief, loss, or tragedy: external events that force reflection. In this work, I sought to approach death on my own terms, to consider it holistically and without emotional catalysts. The resulting book is divided into six chapters that move from the most tangible forms of death to the most abstract, from grief and physical loss to dreams, spirituality, and the in-between. Structured through three recurring “voices”—white, gray, and black pages—the book invites readers into a cyclical process of questioning, absorbing, and reflecting. Each section prompts contemplation not only of death itself, but of how our understanding of mortality deepens our relationship with life.",
-        "summary": "An exploration of mortality as a subject of contemplation rather than reaction. Instead of meeting death through grief or tragedy, this project approaches it on my own terms: holistically, and without an emotional catalyst.",
-        "deliverables": "A book in six chapters, moving from the most tangible forms of death (grief, physical loss) to the most abstract (dreams, spirituality, the in-between). White, gray, and black pages act as three recurring voices that take the reader through questioning, absorbing, and reflecting.",
+        "summary": "Contemplating Death treats mortality as something to think through rather than react to. Death is usually met through grief, loss or tragedy, events that force reflection; this book approaches it slowly and on its own terms, with no emotional catalyst.\n\nBuilt from found images and outside readings, gathered and sequenced into six chapters, it moves from the most tangible forms of death to the most abstract. It isn’t meant to be read once or rushed through: it offers no answers, only a space to pause, to question, and to return to as thoughts shift. Made as the first exploration for Unspoken Dialogue.",
+        "deliverables": [
+            "A [book](#three-voices) in six chapters, from the most tangible forms of death to the most abstract.",
+            "A double-sided [index](#index) poster cataloguing every image in the book."
+        ],
         "media1": "contemplatingdeath/media-1.jpg",
         "media2": "contemplatingdeath/media-2.jpg",
-        "media4": "contemplatingdeath/media-4.mp4",
-        "media5": "contemplatingdeath/media-5.mp4",
         "media6": "contemplatingdeath/media-6.jpg",
         "icon": "contemplatingdeath/icon.jpg",
-        "preview": "contemplatingdeath/preview.mp4"
-    },    
+        "preview": "contemplatingdeath/preview.mp4",
+        "details": [
+            [
+                "role",
+                "designer & editor"
+            ],
+            [
+                "duration",
+                "1 month"
+            ],
+            [
+                "skills",
+                "curation, InDesign, Photoshop, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Prin Limphongpand, Ingrid Chou"
+            ],
+            [
+                "production",
+                "laser print, risograph (black pages), large-format printing (index poster)"
+            ]
+        ],
+        "sections": [
+            {
+                "dark": true,
+                "media": [
+                    "contemplatingdeath/chapter-one.jpg"
+                ]
+            },
+            {
+                "label": "three voices",
+                "text": "Every chapter moves through three kinds of pages, each doing a different job:",
+                "items": [
+                    "White pages pose the question, opening each chapter with images.",
+                    "Grey pages widen it, bringing in outside voices to inform.",
+                    "Black pages turn inward, with a reflection."
+                ]
+            },
+            {
+                "dark": true,
+                "media": [
+                    "contemplatingdeath/chapter-one.mp4"
+                ]
+            },
+            {
+                "label": "chapters",
+                "items": [
+                    "Contemplating Death",
+                    "Mourning Death",
+                    "Spiritual Death",
+                    "Physical Death",
+                    "Thresholds and Dreams",
+                    "Sitting with Death"
+                ],
+                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in."
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "contemplatingdeath/mourning-diary.mp4",
+                    "contemplatingdeath/colour.mp4"
+                ]
+            },
+            {
+                "layout": "viewer",
+                "dark": true,
+                "caption": "*Physical Death* is French-folded: its images are hidden inside the folds, faint enough that you can only half see them, holding both the shock of it and the distance.",
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-196-197.jpg",
+                        "thumb": "contemplatingdeath/spread-196-197-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-184-185.jpg",
+                        "thumb": "contemplatingdeath/spread-184-185-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-188-189.jpg",
+                        "thumb": "contemplatingdeath/spread-188-189-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-200-201.jpg",
+                        "thumb": "contemplatingdeath/spread-200-201-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-212-213.jpg",
+                        "thumb": "contemplatingdeath/spread-212-213-tile.jpg"
+                    }
+                ],
+                "centred": true
+            },
+            {
+                "layout": "viewer",
+                "dark": true,
+                "caption": "Diagrams in the grey pages turn the readings into something visible, a first step towards the data-visualization posters of *Unspoken Dialogue*.",
+                "media": [
+                    {
+                        "src": "contemplatingdeath/spread-42-43.jpg",
+                        "thumb": "contemplatingdeath/spread-42-43-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-48-49.jpg",
+                        "thumb": "contemplatingdeath/spread-48-49-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-156-157.jpg",
+                        "thumb": "contemplatingdeath/spread-156-157-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-162-163.jpg",
+                        "thumb": "contemplatingdeath/spread-162-163-tile.jpg"
+                    },
+                    {
+                        "src": "contemplatingdeath/spread-174-175.jpg",
+                        "thumb": "contemplatingdeath/spread-174-175-tile.jpg"
+                    }
+                ],
+                "centred": true
+            },
+            {
+                "label": "index",
+                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
+            },
+            {
+                "layout": "viewer",
+                "dark": true,
+                "media": [
+                    {
+                        "src": "contemplatingdeath/index.mp4",
+                        "thumb": "contemplatingdeath/index-loop-thumb.jpg",
+                        "caption": "The index poster"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-front.jpg",
+                        "thumb": "contemplatingdeath/index-front-thumb.jpg",
+                        "caption": "Images side"
+                    },
+                    {
+                        "src": "contemplatingdeath/index-back.jpg",
+                        "thumb": "contemplatingdeath/index-back-thumb.jpg",
+                        "caption": "Index side"
+                    }
+                ],
+                "centred": true
+            }
+        ]
+    },
     {
         "title": "lego sans",
         "subject": "typeface design",
@@ -218,7 +365,7 @@
         "media3": "legosans/media-3.jpg",
         "icon": "legosans/icon.jpg",
         "preview": "legosans/preview.mp4"
-    }, 
+    },
     {
         "title": "kowloon",
         "subject": "book design",
@@ -233,7 +380,7 @@
         "media5": "kowloon/media-5.jpg",
         "icon": "kowloon/icon.jpg",
         "preview": "kowloon/preview.mp4"
-    }, 
+    },
     {
         "title": "76 cones",
         "subject": "book design",

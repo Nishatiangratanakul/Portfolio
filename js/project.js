@@ -19,6 +19,8 @@
 //                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
 //                   add "caption": "…" for one note under the whole block
+//                   add "centred": true to a viewer to centre its picture in the whole band, thumbnails over the edge
+//                   an item with "back": "b.jpg" turns over when clicked
 //                   text anywhere can use *italics* and [a link](#posters) to jump to a part of the page
 //                   add "dark": true to put any image block on black
 // Without "sections", the mediaN images/videos are laid out in a mix of one and two across.
@@ -71,13 +73,11 @@ function showProject(project, visible) {
     showNextBar(project, visible);
 }
 
-// a label on the left, then text, a two-column list, or bullet points across the other two columns
+// a label on the left, then text and/or bullet points, or a two-column list, across the other two columns
 function infoRow({ label, text, list, items }) {
     const body = list
-        ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`
-        : items
-        ? `<ul class="text bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>`
-        : `<div class="text">${fmt(text || '').split(/\n\n+/).map(p => `<p>${p}</p>`).join('')}</div>`;
+        ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join('')}</dl>`
+        : `<div class="text">${text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : ''}${items ? `<ul class="bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}</div>`;
     return `<div class="row" id="${slugId(label || '')}"><h2>${esc(label || '')}</h2>${body}</div>`;
 }
 
@@ -101,14 +101,19 @@ function createSection(section, title) {
         return row;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
     if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
-    if (section.layout === 'viewer') return buildViewer(el, grid, items, title);
-    items.forEach(({ src, thumb, caption }, i) => {
+    if (section.layout === 'viewer') {
+        buildViewer(el, grid, items, title);
+        if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
+        return el;
+    }
+    items.forEach((item, i) => {
+        const { src, thumb, caption } = item;
         const figure = document.createElement('figure');
         if (section.layout === 'gallery') {
             // a thumbnail that opens the full image
@@ -119,7 +124,7 @@ function createSection(section, title) {
             button.addEventListener('click', () => openLightbox(items, i, title));
             figure.appendChild(button);
         } else {
-            const media = createMedia(src, `${title}, image ${i + 1}`, true);
+            const media = item.back ? createFlip(src, item.back, caption || title) : createMedia(src, `${title}, image ${i + 1}`, true);
             figure.appendChild(media);
             markPortrait(media, figure);
             // on black, the note sits under the band, like every other note
@@ -166,7 +171,7 @@ function buildViewer(el, grid, items, title) {
         const button = document.createElement('button');
         button.type = 'button';
         button.setAttribute('aria-label', item.caption || `image ${i + 1}`);
-        button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', true));
+        button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', false)); // small; load straight away
         button.addEventListener('click', () => show(i));
         thumbs.appendChild(button);
     });
@@ -176,7 +181,18 @@ function buildViewer(el, grid, items, title) {
     return el;
 }
 
-// Full screen on black: < > (or arrow keys) to step, Esc or × to close.
+// a picture with a back: clicking turns it over (e.g. both sides of a poster)
+function createFlip(front, back, alt) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'flip';
+    button.setAttribute('aria-label', 'turn it over');
+    button.innerHTML = `<span class="flip-inner"><img class="flip-front" src="assets/${front}" alt="${esc(alt)}"><img class="flip-back" src="assets/${back}" alt="${esc(alt)}, back"></span>`;
+    button.addEventListener('click', () => button.classList.toggle('flipped'));
+    return button;
+}
+
+// Full screen on black: < > in the middle (or arrow keys) to step, Esc or × (top right) to close.
 // Clicking the image zooms in to about its real size; move the mouse (or drag on a phone) to look around.
 let lightbox;
 function openLightbox(items, start, title) {
@@ -186,15 +202,15 @@ function openLightbox(items, start, title) {
         lightbox.setAttribute('role', 'dialog');
         lightbox.setAttribute('aria-modal', 'true');
         lightbox.innerHTML = `
+            <button type="button" class="lb-close" aria-label="close">×</button>
             <div class="lb-stage"><img alt=""></div>
             <div class="lb-bar">
                 <p class="lb-caption"></p>
                 <div class="lb-nav">
-                    <span class="lb-count"></span>
                     <button type="button" data-step="-1" aria-label="previous">&lt;</button>
                     <button type="button" data-step="1" aria-label="next">&gt;</button>
-                    <button type="button" class="lb-close" aria-label="close">×</button>
                 </div>
+                <span class="lb-count"></span>
             </div>`;
         document.body.appendChild(lightbox);
     }
@@ -233,8 +249,8 @@ function openLightbox(items, start, title) {
     lightbox.querySelector('.lb-nav').onclick = e => {
         const b = e.target.closest('[data-step]');
         if (b) step(+b.dataset.step);
-        if (e.target.closest('.lb-close')) close();
     };
+    lightbox.querySelector('.lb-close').onclick = close;
     img.onclick = e => {
         const zoomed = stage.classList.toggle('zoomed');
         // zoom in on the spot that was clicked (mouse) or leave it for dragging (touch)
@@ -277,7 +293,7 @@ function createLoopingVideo(src, alt) {
     return video;
 }
 
-// "← previous" and "next →" as plain text; hovering one shows a small preview just above it.
+// "← previous", "↑ top" and "next →" as plain text; hovering previous/next shows a small preview just above it.
 function showNextBar(project, visible) {
     const bar = container.querySelector('.next-bar');
     const i = visible.findIndex(p => p.title === project.title);
@@ -301,5 +317,11 @@ function showNextBar(project, visible) {
         a.addEventListener('mouseleave', () => video?.pause());
         return a;
     };
-    bar.append(link(prev, 'prev'), link(next, 'next'));
+    // back to the top (and the header's work · fun shit · about) from the bottom of a long page
+    const top = document.createElement('a');
+    top.className = 'to-top';
+    top.href = '#';
+    top.textContent = '↑ top';
+    top.addEventListener('click', e => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); });
+    bar.append(link(prev, 'prev'), top, link(next, 'next'));
 }
