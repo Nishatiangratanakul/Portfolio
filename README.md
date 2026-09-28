@@ -5,7 +5,7 @@ Nisha Tiangratanakul's portfolio, [ntiang.com](https://ntiang.com). Plain HTML, 
 ## Where things live
 
 - `index.json`: every project (work list + project pages)
-- `funshit.json`: the fun shit pieces
+- `funshit.json`: the fun shit images
 - `js/site.js`: header, footer and the **about** text (bio, exhibitions & fairs, contact) at the top of the file
 - `assets/<project>/`: each project's images and videos
 
@@ -59,10 +59,6 @@ Each project is one entry in `index.json`. Only `title`, `year`, `description` a
 
 ## Adding to fun shit
 
-Put the images in `assets/funshit/`, then add a piece to `funshit.json`:
+Put the image in `assets/funshit/` and add its file name to the `images` list in `funshit.json`. The newest (last in the list) shows first.
 
-```json
-{ "title": "tassel", "medium": "cord, thread, printed fabric", "year": "2024", "note": "a line or two about it", "images": ["image4.jpg", "image5.jpg"] }
-```
-
-`year` and `note` can be left as `""`. The page shows them in a new random order on every visit. `intro` at the top of the file is the text shown under "fun shit".
+A redesigned fun shit page (a panel with a title, medium, year and note for each piece, and a viewer) is saved on the `funshit-redesign` branch, waiting for those descriptions.

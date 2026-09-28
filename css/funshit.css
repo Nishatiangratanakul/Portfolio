@@ -1,149 +1,22 @@
-/* Fun shit page. Desktop: panel + grid, enlarged view on the right. Phones: one at a time. */
+/* Fun shit page: one column on phones, five on desktop. */
 
-/* ---------- desktop ---------- */
-
-.layout {
+.funshit-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 1fr;
 }
 
-/* the panel: "fun shit" + intro, or the piece you're on */
-.panel {
-    position: sticky;
-    top: 0;
-    align-self: start;
-    min-height: calc(100vh - 75px);
-    border-right: var(--line);
-    padding: 28px 28px 32px var(--gutter);
-    font-size: 12pt;
-    line-height: 1.5;
+@media (min-width: 601px) {
+    .funshit-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
-.panel h1,
-.cinfo h1 {
-    font-size: 26pt;
-    line-height: 1.05;
-}
-
-.panel .line,
-.cinfo .line { margin-top: 8px; }
-
-.panel .note { margin-top: 16px; max-width: 30ch; }
-
-.grid {
-    columns: 3;
-    column-gap: 24px;
-    padding: 24px var(--gutter) 64px 24px;
-}
-
-.grid figure {
-    break-inside: avoid;
-    margin-bottom: 24px;
-    cursor: var(--cursor-open);
-}
-
-.grid img {
+.funshit-image {
     display: block;
-    width: 100%;
-}
-
-/* the enlarged view: fills the space right of the panel, below the header */
-.viewer {
-    position: fixed;
-    top: var(--viewer-top, 0px);
-    left: var(--viewer-left, 320px);
-    right: 0;
-    bottom: 0;
-    z-index: 40;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 20px 4vw 24px;
-    background: white;
-    font-size: 12pt;
-}
-
-.viewer[hidden] { display: none; }
-
-.viewer .back { justify-self: end; }
-
-.viewer .stage {
-    position: relative;
-    min-height: 0;
-    margin: 14px 0;
-}
-
-.viewer .stage img {
-    position: absolute;
-    inset: 0;
-    margin: auto;
+    width: auto;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
-    cursor: var(--cursor-click);
-}
-
-.viewer .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.viewer .nav button { font-size: 14pt; padding: 0 6px; }
-
-.count { font-size: 9pt; }
-
-.carousel { display: none; }
-
-/* ---------- phones: one at a time ---------- */
-
-@media (max-width: 600px) {
-    .layout { display: none; }
-
-    .carousel {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        height: calc(100svh - var(--carousel-top, 60px));
-        min-height: 460px;
-    }
-
-    .cinfo {
-        padding: 16px var(--gutter) 14px;
-        border-bottom: var(--line);
-        font-size: 10.5pt;
-        line-height: 1.45;
-    }
-
-    .cinfo h1 { font-size: 20pt; line-height: 1.1; }
-    .cinfo .line { margin: 4px 0 0; }
-    .cinfo .note { margin-top: 8px; }
-
-    .cstage {
-        position: relative;
-        min-height: 0;
-        margin: 16px var(--gutter);
-        touch-action: pan-y;
-    }
-
-    .cstage img {
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .cnav {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding: 0 var(--gutter) 18px;
-        font-size: 13pt;
-    }
-
-    /* the cover: no arrows yet, just the prompt */
-    .cnav .prompt { display: none; flex: 1; text-align: center; font-size: 10pt; }
-    .carousel.cover .cnav [data-step],
-    .carousel.cover .cnav .count { display: none; }
-    .carousel.cover .cnav .prompt { display: block; }
-
-    .viewer { display: none; }
+    margin: 0 auto 10px;
+    padding: 5%;
 }
