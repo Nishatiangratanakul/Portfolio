@@ -230,11 +230,14 @@ figcaption {
 
 /* previous / next: plain text, no line above */
 .next-bar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;   /* previous · top · next */
+    align-items: baseline;
     gap: 16px;
     padding: 24px 0 32px;
 }
+.next-link.prev { justify-self: start; }
+.next-link.next { justify-self: end; }
 
 .next-link { position: relative; }
 .next-link.next { text-align: right; }

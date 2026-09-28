@@ -293,7 +293,7 @@ function createLoopingVideo(src, alt) {
     return video;
 }
 
-// "← previous" and "next →" as plain text; hovering one shows a small preview just above it.
+// "← previous", "↑ top" and "next →" as plain text; hovering previous/next shows a small preview just above it.
 function showNextBar(project, visible) {
     const bar = container.querySelector('.next-bar');
     const i = visible.findIndex(p => p.title === project.title);
@@ -317,5 +317,11 @@ function showNextBar(project, visible) {
         a.addEventListener('mouseleave', () => video?.pause());
         return a;
     };
-    bar.append(link(prev, 'prev'), link(next, 'next'));
+    // back to the top (and the header's work · fun shit · about) from the bottom of a long page
+    const top = document.createElement('a');
+    top.className = 'to-top';
+    top.href = '#';
+    top.textContent = '↑ top';
+    top.addEventListener('click', e => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); });
+    bar.append(link(prev, 'prev'), top, link(next, 'next'));
 }
