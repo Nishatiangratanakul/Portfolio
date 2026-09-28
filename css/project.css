@@ -30,7 +30,7 @@
     object-fit: cover;
 }
 
-/* info rows: overview · context · deliverables (or your own) */
+/* info rows: description · context · deliverables (or your own) */
 .project-info {
     padding: 28px 0 12px;
 }

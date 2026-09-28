@@ -26,7 +26,7 @@ Each project is one entry in `index.json`. Only `title`, `year`, `description` a
     "preview": "unspokendialogue/preview.mp4",
     "hero": "unspokendialogue/media-1.jpg",
 
-    "summary": "The overview row.",
+    "summary": "The description row.",
     "details": [
         ["role", "designer, editor"],
         ["duration", "8 months"]
@@ -48,8 +48,8 @@ Each project is one entry in `index.json`. Only `title`, `year`, `description` a
 ```
 
 - **Work list:** shows `title`, then `format` (or `subject` if there's no format), then `year`. Hovering plays `preview` (or shows `icon`).
-- **Info rows** (under the title): `summary` → overview, `details` → context, `deliverables` → deliverables. For different rows, use `"rows"` instead, in any order:
-  `"rows": [{ "label": "overview", "text": "…" }, { "label": "materials", "list": [["paper", "…"]] }]`
+- **Info rows** (under the title): `summary` → description, `details` → context, `deliverables` → deliverables. For different rows, use `"rows"` instead, in any order:
+  `"rows": [{ "label": "description", "text": "…" }, { "label": "materials", "list": [["paper", "…"]] }]`
 - **Sections** (below) run in the order you list them. An image block is `full` (one), `pair` (two) or `trio` (three) across. Each image can be a plain path, or `{ "src": …, "caption": … }` for a note under it. A block with `label` + `text` and no `media` is a text row.
 - No `sections`? The `media1`, `media2`… images are laid out automatically, one then two across.
 - **Videos:** use `.mp4`. They play silently on loop with no controls. Add a `-poster.jpg` of the first frame next to each (e.g. `media-3.mp4` → `media-3-poster.jpg`); it shows while loading and on phones that block autoplay.

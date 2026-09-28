@@ -5,11 +5,11 @@
 // What a project can have in index.json (everything past title/year/description is optional;
 // see README.md for a full example):
 //   "hero":         "folder/image.jpg"   big image at the top (defaults to media1)
-//   "summary":      the "overview" row (defaults to "description")
+//   "summary":      the "description" row (defaults to "description")
 //   "details":      [["role", "designer"], ["duration", "8 months"], …]   the "context" row
 //   "deliverables": "what it turned into"                              the "deliverables" row
 //   "rows":         [{ "label": "…", "text": "…" } or { "label": "…", "list": [["a", "b"], …] }, …]
-//                   your own info rows instead of overview · context · deliverables
+//                   your own info rows instead of description · context · deliverables
 //   "sections":     the blocks below, in order. Each is either images or a text row:
 //                   { "layout": "full" | "pair" | "trio", "media": ["folder/a.jpg", { "src": "folder/b.mp4", "caption": "a note" }] }
 //                   { "label": "a new part", "text": "…" }
@@ -38,7 +38,7 @@ function showProject(project, visible) {
     const hero = project.hero || media[0];
     const rest = project.hero ? media : media.slice(1);
     const rows = project.rows || [
-        { label: 'overview', text: project.summary || project.description },
+        { label: 'description', text: project.summary || project.description },
         project.details && { label: 'context', list: project.details },
         project.deliverables && { label: 'deliverables', text: project.deliverables },
     ].filter(Boolean);
