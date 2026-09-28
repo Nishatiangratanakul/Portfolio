@@ -6,13 +6,13 @@
         "description": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations with people reflecting on these themes form a loose constellation of stories that circle around endings without resolving them. What emerges is less a single argument and more a durational encounter with how people speak, hesitate, redirect, and fall silent when asked to stay with death. By holding intimate narratives in a form that can be returned to, reread, and carried, the project opens a gentle, persistent space for reflection. In doing so, it suggests that design can accompany difficult conversations—not to solve or explain them, but to keep them possible, and keep them open.",
         "summary": "Unspoken Dialogue moves through the everyday ways that death, grief, and loss sit inside language, gesture, and memory, often without being named. Six conversations form a loose constellation of stories that circle around endings without resolving them.",
         "details": [
-            ["role", "designer, interviewer, editor"],
-            ["duration", "8 months"],
-            ["skills", "editorial design, interviewing, bookbinding"],
-            ["collaborators", "six conversation partners"],
-            ["printing", "digitally printed, perfect bound"]
+            ["role", "designer & producer"],
+            ["duration", "9 months"],
+            ["skills", "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"],
+            ["advisors", "Prin Limphongpand, Ingrid Chou"],
+            ["production", "risograph, laser, screen print, large-format plotter (posters), UV-printed cover, spray-painted edges"]
         ],
-        "deliverables": "A book of six transcribed conversations about death and grief. Each conversation opens with a chart of how that person thinks about death, and blue fold-out pages sit over parts of the text.",
+        "deliverables": "A book holding all six conversations (the spoken), a series of data-visualization posters, one for each conversation (the unspoken), and fill-out letter packets handed out at book fairs, asking others to reflect for themselves.",
         "sections": [
             {
                 "layout": "pair",
@@ -27,6 +27,13 @@
             {
                 "layout": "pair",
                 "media": ["unspokendialogue/media-4.jpg", "unspokendialogue/media-6.jpg"]
+            },
+            {
+                "label": "letter packets",
+                "text": "At the Parsons thesis fair, visitors could take home a letter packet: a glassine envelope holding a letter about the project, a reflection card, a death graph for mapping their own thoughts, and a prompt card of ten questions."
+            },
+            {
+                "media": ["unspokendialogue/packet.mp4"]
             }
         ],
         "media1": "unspokendialogue/media-1.jpg",

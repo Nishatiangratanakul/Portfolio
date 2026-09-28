@@ -72,6 +72,15 @@
     height: auto;
 }
 
+/* a single tall image (e.g. portrait) never gets taller than the screen; it sits centred instead */
+.layout-full .section-media img,
+.layout-full .section-media video {
+    width: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    margin: 0 auto;
+}
+
 figcaption {
     font-size: 10pt;
     margin-top: 8px;
