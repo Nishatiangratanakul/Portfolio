@@ -524,7 +524,8 @@
                 "media": [
                     {
                         "src": "legosans/plate-built.jpg",
-                        "caption": "Each letter is built by hand on a Lego baseplate from squares and quarter-circles, mirrored so it prints the right way round."
+                        "caption": "Each letter is built by hand on a Lego baseplate from squares and quarter-circles, mirrored so it prints the right way round.",
+                        "phone": "legosans/plate-built-phone.jpg"
                     }
                 ]
             }

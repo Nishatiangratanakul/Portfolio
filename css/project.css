@@ -113,6 +113,7 @@ figcaption.noted { display: none; }
     gap: 28px;
 }
 
+.section-media picture { display: block; }
 .section-media img,
 .section-media video {
     display: block;

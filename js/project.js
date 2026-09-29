@@ -20,6 +20,7 @@
 //                   { "label": "a new part", "text": "…" }
 //                   add "caption": "…" for one note under the whole block
 //                   add "centred": true to a viewer to centre its picture in the whole band, thumbnails over the edge
+//                   an item with "phone": "file" uses that crop on phones
 //                   an item with "back": "b.jpg" turns over when clicked
 //                   text anywhere can use *italics* and [a link](#posters) to jump to a part of the page
 //                   add "dark": true to put any image block on black
@@ -221,9 +222,10 @@ function createSection(section, title) {
             button.addEventListener('click', () => openLightbox(items, i, title));
             figure.appendChild(button);
         } else {
-            const media = item.back ? createFlip(src, item.back, caption || title) : createMedia(src, `${title}, image ${i + 1}`, true);
+            let media = item.back ? createFlip(src, item.back, caption || title) : createMedia(src, `${title}, image ${i + 1}`, true);
+            if (item.phone && media.tagName === 'IMG') media = forPhones(media, item.phone);
             figure.appendChild(media);
-            markPortrait(media, figure);
+            markPortrait(media.tagName === 'PICTURE' ? media.querySelector('img') : media, figure);
             // on black, the note sits under the band, like every other note
             if (caption && !section.dark) figure.insertAdjacentHTML('beforeend', `<figcaption>${fmt(caption)}</figcaption>`);
         }
@@ -365,6 +367,15 @@ function openLightbox(items, start, title) {
 function createMedia(file, alt, lazy) {
     const src = `assets/${file}`;
     return file.toLowerCase().endsWith('.mp4') ? createLoopingVideo(src, alt) : createImage(src, alt, lazy);
+}
+
+// a different crop of a picture for phones ("phone": "file" on an item)
+function forPhones(img, file) {
+    const picture = document.createElement('picture');
+    picture.innerHTML = `<source media="(max-width: 600px)" srcset="assets/${file}">`;
+    img.loading = 'eager';   // lazy pictures with a <source> can fail to start loading
+    picture.appendChild(img);
+    return picture;
 }
 
 function createImage(src, alt, lazy) {
