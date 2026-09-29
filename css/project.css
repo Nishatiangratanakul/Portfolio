@@ -98,7 +98,7 @@ figcaption.noted { display: none; }
 
 /* with a mouse, a part's writing is shown as notes on its pictures, so the text itself is hidden */
 @media (hover: hover) and (pointer: fine) {
-    .part-text.noted-part { display: none; }
+    .part-text.noted-part { display: none; }   /* only in the "hover" look */
     .project-section { padding-bottom: 24px; }
 }
 .hover-note b { font-weight: 600; }
@@ -284,12 +284,14 @@ figcaption {
     .next-link.prev { grid-area: prev; }
     .next-link.next { grid-area: next; }
     .to-top { grid-area: top; justify-self: center; }
-    .next-link .label { display: block; white-space: nowrap; }
-    .next-link.long .label { white-space: normal; max-width: 13ch; text-wrap: balance; }
-    .next-link.next.long .label { margin-left: auto; }
+    .next-link .name { white-space: nowrap; }
+    .next-link.long .name { white-space: normal; max-width: 12ch; text-wrap: balance; }
+    .next-link.next .name { text-align: right; }
 }
 
 .next-link { position: relative; }
+.next-link .label { display: inline-flex; align-items: baseline; gap: 0.35em; }
+.next-link .arrow { flex: none; }
 .next-link.next { text-align: right; }
 
 .peek { display: none; }
@@ -371,3 +373,9 @@ figcaption {
         height: auto;
     }
 }
+
+/* the switcher for comparing looks (only with ?try) */
+.look-switcher { position: fixed; left: 12px; bottom: 12px; z-index: 50; background: #fff; border: 1.5px solid var(--red); padding: 8px 10px; font-size: 9pt; }
+.look-switcher span { display: inline-block; margin-right: 8px; }
+.look-switcher button { font: inherit; color: var(--red); background: none; border: 1px solid var(--red); padding: 1px 7px; margin-right: 4px; border-radius: 999px; }
+.look-switcher button[aria-pressed="true"] { background: var(--red); color: #fff; }

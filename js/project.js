@@ -55,7 +55,7 @@ function showProject(project, visible) {
 
     // the words first: title on the left; what it is and what was made on the right. Then the picture.
     container.innerHTML = `
-        <header class="opening">
+        <div class="opening">
             <div class="opening-title">
                 <h1>${esc(project.title)}</h1>
                 <p class="meta">${esc([project.format || project.subject, project.year].filter(Boolean).join(' · '))}</p>
@@ -65,7 +65,7 @@ function showProject(project, visible) {
                 ${deliverables ? `<ul class="made">${deliverables.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
                 ${project.details ? `<a class="to-credits" href="#credits">details ↓</a>` : ''}
             </div>
-        </header>
+        </div>
         <div class="hero"></div>
         <div class="sections"></div>
         ${project.details ? credits(project.details) : ''}
@@ -78,6 +78,24 @@ function showProject(project, visible) {
     showNextBar(project, visible);
     creditsSidebar();
     hoverNotes();
+    if (new URLSearchParams(location.search).has('try')) sectionsSwitcher();
+}
+
+// On desktop, each part's writing shows as text ("text", the default) or only as notes over its
+// pictures ("hover"). To compare, add ?try to the address: a small switcher appears.
+function sectionsLook() {
+    try { return localStorage.getItem('look-sections') === 'hover' ? 'hover' : 'text'; } catch (e) { return 'text'; }
+}
+function sectionsSwitcher() {
+    const box = document.createElement('div');
+    box.className = 'look-switcher';
+    box.innerHTML = `<div><span>sections</span>${['text', 'hover'].map(v => `<button type="button" data-val="${v}" aria-pressed="${sectionsLook() === v}">${v}</button>`).join('')}</div>`;
+    box.addEventListener('click', e => {
+        const b = e.target.closest('button'); if (!b) return;
+        try { localStorage.setItem('look-sections', b.dataset.val); } catch (err) {}
+        location.reload();
+    });
+    document.body.appendChild(box);
 }
 
 // Credits in a panel that slides out from the right, under the nav, when "credits" is clicked
@@ -170,8 +188,8 @@ function hoverNotes() {
             if (own) { own.classList.add('noted'); attach(section.querySelector('.section-media'), own.innerHTML); }
         });
     }
-    // a part's writing, as a note over all its pictures (until the next part)
-    {
+    // a part's writing, as a note over all its pictures (until the next part) - only in the "hover" look
+    if (sectionsLook() === 'hover') {
         let note = null;
         [...container.querySelector('.sections').children].forEach(el => {
             if (el.classList.contains('part-text')) { note = el.dataset.note; el.classList.add('noted-part'); return; }
@@ -414,7 +432,10 @@ function showNextBar(project, visible) {
         a.className = `next-link ${dir}`;
         a.href = `project.html?p=${slugify(p.title)}`;
         if (p.title.length > 13) a.classList.add('long');   // longer than "contemplating": may wrap on phones
-        a.innerHTML = `<span class="label">${dir === 'prev' ? `← ${esc(p.title)}` : `${esc(p.title)} →`}</span>`;
+        // the arrow sits apart from the title, level with its first line, so wrapped lines align with each other
+        a.innerHTML = dir === 'prev'
+            ? `<span class="label"><span class="arrow">←</span><span class="name">${esc(p.title)}</span></span>`
+            : `<span class="label"><span class="name">${esc(p.title)}</span><span class="arrow">→</span></span>`;
         const peek = document.createElement('span');
         peek.className = 'peek';
         peek.appendChild(p.preview

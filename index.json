@@ -20,7 +20,11 @@
             ],
             [
                 "printed",
-                "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges, tape binding"
+                "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges"
+            ],
+            [
+                "bound",
+                "tape bound, with a Swiss binding (the cover attached at the back, so the spine stays open)"
             ]
         ],
         "deliverables": [
@@ -220,6 +224,10 @@
             [
                 "printed",
                 "laser print, risograph (black pages), large-format printing (index poster)"
+            ],
+            [
+                "bound",
+                "sewn signatures, with a Swiss binding (the cover attached at the back, so the spine stays open)"
             ]
         ],
         "sections": [
@@ -380,6 +388,10 @@
             [
                 "printed",
                 "Lego letterpress"
+            ],
+            [
+                "bound",
+                "saddle stitched"
             ]
         ],
         "sections": [
