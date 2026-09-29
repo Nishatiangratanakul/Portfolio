@@ -338,7 +338,12 @@ figcaption {
        no taller than most of the screen; the thumbnails sit over the right edge, from the top */
     .centred.layout-viewer .section-media { display: block; position: relative; padding: 48px 140px; }
     .centred .viewer-stage { aspect-ratio: auto; height: min(72vh, 62vw); }
-    .centred .viewer-thumbs { position: absolute; right: 36px; top: 48px; width: 64px; gap: 8px; }
+    .centred .viewer-thumbs { position: absolute; right: 36px; top: 48px; width: 64px; gap: 8px; max-height: calc(100% - 96px); overflow-y: auto; scrollbar-width: none; }
+    .centred .viewer-thumbs::-webkit-scrollbar { display: none; }
+    /* "fill": the picture covers the whole band, running off its edges */
+    .fill.layout-viewer .section-media { padding: 0; }
+    .fill .viewer-stage img, .fill .viewer-stage video { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+    .fill .viewer-thumbs { top: 24px; max-height: calc(100% - 48px); }
     .has-columns .section-media { grid-auto-flow: row; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 32px; padding: 48px 12%; }
     .lb-stage { padding: 32px; }
 
@@ -379,3 +384,6 @@ figcaption {
 .look-switcher span { display: inline-block; margin-right: 8px; }
 .look-switcher button { font: inherit; color: var(--red); background: none; border: 1px solid var(--red); padding: 1px 7px; margin-right: 4px; border-radius: 999px; }
 .look-switcher button[aria-pressed="true"] { background: var(--red); color: #fff; }
+
+/* a softer black band (the spreads sit on the same tone) */
+.tone-dim .section-media { background: #18191b; }

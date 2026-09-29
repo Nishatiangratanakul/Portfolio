@@ -383,7 +383,7 @@
             ],
             [
                 "advisors",
-                "Advisor name, Advisor name"
+                "Maria Veronica San Martin, Amber Braverman"
             ],
             [
                 "printed",
@@ -633,7 +633,8 @@
                         "src": "kowloon/spread-fiction-88.jpg",
                         "thumb": "kowloon/spread-fiction-88-tile.jpg"
                     }
-                ]
+                ],
+                "tone": "dim"
             },
             {
                 "label": "tearing it open",
@@ -648,14 +649,9 @@
                         "caption": "Tearing along the perforation to reach the fiction layer."
                     },
                     {
-                        "src": "kowloon/flip-through.mp4",
-                        "caption": "Reading through, the two layers alternate."
+                        "src": "kowloon/perforation.jpg",
+                        "caption": "The perforated folds, fanned open."
                     }
-                ]
-            },
-            {
-                "media": [
-                    "kowloon/perforation.jpg"
                 ]
             }
         ]
@@ -732,10 +728,15 @@
                         "thumb": "76cones/overall-tile.jpg",
                         "caption": "The fold-out sheet"
                     }
+                ],
+                "fill": true
+            },
+            {
+                "media": [
+                    "76cones/portrait.jpg"
                 ]
             }
-        ],
-        "hero": "76cones/hero.jpg"
+        ]
     },
     {
         "title": "the joy luck supper club",
@@ -819,10 +820,11 @@
                 ]
             },
             {
-                "layout": "pair",
                 "media": [
-                    "wangkarwai/scan-pg36.jpg",
-                    "wangkarwai/scan-quote.jpg"
+                    {
+                        "src": "wangkarwai/spine.jpg",
+                        "caption": "Sewn with red thread, the spine left open."
+                    }
                 ]
             },
             {
@@ -849,26 +851,6 @@
                         "src": "wangkarwai/fold-index.mp4",
                         "thumb": "wangkarwai/fold-index-tile.jpg",
                         "caption": "The index, with its translucent page"
-                    },
-                    {
-                        "src": "wangkarwai/fold-clasical-color-divider-closed.jpg",
-                        "thumb": "wangkarwai/fold-clasical-color-divider-closed-tile.jpg",
-                        "caption": "Classical colour aesthetics, closed"
-                    },
-                    {
-                        "src": "wangkarwai/fold-clasical-color-aestheic-divider.jpg",
-                        "thumb": "wangkarwai/fold-clasical-color-aestheic-divider-tile.jpg",
-                        "caption": "…and opened"
-                    },
-                    {
-                        "src": "wangkarwai/fold-timeline.jpg",
-                        "thumb": "wangkarwai/fold-timeline-tile.jpg",
-                        "caption": "Timeline, closed"
-                    },
-                    {
-                        "src": "wangkarwai/fold-timeline-open.jpg",
-                        "thumb": "wangkarwai/fold-timeline-open-tile.jpg",
-                        "caption": "…and opened"
                     }
                 ]
             }

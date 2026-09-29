@@ -19,6 +19,7 @@
 //                     the first one big, the rest as thumbnails beside it that swap in when clicked
 //                   { "label": "a new part", "text": "…" }
 //                   add "caption": "…" for one note under the whole block
+//                   "fill": true lets a viewer's pictures run to the band's edges; "tone": "dim" a softer black
 //                   add "centred": true to a viewer to centre its picture in the whole band, thumbnails over the edge
 //                   an item with "phone": "file" uses that crop on phones
 //                   an item with "back": "b.jpg" turns over when clicked
@@ -217,7 +218,7 @@ function createSection(section, title) {
         return wrap.firstElementChild;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}${section.fill ? ' fill' : ''}${section.tone ? ' tone-' + section.tone : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
