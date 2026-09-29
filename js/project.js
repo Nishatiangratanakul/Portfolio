@@ -62,7 +62,7 @@ function showProject(project, visible) {
             <div class="opening-text">
                 ${paragraphs(project.summary || project.description)}
                 ${deliverables ? `<ul class="made">${deliverables.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
-                ${project.details ? `<a class="to-credits" href="#credits">credits ↓</a>` : ''}
+                ${project.details ? `<a class="to-credits" href="#credits">details ↓</a>` : ''}
             </div>
         </header>
         <div class="hero"></div>
@@ -85,13 +85,13 @@ function creditsSidebar() {
     const panel = container.querySelector('.credits');
     const link = container.querySelector('.to-credits');
     if (!panel || !link) return;
-    link.textContent = 'credits +';
+    link.textContent = 'details +';
     link.after(panel);   // on phones it opens right here, under the link
-    panel.insertAdjacentHTML('afterbegin', '<button type="button" class="credits-close" aria-label="close credits">×</button>');
+    panel.insertAdjacentHTML('afterbegin', '<button type="button" class="credits-close" aria-label="close details">×</button>');
     const open = on => {
         panel.classList.toggle('open', on);
         link.setAttribute('aria-expanded', on);
-        link.textContent = on ? 'credits −' : 'credits +';
+        link.textContent = on ? 'details −' : 'details +';
     };
     link.addEventListener('click', e => { e.preventDefault(); open(!panel.classList.contains('open')); });
     panel.querySelector('.credits-close').addEventListener('click', () => open(false));
