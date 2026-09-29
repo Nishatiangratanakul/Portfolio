@@ -821,14 +821,8 @@
             {
                 "layout": "pair",
                 "media": [
-                    {
-                        "src": "wangkarwai/cover.jpg",
-                        "caption": "His name, laser-cut into the cover."
-                    },
-                    {
-                        "src": "wangkarwai/spine.jpg",
-                        "caption": "Sewn with red thread, the spine left open."
-                    }
+                    "wangkarwai/scan-pg36.jpg",
+                    "wangkarwai/scan-quote.jpg"
                 ]
             },
             {
@@ -847,6 +841,16 @@
                 "dark": true,
                 "media": [
                     {
+                        "src": "wangkarwai/fold-toc.mp4",
+                        "thumb": "wangkarwai/fold-toc-tile.jpg",
+                        "caption": "The table of contents, folding out"
+                    },
+                    {
+                        "src": "wangkarwai/fold-index.mp4",
+                        "thumb": "wangkarwai/fold-index-tile.jpg",
+                        "caption": "The index, with its translucent page"
+                    },
+                    {
                         "src": "wangkarwai/fold-clasical-color-divider-closed.jpg",
                         "thumb": "wangkarwai/fold-clasical-color-divider-closed-tile.jpg",
                         "caption": "Classical colour aesthetics, closed"
@@ -854,16 +858,6 @@
                     {
                         "src": "wangkarwai/fold-clasical-color-aestheic-divider.jpg",
                         "thumb": "wangkarwai/fold-clasical-color-aestheic-divider-tile.jpg",
-                        "caption": "…and opened"
-                    },
-                    {
-                        "src": "wangkarwai/fold-table-of-contents-closed.jpg",
-                        "thumb": "wangkarwai/fold-table-of-contents-closed-tile.jpg",
-                        "caption": "Table of contents, closed"
-                    },
-                    {
-                        "src": "wangkarwai/fold-table-of-contents-open.jpg",
-                        "thumb": "wangkarwai/fold-table-of-contents-open-tile.jpg",
                         "caption": "…and opened"
                     },
                     {
@@ -877,15 +871,9 @@
                         "caption": "…and opened"
                     }
                 ]
-            },
-            {
-                "layout": "pair",
-                "media": [
-                    "wangkarwai/fullbleed-photo.jpg",
-                    "wangkarwai/divider-photo.jpg"
-                ]
             }
-        ]
+        ],
+        "hero": "wangkarwai/hero.jpg"
     },
     {
         "title": "roshomon",
