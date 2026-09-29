@@ -417,6 +417,11 @@ function createLoopingVideo(src, alt) {
     video.play().catch(error => {
         if (error.name === 'NotAllowedError') video.replaceWith(createImage(poster, alt, false));
     });
+    // start from the first frame each time it scrolls into view, so a sequence reads in order
+    new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting && !video.dataset.seen) { video.dataset.seen = '1'; video.currentTime = 0; video.play().catch(() => {}); }
+        if (!entry.isIntersecting) delete video.dataset.seen;
+    }, { threshold: 0.4 }).observe(video);
     return video;
 }
 

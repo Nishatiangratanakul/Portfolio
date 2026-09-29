@@ -825,12 +825,6 @@
                 ]
             },
             {
-                "dark": true,
-                "media": [
-                    "wangkarwai/spreads.jpg"
-                ]
-            },
-            {
                 "media": [
                     "wangkarwai/pages-flip.mp4"
                 ]
@@ -858,7 +852,7 @@
                 ]
             }
         ],
-        "hero": false
+        "hero": "wangkarwai/spreads.jpg"
     },
     {
         "title": "roshomon",
