@@ -20,7 +20,7 @@
             ],
             [
                 "printed",
-                "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges"
+                "risograph, laser printed, screen print, large-format printing (posters), UV-printed cover, spray-painted edges"
             ],
             [
                 "bound",
@@ -223,7 +223,7 @@
             ],
             [
                 "printed",
-                "laser print, risograph (black pages), large-format printing (index poster)"
+                "laser printed, risograph (black pages), large-format printing (index poster)"
             ],
             [
                 "bound",
@@ -553,7 +553,6 @@
             "A two-in-one book: a text-based “reality” layer, with an image-driven “fiction” layer hidden inside its perforated French folds."
         ],
         "media1": "kowloon/media-1.jpg",
-        "media3": "kowloon/media-3.mp4",
         "icon": "kowloon/icon.jpg",
         "preview": "kowloon/preview.mp4",
         "details": [
@@ -571,33 +570,17 @@
             ],
             [
                 "printed",
-                "laser"
+                "laser printed"
             ],
             [
                 "bound",
-                "tape bound, with French folds along perforated edges"
+                "tape bound, with perforated French folds"
             ]
         ],
         "sections": [
             {
-                "layout": "pair",
                 "media": [
-                    {
-                        "src": "kowloon/cover-reality.jpg",
-                        "caption": "The reality side: white, text-first."
-                    },
-                    {
-                        "src": "kowloon/cover-fiction.jpg",
-                        "caption": "The fiction side: dark, image-first."
-                    }
-                ]
-            },
-            {
-                "media": [
-                    {
-                        "src": "kowloon/cover-flip.mp4",
-                        "caption": "The sleeve, one side for each layer."
-                    }
+                    "kowloon/cover-flip.mp4"
                 ]
             },
             {
@@ -627,12 +610,20 @@
                         "thumb": "kowloon/spread-fiction-38-tile.jpg"
                     },
                     {
+                        "src": "kowloon/spread-fiction-54.jpg",
+                        "thumb": "kowloon/spread-fiction-54-tile.jpg"
+                    },
+                    {
                         "src": "kowloon/spread-reality-70.jpg",
                         "thumb": "kowloon/spread-reality-70-tile.jpg"
                     },
                     {
                         "src": "kowloon/spread-fiction-52.jpg",
                         "thumb": "kowloon/spread-fiction-52-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-62.jpg",
+                        "thumb": "kowloon/spread-fiction-62-tile.jpg"
                     },
                     {
                         "src": "kowloon/spread-fiction-64.jpg",
@@ -642,8 +633,7 @@
                         "src": "kowloon/spread-fiction-88.jpg",
                         "thumb": "kowloon/spread-fiction-88-tile.jpg"
                     }
-                ],
-                "caption": "Spreads from both layers, from the print files."
+                ]
             },
             {
                 "label": "tearing it open",
@@ -653,28 +643,19 @@
             {
                 "layout": "pair",
                 "media": [
-                    "kowloon/tear-top.mp4",
-                    "kowloon/tear-bottom.mp4"
-                ]
-            },
-            {
-                "media": [
-                    "kowloon/fiction-spread.jpg"
-                ]
-            },
-            {
-                "layout": "pair",
-                "media": [
                     {
-                        "src": "kowloon/perforation.jpg",
-                        "caption": "The perforated fold, before it’s torn."
+                        "src": "kowloon/tear.mp4",
+                        "caption": "Tearing along the perforation to reach the fiction layer."
                     },
-                    "kowloon/fanned.jpg"
+                    {
+                        "src": "kowloon/flip-through.mp4",
+                        "caption": "Reading through, the two layers alternate."
+                    }
                 ]
             },
             {
                 "media": [
-                    "kowloon/media-3.mp4"
+                    "kowloon/perforation.jpg"
                 ]
             }
         ]
@@ -827,7 +808,7 @@
             ],
             [
                 "printed",
-                "laser; laser-cut cover"
+                "laser printed; laser-cut cover"
             ],
             [
                 "bound",
