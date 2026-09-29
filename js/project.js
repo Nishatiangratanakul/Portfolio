@@ -123,10 +123,26 @@ function partText({ label, text, items, note }) {
     </div>`;
 }
 
+// Touch screens: notes on single pictures are hidden; tapping the picture pops its note up
+// over the bottom of it, and tapping again (or another picture) puts it away.
+function tapNotes() {
+    container.querySelectorAll('.project-section .section-media figure').forEach(fig => {
+        const cap = fig.querySelector(':scope > figcaption');
+        if (!cap || fig.querySelector('button')) return;   // gallery pictures open full screen instead
+        cap.classList.add('tap-note');
+        fig.classList.add('has-tap-note');
+        fig.addEventListener('click', () => {
+            const open = !fig.classList.contains('show-note');
+            container.querySelectorAll('.show-note').forEach(f => f.classList.remove('show-note'));
+            fig.classList.toggle('show-note', open);
+        });
+    });
+}
+
 // Notes on pictures: with a mouse, a note follows the cursor while you're over its picture
 // (the note under the picture is hidden); on touch screens the note stays under the picture.
 function hoverNotes() {
-    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return tapNotes();
     const tip = document.createElement('div');
     tip.className = 'hover-note';
     tip.hidden = true;
@@ -386,6 +402,7 @@ function showNextBar(project, visible) {
         const a = document.createElement('a');
         a.className = `next-link ${dir}`;
         a.href = `project.html?p=${slugify(p.title)}`;
+        if (p.title.length > 13) a.classList.add('long');   // longer than "contemplating": may wrap on phones
         a.innerHTML = `<span class="label">${dir === 'prev' ? `← ${esc(p.title)}` : `${esc(p.title)} →`}</span>`;
         const peek = document.createElement('span');
         peek.className = 'peek';

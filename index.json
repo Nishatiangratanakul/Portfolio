@@ -36,7 +36,7 @@
             },
             {
                 "label": "book",
-                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying.",
+                "text": "All six conversations in one book. Each opens with a chart of how that person thinks about death, runs through the full transcript, and ends with closing thoughts and an origami to fold. Riso-printed skies, family photographs and fold-out pages sit between them.",
                 "note": "All six conversations: a chart for each person, the full transcript, and closing thoughts with an origami to fold."
             },
             {
@@ -75,7 +75,7 @@
             },
             {
                 "label": "posters",
-                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data became a way of trying to understand it.",
+                "text": "Two sets of three posters, each drawn from one conversation. The spoken set charts what was said; the unspoken set charts what wasn’t: silence, rhythm, and the emotions underneath.",
                 "note": "Two sets of three. The spoken set charts what was said; the unspoken set charts silence, rhythm and emotion."
             },
             {
@@ -130,7 +130,7 @@
             },
             {
                 "label": "letter packets",
-                "text": "At *Making Space 2026*, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked people to sit with their own.",
+                "text": "At *Making Space 2026*, visitors took home a letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and an origami to fold. It asked people to sit with their own experiences, not just read about others’.",
                 "note": "Handed out at *Making Space 2026*: a letter, a reflection card, a graph, a prompt card and an origami, asking people to sit with their own."
             },
             {
@@ -255,7 +255,7 @@
                     "Thresholds and Dreams",
                     "Sitting with Death"
                 ],
-                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in.",
+                "text": "Six chapters move from the most tangible forms of death to the most abstract. Along the way the cycle loosens, and colour slowly comes in.",
                 "note": "Six chapters, from the most tangible forms of death to the most abstract."
             },
             {
@@ -323,8 +323,8 @@
             },
             {
                 "label": "index",
-                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*.",
-                "note": "A double-sided poster cataloguing every image in the book; the two sides show through each other."
+                "text": "Every image in the book is catalogued on a double-sided poster: the images on one side, their page numbers, titles and makers on the other. The paper is thin enough that each side shows through.",
+                "note": "A double-sided poster cataloguing every image in the book; each side shows through the other."
             },
             {
                 "layout": "viewer",
@@ -392,152 +392,13 @@
                 "layout": "pair",
                 "media": [
                     {
-                        "src": "legosans/process-setting.jpg",
-                        "caption": "Each letter is set by hand on a Lego baseplate from squares and quarter-circles, working from the drawn alphabet."
+                        "src": "legosans/process-building.jpg",
+                        "caption": "Each letter is built by hand on a Lego baseplate from squares and quarter-circles."
                     },
                     {
                         "src": "legosans/process-press.jpg",
-                        "caption": "The baseplate is locked into the proof press like a forme of type, inked and printed."
+                        "caption": "The baseplate is locked into the proof press, inked and printed."
                     }
-                ]
-            },
-            {
-                "layout": "gallery",
-                "columns": 5,
-                "dark": true,
-                "media": [
-                    {
-                        "src": "legosans/letter-a.jpg",
-                        "thumb": "legosans/letter-a-thumb.jpg",
-                        "caption": "A"
-                    },
-                    {
-                        "src": "legosans/letter-b.jpg",
-                        "thumb": "legosans/letter-b-thumb.jpg",
-                        "caption": "B"
-                    },
-                    {
-                        "src": "legosans/letter-c.jpg",
-                        "thumb": "legosans/letter-c-thumb.jpg",
-                        "caption": "C"
-                    },
-                    {
-                        "src": "legosans/letter-d.jpg",
-                        "thumb": "legosans/letter-d-thumb.jpg",
-                        "caption": "D"
-                    },
-                    {
-                        "src": "legosans/letter-e.jpg",
-                        "thumb": "legosans/letter-e-thumb.jpg",
-                        "caption": "E"
-                    },
-                    {
-                        "src": "legosans/letter-f.jpg",
-                        "thumb": "legosans/letter-f-thumb.jpg",
-                        "caption": "F"
-                    },
-                    {
-                        "src": "legosans/letter-g.jpg",
-                        "thumb": "legosans/letter-g-thumb.jpg",
-                        "caption": "G"
-                    },
-                    {
-                        "src": "legosans/letter-h.jpg",
-                        "thumb": "legosans/letter-h-thumb.jpg",
-                        "caption": "H"
-                    },
-                    {
-                        "src": "legosans/letter-j.jpg",
-                        "thumb": "legosans/letter-j-thumb.jpg",
-                        "caption": "J"
-                    },
-                    {
-                        "src": "legosans/letter-k.jpg",
-                        "thumb": "legosans/letter-k-thumb.jpg",
-                        "caption": "K"
-                    },
-                    {
-                        "src": "legosans/letter-l.jpg",
-                        "thumb": "legosans/letter-l-thumb.jpg",
-                        "caption": "L"
-                    },
-                    {
-                        "src": "legosans/letter-m.jpg",
-                        "thumb": "legosans/letter-m-thumb.jpg",
-                        "caption": "M"
-                    },
-                    {
-                        "src": "legosans/letter-n.jpg",
-                        "thumb": "legosans/letter-n-thumb.jpg",
-                        "caption": "N"
-                    },
-                    {
-                        "src": "legosans/letter-o.jpg",
-                        "thumb": "legosans/letter-o-thumb.jpg",
-                        "caption": "O"
-                    },
-                    {
-                        "src": "legosans/letter-p.jpg",
-                        "thumb": "legosans/letter-p-thumb.jpg",
-                        "caption": "P"
-                    },
-                    {
-                        "src": "legosans/letter-q.jpg",
-                        "thumb": "legosans/letter-q-thumb.jpg",
-                        "caption": "Q"
-                    },
-                    {
-                        "src": "legosans/letter-r.jpg",
-                        "thumb": "legosans/letter-r-thumb.jpg",
-                        "caption": "R"
-                    },
-                    {
-                        "src": "legosans/letter-s.jpg",
-                        "thumb": "legosans/letter-s-thumb.jpg",
-                        "caption": "S"
-                    },
-                    {
-                        "src": "legosans/letter-t.jpg",
-                        "thumb": "legosans/letter-t-thumb.jpg",
-                        "caption": "T"
-                    },
-                    {
-                        "src": "legosans/letter-u.jpg",
-                        "thumb": "legosans/letter-u-thumb.jpg",
-                        "caption": "U"
-                    },
-                    {
-                        "src": "legosans/letter-v.jpg",
-                        "thumb": "legosans/letter-v-thumb.jpg",
-                        "caption": "V"
-                    },
-                    {
-                        "src": "legosans/letter-w.jpg",
-                        "thumb": "legosans/letter-w-thumb.jpg",
-                        "caption": "W"
-                    },
-                    {
-                        "src": "legosans/letter-x.jpg",
-                        "thumb": "legosans/letter-x-thumb.jpg",
-                        "caption": "X"
-                    },
-                    {
-                        "src": "legosans/letter-y.jpg",
-                        "thumb": "legosans/letter-y-thumb.jpg",
-                        "caption": "Y"
-                    },
-                    {
-                        "src": "legosans/letter-z.jpg",
-                        "thumb": "legosans/letter-z-thumb.jpg",
-                        "caption": "Z"
-                    }
-                ]
-            },
-            {
-                "layout": "pair",
-                "media": [
-                    "legosans/process-drying.jpg",
-                    "legosans/process-prints.jpg"
                 ]
             }
         ]

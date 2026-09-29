@@ -63,9 +63,16 @@
 }
 .hover-note[hidden] { display: none; }
 figcaption.noted { display: none; }
-/* phones and tablets can't hover: notes always sit small under the picture */
+/* touch screens: a picture's note pops up over it when tapped */
+.has-tap-note { position: relative; }
+.tap-note { display: none; }
+.show-note .tap-note {
+    display: block; position: absolute; left: 10px; right: 10px; bottom: 10px; margin: 0;
+    padding: 6px 9px; background: #fff; color: var(--red); border: 1.5px solid var(--red);
+    font-size: 9.5pt; line-height: 1.4;
+}
 @media (hover: none), (pointer: coarse) {
-    .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
+    .project-section > figcaption { display: none; }   /* a note for a whole block: kept off the page on phones */
 }
 
 /* credits in a sidebar (desktop): slides out from the right, under the nav */
@@ -276,7 +283,9 @@ figcaption {
     .next-link.prev { grid-area: prev; }
     .next-link.next { grid-area: next; }
     .to-top { grid-area: top; justify-self: center; }
-    .next-link .label { display: block; text-wrap: balance; }
+    .next-link .label { display: block; white-space: nowrap; }
+    .next-link.long .label { white-space: normal; max-width: 13ch; text-wrap: balance; }
+    .next-link.next.long .label { margin-left: auto; }
 }
 
 .next-link { position: relative; }
