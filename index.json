@@ -684,18 +684,81 @@
         "subject": "book design",
         "year": "2024",
         "description": "76 Cones explores my psychogeographic journey documenting 76 traffic cones in New York City. The book unfolds in four parts: a layered flyer that introduces the cone as an object, a translucent paper booklet mapping my movement between each cone, an index cataloging my reflections at each site, and a fold-out sheet showing how, over time, the cones lost their objectivity and became simply the color orange. Bound in an orange file folder with office supply-inspired binding, the book evokes construction and urban spaces' bureaucratic and municipal nature.",
-        "summary": "A psychogeographic journey documenting 76 traffic cones across New York City, and how, over time, they stopped being objects and became simply the color orange.",
-        "deliverables": "A book in four parts, bound in an orange file folder with office-supply-inspired binding: a layered flyer introducing the cone as an object, a translucent booklet mapping the route between each cone, an index of reflections from each site, and a fold-out sheet of the cones turning into pure orange.",
+        "summary": "76 Cones is a psychogeographic walk through New York City, finding and documenting 76 traffic cones along the way. What started as a record of objects slowly became something else: over time the cones stopped reading as cones and became simply a colour, orange.\n\nThe book is filed like paperwork in an orange folder, borrowing the bureaucratic, municipal language of construction and of the city that puts cones on its streets.",
+        "deliverables": [
+            "A four-part book in an orange file folder: a layered flyer, a translucent map booklet, an index of reflections, and a fold-out sheet."
+        ],
         "media1": "76cones/media-1.jpg",
         "media2": "76cones/media-2.jpg",
         "media3": "76cones/media-3.jpg",
-        "media4": "76cones/media-4.mp4",
-        "media5": "76cones/media-5.mp4",
-        "media6": "76cones/media-6.mp4",
-        "media7": "76cones/media-7.mp4",
         "media8": "76cones/media-8.jpg",
         "icon": "76cones/icon.jpg",
-        "preview": "76cones/preview.mp4"
+        "preview": "76cones/preview.mp4",
+        "details": [
+            [
+                "role",
+                "designer"
+            ],
+            [
+                "skills",
+                "photography, writing, mapping, InDesign, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Ka Ming Lee"
+            ],
+            [
+                "bound",
+                "filed in an orange folder with office-supply binding"
+            ]
+        ],
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    "76cones/media-2.jpg",
+                    "76cones/media-3.jpg"
+                ]
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "caption": "All four parts at once, then each one up close: the flyer, the map of the route between cones, and the index of reflections from each site.",
+                "media": [
+                    {
+                        "src": "76cones/all-parts.mp4",
+                        "thumb": "76cones/all-parts-tile.jpg",
+                        "caption": "All four parts"
+                    },
+                    {
+                        "src": "76cones/flyer.mp4",
+                        "thumb": "76cones/flyer-tile.jpg",
+                        "caption": "The flyer"
+                    },
+                    {
+                        "src": "76cones/map.mp4",
+                        "thumb": "76cones/map-tile.jpg",
+                        "caption": "The map booklet"
+                    },
+                    {
+                        "src": "76cones/index.mp4",
+                        "thumb": "76cones/index-tile.jpg",
+                        "caption": "The index"
+                    },
+                    {
+                        "src": "76cones/overall.mp4",
+                        "thumb": "76cones/overall-tile.jpg",
+                        "caption": "The fold-out sheet"
+                    }
+                ]
+            },
+            {
+                "media": [
+                    "76cones/media-8.jpg"
+                ]
+            }
+        ]
     },
     {
         "title": "the joy luck supper club",
