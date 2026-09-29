@@ -18,8 +18,6 @@
 .sections, .credits, .next-bar { order: 3; }
 .opening h1 { font-size: 30pt; line-height: 1; }
 .opening .meta { margin-top: 8px; }
-.opening .skills { margin-top: 2px; max-width: 46ch; }
-.opening .skills::first-letter { text-transform: uppercase; }
 .opening-text p + p { margin-top: 1em; }
 .opening-text p { max-width: 58ch; }
 .to-credits { display: inline-block; margin-top: 14px; }
@@ -59,57 +57,44 @@
     position: fixed; left: 0; top: 0; z-index: 40;
     max-width: 300px;
     padding: 6px 9px;
-    background: var(--red); color: #fff;
+    background: #fff; color: var(--red); border: 1.5px solid var(--red);
     font-size: 10pt; line-height: 1.4;
     pointer-events: none;
 }
-[data-notes="outlined"] .hover-note { background: #fff; color: var(--red); border: 1.5px solid var(--red); }
 .hover-note[hidden] { display: none; }
 figcaption.noted { display: none; }
-/* notes under the picture: small and centred */
-[data-notes="under"] .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
 /* phones and tablets can't hover: notes always sit small under the picture */
 @media (hover: none), (pointer: coarse) {
     .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
 }
 
-/* credits in a sidebar (desktop): from the right or the left, over the nav or under it */
+/* credits in a sidebar (desktop): slides out from the right, under the nav */
 .credits-close { display: none; }
 @media (min-width: 601px) {
-    body[data-credits] .credits {
-        position: fixed; top: 0; right: 0; z-index: 45;
+    body .credits {
+        position: fixed; top: var(--header-bottom, 0px); right: 0; z-index: 45;
         display: block;
-        width: 360px; height: 100vh; overflow-y: auto;
-        margin: 0; padding: 72px 28px 32px;
+        width: 360px; height: calc(100vh - var(--header-bottom, 0px)); overflow-y: auto;
+        margin: 0; padding: 48px 28px 32px;
         background: #fff; border-left: var(--line);
         transform: translateX(100%); transition: transform 0.35s ease;
     }
-    body[data-credits="right-inset"] .credits, body[data-credits="right-inset-red"] .credits { top: var(--header-bottom, 0px); height: calc(100vh - var(--header-bottom, 0px)); padding-top: 48px; }
-    body[data-credits] .credits.open { transform: none; }
-    body[data-credits] .credits > div + div { margin-top: 18px; }
-    body[data-credits] .credits-close { display: block; position: absolute; top: 14px; right: 20px; background: none; border: 0; color: var(--red); font: inherit; font-size: 20pt; line-height: 1; }
-    /* red: white type on the site red */
-    body[data-credits$="red"] .credits { background: var(--red); color: #fff; border-left-color: var(--red); }
-    body[data-credits$="red"] .credits a, body[data-credits$="red"] .credits-close { color: #fff; }
+    body .credits.open { transform: none; }
+    body .credits > div + div { margin-top: 18px; }
+    body .credits-close { display: block; position: absolute; top: 14px; right: 20px; background: none; border: 0; color: var(--red); font: inherit; font-size: 20pt; line-height: 1; }
 }
 /* phones: credits open right under the link, as part of the page */
 @media (max-width: 600px) {
-    body[data-credits] .credits { display: none; padding: 16px 0 4px; }
-    body[data-credits] .credits.open { display: grid; }
+    body .credits { display: none; padding: 16px 0 4px; }
+    body .credits.open { display: grid; }
 }
 
-/* a part's writing shown as notes on its pictures (desktop, "hover" look): the text itself is hidden */
+/* with a mouse, a part's writing is shown as notes on its pictures, so the text itself is hidden */
 @media (hover: hover) and (pointer: fine) {
-    [data-sections="hover"] .noted-part { display: none; }
-    [data-sections="hover"] .project-section { padding-bottom: 24px; }
+    .part-text.noted-part { display: none; }
+    .project-section { padding-bottom: 24px; }
 }
 .hover-note b { font-weight: 600; }
-
-/* the switcher for comparing looks (only with ?try) */
-.look-switcher { position: fixed; left: 12px; bottom: 12px; z-index: 50; background: #fff; border: 1.5px solid var(--red); padding: 8px 10px; font-size: 9pt; display: grid; gap: 6px; }
-.look-switcher span { display: inline-block; width: 52px; }
-.look-switcher button { font: inherit; color: var(--red); background: none; border: 1px solid var(--red); padding: 1px 7px; margin-right: 4px; border-radius: 999px; }
-.look-switcher button[aria-pressed="true"] { background: var(--red); color: #fff; }
 
 /* images: one full width, or two across, with notes under them */
 .project-section {

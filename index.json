@@ -11,6 +11,10 @@
                 "designer & producer"
             ],
             [
+                "skills",
+                "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
+            ],
+            [
                 "advisors",
                 "Prin Limphongpand, Ingrid Chou"
             ],
@@ -183,8 +187,7 @@
         "media5": "unspokendialogue/media-5.mp4",
         "media6": "unspokendialogue/media-6.jpg",
         "icon": "unspokendialogue/icon.jpg",
-        "preview": "unspokendialogue/preview.mp4",
-        "skills": "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
+        "preview": "unspokendialogue/preview.mp4"
     },
     {
         "title": "contemplating death",
@@ -205,6 +208,10 @@
             [
                 "role",
                 "designer & editor"
+            ],
+            [
+                "skills",
+                "curation, InDesign, Photoshop, Illustrator, bookbinding"
             ],
             [
                 "advisors",
@@ -341,8 +348,7 @@
                 ],
                 "centred": true
             }
-        ],
-        "skills": "curation, InDesign, Photoshop, Illustrator, bookbinding"
+        ]
     },
     {
         "title": "lego sans",
@@ -362,6 +368,10 @@
             [
                 "role",
                 "type designer & printer"
+            ],
+            [
+                "skills",
+                "type design, Illustrator, letterpress printing"
             ],
             [
                 "advisors",
@@ -530,8 +540,7 @@
                     "legosans/process-prints.jpg"
                 ]
             }
-        ],
-        "skills": "type design, Illustrator, letterpress printing"
+        ]
     },
     {
         "title": "kowloon",

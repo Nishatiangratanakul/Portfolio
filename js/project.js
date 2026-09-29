@@ -58,7 +58,6 @@ function showProject(project, visible) {
             <div class="opening-title">
                 <h1>${esc(project.title)}</h1>
                 <p class="meta">${esc([project.format || project.subject, project.year].filter(Boolean).join(' · '))}</p>
-                ${project.skills ? `<p class="skills">${fmt(project.skills)}</p>` : ''}
             </div>
             <div class="opening-text">
                 ${paragraphs(project.summary || project.description)}
@@ -76,29 +75,12 @@ function showProject(project, visible) {
     const sectionsEl = container.querySelector('.sections');
     (project.sections || defaultSections(rest)).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
-    applyLook();
-    hoverNotes();
-    if (new URLSearchParams(location.search).has('try')) lookSwitcher();
-}
-
-// Looks to compare (only while trying things out, with ?try): the credits sidebar over the nav or
-// under it, white or red.
-// chosen: outlined notes, each part's writing as hover notes; credits still being decided
-const CHOSEN = { notes: 'outlined', sections: 'hover' };
-const LOOKS = { credits: ['right', 'right-inset', 'right-red', 'right-inset-red'] };
-function look(key) {
-    if (CHOSEN[key]) return CHOSEN[key];
-    try { const v = localStorage.getItem('look-' + key); if (LOOKS[key].includes(v)) return v; } catch (e) {}
-    return LOOKS[key][0];
-}
-function applyLook() {
-    document.body.dataset.notes = look('notes');
-    document.body.dataset.sections = look('sections');
-    document.body.dataset.credits = look('credits');
     creditsSidebar();
+    hoverNotes();
 }
 
-// credits in a panel that slides out from the right when "credits" is clicked
+// Credits in a panel that slides out from the right, under the nav, when "credits" is clicked
+// (on phones it opens right under the link instead)
 function creditsSidebar() {
     const panel = container.querySelector('.credits');
     const link = container.querySelector('.to-credits');
@@ -118,23 +100,11 @@ function creditsSidebar() {
         if (matchMedia('(max-width: 600px)').matches) return;
         if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== link) open(false);
     });
-    // "under the nav": the panel starts where the header ends
+    // the panel starts where the header ends
     const fit = () => document.body.style.setProperty('--header-bottom', Math.max(0, document.querySelector('header').getBoundingClientRect().bottom) + 'px');
     fit(); addEventListener('scroll', fit, { passive: true }); addEventListener('resize', fit);
 }
 
-function lookSwitcher() {
-    const box = document.createElement('div');
-    box.className = 'look-switcher';
-    box.innerHTML = Object.entries(LOOKS).map(([key, opts]) =>
-        `<div><span>${key}</span>${opts.map(o => `<button type="button" data-key="${key}" data-val="${o}" aria-pressed="${look(key) === o}">${o}</button>`).join('')}</div>`).join('');
-    box.addEventListener('click', e => {
-        const b = e.target.closest('button'); if (!b) return;
-        try { localStorage.setItem('look-' + b.dataset.key, b.dataset.val); } catch (err) {}
-        location.reload();
-    });
-    document.body.appendChild(box);
-}
 
 const paragraphs = text => text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : '';
 
@@ -173,7 +143,7 @@ function hoverNotes() {
         area.addEventListener('mouseleave', () => { tip.hidden = true; });
     };
     // notes on single pictures (these win over a part's note, being the innermost)
-    if (look('notes') !== 'under') {
+    {
         container.querySelectorAll('.project-section').forEach(section => {
             section.querySelectorAll('.section-media figure').forEach(fig => {
                 const cap = fig.querySelector(':scope > figcaption');
@@ -184,7 +154,7 @@ function hoverNotes() {
         });
     }
     // a part's writing, as a note over all its pictures (until the next part)
-    if (look('sections') === 'hover') {
+    {
         let note = null;
         [...container.querySelector('.sections').children].forEach(el => {
             if (el.classList.contains('part-text')) { note = el.dataset.note; el.classList.add('noted-part'); return; }
