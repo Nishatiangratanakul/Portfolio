@@ -8,8 +8,14 @@
     line-height: 1.5;
 }
 
-/* opening: title, then the description and what was made */
-.opening { display: grid; gap: 16px; padding: 8px 0 28px; }
+/* opening: title, then the description and what was made.
+   Phones: title, then the picture, then the words. */
+.project { display: flex; flex-direction: column; }
+.opening { display: contents; }
+.opening-title { order: 0; padding: 8px 0 20px; }
+.hero { order: 1; }
+.opening-text { order: 2; padding: 24px 0 8px; }
+.sections, .credits, .next-bar { order: 3; }
 .opening h1 { font-size: 30pt; line-height: 1; }
 .opening .meta { margin-top: 8px; }
 .opening-text p + p { margin-top: 1em; }
@@ -25,22 +31,25 @@
 
 .hero img,
 .hero video { display: block; width: 100%; height: auto; }
+.hero { margin-bottom: 20px; }
 
-/* a short piece of writing between the pictures */
-.part-text { padding: 36px 0 28px; max-width: 62ch; scroll-margin-top: 24px; }
-.part-text h2 { font-size: 18pt; line-height: 1.1; margin-bottom: 10px; }
-.part-text p + p { margin-top: 1em; }
+/* a short piece of writing between the pictures: a big heading, then the words */
+.part-text { padding: 40px 0; scroll-margin-top: 24px; }
+.part-text h2 { font-size: 26pt; line-height: 1; margin-bottom: 14px; }
+.part-words p + p { margin-top: 1em; }
+.part-words { max-width: 62ch; }
+.part-text .made { margin-top: 14px; }
 
-/* credits at the end: small headings, several across */
+/* credits at the end: bold headings, several across */
 .credits {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px 24px;
-    padding: 32px 0 8px;
+    padding: 48px 0 56px;
     scroll-margin-top: 24px;
     font-size: 10pt;
 }
-.credits h2 { opacity: 0.6; margin-bottom: 2px; }
+.credits h2 { font-weight: 600; margin-bottom: 2px; }
 .credits p::first-letter { text-transform: uppercase; }
 
 /* a note that follows the cursor over its picture (mouse only; see hoverNotes in js/project.js) */
@@ -52,9 +61,17 @@
     font-size: 10pt; line-height: 1.4;
     pointer-events: none;
 }
+[data-notes="outlined"] .hover-note { background: #fff; color: var(--red); border: 1.5px solid var(--red); }
 .hover-note[hidden] { display: none; }
-.hover-note em { font-style: italic; }
 figcaption.noted { display: none; }
+/* notes under the picture: small and centred */
+[data-notes="under"] .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
+
+/* the switcher for comparing looks (only with ?try) */
+.look-switcher { position: fixed; left: 12px; bottom: 12px; z-index: 50; background: #fff; border: 1.5px solid var(--red); padding: 8px 10px; font-size: 9pt; display: grid; gap: 6px; }
+.look-switcher span { display: inline-block; width: 44px; }
+.look-switcher button { font: inherit; color: var(--red); background: none; border: 1px solid var(--red); padding: 1px 7px; margin-right: 4px; border-radius: 999px; }
+.look-switcher button[aria-pressed="true"] { background: var(--red); color: #fff; }
 
 /* images: one full width, or two across, with notes under them */
 .project-section {
@@ -252,14 +269,24 @@ figcaption {
         font-size: 12pt;
     }
 
-    /* opening: title on the left, the words on the right */
-    .opening { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 24px 0 48px; align-items: start; }
+    /* desktop: the words first, then the picture */
+    .opening { display: grid; order: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 40px 0; align-items: start; }
+    .opening-title, .opening-text { padding: 0; }
+    .hero { order: 1; margin-bottom: 32px; }
     .opening h1 { font-size: 48pt; }
+    [data-text="left"] .opening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 
-    .part-text { padding: 64px 0 36px; }
-    .part-text h2 { font-size: 24pt; }
+    /* section writing on five columns: the heading across, the words over the first three, a list in the last two */
+    .part-text { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 24px; padding: 56px 0; }
+    .part-text h2 { grid-column: 1 / -1; font-size: 40pt; margin-bottom: 18px; }
+    .part-words { grid-column: 1 / 4; max-width: none; }
+    .part-text .made { grid-column: 4 / 6; margin-top: 0; }
+    .part-words + .made { align-self: start; }
+    .part-text > .made:only-of-type:not(.part-words + .made) { grid-column: 1 / 4; }
+    [data-text="left"] .part-words, [data-text="left"] .part-text .made { grid-column: 1 / 4; }
+    [data-text="left"] .part-text .made { margin-top: 16px; }
 
-    .credits { grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 56px 0 16px; font-size: 11pt; }
+    .credits { grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 72px 0 64px; font-size: 11pt; }
 
     .project-section { padding-bottom: 32px; }
     figcaption { font-size: 11pt; }

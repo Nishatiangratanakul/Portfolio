@@ -75,7 +75,33 @@ function showProject(project, visible) {
     const sectionsEl = container.querySelector('.sections');
     (project.sections || defaultSections(rest)).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
+    applyLook();
     hoverNotes();
+    if (new URLSearchParams(location.search).has('try')) lookSwitcher();
+}
+
+// Looks to compare (only while trying things out): text in two columns or all on the left;
+// notes that follow the cursor (filled or outlined) or sit small under the picture.
+const LOOKS = { text: ['columns', 'left'], notes: ['filled', 'outlined', 'under'] };
+function look(key) {
+    try { const v = localStorage.getItem('look-' + key); if (LOOKS[key].includes(v)) return v; } catch (e) {}
+    return LOOKS[key][0];
+}
+function applyLook() {
+    document.body.dataset.text = look('text');
+    document.body.dataset.notes = look('notes');
+}
+function lookSwitcher() {
+    const box = document.createElement('div');
+    box.className = 'look-switcher';
+    box.innerHTML = Object.entries(LOOKS).map(([key, opts]) =>
+        `<div><span>${key}</span>${opts.map(o => `<button type="button" data-key="${key}" data-val="${o}" aria-pressed="${look(key) === o}">${o}</button>`).join('')}</div>`).join('');
+    box.addEventListener('click', e => {
+        const b = e.target.closest('button'); if (!b) return;
+        try { localStorage.setItem('look-' + b.dataset.key, b.dataset.val); } catch (err) {}
+        location.reload();
+    });
+    document.body.appendChild(box);
 }
 
 const paragraphs = text => text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : '';
@@ -89,7 +115,7 @@ function credits(list) {
 function partText({ label, text, items }) {
     return `<div class="part-text" id="${slugId(label || '')}">
         ${label ? `<h2>${esc(label)}</h2>` : ''}
-        ${paragraphs(text)}
+        ${text ? `<div class="part-words">${paragraphs(text)}</div>` : ''}
         ${items ? `<ul class="made">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
     </div>`;
 }
@@ -97,7 +123,7 @@ function partText({ label, text, items }) {
 // Notes on pictures: with a mouse, a note follows the cursor while you're over its picture
 // (the note under the picture is hidden); on touch screens the note stays under the picture.
 function hoverNotes() {
-    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches || look('notes') === 'under') return;
     const tip = document.createElement('div');
     tip.className = 'hover-note';
     tip.hidden = true;
