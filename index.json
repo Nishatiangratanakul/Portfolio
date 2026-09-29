@@ -678,7 +678,7 @@
         "details": [
             [
                 "role",
-                "designer"
+                "designer & producer"
             ],
             [
                 "skills",
@@ -733,13 +733,9 @@
                         "caption": "The fold-out sheet"
                     }
                 ]
-            },
-            {
-                "media": [
-                    "76cones/media-8.jpg"
-                ]
             }
-        ]
+        ],
+        "hero": "76cones/hero.jpg"
     },
     {
         "title": "the joy luck supper club",
@@ -796,7 +792,7 @@
         "details": [
             [
                 "role",
-                "designer"
+                "designer & producer"
             ],
             [
                 "skills",
