@@ -804,15 +804,111 @@
         "subject": "book design",
         "year": "2024",
         "description": "Wang Kar Wai is a tribute to the renowned filmmaker, celebrating his signature use of color and framing. The book features full-bleed pages and layered frame-within-a-frame layouts, with fold-out spreads that capture the fluid motion present in his films. His name is laser-cut in the cover with iconic stills from his films peeking through to represent his clever use of framing within his work. Small touches, like binding with red thread and spreads that recreate the typographic panels seen in his films, further alluded to his artistic style. ",
-        "summary": "A tribute to the filmmaker, celebrating his signature use of color and framing.",
-        "deliverables": "A book with full-bleed pages, layered frame-within-a-frame layouts, and fold-out spreads that capture the motion of his films. His name is laser-cut into the cover so stills peek through, the binding is sewn with red thread, and some spreads recreate the typographic panels from his films.",
+        "summary": "Wang Kar Wai is a tribute to the filmmaker and his use of colour and framing. Built as an archive project, it pairs stills drawn from an archive of his films with a critical text on colour in his cinema, sequenced so the pages move the way his films do.\n\nFull-bleed pages and frames-within-frames echo the way he composes a shot, fold-outs stretch scenes across the page, and some spreads recreate the typographic panels that appear in his films.",
+        "deliverables": [
+            "A hardcover book with fold-out spreads, its name laser-cut into the cover so stills show through."
+        ],
         "media1": "wangkarwai/media-1.jpg",
         "media2": "wangkarwai/media-2.mp4",
-        "media3": "wangkarwai/media-3.jpg",
-        "media4": "wangkarwai/media-4.mp4",
-        "media5": "wangkarwai/media-5.mp4",
         "icon": "wangkarwai/icon.jpg",
-        "preview": "wangkarwai/preview.mp4"
+        "preview": "wangkarwai/preview.mp4",
+        "details": [
+            [
+                "role",
+                "designer"
+            ],
+            [
+                "skills",
+                "archival research, image sequencing, InDesign, Photoshop, bookbinding"
+            ],
+            [
+                "advisors",
+                "Paul Carlos"
+            ],
+            [
+                "printed",
+                "laser; laser-cut cover"
+            ],
+            [
+                "bound",
+                "hardcover, sewn signatures with red thread, exposed spine"
+            ]
+        ],
+        "sections": [
+            {
+                "dark": true,
+                "media": [
+                    "wangkarwai/spreads.jpg"
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "wangkarwai/cover.jpg",
+                        "caption": "His name, laser-cut into the cover."
+                    },
+                    {
+                        "src": "wangkarwai/spine.jpg",
+                        "caption": "Sewn with red thread, the spine left open."
+                    }
+                ]
+            },
+            {
+                "media": [
+                    "wangkarwai/media-2.mp4"
+                ]
+            },
+            {
+                "label": "fold-outs",
+                "text": "Some spreads fold out, stretching a scene or a sequence past the edge of the book, the way his camera lingers.",
+                "note": "Fold-outs stretch a scene past the edge of the book."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "wangkarwai/fold-clasical-color-divider-closed.jpg",
+                        "thumb": "wangkarwai/fold-clasical-color-divider-closed-tile.jpg",
+                        "caption": "Classical colour aesthetics, closed"
+                    },
+                    {
+                        "src": "wangkarwai/fold-clasical-color-aestheic-divider.jpg",
+                        "thumb": "wangkarwai/fold-clasical-color-aestheic-divider-tile.jpg",
+                        "caption": "…and opened"
+                    },
+                    {
+                        "src": "wangkarwai/fold-table-of-contents-closed.jpg",
+                        "thumb": "wangkarwai/fold-table-of-contents-closed-tile.jpg",
+                        "caption": "Table of contents, closed"
+                    },
+                    {
+                        "src": "wangkarwai/fold-table-of-contents-open.jpg",
+                        "thumb": "wangkarwai/fold-table-of-contents-open-tile.jpg",
+                        "caption": "…and opened"
+                    },
+                    {
+                        "src": "wangkarwai/fold-timeline.jpg",
+                        "thumb": "wangkarwai/fold-timeline-tile.jpg",
+                        "caption": "Timeline, closed"
+                    },
+                    {
+                        "src": "wangkarwai/fold-timeline-open.jpg",
+                        "thumb": "wangkarwai/fold-timeline-open-tile.jpg",
+                        "caption": "…and opened"
+                    }
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "wangkarwai/fullbleed-photo.jpg",
+                    "wangkarwai/divider-photo.jpg"
+                ]
+            }
+        ]
     },
     {
         "title": "roshomon",
