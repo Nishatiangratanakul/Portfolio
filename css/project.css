@@ -35,7 +35,7 @@
 
 /* a short piece of writing between the pictures: a big heading, then the words */
 .part-text { padding: 40px 0; scroll-margin-top: 24px; }
-.part-text h2 { font-size: 26pt; line-height: 1; margin-bottom: 14px; }
+.part-text h2 { font-size: 14pt; line-height: 1.2; margin-bottom: 10px; }   /* a second size: like the nav */
 .part-words p + p { margin-top: 1em; }
 .part-words { max-width: 62ch; }
 .part-text .made { margin-top: 14px; }
@@ -66,10 +66,27 @@
 figcaption.noted { display: none; }
 /* notes under the picture: small and centred */
 [data-notes="under"] .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
+/* phones and tablets can't hover: notes always sit small under the picture */
+@media (hover: none), (pointer: coarse) {
+    .project-section figcaption { text-align: center; margin-left: auto; margin-right: auto; font-size: 9.5pt; max-width: 70ch; }
+}
+
+/* credits as a sidebar that slides out from the right */
+[data-credits="sidebar"] .credits {
+    position: fixed; top: 0; right: 0; z-index: 45;
+    display: block;
+    width: min(380px, 88vw); height: 100vh; overflow-y: auto;
+    padding: 72px 28px 32px;
+    background: #fff; border-left: var(--line);
+    transform: translateX(100%); transition: transform 0.35s ease;
+}
+[data-credits="sidebar"] .credits.open { transform: none; }
+[data-credits="sidebar"] .credits > div + div { margin-top: 18px; }
+.credits-close { position: absolute; top: 18px; right: 22px; background: none; border: 0; color: var(--red); font: inherit; font-size: 20pt; line-height: 1; }
 
 /* the switcher for comparing looks (only with ?try) */
 .look-switcher { position: fixed; left: 12px; bottom: 12px; z-index: 50; background: #fff; border: 1.5px solid var(--red); padding: 8px 10px; font-size: 9pt; display: grid; gap: 6px; }
-.look-switcher span { display: inline-block; width: 44px; }
+.look-switcher span { display: inline-block; width: 52px; }
 .look-switcher button { font: inherit; color: var(--red); background: none; border: 1px solid var(--red); padding: 1px 7px; margin-right: 4px; border-radius: 999px; }
 .look-switcher button[aria-pressed="true"] { background: var(--red); color: #fff; }
 
@@ -274,17 +291,14 @@ figcaption {
     .opening-title, .opening-text { padding: 0; }
     .hero { order: 1; margin-bottom: 32px; }
     .opening h1 { font-size: 48pt; }
-    [data-text="left"] .opening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 
     /* section writing on five columns: the heading across, the words over the first three, a list in the last two */
     .part-text { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 24px; padding: 56px 0; }
-    .part-text h2 { grid-column: 1 / -1; font-size: 40pt; margin-bottom: 18px; }
+    .part-text h2 { grid-column: 1 / -1; font-size: 18pt; margin-bottom: 12px; }
     .part-words { grid-column: 1 / 4; max-width: none; }
     .part-text .made { grid-column: 4 / 6; margin-top: 0; }
     .part-words + .made { align-self: start; }
     .part-text > .made:only-of-type:not(.part-words + .made) { grid-column: 1 / 4; }
-    [data-text="left"] .part-words, [data-text="left"] .part-text .made { grid-column: 1 / 4; }
-    [data-text="left"] .part-text .made { margin-top: 16px; }
 
     .credits { grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 72px 0 64px; font-size: 11pt; }
 

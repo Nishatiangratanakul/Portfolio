@@ -80,16 +80,31 @@ function showProject(project, visible) {
     if (new URLSearchParams(location.search).has('try')) lookSwitcher();
 }
 
-// Looks to compare (only while trying things out): text in two columns or all on the left;
-// notes that follow the cursor (filled or outlined) or sit small under the picture.
-const LOOKS = { text: ['columns', 'left'], notes: ['filled', 'outlined', 'under'] };
+// Looks to compare (only while trying things out): notes that follow the cursor (filled or
+// outlined) or sit small under the picture; credits at the bottom or in a sidebar that slides out.
+const LOOKS = { notes: ['filled', 'outlined', 'under'], credits: ['bottom', 'sidebar'] };
 function look(key) {
     try { const v = localStorage.getItem('look-' + key); if (LOOKS[key].includes(v)) return v; } catch (e) {}
     return LOOKS[key][0];
 }
 function applyLook() {
-    document.body.dataset.text = look('text');
     document.body.dataset.notes = look('notes');
+    document.body.dataset.credits = look('credits');
+    if (look('credits') === 'sidebar') creditsSidebar();
+}
+
+// credits in a panel that slides out from the right when "credits" is clicked
+function creditsSidebar() {
+    const panel = container.querySelector('.credits');
+    const link = container.querySelector('.to-credits');
+    if (!panel || !link) return;
+    link.textContent = 'credits +';
+    panel.insertAdjacentHTML('afterbegin', '<button type="button" class="credits-close" aria-label="close credits">×</button>');
+    const open = on => { panel.classList.toggle('open', on); link.setAttribute('aria-expanded', on); };
+    link.addEventListener('click', e => { e.preventDefault(); open(!panel.classList.contains('open')); });
+    panel.querySelector('.credits-close').addEventListener('click', () => open(false));
+    addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });
+    document.addEventListener('click', e => { if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== link) open(false); });
 }
 function lookSwitcher() {
     const box = document.createElement('div');
