@@ -11,14 +11,6 @@
                 "designer & producer"
             ],
             [
-                "time",
-                "9 months"
-            ],
-            [
-                "made with",
-                "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
-            ],
-            [
                 "advisors",
                 "Prin Limphongpand, Ingrid Chou"
             ],
@@ -40,7 +32,8 @@
             },
             {
                 "label": "book",
-                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying."
+                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying.",
+                "note": "All six conversations: a chart for each person, the full transcript, and closing thoughts with an origami to fold."
             },
             {
                 "media": [
@@ -78,7 +71,8 @@
             },
             {
                 "label": "posters",
-                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data became a way of trying to understand it."
+                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data became a way of trying to understand it.",
+                "note": "Two sets of three. The spoken set charts what was said; the unspoken set charts silence, rhythm and emotion."
             },
             {
                 "layout": "viewer",
@@ -132,7 +126,8 @@
             },
             {
                 "label": "letter packets",
-                "text": "At *Making Space 2026*, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked people to sit with their own."
+                "text": "At *Making Space 2026*, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked people to sit with their own.",
+                "note": "Handed out at *Making Space 2026*: a letter, a reflection card, a graph, a prompt card and an origami, asking people to sit with their own."
             },
             {
                 "layout": "viewer",
@@ -188,7 +183,8 @@
         "media5": "unspokendialogue/media-5.mp4",
         "media6": "unspokendialogue/media-6.jpg",
         "icon": "unspokendialogue/icon.jpg",
-        "preview": "unspokendialogue/preview.mp4"
+        "preview": "unspokendialogue/preview.mp4",
+        "skills": "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
     },
     {
         "title": "contemplating death",
@@ -209,14 +205,6 @@
             [
                 "role",
                 "designer & editor"
-            ],
-            [
-                "time",
-                "1 month"
-            ],
-            [
-                "made with",
-                "curation, InDesign, Photoshop, Illustrator, bookbinding"
             ],
             [
                 "advisors",
@@ -241,7 +229,8 @@
                     "White pages pose the question, opening each chapter with images.",
                     "Grey pages widen it, bringing in outside voices to inform.",
                     "Black pages turn inward, with a reflection."
-                ]
+                ],
+                "note": "White pages pose the question. Grey pages bring in outside voices. Black pages turn inward."
             },
             {
                 "dark": true,
@@ -259,7 +248,8 @@
                     "Thresholds and Dreams",
                     "Sitting with Death"
                 ],
-                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in."
+                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in.",
+                "note": "Six chapters, from the most tangible forms of death to the most abstract."
             },
             {
                 "layout": "pair",
@@ -326,7 +316,8 @@
             },
             {
                 "label": "index",
-                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
+                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*.",
+                "note": "A double-sided poster cataloguing every image in the book; the two sides show through each other."
             },
             {
                 "layout": "viewer",
@@ -350,7 +341,8 @@
                 ],
                 "centred": true
             }
-        ]
+        ],
+        "skills": "curation, InDesign, Photoshop, Illustrator, bookbinding"
     },
     {
         "title": "lego sans",
@@ -370,14 +362,6 @@
             [
                 "role",
                 "type designer & printer"
-            ],
-            [
-                "time",
-                "5 weeks"
-            ],
-            [
-                "made with",
-                "type design, Illustrator, letterpress printing"
             ],
             [
                 "advisors",
@@ -546,7 +530,8 @@
                     "legosans/process-prints.jpg"
                 ]
             }
-        ]
+        ],
+        "skills": "type design, Illustrator, letterpress printing"
     },
     {
         "title": "kowloon",

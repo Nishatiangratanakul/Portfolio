@@ -58,6 +58,7 @@ function showProject(project, visible) {
             <div class="opening-title">
                 <h1>${esc(project.title)}</h1>
                 <p class="meta">${esc([project.format || project.subject, project.year].filter(Boolean).join(' · '))}</p>
+                ${project.skills ? `<p class="skills">${fmt(project.skills)}</p>` : ''}
             </div>
             <div class="opening-text">
                 ${paragraphs(project.summary || project.description)}
@@ -81,16 +82,18 @@ function showProject(project, visible) {
 }
 
 // Looks to compare (only while trying things out): notes that follow the cursor (filled or
-// outlined) or sit small under the picture; credits at the bottom or in a sidebar that slides out.
-const LOOKS = { notes: ['filled', 'outlined', 'under'], credits: ['bottom', 'sidebar'] };
+// outlined) or sit small under the picture; each part's writing as text or as a note on its
+// pictures; credits at the bottom or in a sidebar (from the right or left, over or under the nav).
+const LOOKS = { notes: ['filled', 'outlined', 'under'], sections: ['text', 'hover'], credits: ['bottom', 'right', 'left', 'right-inset', 'left-inset'] };
 function look(key) {
     try { const v = localStorage.getItem('look-' + key); if (LOOKS[key].includes(v)) return v; } catch (e) {}
     return LOOKS[key][0];
 }
 function applyLook() {
     document.body.dataset.notes = look('notes');
+    document.body.dataset.sections = look('sections');
     document.body.dataset.credits = look('credits');
-    if (look('credits') === 'sidebar') creditsSidebar();
+    if (look('credits') !== 'bottom') creditsSidebar();
 }
 
 // credits in a panel that slides out from the right when "credits" is clicked
@@ -99,13 +102,25 @@ function creditsSidebar() {
     const link = container.querySelector('.to-credits');
     if (!panel || !link) return;
     link.textContent = 'credits +';
+    link.after(panel);   // on phones it opens right here, under the link
     panel.insertAdjacentHTML('afterbegin', '<button type="button" class="credits-close" aria-label="close credits">×</button>');
-    const open = on => { panel.classList.toggle('open', on); link.setAttribute('aria-expanded', on); };
+    const open = on => {
+        panel.classList.toggle('open', on);
+        link.setAttribute('aria-expanded', on);
+        link.textContent = on ? 'credits −' : 'credits +';
+    };
     link.addEventListener('click', e => { e.preventDefault(); open(!panel.classList.contains('open')); });
     panel.querySelector('.credits-close').addEventListener('click', () => open(false));
     addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });
-    document.addEventListener('click', e => { if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== link) open(false); });
+    document.addEventListener('click', e => {
+        if (matchMedia('(max-width: 600px)').matches) return;
+        if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== link) open(false);
+    });
+    // "under the nav": the panel starts where the header ends
+    const fit = () => document.body.style.setProperty('--header-bottom', Math.max(0, document.querySelector('header').getBoundingClientRect().bottom) + 'px');
+    fit(); addEventListener('scroll', fit, { passive: true }); addEventListener('resize', fit);
 }
+
 function lookSwitcher() {
     const box = document.createElement('div');
     box.className = 'look-switcher';
@@ -127,8 +142,9 @@ function credits(list) {
 }
 
 // a short piece of writing between the pictures: a small heading, then the text and/or a list
-function partText({ label, text, items }) {
-    return `<div class="part-text" id="${slugId(label || '')}">
+function partText({ label, text, items, note }) {
+    const short = `${label ? `<b>${esc(label)}</b> ` : ''}${fmt(note || text || '')}`;
+    return `<div class="part-text" id="${slugId(label || '')}" data-note="${esc(short).replace(/"/g, '&quot;')}">
         ${label ? `<h2>${esc(label)}</h2>` : ''}
         ${text ? `<div class="part-words">${paragraphs(text)}</div>` : ''}
         ${items ? `<ul class="made">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
@@ -138,33 +154,41 @@ function partText({ label, text, items }) {
 // Notes on pictures: with a mouse, a note follows the cursor while you're over its picture
 // (the note under the picture is hidden); on touch screens the note stays under the picture.
 function hoverNotes() {
-    if (!matchMedia('(hover: hover) and (pointer: fine)').matches || look('notes') === 'under') return;
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
     const tip = document.createElement('div');
     tip.className = 'hover-note';
     tip.hidden = true;
     document.body.appendChild(tip);
-    const pairs = [];
-    container.querySelectorAll('.project-section').forEach(section => {
-        // a note for one picture
-        section.querySelectorAll('.section-media figure').forEach(fig => {
-            const cap = fig.querySelector(':scope > figcaption');
-            if (cap) pairs.push([fig, cap]);
-        });
-        // a note for the whole block
-        const own = section.querySelector(':scope > figcaption');
-        if (own) pairs.push([section.querySelector('.section-media'), own]);
-    });
-    pairs.forEach(([area, cap]) => {
-        cap.classList.add('noted');
+    const show = (html, e) => {
+        tip.innerHTML = html;
+        tip.hidden = false;
+        const x = Math.min(e.clientX + 18, innerWidth - tip.offsetWidth - 12);
+        tip.style.transform = `translate(${x}px, ${e.clientY + 18}px)`;
+    };
+    const attach = (area, html) => {
         area.classList.add('has-note');
-        area.addEventListener('mousemove', e => {
-            tip.innerHTML = cap.innerHTML;
-            tip.hidden = false;
-            const x = Math.min(e.clientX + 18, innerWidth - tip.offsetWidth - 12);
-            tip.style.transform = `translate(${x}px, ${e.clientY + 18}px)`;
-        });
+        area.addEventListener('mousemove', e => { if (!e.noteShown) { e.noteShown = true; show(html, e); } });
         area.addEventListener('mouseleave', () => { tip.hidden = true; });
-    });
+    };
+    // notes on single pictures (these win over a part's note, being the innermost)
+    if (look('notes') !== 'under') {
+        container.querySelectorAll('.project-section').forEach(section => {
+            section.querySelectorAll('.section-media figure').forEach(fig => {
+                const cap = fig.querySelector(':scope > figcaption');
+                if (cap) { cap.classList.add('noted'); attach(fig, cap.innerHTML); }
+            });
+            const own = section.querySelector(':scope > figcaption');
+            if (own) { own.classList.add('noted'); attach(section.querySelector('.section-media'), own.innerHTML); }
+        });
+    }
+    // a part's writing, as a note over all its pictures (until the next part)
+    if (look('sections') === 'hover') {
+        let note = null;
+        [...container.querySelector('.sections').children].forEach(el => {
+            if (el.classList.contains('part-text')) { note = el.dataset.note; el.classList.add('noted-part'); return; }
+            if (note && el.classList.contains('project-section')) attach(el, note);
+        });
+    }
 }
 
 // no written sections yet: alternate one image with a pair side by side
