@@ -197,46 +197,83 @@
         "title": "worm & whisk",
         "subject": "branding",
         "year": "2025–now",
-        "description": "Worm & Whisk is a pop-up café. DRAFT: to be written.",
-        "summary": "Worm & Whisk is a pop-up café [DRAFT: what it is, who it's with, where and when it ran, and what the identity set out to do].",
+        "description": "Worm & Whisk is a series of café pop-ups built around matcha, hojicha and Asian flavours, with an identity made to stretch across each one.",
+        "summary": "Worm & Whisk is a series of café pop-ups built around matcha, hojicha and Asian flavours, with an identity made to stretch across each one. It began as a way to design around food and turned into a lesson in hosting: planning space and flow, handling a crowd, and making something communal, playful and a little silly.",
         "deliverables": [
-            "[DRAFT] Identity, menus, signage, buttons, coasters, time cards and recipe cards for each pop-up.",
-            "[DRAFT] A stop-motion menu release for Instagram."
+            "An [identity](#identity): logo, type, colour and stickers.",
+            "[Posters](#three-pop-ups), menus, buttons, signs and recipe cards for each pop-up.",
+            "Menu releases and illustrated posts for [Instagram](#online).",
+            "[Drink review cards](#on-the-day) for guests to fill in."
         ],
         "details": [
             [
                 "role",
-                "[DRAFT]"
+                "co-creator, designer & producer"
+            ],
+            [
+                "with",
+                "Katelyn Lee"
             ],
             [
                 "skills",
-                "[DRAFT]"
-            ],
-            [
-                "collaborators",
-                "[DRAFT]"
-            ],
-            [
-                "printed",
-                "[DRAFT]"
+                "branding, illustration, event production, recipe development, Illustrator, InDesign, Photoshop"
             ]
         ],
-        "hero": "wormandwhisk/hero.jpg",
+        "hero": "wormandwhisk/hero-collage.jpg",
         "sections": [
             {
                 "layout": "pair",
                 "media": [
-                    {
-                        "src": "wormandwhisk/stop-motion.mp4",
-                        "caption": "[DRAFT] The menu, shot as a stop-motion."
-                    },
-                    "wormandwhisk/event-counter.jpg"
+                    "wormandwhisk/yac-booth.jpg",
+                    "wormandwhisk/yac-us.jpg"
                 ]
             },
             {
-                "label": "print",
-                "text": "[DRAFT] Everything printed for the day.",
-                "note": "[DRAFT] Everything printed for the day."
+                "label": "identity",
+                "text": "The identity stays close to what’s in the cup: the greens and browns of matcha and hojicha, and a worm as a playful mascot, wrapped around a whisk. ZT Bros Oskon 90s lifts it a little, while its capitals keep things striking.",
+                "note": "Greens and browns from matcha and hojicha, and a worm for a mascot."
+            },
+            {
+                "media": [
+                    "wormandwhisk/identity.jpg"
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "wormandwhisk/buttons-pile.jpg",
+                    "wormandwhisk/kitchen.jpg"
+                ]
+            },
+            {
+                "label": "three pop-ups",
+                "text": "It started as a home café. For You Are Code, a student exhibition, the identity went pixel; for After Hours, an evening menu of cocktails, it went to capitals, with a martini glass in place of the whisk.",
+                "note": "Home café, pixels for You Are Code, capitals and a martini glass for After Hours."
+            },
+            {
+                "layout": "row",
+                "media": [
+                    {
+                        "src": "wormandwhisk/poster-home.jpg",
+                        "ratio": 0.755,
+                        "caption": "Home café"
+                    },
+                    {
+                        "src": "wormandwhisk/poster-yac-0.jpg",
+                        "ratio": 0.784,
+                        "caption": "You Are Code"
+                    },
+                    {
+                        "src": "wormandwhisk/poster-afterhours.jpg",
+                        "ratio": 0.672,
+                        "caption": "After Hours"
+                    }
+                ]
+            },
+            {
+                "label": "on the table",
+                "text": "Menus, recipe cards, time cards, labels, buttons and signs, printed for each pop-up.",
+                "note": "Everything printed for the pop-ups."
             },
             {
                 "layout": "viewer",
@@ -258,6 +295,11 @@
                         "src": "wormandwhisk/print-menu-4.jpg",
                         "thumb": "wormandwhisk/print-menu-4-tile.jpg",
                         "caption": "Menu, drinks"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-spring.jpg",
+                        "thumb": "wormandwhisk/menu-spring-tile.jpg",
+                        "caption": "Spring menu"
                     },
                     {
                         "src": "wormandwhisk/print-menu-first-1.jpg",
@@ -304,6 +346,55 @@
                         "thumb": "wormandwhisk/print-signs-1-tile.jpg",
                         "caption": "Signs"
                     }
+                ]
+            },
+            {
+                "label": "online",
+                "text": "Menu releases and illustrated posts, drawn for Instagram.",
+                "note": "Menu releases and illustrated posts for Instagram."
+            },
+            {
+                "media": [
+                    "wormandwhisk/hero.jpg"
+                ]
+            },
+            {
+                "layout": "row",
+                "media": [
+                    {
+                        "src": "wormandwhisk/poster-illustration-0.jpg",
+                        "ratio": 0.755
+                    },
+                    {
+                        "src": "wormandwhisk/poster-illustration-1.jpg",
+                        "ratio": 0.755
+                    },
+                    {
+                        "src": "wormandwhisk/poster-illustration-2.jpg",
+                        "ratio": 0.755
+                    },
+                    {
+                        "src": "wormandwhisk/poster-illustration-4.jpg",
+                        "ratio": 0.758
+                    }
+                ]
+            },
+            {
+                "media": [
+                    {
+                        "src": "wormandwhisk/stop-motion.mp4",
+                        "caption": "A menu release, shot as a stop-motion."
+                    }
+                ]
+            },
+            {
+                "label": "on the day",
+                "text": "At After Hours, every drink came with a card to fill in: arrival time, signature, and a rating.",
+                "note": "Every drink came with a card to fill in."
+            },
+            {
+                "media": [
+                    "wormandwhisk/drink-reviews.mp4"
                 ]
             }
         ],

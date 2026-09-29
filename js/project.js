@@ -224,6 +224,11 @@ function createSection(section, title) {
     if (section.columns) grid.style.setProperty('--cols', section.columns);
     if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
+    // pictures that give their shape (width / height) share one height: each column is as wide as its picture
+    if (items.every(i => i.ratio)) {
+        grid.style.setProperty('--ratios', items.map(i => `minmax(0, ${i.ratio}fr)`).join(' '));
+        el.classList.add('even');
+    }
     if (section.layout === 'viewer') {
         buildViewer(el, grid, items, title);
         if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);

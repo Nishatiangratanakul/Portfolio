@@ -163,6 +163,8 @@ figcaption {
 
 /* a row: everything side by side (3 across on phones) */
 .layout-row .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+/* pictures that give their shape share one height: each column is as wide as its picture */
+.project-section.even .section-media { grid-auto-flow: row; grid-template-columns: var(--ratios); }
 
 /* gallery: thumbnails; each opens full screen */
 .layout-gallery .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
