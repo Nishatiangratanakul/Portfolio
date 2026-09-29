@@ -50,8 +50,8 @@ const slugId = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(
 function showProject(project, visible) {
     document.title = `${project.title} · Nisha Tiangratanakul`;
     const media = Object.keys(project).filter(k => /^media\d+$/.test(k)).map(k => project[k]);
-    const hero = project.hero || media[0];
-    const rest = project.hero ? media : media.slice(1);
+    const hero = project.hero === false ? null : project.hero || media[0];   // "hero": false for none
+    const rest = project.hero !== undefined ? media : media.slice(1);
     const deliverables = project.deliverables && (Array.isArray(project.deliverables) ? project.deliverables : [project.deliverables]);
 
     // the words first: title on the left; what it is and what was made on the right. Then the picture.
