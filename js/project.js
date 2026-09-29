@@ -81,11 +81,13 @@ function showProject(project, visible) {
     if (new URLSearchParams(location.search).has('try')) lookSwitcher();
 }
 
-// Looks to compare (only while trying things out): notes that follow the cursor (filled or
-// outlined) or sit small under the picture; each part's writing as text or as a note on its
-// pictures; credits at the bottom or in a sidebar (from the right or left, over or under the nav).
-const LOOKS = { notes: ['filled', 'outlined', 'under'], sections: ['text', 'hover'], credits: ['bottom', 'right', 'left', 'right-inset', 'left-inset'] };
+// Looks to compare (only while trying things out, with ?try): the credits sidebar over the nav or
+// under it, white or red.
+// chosen: outlined notes, each part's writing as hover notes; credits still being decided
+const CHOSEN = { notes: 'outlined', sections: 'hover' };
+const LOOKS = { credits: ['right', 'right-inset', 'right-red', 'right-inset-red'] };
 function look(key) {
+    if (CHOSEN[key]) return CHOSEN[key];
     try { const v = localStorage.getItem('look-' + key); if (LOOKS[key].includes(v)) return v; } catch (e) {}
     return LOOKS[key][0];
 }
@@ -93,7 +95,7 @@ function applyLook() {
     document.body.dataset.notes = look('notes');
     document.body.dataset.sections = look('sections');
     document.body.dataset.credits = look('credits');
-    if (look('credits') !== 'bottom') creditsSidebar();
+    creditsSidebar();
 }
 
 // credits in a panel that slides out from the right when "credits" is clicked
