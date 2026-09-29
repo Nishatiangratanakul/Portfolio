@@ -194,6 +194,153 @@
         "preview": "unspokendialogue/preview.mp4"
     },
     {
+        "title": "worm & whisk",
+        "subject": "branding",
+        "year": "2026",
+        "description": "Worm & Whisk is a pop-up café. DRAFT: to be written.",
+        "summary": "Worm & Whisk is a pop-up café [DRAFT: what it is, who it's with, where and when it ran, and what the identity set out to do].",
+        "deliverables": [
+            "[DRAFT] Identity, menus, signage, buttons, coasters, time cards and recipe cards for each pop-up.",
+            "[DRAFT] A stop-motion menu release for Instagram."
+        ],
+        "details": [
+            [
+                "role",
+                "[DRAFT]"
+            ],
+            [
+                "skills",
+                "[DRAFT]"
+            ],
+            [
+                "collaborators",
+                "[DRAFT]"
+            ],
+            [
+                "printed",
+                "[DRAFT]"
+            ]
+        ],
+        "hero": "wormandwhisk/stop-motion.mp4",
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    "wormandwhisk/event-counter.jpg",
+                    "wormandwhisk/event-room.jpg"
+                ]
+            },
+            {
+                "label": "menu",
+                "text": "[DRAFT] The menu, released one drink at a time.",
+                "note": "[DRAFT] The menu, released one drink at a time."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "tone": "dim",
+                "media": [
+                    {
+                        "src": "wormandwhisk/menu-post-1.jpg",
+                        "thumb": "wormandwhisk/menu-post-1-tile.jpg",
+                        "caption": "Hojiberry"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-post-2.jpg",
+                        "thumb": "wormandwhisk/menu-post-2-tile.jpg",
+                        "caption": "Omija spritz mocktail"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-post-3.jpg",
+                        "thumb": "wormandwhisk/menu-post-3-tile.jpg",
+                        "caption": "Mango sticky rice"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-post-4.jpg",
+                        "thumb": "wormandwhisk/menu-post-4-tile.jpg",
+                        "caption": "Bala"
+                    }
+                ]
+            },
+            {
+                "label": "print",
+                "text": "[DRAFT] Everything printed for the day.",
+                "note": "[DRAFT] Everything printed for the day."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "tone": "dim",
+                "media": [
+                    {
+                        "src": "wormandwhisk/print-menu-2.jpg",
+                        "thumb": "wormandwhisk/print-menu-2-tile.jpg",
+                        "caption": "Menu, after hours"
+                    },
+                    {
+                        "src": "wormandwhisk/print-menu-3.jpg",
+                        "thumb": "wormandwhisk/print-menu-3-tile.jpg",
+                        "caption": "Menu"
+                    },
+                    {
+                        "src": "wormandwhisk/print-menu-4.jpg",
+                        "thumb": "wormandwhisk/print-menu-4-tile.jpg",
+                        "caption": "Menu, drinks"
+                    },
+                    {
+                        "src": "wormandwhisk/print-menu-first-1.jpg",
+                        "thumb": "wormandwhisk/print-menu-first-1-tile.jpg",
+                        "caption": "The first menu"
+                    },
+                    {
+                        "src": "wormandwhisk/print-recipe-1.jpg",
+                        "thumb": "wormandwhisk/print-recipe-1-tile.jpg",
+                        "caption": "Recipe card"
+                    },
+                    {
+                        "src": "wormandwhisk/print-recipe-2.jpg",
+                        "thumb": "wormandwhisk/print-recipe-2-tile.jpg",
+                        "caption": "Recipe card"
+                    },
+                    {
+                        "src": "wormandwhisk/print-timecard-1.jpg",
+                        "thumb": "wormandwhisk/print-timecard-1-tile.jpg",
+                        "caption": "Time card"
+                    },
+                    {
+                        "src": "wormandwhisk/print-timecard-2.jpg",
+                        "thumb": "wormandwhisk/print-timecard-2-tile.jpg",
+                        "caption": "Time card"
+                    },
+                    {
+                        "src": "wormandwhisk/print-labels-1.jpg",
+                        "thumb": "wormandwhisk/print-labels-1-tile.jpg",
+                        "caption": "Food label"
+                    },
+                    {
+                        "src": "wormandwhisk/print-buttons-1.jpg",
+                        "thumb": "wormandwhisk/print-buttons-1-tile.jpg",
+                        "caption": "Buttons"
+                    },
+                    {
+                        "src": "wormandwhisk/print-doortag-1.jpg",
+                        "thumb": "wormandwhisk/print-doortag-1-tile.jpg",
+                        "caption": "Door tag"
+                    },
+                    {
+                        "src": "wormandwhisk/print-signs-1.jpg",
+                        "thumb": "wormandwhisk/print-signs-1-tile.jpg",
+                        "caption": "Signs"
+                    }
+                ]
+            }
+        ],
+        "icon": "wormandwhisk/icon.jpg",
+        "preview": "wormandwhisk/preview.mp4"
+    },
+    {
         "title": "contemplating death",
         "subject": "book design",
         "year": "2025",
