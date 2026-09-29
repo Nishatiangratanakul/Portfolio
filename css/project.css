@@ -1,340 +1,62 @@
-/* Project page. Phone styles first, then desktop overrides.
-   Desktop rows use the work list's columns (2fr 1fr 2fr, 24px apart):
-   a label in column 1, the content across columns 2–3. */
+/* Project page. Phone styles first, then desktop overrides. */
 
 .project {
-    padding: 20px var(--gutter) 0;
-    font-size: 11pt;
-    line-height: 1.5;
-}
-
-/* title + year, on their own at the top */
-.title-row {
-    padding: 4px 0 20px;
-}
-
-.title-row h1 {
-    font-size: 22pt;
-    line-height: 1.1;
-}
-
-.title-row .year {
-    margin-top: 2px;
-}
-
-.hero img,
-.hero video {
-    display: block;
-    width: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-}
-
-/* info rows: description · context · deliverables (or your own) */
-.project-info {
-    padding: 28px 0 12px;
-}
-
-.row {
-    display: grid;
-    gap: 8px;
-    padding-bottom: 28px;
-}
-
-/* the row labels read as headings */
-.row h2 { font-weight: 600; }
-
-.text p + p { margin-top: 1em; }
-
-/* bullet points (e.g. deliverables) */
-.bullets { list-style: none; padding: 0; margin: 0; }
-.text p + .bullets { margin-top: 1em; }
-.bullets li { position: relative; padding-left: 1.1em; }
-.bullets li + li { margin-top: 0.5em; }
-.bullets li::before { content: "→"; position: absolute; left: 0; }
-.text a { text-decoration: underline; text-underline-offset: 2px; }
-.row { scroll-margin-top: 24px; }
-
-/* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
-   on phones the list is indented under its heading */
-.context {
-    display: grid;
-    grid-template-columns: minmax(84px, max-content) minmax(0, 1fr);
-    gap: 8px 16px;
-    padding-left: 14px;
-}
-
-/* images: one full width, or two across, with notes under them */
-.project-section {
-    padding-bottom: 20px;
-}
-
-.section-media {
-    display: grid;
-    gap: 20px;
-}
-
-.section-media img,
-.section-media video {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* a full-width loop stays full width but never taller than most of the screen, so its note still fits
-   (a little of its top and bottom is trimmed on short screens) */
-.layout-full .section-media video { max-height: 78vh; object-fit: cover; }
-
-/* a single image fills the width; an upright (portrait) one never gets taller than the screen and sits centred */
-.layout-full .portrait img,
-.layout-full .portrait video {
-    width: auto;
-    max-width: 100%;
-    max-height: 90vh;
-    margin: 0 auto;
-}
-
-figcaption {
-    font-size: 10pt;
-    margin-top: 8px;
-    max-width: 60ch;
-}
-
-/* a picture that turns over when clicked */
-.flip { display: block; width: 100%; padding: 0; border: 0; background: none; perspective: 2000px; cursor: var(--cursor-click); }
-.flip-inner { display: block; position: relative; transition: transform 0.7s ease; transform-style: preserve-3d; }
-.flip.flipped .flip-inner { transform: rotateY(180deg); }
-.flip img { display: block; width: 100%; height: auto; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.flip .flip-back { position: absolute; inset: 0; transform: rotateY(180deg); }
-
-/* "dark": the block sits on black, like the posters and origami */
-.dark .section-media {
-    background: var(--black);
-    padding: 20px;
-}
-.dark .section-media figcaption { color: #fff; }
-/* notes for a black block sit under it, in the normal colour */
-.dark > figcaption { margin-top: 10px; }
-/* a single image or loop on black fills the band edge to edge, so every black block is the same width */
-.dark.layout-full .section-media { padding: 0; }
-.dark.layout-full .section-media img,
-.dark.layout-full .section-media video { width: 100%; max-height: none; }
-.layout-gallery .section-media { align-items: center; }
-
-/* a row: everything side by side (3 across on phones) */
-.layout-row .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-
-/* gallery: thumbnails; each opens full screen */
-.layout-gallery .section-media { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.layout-gallery button {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: var(--cursor-open);
-}
-.layout-gallery button img { transition: opacity 0.15s; }
-.layout-gallery button:hover img { opacity: 0.85; }
-
-/* viewer: the big spot, then thumbnails (below on phones, a column on the right on desktop) */
-.layout-viewer .section-media { gap: 12px; }
-.viewer-stage {
-    aspect-ratio: 4 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.viewer-stage img,
-.viewer-stage video { max-width: 100%; max-height: 100%; width: auto; height: auto; }
-.viewer-stage .zoomable { cursor: var(--cursor-open); }
-.viewer-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px; }
-.viewer-thumbs button {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 1px solid transparent;
-    background: none;
-    cursor: var(--cursor-click);
-    opacity: 0.55;
-    transition: opacity 0.15s;
-}
-.viewer-thumbs button:hover,
-.viewer-thumbs button[aria-current="true"] { opacity: 1; }
-.viewer-thumbs button[aria-current="true"] { border-color: rgba(255, 255, 255, 0.6); }
-.viewer-thumbs img { display: block; width: 100%; height: auto; }
-
-.lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 30;
     display: flex;
     flex-direction: column;
-    background: var(--black);
-    color: #fff;
-}
-.lightbox[hidden] { display: none; }
-
-.lb-stage {
-    flex: 1;
-    min-height: 0;
-    overflow: hidden;
-    display: flex;
     align-items: center;
+    padding: 5%;
+}
+
+.text-container {
+    max-width: 80vw;
+    padding-bottom: 2%;
+}
+
+.project-title {
+    padding-bottom: 2%;
+}
+
+.subject {
+    padding-bottom: 5%;
+}
+
+.description {
+    max-width: 50ch;
+    padding: 2% 0 5%;
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 16px;
-}
-.lb-stage img {
-    max-width: 100%;
-    max-height: 100%;
-    cursor: var(--cursor-open);
-}
-/* zoomed: the image at up to 2.5x the screen height; scrolls (and follows the mouse) inside the stage */
-.lb-stage.zoomed {
-    display: block;
-    overflow: auto;
-    padding: 0;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-}
-.lb-stage.zoomed::-webkit-scrollbar { display: none; }
-.lb-stage.zoomed img {
-    max-width: none;
-    max-height: none;
-    height: 250vh;
-    display: block;
-    margin: 0 auto;
-    cursor: zoom-out;
 }
 
-.lb-bar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;   /* caption · arrows in the middle · count */
-    align-items: baseline;
-    gap: 16px;
-    padding: 12px var(--gutter) 16px;
-    font-size: 11pt;
+.media-container > * {
+    width: 80vw;
+    height: auto;
+    margin: 2%;
 }
-.lb-nav { display: flex; gap: 22px; align-items: baseline; }
-.lb-nav button,
-.lb-close {
-    background: none;
-    border: 0;
-    padding: 0 2px;
-    color: #fff;
-    font: inherit;
-    font-size: 14pt;
-}
-.lb-count { opacity: 0.6; justify-self: end; }
-.lb-close { position: absolute; top: 12px; right: var(--gutter); z-index: 1; font-size: 20pt; line-height: 1; }
-
-/* previous / next: plain text, no line above */
-.next-bar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;   /* previous · top · next */
-    align-items: baseline;
-    gap: 16px;
-    padding: 24px 0 32px;
-}
-.next-link.prev { justify-self: start; }
-.next-link.next { justify-self: end; }
-
-.next-link { position: relative; }
-.next-link.next { text-align: right; }
-
-.peek { display: none; }
-
-.not-found { padding: 40px 0; }
 
 @media (min-width: 601px) {
     .project {
-        padding-top: 28px;
-        font-size: 12pt;
+        padding: 5% 15% 1%;
     }
 
-    .title-row {
-        padding: 0 0 24px;
+    .project-title {
+        font-size: 46pt;
     }
 
-    .title-row h1 { font-size: 28pt; }
-
-    .project-info { padding: 40px 0 24px; }
-
-    /* desktop: the hero comes first, short enough that the title still shows on the first screen
-       (phones keep the title first) */
-    .project { display: flex; flex-direction: column; }
-    .hero { order: -1; }
-    .title-row { padding-top: 24px; }
-    /* as tall as the screen allows while the title still shows without scrolling */
-    .hero img,
-    .hero video { height: calc(100vh - 210px); min-height: 380px; max-height: 1150px; }
-
-    .context {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-        gap: 10px 24px;
-        padding-left: 0;
+    .subject {
+        padding-bottom: 2%;
     }
 
-    .row {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr); /* fixed widths: long text wraps instead of stretching a column */
-        column-gap: 24px;
-        padding-bottom: 40px;
+    .description {
+        max-width: 70ch;
+        padding-bottom: 0;
     }
 
-    /* the content always takes columns 2–3 */
-    .row > :not(h2) { grid-column: 2 / 4; }
-    .text { max-width: 70ch; }
-
-    .project-section { padding-bottom: 32px; }
-    figcaption { font-size: 11pt; }
-    /* notes under a full-width block run the whole width of the picture */
-    .layout-full figcaption,
-    .layout-pair figcaption,
-    .project-section > figcaption { max-width: none; }
-
-    .layout-trio .section-media { grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
-
-    .dark .section-media { padding: 40px; }
-    .layout-row .section-media,
-    .layout-gallery .section-media { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
-    .layout-viewer .section-media { grid-template-columns: minmax(0, 1fr) 84px; gap: 24px; align-items: start; }
-    .viewer-thumbs { grid-template-columns: none; gap: 10px; }
-    /* "centred": the big picture is centred in the whole black band (not beside the thumbnails),
-       no taller than most of the screen; the thumbnails sit over the right edge, from the top */
-    .centred.layout-viewer .section-media { display: block; position: relative; padding: 48px 140px; }
-    .centred .viewer-stage { aspect-ratio: auto; height: min(72vh, 62vw); }
-    .centred .viewer-thumbs { position: absolute; right: 36px; top: 48px; width: 64px; gap: 8px; }
-    .has-columns .section-media { grid-auto-flow: row; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 32px; padding: 48px 12%; }
-    .lb-stage { padding: 32px; }
-
-    .layout-pair .section-media {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        align-items: start;
-    }
-
-    /* hovering previous / next shows a small preview */
-    .peek {
-        display: block;
-        width: 220px;
-        pointer-events: none;
-        visibility: hidden;
-        z-index: 5;
-    }
-    .next-link:hover .peek { visibility: visible; }
-
-    /* centred just above the link text */
-    .peek {
-        position: absolute;
-        bottom: calc(100% + 14px);
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .peek video,
-    .peek img {
-        display: block;
-        width: 100%;
-        height: auto;
+    .media-container > * {
+        width: 70vw;
+        margin: 1%;
     }
 }
