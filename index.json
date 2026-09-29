@@ -384,6 +384,11 @@
         ],
         "sections": [
             {
+                "media": [
+                    "legosans/media-2.mp4"
+                ]
+            },
+            {
                 "layout": "gallery",
                 "columns": 5,
                 "dark": true,
@@ -516,15 +521,10 @@
                 ]
             },
             {
-                "layout": "pair",
                 "media": [
                     {
                         "src": "legosans/plate-built.jpg",
                         "caption": "Each letter is built by hand on a Lego baseplate from squares and quarter-circles, mirrored so it prints the right way round."
-                    },
-                    {
-                        "src": "legosans/plate-inked.jpg",
-                        "caption": "The same plate locked into the proof press and inked."
                     }
                 ]
             }
