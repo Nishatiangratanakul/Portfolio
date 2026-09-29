@@ -549,14 +549,135 @@
         "year": "2025",
         "description": "Kowloon is a dual-layered  book that contrasts the historical reality of the Kowloon Walled City with its fictionalized portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often depicted as a chaotic, futuristic labyrinth.Designed as two books within one, the piece features perforated pages that readers can tear open, revealing the hidden \"fiction\" layer beneath the \"reality\" section.  The \"reality\" section takes an academic, text-based approach, while the \"fiction\" layer is more image-driven, reflecting how history transforms into myth.",
         "summary": "A book that contrasts the historical reality of the Kowloon Walled City with its fictional portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often shown as a chaotic, futuristic labyrinth.",
-        "deliverables": "Two books in one. Perforated pages tear open to reveal a hidden “fiction” layer beneath the “reality” section: the reality layer is academic and text-based, the fiction layer image-driven, showing how history turns into myth.",
+        "deliverables": [
+            "A two-in-one book: a text-based “reality” layer, with an image-driven “fiction” layer hidden inside its perforated French folds."
+        ],
         "media1": "kowloon/media-1.jpg",
-        "media2": "kowloon/media-2.mp4",
         "media3": "kowloon/media-3.mp4",
-        "media4": "kowloon/media-4.mp4",
-        "media5": "kowloon/media-5.jpg",
         "icon": "kowloon/icon.jpg",
-        "preview": "kowloon/preview.mp4"
+        "preview": "kowloon/preview.mp4",
+        "details": [
+            [
+                "role",
+                "designer & producer"
+            ],
+            [
+                "skills",
+                "editing, InDesign, Photoshop, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Ka Ming Lee"
+            ],
+            [
+                "printed",
+                "laser"
+            ],
+            [
+                "bound",
+                "tape bound, with French folds along perforated edges"
+            ]
+        ],
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "kowloon/cover-reality.jpg",
+                        "caption": "The reality side: white, text-first."
+                    },
+                    {
+                        "src": "kowloon/cover-fiction.jpg",
+                        "caption": "The fiction side: dark, image-first."
+                    }
+                ]
+            },
+            {
+                "media": [
+                    {
+                        "src": "kowloon/cover-flip.mp4",
+                        "caption": "The sleeve, one side for each layer."
+                    }
+                ]
+            },
+            {
+                "label": "two layers",
+                "text": "The reality layer is academic and text-based: the walled city’s history, its architecture and daily life. The fiction layer, hidden inside it, is image-driven: the city as films and games have imagined it.",
+                "note": "Reality on the outside, fiction folded inside."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "kowloon/spread-reality-22.jpg",
+                        "thumb": "kowloon/spread-reality-22-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-46.jpg",
+                        "thumb": "kowloon/spread-fiction-46-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-reality-42.jpg",
+                        "thumb": "kowloon/spread-reality-42-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-38.jpg",
+                        "thumb": "kowloon/spread-fiction-38-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-reality-70.jpg",
+                        "thumb": "kowloon/spread-reality-70-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-52.jpg",
+                        "thumb": "kowloon/spread-fiction-52-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-64.jpg",
+                        "thumb": "kowloon/spread-fiction-64-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread-fiction-88.jpg",
+                        "thumb": "kowloon/spread-fiction-88-tile.jpg"
+                    }
+                ],
+                "caption": "Spreads from both layers, from the print files."
+            },
+            {
+                "label": "tearing it open",
+                "text": "The fiction pages sit inside perforated French folds. To read them, the reader has to tear the book open, and once it’s torn it can’t be put back together: the history and the myth have to coexist.",
+                "note": "Once it’s torn open, it can’t be put back: the history and the myth have to coexist."
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "kowloon/tear-top.mp4",
+                    "kowloon/tear-bottom.mp4"
+                ]
+            },
+            {
+                "media": [
+                    "kowloon/fiction-spread.jpg"
+                ]
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "kowloon/perforation.jpg",
+                        "caption": "The perforated fold, before it’s torn."
+                    },
+                    "kowloon/fanned.jpg"
+                ]
+            },
+            {
+                "media": [
+                    "kowloon/media-3.mp4"
+                ]
+            }
+        ]
     },
     {
         "title": "76 cones",
