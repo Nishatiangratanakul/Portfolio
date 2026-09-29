@@ -221,46 +221,16 @@
                 "[DRAFT]"
             ]
         ],
-        "hero": "wormandwhisk/stop-motion.mp4",
+        "hero": "wormandwhisk/hero.jpg",
         "sections": [
             {
                 "layout": "pair",
                 "media": [
-                    "wormandwhisk/event-counter.jpg",
-                    "wormandwhisk/event-room.jpg"
-                ]
-            },
-            {
-                "label": "menu",
-                "text": "[DRAFT] The menu, released one drink at a time.",
-                "note": "[DRAFT] The menu, released one drink at a time."
-            },
-            {
-                "layout": "viewer",
-                "centred": true,
-                "dark": true,
-                "tone": "dim",
-                "media": [
                     {
-                        "src": "wormandwhisk/menu-post-1.jpg",
-                        "thumb": "wormandwhisk/menu-post-1-tile.jpg",
-                        "caption": "Hojiberry"
+                        "src": "wormandwhisk/stop-motion.mp4",
+                        "caption": "[DRAFT] The menu, shot as a stop-motion."
                     },
-                    {
-                        "src": "wormandwhisk/menu-post-2.jpg",
-                        "thumb": "wormandwhisk/menu-post-2-tile.jpg",
-                        "caption": "Omija spritz mocktail"
-                    },
-                    {
-                        "src": "wormandwhisk/menu-post-3.jpg",
-                        "thumb": "wormandwhisk/menu-post-3-tile.jpg",
-                        "caption": "Mango sticky rice"
-                    },
-                    {
-                        "src": "wormandwhisk/menu-post-4.jpg",
-                        "thumb": "wormandwhisk/menu-post-4-tile.jpg",
-                        "caption": "Bala"
-                    }
+                    "wormandwhisk/event-counter.jpg"
                 ]
             },
             {
