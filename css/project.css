@@ -1,6 +1,6 @@
 /* Project page. Phone styles first, then desktop overrides.
-   Desktop rows use the work list's columns (2fr 1fr 2fr, 24px apart):
-   a label in column 1, the content across columns 2–3. */
+   The words come first (title; what it is and what was made), then the pictures, which carry most
+   of the page. Short writing sits between them; the facts are credits at the end. */
 
 .project {
     padding: 20px var(--gutter) 0;
@@ -8,63 +8,53 @@
     line-height: 1.5;
 }
 
-/* title + year, on their own at the top */
-.title-row {
-    padding: 4px 0 20px;
-}
+/* opening: title, then the description and what was made */
+.opening { display: grid; gap: 16px; padding: 8px 0 28px; }
+.opening h1 { font-size: 30pt; line-height: 1; }
+.opening .meta { margin-top: 8px; }
+.opening-text p + p { margin-top: 1em; }
+.opening-text p { max-width: 58ch; }
+.to-credits { display: inline-block; margin-top: 14px; }
 
-.title-row h1 {
-    font-size: 22pt;
-    line-height: 1.1;
-}
-
-.title-row .year {
-    margin-top: 2px;
-}
+/* "made": what the project turned into (and other short lists) */
+.made { list-style: none; padding: 0; margin: 16px 0 0; }
+.made li { position: relative; padding-left: 1.2em; }
+.made li + li { margin-top: 0.4em; }
+.made li::before { content: "→"; position: absolute; left: 0; }
+.opening a, .part-text a, .credits a { text-decoration: underline; text-underline-offset: 2px; }
 
 .hero img,
-.hero video {
-    display: block;
-    width: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-}
+.hero video { display: block; width: 100%; height: auto; }
 
-/* info rows: description · context · deliverables (or your own) */
-.project-info {
-    padding: 28px 0 12px;
-}
+/* a short piece of writing between the pictures */
+.part-text { padding: 36px 0 28px; max-width: 62ch; scroll-margin-top: 24px; }
+.part-text h2 { font-size: 18pt; line-height: 1.1; margin-bottom: 10px; }
+.part-text p + p { margin-top: 1em; }
 
-.row {
+/* credits at the end: small headings, several across */
+.credits {
     display: grid;
-    gap: 8px;
-    padding-bottom: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+    padding: 32px 0 8px;
+    scroll-margin-top: 24px;
+    font-size: 10pt;
 }
+.credits h2 { opacity: 0.6; margin-bottom: 2px; }
+.credits p::first-letter { text-transform: uppercase; }
 
-/* the row labels read as headings */
-.row h2 { font-weight: 600; }
-
-.text p + p { margin-top: 1em; }
-
-/* bullet points (e.g. deliverables) */
-.bullets { list-style: none; padding: 0; margin: 0; }
-.text p + .bullets { margin-top: 1em; }
-.bullets li { position: relative; padding-left: 1.1em; }
-.bullets li + li { margin-top: 0.5em; }
-.bullets li::before { content: "→"; position: absolute; left: 0; }
-.text a { text-decoration: underline; text-underline-offset: 2px; }
-.row { scroll-margin-top: 24px; }
-
-/* context: labels in one column, answers in the next (same 1 : 2 split as columns 2–3);
-   on phones the list is indented under its heading */
-.context dd::first-letter { text-transform: uppercase; }   /* every answer starts with a capital, like the sentences */
-
-.context {
-    display: grid;
-    grid-template-columns: minmax(84px, max-content) minmax(0, 1fr);
-    gap: 8px 16px;
-    padding-left: 14px;
+/* a note that follows the cursor over its picture (mouse only; see hoverNotes in js/project.js) */
+.hover-note {
+    position: fixed; left: 0; top: 0; z-index: 40;
+    max-width: 300px;
+    padding: 6px 9px;
+    background: var(--red); color: #fff;
+    font-size: 10pt; line-height: 1.4;
+    pointer-events: none;
 }
+.hover-note[hidden] { display: none; }
+.hover-note em { font-style: italic; }
+figcaption.noted { display: none; }
 
 /* images: one full width, or two across, with notes under them */
 .project-section {
@@ -262,38 +252,14 @@ figcaption {
         font-size: 12pt;
     }
 
-    .title-row {
-        padding: 0 0 24px;
-    }
+    /* opening: title on the left, the words on the right */
+    .opening { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 24px 0 48px; align-items: start; }
+    .opening h1 { font-size: 48pt; }
 
-    .title-row h1 { font-size: 28pt; }
+    .part-text { padding: 64px 0 36px; }
+    .part-text h2 { font-size: 24pt; }
 
-    .project-info { padding: 40px 0 24px; }
-
-    /* desktop: the hero comes first, short enough that the title still shows on the first screen
-       (phones keep the title first) */
-    .project { display: flex; flex-direction: column; }
-    .hero { order: -1; }
-    .title-row { padding-top: 24px; }
-    /* as tall as the screen allows while the title still shows without scrolling */
-    .hero img,
-    .hero video { height: calc(100vh - 210px); min-height: 380px; max-height: 1150px; }
-
-    .context {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-        gap: 10px 24px;
-        padding-left: 0;
-    }
-
-    .row {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr); /* fixed widths: long text wraps instead of stretching a column */
-        column-gap: 24px;
-        padding-bottom: 40px;
-    }
-
-    /* the content always takes columns 2–3 */
-    .row > :not(h2) { grid-column: 2 / 4; }
-    .text { max-width: 70ch; }
+    .credits { grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 56px 0 16px; font-size: 11pt; }
 
     .project-section { padding-bottom: 32px; }
     figcaption { font-size: 11pt; }

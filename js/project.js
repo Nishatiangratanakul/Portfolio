@@ -50,20 +50,24 @@ function showProject(project, visible) {
     const media = Object.keys(project).filter(k => /^media\d+$/.test(k)).map(k => project[k]);
     const hero = project.hero || media[0];
     const rest = project.hero ? media : media.slice(1);
-    const rows = project.rows || [
-        { label: 'description', text: project.summary || project.description },
-        project.details && { label: 'context', list: project.details },
-        project.deliverables && { label: 'deliverables', [Array.isArray(project.deliverables) ? 'items' : 'text']: project.deliverables },
-    ].filter(Boolean);
+    const deliverables = project.deliverables && (Array.isArray(project.deliverables) ? project.deliverables : [project.deliverables]);
 
+    // the words first: title on the left; what it is and what was made on the right. Then the picture.
     container.innerHTML = `
-        <div class="title-row">
-            <h1>${esc(project.title)}</h1>
-            <p class="year">${esc(project.year)}</p>
-        </div>
+        <header class="opening">
+            <div class="opening-title">
+                <h1>${esc(project.title)}</h1>
+                <p class="meta">${esc([project.format || project.subject, project.year].filter(Boolean).join(' · '))}</p>
+            </div>
+            <div class="opening-text">
+                ${paragraphs(project.summary || project.description)}
+                ${deliverables ? `<ul class="made">${deliverables.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
+                ${project.details ? `<a class="to-credits" href="#credits">credits ↓</a>` : ''}
+            </div>
+        </header>
         <div class="hero"></div>
-        <div class="project-info">${rows.map(infoRow).join('')}</div>
         <div class="sections"></div>
+        ${project.details ? credits(project.details) : ''}
         <nav class="next-bar" aria-label="more projects"></nav>
     `;
 
@@ -71,14 +75,55 @@ function showProject(project, visible) {
     const sectionsEl = container.querySelector('.sections');
     (project.sections || defaultSections(rest)).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
+    hoverNotes();
 }
 
-// a label on the left, then text and/or bullet points, or a two-column list, across the other two columns
-function infoRow({ label, text, list, items }) {
-    const body = list
-        ? `<dl class="context">${list.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join('')}</dl>`
-        : `<div class="text">${text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : ''}${items ? `<ul class="bullets">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}</div>`;
-    return `<div class="row" id="${slugId(label || '')}"><h2>${esc(label || '')}</h2>${body}</div>`;
+const paragraphs = text => text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : '';
+
+// the facts (role, time, advisors…) at the end of the page, like credits
+function credits(list) {
+    return `<section class="credits" id="credits">${list.map(([k, v]) => `<div><h2>${esc(k)}</h2><p>${fmt(v)}</p></div>`).join('')}</section>`;
+}
+
+// a short piece of writing between the pictures: a small heading, then the text and/or a list
+function partText({ label, text, items }) {
+    return `<div class="part-text" id="${slugId(label || '')}">
+        ${label ? `<h2>${esc(label)}</h2>` : ''}
+        ${paragraphs(text)}
+        ${items ? `<ul class="made">${items.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
+    </div>`;
+}
+
+// Notes on pictures: with a mouse, a note follows the cursor while you're over its picture
+// (the note under the picture is hidden); on touch screens the note stays under the picture.
+function hoverNotes() {
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const tip = document.createElement('div');
+    tip.className = 'hover-note';
+    tip.hidden = true;
+    document.body.appendChild(tip);
+    const pairs = [];
+    container.querySelectorAll('.project-section').forEach(section => {
+        // a note for one picture
+        section.querySelectorAll('.section-media figure').forEach(fig => {
+            const cap = fig.querySelector(':scope > figcaption');
+            if (cap) pairs.push([fig, cap]);
+        });
+        // a note for the whole block
+        const own = section.querySelector(':scope > figcaption');
+        if (own) pairs.push([section.querySelector('.section-media'), own]);
+    });
+    pairs.forEach(([area, cap]) => {
+        cap.classList.add('noted');
+        area.classList.add('has-note');
+        area.addEventListener('mousemove', e => {
+            tip.innerHTML = cap.innerHTML;
+            tip.hidden = false;
+            const x = Math.min(e.clientX + 18, innerWidth - tip.offsetWidth - 12);
+            tip.style.transform = `translate(${x}px, ${e.clientY + 18}px)`;
+        });
+        area.addEventListener('mouseleave', () => { tip.hidden = true; });
+    });
 }
 
 // no written sections yet: alternate one image with a pair side by side
@@ -95,10 +140,9 @@ function defaultSections(media) {
 // a section: images (one, two or three across) with any notes under them, or a text row
 function createSection(section, title) {
     if (!section.media) {
-        const row = document.createElement('div');
-        row.className = 'project-info';
-        row.innerHTML = infoRow(section);
-        return row;
+        const wrap = document.createElement('div');
+        wrap.innerHTML = partText(section);
+        return wrap.firstElementChild;
     }
     const el = document.createElement('section');
     el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}`;

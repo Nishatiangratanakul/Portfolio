@@ -11,11 +11,11 @@
                 "designer & producer"
             ],
             [
-                "duration",
+                "time",
                 "9 months"
             ],
             [
-                "skills",
+                "made with",
                 "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
             ],
             [
@@ -23,16 +23,15 @@
                 "Prin Limphongpand, Ingrid Chou"
             ],
             [
-                "production",
+                "printed",
                 "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges, tape binding"
             ]
         ],
         "deliverables": [
-            "A [book](#book) holding all six conversations: the transcripts, a chart for each person, and my closing thoughts on each, with an origami to fold.",
+            "A [book](#book) holding all six conversations: the transcripts, a chart for each person, and closing thoughts on each, with an origami to fold.",
             "A set of data-visualization [posters](#posters), the spoken and the unspoken, each drawn from one conversation.",
             "Take-home [letter packets](#letter-packets), handed out at *Making Space 2026*."
         ],
-        "hero": "unspokendialogue/hero.jpg",
         "sections": [
             {
                 "media": [
@@ -79,7 +78,7 @@
             },
             {
                 "label": "posters",
-                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data was my way of trying to understand it."
+                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data became a way of trying to understand it."
             },
             {
                 "layout": "viewer",
@@ -212,11 +211,11 @@
                 "designer & editor"
             ],
             [
-                "duration",
+                "time",
                 "1 month"
             ],
             [
-                "skills",
+                "made with",
                 "curation, InDesign, Photoshop, Illustrator, bookbinding"
             ],
             [
@@ -224,7 +223,7 @@
                 "Prin Limphongpand, Ingrid Chou"
             ],
             [
-                "production",
+                "printed",
                 "laser print, risograph (black pages), large-format printing (index poster)"
             ]
         ],
@@ -373,11 +372,11 @@
                 "type designer & printer"
             ],
             [
-                "duration",
+                "time",
                 "5 weeks"
             ],
             [
-                "skills",
+                "made with",
                 "type design, Illustrator, letterpress printing"
             ],
             [
@@ -385,7 +384,7 @@
                 "Advisor name, Advisor name"
             ],
             [
-                "production",
+                "printed",
                 "Lego letterpress"
             ]
         ],
