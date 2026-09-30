@@ -220,14 +220,14 @@ function createSection(section, title) {
         return wrap.firstElementChild;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}${section.fill ? ' fill' : ''}${section.tone ? ' tone-' + section.tone : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}${section.fill ? ' fill' : ''}${section.tone ? ' tone-' + section.tone : ''}${section.tall ? ' tall' : ''}`;
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
     if (section.columns) el.classList.add('has-columns');
     const items = section.media.map(item => typeof item === 'string' ? { src: item } : item);
     // pictures that give their shape (width / height) share one height: each column is as wide as its picture
-    if (items.every(i => i.ratio)) {
+    if (section.layout !== 'posts' && items.every(i => i.ratio)) {
         grid.style.setProperty('--ratios', items.map(i => `minmax(0, ${i.ratio}fr)`).join(' '));
         el.classList.add('even');
     }
@@ -304,8 +304,8 @@ function buildPosts(el, grid, items, section, title) {
             <div class="post-head">${avatar}<b>${esc(account)}</b><span class="post-more">${ICON.more}</span></div>
             <div class="post-media"${item.ratio ? ` style="aspect-ratio: ${item.ratio}"` : ''}><div class="post-slides"></div>
                 ${slides.length > 1 ? `<span class="post-count">1/${slides.length}</span>
-                    <button type="button" class="post-step prev" aria-label="previous picture" hidden>‹</button>
-                    <button type="button" class="post-step next" aria-label="next picture">›</button>` : ''}
+                    <button type="button" class="post-step prev" aria-label="previous picture" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button type="button" class="post-step next" aria-label="next picture"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>` : ''}
                 ${/\.mp4$/i.test(slides[0]) ? `<span class="post-clip">${ICON.clip}</span>` : ''}
             </div>
             ${slides.length > 1 ? `<div class="post-dots">${slides.map((_, k) => `<i${k ? '' : ' class="on"'}></i>`).join('')}</div>` : ''}
@@ -341,7 +341,7 @@ function buildPosts(el, grid, items, section, title) {
     row.appendChild(grid);
     // arrows to move through the posts (shown on every screen, so it's clear the row scrolls)
     const step = dir => grid.scrollBy({ left: dir * (grid.querySelector('.post').offsetWidth + 24), behavior: 'smooth' });
-    row.insertAdjacentHTML('beforeend', '<button type="button" class="posts-arrow prev" aria-label="previous post">←</button><button type="button" class="posts-arrow next" aria-label="next post">→</button>');
+    row.insertAdjacentHTML('beforeend', '<div class="posts-nav"><button type="button" class="posts-arrow prev" aria-label="previous post">←</button><button type="button" class="posts-arrow next" aria-label="next post">→</button></div>');
     row.querySelector('.posts-arrow.prev').addEventListener('click', () => step(-1));
     row.querySelector('.posts-arrow.next').addEventListener('click', () => step(1));
     const ends = () => {

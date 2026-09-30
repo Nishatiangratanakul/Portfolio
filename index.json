@@ -233,7 +233,10 @@
             },
             {
                 "media": [
-                    "wormandwhisk/identity.jpg"
+                    {
+                        "src": "wormandwhisk/identity.jpg",
+                        "phone": "wormandwhisk/identity-phone.jpg"
+                    }
                 ]
             },
             {
@@ -244,26 +247,27 @@
                 "caption": "The menus we made, one for each pop-up.",
                 "media": [
                     {
-                        "src": "wormandwhisk/menu-afterhours.jpg",
-                        "thumb": "wormandwhisk/menu-afterhours-tile.jpg",
+                        "src": "wormandwhisk/m-afterhours.jpg",
+                        "thumb": "wormandwhisk/m-afterhours-tile.jpg",
                         "caption": "After Hours: the cover and the drinks inside"
                     },
                     {
-                        "src": "wormandwhisk/print-menu-first-1.jpg",
-                        "thumb": "wormandwhisk/print-menu-first-1-tile.jpg",
-                        "caption": "The first home café"
+                        "src": "wormandwhisk/m-youarecode.jpg",
+                        "thumb": "wormandwhisk/m-youarecode-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
                     },
                     {
-                        "src": "wormandwhisk/menu-photo.jpg",
-                        "thumb": "wormandwhisk/menu-photo-tile.jpg",
+                        "src": "wormandwhisk/m-photo.jpg",
+                        "thumb": "wormandwhisk/m-photo-tile.jpg",
                         "caption": "The second home café, with the drinks and bakes cut out"
                     },
                     {
-                        "src": "wormandwhisk/menu-youarecode-v2.jpg",
-                        "thumb": "wormandwhisk/menu-youarecode-v2-tile.jpg",
-                        "caption": "You Are Code: the two drinks"
+                        "src": "wormandwhisk/m-first.jpg",
+                        "thumb": "wormandwhisk/m-first-tile.jpg",
+                        "caption": "The first home café"
                     }
-                ]
+                ],
+                "tall": true
             },
             {
                 "layout": "viewer",
@@ -272,22 +276,23 @@
                 "caption": "Posters for each pop-up.",
                 "media": [
                     {
-                        "src": "wormandwhisk/posters-illustrated-v2.jpg",
-                        "thumb": "wormandwhisk/posters-illustrated-v2-tile.jpg",
-                        "caption": "The second home café, illustrated by Carrie Kuo"
-                    },
-                    {
-                        "src": "wormandwhisk/posters-afterhours-v2.jpg",
-                        "thumb": "wormandwhisk/posters-afterhours-v2-tile.jpg",
+                        "src": "wormandwhisk/p-afterhours.jpg",
+                        "thumb": "wormandwhisk/p-afterhours-tile.jpg",
                         "caption": "After Hours: the drinks, released one by one"
                     },
                     {
-                        "src": "wormandwhisk/posters-youarecode-v2.jpg",
-                        "thumb": "wormandwhisk/posters-youarecode-v2-tile.jpg",
-                        "caption": "You Are Code: the full wall of posters"
+                        "src": "wormandwhisk/p-youarecode.jpg",
+                        "thumb": "wormandwhisk/p-youarecode-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
+                    },
+                    {
+                        "src": "wormandwhisk/p-illustrated.jpg",
+                        "thumb": "wormandwhisk/p-illustrated-tile.jpg",
+                        "caption": "The second home café, illustrated by Carrie Kuo"
                     }
                 ],
-                "tone": "dim"
+                "tone": "dim",
+                "tall": true
             },
             {
                 "layout": "posts",
@@ -324,25 +329,6 @@
                     },
                     {
                         "media": [
-                            "wormandwhisk/ig/whisked-away-1.jpg",
-                            "wormandwhisk/ig/whisked-away-2.jpg",
-                            "wormandwhisk/ig/whisked-away-3.jpg",
-                            "wormandwhisk/ig/whisked-away-4.jpg",
-                            "wormandwhisk/ig/whisked-away-5.jpg",
-                            "wormandwhisk/ig/whisked-away-6.jpg",
-                            "wormandwhisk/ig/whisked-away-7.jpg",
-                            "wormandwhisk/ig/whisked-away-8.jpg",
-                            "wormandwhisk/ig/whisked-away-9.jpg",
-                            "wormandwhisk/ig/whisked-away-10.jpg",
-                            "wormandwhisk/ig/whisked-away-11.jpg"
-                        ],
-                        "ratio": 1.502,
-                        "likes": "46",
-                        "date": "May 2, 2025",
-                        "caption": "whisked away @ Worm&Whisk 🪱🍵"
-                    },
-                    {
-                        "media": [
                             "wormandwhisk/ig/youarecode-1.jpg",
                             "wormandwhisk/ig/youarecode-2.jpg",
                             "wormandwhisk/ig/youarecode-3.jpg"
@@ -369,31 +355,13 @@
                         "likes": "27",
                         "date": "April 30, 2026",
                         "caption": "Worm&Whisk: After Hours 🪱 🍸 \nAn evening edition. May 9, 4-7 PM EST.\nAn all new menu of cocktails and small bites.\n\nTickets now live in bio."
-                    },
-                    {
-                        "media": [
-                            "wormandwhisk/ig/behind-the-scenes-1.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-2.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-3.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-4.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-5.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-6.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-7.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-8.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-9.jpg",
-                            "wormandwhisk/ig/behind-the-scenes-10.jpg"
-                        ],
-                        "ratio": 0.8,
-                        "likes": "20",
-                        "date": "March 19, 2025",
-                        "caption": "behind the scenes 🪱🍵 moments\n\nmany late night matchas, editing, and baking"
                     }
                 ]
             },
             {
                 "media": [
                     {
-                        "src": "wormandwhisk/drink-reviews-hd.mp4",
+                        "src": "wormandwhisk/drink-reviews-v2.mp4",
                         "caption": "Drink review cards from After Hours: arrival time, signature, and a rating."
                     }
                 ]
