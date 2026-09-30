@@ -202,7 +202,7 @@
         "deliverables": [
             "An [identity](#identity): logo, type, colour and stickers.",
             "Printed collateral for each pop-up: posters, menus, buttons, signs and recipe cards.",
-            "Menu releases and posts for social media.",
+            "Posts and menu releases for social media.",
             "Drink review cards for guests to fill in."
         ],
         "details": [
@@ -234,26 +234,6 @@
             {
                 "media": [
                     "wormandwhisk/identity.jpg"
-                ]
-            },
-            {
-                "layout": "row",
-                "media": [
-                    {
-                        "src": "wormandwhisk/poster-home.jpg",
-                        "ratio": 0.755,
-                        "caption": "Poster for a home café"
-                    },
-                    {
-                        "src": "wormandwhisk/poster-yac-0.jpg",
-                        "ratio": 0.784,
-                        "caption": "Poster for You Are Code"
-                    },
-                    {
-                        "src": "wormandwhisk/poster-afterhours.jpg",
-                        "ratio": 0.672,
-                        "caption": "Poster for After Hours"
-                    }
                 ]
             },
             {
@@ -295,25 +275,47 @@
                 ]
             },
             {
-                "layout": "row",
+                "layout": "gallery",
+                "columns": 3,
                 "media": [
                     {
-                        "src": "wormandwhisk/social-grid.jpg",
-                        "ratio": 1.31,
-                        "caption": "Posts for social media"
+                        "src": "wormandwhisk/post-home.jpg",
+                        "caption": "Home café"
                     },
                     {
-                        "src": "wormandwhisk/stop-motion.mp4",
-                        "ratio": 0.8,
-                        "caption": "A menu release, shot as a stop-motion"
+                        "src": "wormandwhisk/post-yac-mango.jpg",
+                        "caption": "You Are Code"
+                    },
+                    {
+                        "src": "wormandwhisk/post-afterhours.jpg",
+                        "caption": "After Hours"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-post-1.jpg",
+                        "caption": "Menu release: hojiberry"
+                    },
+                    {
+                        "src": "wormandwhisk/post-yac-banana.jpg",
+                        "caption": "You Are Code"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-post-3.jpg",
+                        "caption": "Menu release: mango sticky rice"
                     }
                 ]
             },
             {
+                "layout": "row",
                 "media": [
                     {
+                        "src": "wormandwhisk/stop-motion.mp4",
+                        "ratio": 0.8,
+                        "caption": "A menu release, shot as a stop-motion"
+                    },
+                    {
                         "src": "wormandwhisk/hero.jpg",
-                        "caption": "The After Hours menu, released one drink at a time."
+                        "ratio": 2.797,
+                        "caption": "The After Hours menu, released one drink at a time"
                     }
                 ]
             },

@@ -390,3 +390,16 @@ figcaption {
 
 /* a softer black band (the spreads sit on the same tone) */
 .tone-dim .section-media { background: #18191b; }
+
+/* v3: the opening as the pages first were, one column: title, words, what was made, the facts */
+.made-plain { margin-top: 1em; }
+.made-plain p + p { margin-top: 0.35em; }
+.opening-text .made-plain p { max-width: 70ch; }
+.facts { margin-top: 1.2em; font-size: 11pt; max-width: 70ch; }
+.facts b { font-weight: 600; }
+.facts span + span::before { content: "  ·  "; white-space: pre; }
+@media (min-width: 601px) {
+    .opening { display: block; padding: 48px 0 36px; }
+    .opening-text { margin-top: 28px; }
+    .opening-text p { max-width: 70ch; }
+}

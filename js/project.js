@@ -54,7 +54,7 @@ function showProject(project, visible) {
     const rest = project.hero !== undefined ? media : media.slice(1);
     const deliverables = project.deliverables && (Array.isArray(project.deliverables) ? project.deliverables : [project.deliverables]);
 
-    // the words first: title on the left; what it is and what was made on the right. Then the picture.
+    // one column, as the pages first were: title, what it is, what was made and the facts, then the picture
     container.innerHTML = `
         <div class="opening">
             <div class="opening-title">
@@ -63,13 +63,12 @@ function showProject(project, visible) {
             </div>
             <div class="opening-text">
                 ${paragraphs(project.summary || project.description)}
-                ${deliverables ? `<ul class="made">${deliverables.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
-                ${project.details ? `<a class="to-credits" href="#credits">details ↓</a>` : ''}
+                ${deliverables ? `<div class="made-plain">${deliverables.map(t => `<p>${fmt(t)}</p>`).join('')}</div>` : ''}
+                ${project.details ? facts(project.details) : ''}
             </div>
         </div>
         <div class="hero"></div>
         <div class="sections"></div>
-        ${project.details ? credits(project.details) : ''}
         <nav class="next-bar" aria-label="more projects"></nav>
     `;
 
@@ -77,7 +76,6 @@ function showProject(project, visible) {
     const sectionsEl = container.querySelector('.sections');
     (project.sections || defaultSections(rest)).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
-    creditsSidebar();
     hoverNotes();
     if (new URLSearchParams(location.search).has('try')) sectionsSwitcher();
 }
@@ -129,6 +127,11 @@ function creditsSidebar() {
 const paragraphs = text => text ? fmt(text).split(/\n\n+/).map(p => `<p>${p}</p>`).join('') : '';
 
 // the facts (role, time, advisors…) at the end of the page, like credits
+// the facts (role, skills, advisors…) as one short run of text under the description
+function facts(list) {
+    return `<p class="facts">${list.map(([k, v]) => `<span><b>${esc(k)}</b> ${fmt(v)}</span>`).join('')}</p>`;
+}
+
 function credits(list) {
     return `<section class="credits" id="credits">${list.map(([k, v]) => `<div><h2>${esc(k)}</h2><p>${fmt(v)}</p></div>`).join('')}</section>`;
 }
