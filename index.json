@@ -219,7 +219,7 @@
                 "branding, event production, recipe development, Illustrator, InDesign, Photoshop"
             ]
         ],
-        "hero": "wormandwhisk/hero-collage.jpg",
+        "hero": "wormandwhisk/hero-collage-tall.jpg",
         "sections": [
             {
                 "media": [
@@ -238,16 +238,31 @@
             },
             {
                 "layout": "row",
+                "caption": "Drinks and bakes from the pop-ups.",
                 "media": [
                     {
-                        "src": "wormandwhisk/buttons-pile.jpg",
-                        "ratio": 1.5,
-                        "caption": "Buttons"
+                        "src": "wormandwhisk/drink-yuzu.jpg",
+                        "ratio": 0.667
+                    },
+                    {
+                        "src": "wormandwhisk/bake-tart.jpg",
+                        "ratio": 0.667
+                    },
+                    {
+                        "src": "wormandwhisk/drink-matcha.jpg",
+                        "ratio": 0.667
+                    },
+                    {
+                        "src": "wormandwhisk/bake-focaccia.jpg",
+                        "ratio": 0.667
                     },
                     {
                         "src": "wormandwhisk/drink-banana.jpg",
-                        "ratio": 0.667,
-                        "caption": "Banana pudding matcha"
+                        "ratio": 0.667
+                    },
+                    {
+                        "src": "wormandwhisk/bake-pineapple.jpg",
+                        "ratio": 0.667
                     }
                 ]
             },
@@ -256,16 +271,22 @@
                 "centred": true,
                 "dark": true,
                 "tone": "dim",
+                "caption": "The menus we made, one for each pop-up.",
                 "media": [
                     {
                         "src": "wormandwhisk/menu-afterhours.jpg",
                         "thumb": "wormandwhisk/menu-afterhours-tile.jpg",
-                        "caption": "After Hours menu, outside and in"
+                        "caption": "After Hours: the cover and the drinks inside"
                     },
                     {
                         "src": "wormandwhisk/print-menu-first-1.jpg",
                         "thumb": "wormandwhisk/print-menu-first-1-tile.jpg",
-                        "caption": "The first home café menu"
+                        "caption": "The first home café"
+                    },
+                    {
+                        "src": "wormandwhisk/menu-photo.jpg",
+                        "thumb": "wormandwhisk/menu-photo-tile.jpg",
+                        "caption": "The second home café, with the drinks and bakes cut out"
                     },
                     {
                         "src": "wormandwhisk/menu-youarecode.jpg",
@@ -275,72 +296,56 @@
                 ]
             },
             {
-                "layout": "gallery",
-                "columns": 3,
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "caption": "Posters for each pop-up.",
                 "media": [
                     {
-                        "src": "wormandwhisk/post-home.jpg",
-                        "caption": "Home café"
+                        "src": "wormandwhisk/posters-illustrated.jpg",
+                        "thumb": "wormandwhisk/posters-illustrated-tile.jpg",
+                        "caption": "The second home café, illustrated by Carrie Kuo"
                     },
                     {
-                        "src": "wormandwhisk/post-yac-mango.jpg",
-                        "caption": "You Are Code"
+                        "src": "wormandwhisk/posters-afterhours.jpg",
+                        "thumb": "wormandwhisk/posters-afterhours-tile.jpg",
+                        "caption": "After Hours: the poster, then the drinks released one by one"
+                    },
+                    {
+                        "src": "wormandwhisk/posters-youarecode.jpg",
+                        "thumb": "wormandwhisk/posters-youarecode-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
+                    }
+                ],
+                "tone": "dim"
+            },
+            {
+                "layout": "posts",
+                "account": "wormandwhisk",
+                "avatar": "wormandwhisk/ig-icon.jpg",
+                "caption": "Posts for the pop-ups on social media.",
+                "media": [
+                    {
+                        "src": "wormandwhisk/menu-post-1.jpg",
+                        "caption": "Worm&Whisk: After Hours\nThe long awaited menu release:\n\nHojiberry\nOmija Spritz Mocktail*\nMango Sticky Rice\nBala*\n\n*Mocktail versions available\n\nMay 9, 4PM-7PM EST.\nOnly a few spots left, link to tickets in bio."
+                    },
+                    {
+                        "src": "wormandwhisk/stop-motion.mp4"
                     },
                     {
                         "src": "wormandwhisk/post-afterhours.jpg",
-                        "caption": "After Hours"
-                    },
-                    {
-                        "src": "wormandwhisk/menu-post-1.jpg",
-                        "caption": "Menu release: hojiberry"
+                        "caption": "Worm&Whisk: After Hours 🪱🍸\nAn evening edition. May 9, 4-7 PM EST.\nAn all new menu of cocktails and small bites.\n\nTickets now live in bio."
                     },
                     {
                         "src": "wormandwhisk/post-yac-banana.jpg",
-                        "caption": "You Are Code"
-                    },
-                    {
-                        "src": "wormandwhisk/menu-post-3.jpg",
-                        "caption": "Menu release: mango sticky rice"
-                    }
-                ]
-            },
-            {
-                "layout": "row",
-                "media": [
-                    {
-                        "src": "wormandwhisk/stop-motion.mp4",
-                        "ratio": 0.8,
-                        "caption": "A menu release, shot as a stop-motion"
-                    },
-                    {
-                        "src": "wormandwhisk/hero.jpg",
-                        "ratio": 2.797,
-                        "caption": "The After Hours menu, released one drink at a time"
-                    }
-                ]
-            },
-            {
-                "layout": "row",
-                "media": [
-                    {
-                        "src": "wormandwhisk/poster-illustration-0.jpg",
-                        "ratio": 0.755,
-                        "caption": "Illustrated by Carrie Kuo."
+                        "caption": "happy summer! Worm&Whisk will be sharing new flavors at YouAreCode this Friday! hope to see you there!\n\n08.22 | 12–3 PM 📍 spaceLES, 155 Suffolk St.\n\nWorm&Whisk 🪱🍵 8/22 menu:\n\nbanana pudding matcha\nmango sticky rice matcha"
                     },
                     {
                         "src": "wormandwhisk/poster-illustration-1.jpg",
-                        "ratio": 0.755,
-                        "caption": "Illustrated by Carrie Kuo."
+                        "caption": "shoutout to @carrie.kuo for doing our beautiful posters for the second Worm&Whisk 🪱🍵 popup!"
                     },
                     {
-                        "src": "wormandwhisk/poster-illustration-2.jpg",
-                        "ratio": 0.755,
-                        "caption": "Illustrated by Carrie Kuo."
-                    },
-                    {
-                        "src": "wormandwhisk/poster-illustration-4.jpg",
-                        "ratio": 0.758,
-                        "caption": "Illustrated by Carrie Kuo."
+                        "src": "wormandwhisk/post-home.jpg"
                     }
                 ]
             },
@@ -757,65 +762,55 @@
                 "dark": true,
                 "media": [
                     {
-                        "src": "kowloon/spread-reality-22.jpg",
-                        "thumb": "kowloon/spread-reality-22-tile.jpg"
+                        "src": "kowloon/spread2-reality-22.jpg",
+                        "thumb": "kowloon/spread2-reality-22-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-46.jpg",
-                        "thumb": "kowloon/spread-fiction-46-tile.jpg"
+                        "src": "kowloon/spread2-fiction-46.jpg",
+                        "thumb": "kowloon/spread2-fiction-46-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-reality-42.jpg",
-                        "thumb": "kowloon/spread-reality-42-tile.jpg"
+                        "src": "kowloon/spread2-reality-30.jpg",
+                        "thumb": "kowloon/spread2-reality-30-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-38.jpg",
-                        "thumb": "kowloon/spread-fiction-38-tile.jpg"
+                        "src": "kowloon/spread2-fiction-38.jpg",
+                        "thumb": "kowloon/spread2-fiction-38-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-54.jpg",
-                        "thumb": "kowloon/spread-fiction-54-tile.jpg"
+                        "src": "kowloon/spread2-reality-42.jpg",
+                        "thumb": "kowloon/spread2-reality-42-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-reality-70.jpg",
-                        "thumb": "kowloon/spread-reality-70-tile.jpg"
+                        "src": "kowloon/spread2-fiction-52.jpg",
+                        "thumb": "kowloon/spread2-fiction-52-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-52.jpg",
-                        "thumb": "kowloon/spread-fiction-52-tile.jpg"
+                        "src": "kowloon/spread2-reality-112.jpg",
+                        "thumb": "kowloon/spread2-reality-112-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-62.jpg",
-                        "thumb": "kowloon/spread-fiction-62-tile.jpg"
+                        "src": "kowloon/spread2-fiction-62.jpg",
+                        "thumb": "kowloon/spread2-fiction-62-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-64.jpg",
-                        "thumb": "kowloon/spread-fiction-64-tile.jpg"
+                        "src": "kowloon/spread2-reality-70.jpg",
+                        "thumb": "kowloon/spread2-reality-70-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread-fiction-88.jpg",
-                        "thumb": "kowloon/spread-fiction-88-tile.jpg"
+                        "src": "kowloon/spread2-fiction-88.jpg",
+                        "thumb": "kowloon/spread2-fiction-88-tile.jpg"
                     }
                 ],
                 "tone": "dim"
             },
             {
-                "label": "tearing it open",
-                "text": "The fiction pages sit inside perforated French folds. To read them, the reader has to tear the book open, and once it’s torn it can’t be put back together: the history and the myth have to coexist.",
-                "note": "Once it’s torn open, it can’t be put back: the history and the myth have to coexist."
-            },
-            {
                 "layout": "pair",
                 "media": [
-                    {
-                        "src": "kowloon/tear.mp4",
-                        "caption": "Tearing along the perforation to reach the fiction layer."
-                    },
-                    {
-                        "src": "kowloon/perforation.jpg",
-                        "caption": "The perforated folds, fanned open."
-                    }
-                ]
+                    "kowloon/tear.mp4",
+                    "kowloon/perforation.jpg"
+                ],
+                "caption": "Tearing along the perforation to reach the fiction layer."
             }
         ]
     },
@@ -894,7 +889,7 @@
             },
             {
                 "media": [
-                    "76cones/portrait-wide.jpg"
+                    "76cones/portrait-wide-v2.jpg"
                 ]
             }
         ]
@@ -993,11 +988,6 @@
                 ]
             },
             {
-                "label": "fold-outs",
-                "text": "Some spreads fold out, stretching a scene or a sequence past the edge of the book, the way his camera lingers.",
-                "note": "Fold-outs stretch a scene past the edge of the book."
-            },
-            {
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
@@ -1012,7 +1002,8 @@
                         "thumb": "wangkarwai/fold-index-turn-tile.jpg",
                         "caption": "The index, with its translucent page"
                     }
-                ]
+                ],
+                "caption": "Fold-outs stretch a scene or a sequence past the edge of the book, giving a time-based feel to a medium that isn’t quite one."
             }
         ],
         "hero": "wangkarwai/spreads.jpg"

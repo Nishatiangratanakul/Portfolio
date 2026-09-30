@@ -54,7 +54,7 @@ function showProject(project, visible) {
     const rest = project.hero !== undefined ? media : media.slice(1);
     const deliverables = project.deliverables && (Array.isArray(project.deliverables) ? project.deliverables : [project.deliverables]);
 
-    // one column, as the pages first were: title, what it is, what was made and the facts, then the picture
+    // one column, as the pages first were: title, what it is and what was made, then the picture
     container.innerHTML = `
         <div class="opening">
             <div class="opening-title">
@@ -63,8 +63,7 @@ function showProject(project, visible) {
             </div>
             <div class="opening-text">
                 ${paragraphs(project.summary || project.description)}
-                ${deliverables ? `<div class="made-plain">${deliverables.map(t => `<p>${fmt(t)}</p>`).join('')}</div>` : ''}
-                ${project.details ? facts(project.details) : ''}
+                ${deliverables ? `<ul class="made">${deliverables.map(t => `<li>${fmt(t)}</li>`).join('')}</ul>` : ''}
             </div>
         </div>
         <div class="hero"></div>
@@ -232,6 +231,10 @@ function createSection(section, title) {
         grid.style.setProperty('--ratios', items.map(i => `minmax(0, ${i.ratio}fr)`).join(' '));
         el.classList.add('even');
     }
+    if (section.layout === 'posts') {
+        buildPosts(el, grid, items, section, title);
+        return el;
+    }
     if (section.layout === 'viewer') {
         buildViewer(el, grid, items, title);
         if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
@@ -278,6 +281,32 @@ function markPortrait(media, figure) {
 
 // viewer: one big image (the first item to start), with small thumbnails beside it; clicking a
 // thumbnail shows that item in the big spot, and clicking a big picture opens it full screen to zoom
+// posts: each picture or loop shown as a post on a phone (account name, the post, the usual
+// icons, its caption), in a row you can scroll sideways through
+function buildPosts(el, grid, items, section, title) {
+    const icon = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
+    const icons = [
+        'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z',
+        'M4 5h16v11H9l-5 4z',
+        'M21 4 3 11l7 2 2 7z',
+    ];
+    const account = section.account || '';
+    const avatar = section.avatar ? `assets/${section.avatar}` : '';
+    items.forEach((item, i) => {
+        const card = document.createElement('figure');
+        card.className = 'post';
+        card.innerHTML = `
+            <div class="post-head">${avatar ? `<img src="${avatar}" alt="" loading="lazy">` : ''}<b>${esc(account)}</b></div>
+            <div class="post-media"></div>
+            <div class="post-icons">${icons.map(icon).join('')}<span></span>${icon('M6 3h12v18l-6-5-6 5z')}</div>
+            ${item.caption ? `<p class="post-caption"><b>${esc(account)}</b> ${esc(item.caption).replace(/\n/g, '<br>')}</p>` : ''}`;
+        card.querySelector('.post-media').appendChild(createMedia(item.src, `${title}, post ${i + 1}`, true));
+        grid.appendChild(card);
+    });
+    el.appendChild(grid);
+    if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
+}
+
 function buildViewer(el, grid, items, title) {
     const stage = document.createElement('div');
     stage.className = 'viewer-stage';

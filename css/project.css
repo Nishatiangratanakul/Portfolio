@@ -34,8 +34,8 @@
 .hero { margin-bottom: 0; }
 
 /* a short piece of writing between the pictures: a big heading, then the words */
-.part-text { padding: 8px 0 28px; scroll-margin-top: 24px; }
-.part-text h2 { font-size: 14pt; line-height: 1.2; margin-bottom: 10px; }   /* a second size: like the nav */
+.part-text { padding: 40px 0 28px; scroll-margin-top: 24px; }
+.part-text h2 { font-size: 14pt; font-weight: 600; line-height: 1.2; margin-bottom: 10px; }   /* a second size: like the nav */
 .part-words p + p { margin-top: 1em; }
 .part-words { max-width: 62ch; }
 .part-text .made { margin-top: 14px; }
@@ -313,12 +313,11 @@ figcaption {
     .opening h1 { font-size: 48pt; }
 
     /* section writing on five columns: the heading across, the words over the first three, a list in the last two */
-    .part-text { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 24px; padding: 56px 0; }
-    .part-text h2 { grid-column: 1 / -1; font-size: 18pt; margin-bottom: 12px; }
-    .part-words { grid-column: 1 / 4; max-width: none; }
-    .part-text .made { grid-column: 4 / 6; margin-top: 0; }
-    .part-words + .made { align-self: start; }
-    .part-text > .made:only-of-type:not(.part-words + .made) { grid-column: 1 / 4; }
+    /* one column: a clear break before each part, a bold heading, the words, then what was made */
+    .part-text { display: block; padding: 104px 0 36px; }
+    .part-text h2 { font-size: 18pt; font-weight: 600; margin-bottom: 12px; }
+    .part-words { max-width: 70ch; }
+    .part-text .made { margin-top: 16px; max-width: 70ch; }
 
     .credits { grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 72px 0 64px; font-size: 11pt; }
 
@@ -402,4 +401,28 @@ figcaption {
     .opening { display: block; padding: 48px 0 36px; }
     .opening-text { margin-top: 28px; }
     .opening-text p { max-width: 70ch; }
+}
+
+/* posts: phone-sized posts in a row that scrolls sideways, on a pale green band */
+.layout-posts { background: #C2D0AF; }
+.layout-posts .section-media {
+    display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 36px 20px; scrollbar-width: thin;
+}
+.post {
+    flex: 0 0 min(300px, 78vw); scroll-snap-align: center; margin: 0;
+    background: #fff; border-radius: 26px; overflow: hidden; color: #111;
+    box-shadow: 0 10px 28px rgba(40, 40, 20, 0.18); font-size: 10pt; line-height: 1.35;
+}
+.post-head { display: flex; align-items: center; gap: 8px; padding: 12px 14px; }
+.post-head img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid #ddd; }
+.post-media { aspect-ratio: 4 / 5; background: #eee; }
+.post-media img, .post-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-icons { display: flex; align-items: center; gap: 12px; padding: 10px 14px 4px; }
+.post-icons span { flex: 1; }
+.post-icons svg { width: 22px; height: 22px; fill: none; stroke: #111; stroke-width: 1.6; stroke-linejoin: round; }
+.post-caption { padding: 4px 14px 16px; margin: 0; }
+@media (min-width: 601px) {
+    .layout-posts .section-media { padding: 48px 40px; gap: 28px; }
+    .post { flex-basis: 320px; }
 }
