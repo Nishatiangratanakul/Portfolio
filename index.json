@@ -121,14 +121,16 @@
                         "thumb": "unspokendialogue/poster-emotions-tile.jpg",
                         "caption": "Unspoken: changes in emotion within dialogue"
                     }
-                ]
+                ],
+                "tall": true
             },
             {
                 "dark": true,
                 "media": [
                     {
                         "src": "unspokendialogue/origami.jpg",
-                        "caption": "Each poster with the origami from the same conversation."
+                        "caption": "Each poster with the origami from the same conversation.",
+                        "phone": "unspokendialogue/origami-grid.jpg"
                     }
                 ]
             },
@@ -957,7 +959,7 @@
         "media1": "wangkarwai/media-1.jpg",
         "media2": "wangkarwai/pages-flip.mp4",
         "icon": "wangkarwai/icon.jpg",
-        "preview": "wangkarwai/preview-v3.mp4",
+        "preview": "wangkarwai/preview-v4.mp4",
         "details": [
             [
                 "role",

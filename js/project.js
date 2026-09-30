@@ -381,7 +381,25 @@ function buildViewer(el, grid, items, title) {
         }
         stage.replaceChildren(media);
         thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
+        at = i;
+        count.textContent = `${i + 1} / ${items.length}`;
     };
+    // phones: no thumbnails, just arrows and a count under the picture (and swiping the picture)
+    let at = 0;
+    const nav = document.createElement('div');
+    nav.className = 'viewer-nav';
+    nav.innerHTML = '<button type="button" aria-label="previous">←</button><span></span><button type="button" aria-label="next">→</button>';
+    const count = nav.querySelector('span');
+    const step = d => show((at + d + items.length) % items.length);
+    nav.querySelector('[aria-label="previous"]').addEventListener('click', () => step(-1));
+    nav.querySelector('[aria-label="next"]').addEventListener('click', () => step(1));
+    let touchX = null;
+    stage.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX; touchX = null;
+        if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+    });
     items.forEach((item, i) => {
         const button = document.createElement('button');
         button.type = 'button';
@@ -391,6 +409,7 @@ function buildViewer(el, grid, items, title) {
         thumbs.appendChild(button);
     });
     grid.append(stage, thumbs);
+    if (items.length > 1) grid.appendChild(nav);
     el.appendChild(grid);
     show(0);
     return el;

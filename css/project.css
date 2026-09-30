@@ -191,6 +191,13 @@ figcaption {
 .viewer-stage video { max-width: 100%; max-height: 100%; width: auto; height: auto; }
 .viewer-stage .zoomable { cursor: var(--cursor-open); }
 .viewer-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px; }
+/* phones: arrows and a count instead of the thumbnails */
+.viewer-nav { display: flex; justify-content: center; align-items: center; gap: 18px; padding: 10px 0 14px; color: #fff; font-size: 11pt; }
+.viewer-nav button { border: 0; background: none; padding: 4px 8px; color: inherit; font: inherit; font-size: 14pt; cursor: pointer; }
+.layout-viewer:not(.dark):not([class*='tone-']) .viewer-nav { color: var(--red); }
+.viewer-nav { padding: 2px 0 0; }
+@media (max-width: 600px) { .viewer-thumbs { display: none; } }
+@media (min-width: 601px) { .viewer-nav { display: none; } }
 .viewer-thumbs button {
     display: block;
     width: 100%;
