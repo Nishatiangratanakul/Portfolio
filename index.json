@@ -277,7 +277,7 @@
                 "media": [
                     {
                         "src": "wormandwhisk/p-afterhours.jpg",
-                        "thumb": "wormandwhisk/p-afterhours-tile.jpg",
+                        "thumb": "wormandwhisk/p-afterhours-tile2.jpg",
                         "caption": "After Hours: the drinks, released one by one",
                         "phone": "wormandwhisk/p-afterhours-grid.jpg"
                     },
@@ -288,7 +288,7 @@
                     },
                     {
                         "src": "wormandwhisk/p-illustrated.jpg",
-                        "thumb": "wormandwhisk/p-illustrated-tile.jpg",
+                        "thumb": "wormandwhisk/p-illustrated-tile2.jpg",
                         "caption": "The second home café, illustrated by Carrie Kuo",
                         "phone": "wormandwhisk/p-illustrated-grid.jpg"
                     }
@@ -371,7 +371,7 @@
             }
         ],
         "icon": "wormandwhisk/icon.jpg",
-        "preview": "wormandwhisk/preview.mp4"
+        "preview": "wormandwhisk/preview-v2.mp4"
     },
     {
         "title": "contemplating death",
@@ -387,7 +387,7 @@
         "media2": "contemplatingdeath/media-2.jpg",
         "media6": "contemplatingdeath/media-6.jpg",
         "icon": "contemplatingdeath/icon.jpg",
-        "preview": "contemplatingdeath/preview.mp4",
+        "preview": "contemplatingdeath/preview-v2.mp4",
         "details": [
             [
                 "role",
@@ -551,7 +551,7 @@
         "media1": "legosans/media-1.jpg",
         "media2": "legosans/media-2.mp4",
         "icon": "legosans/icon.jpg",
-        "preview": "legosans/preview.mp4",
+        "preview": "legosans/preview-v2.mp4",
         "details": [
             [
                 "role",
@@ -838,7 +838,7 @@
         "media1": "76cones/media-1.jpg",
         "media8": "76cones/media-8.jpg",
         "icon": "76cones/icon.jpg",
-        "preview": "76cones/preview.mp4",
+        "preview": "76cones/preview-v2.mp4",
         "details": [
             [
                 "role",
@@ -957,7 +957,7 @@
         "media1": "wangkarwai/media-1.jpg",
         "media2": "wangkarwai/pages-flip.mp4",
         "icon": "wangkarwai/icon.jpg",
-        "preview": "wangkarwai/preview.mp4",
+        "preview": "wangkarwai/preview-v2.mp4",
         "details": [
             [
                 "role",
