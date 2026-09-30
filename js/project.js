@@ -252,8 +252,10 @@ function createSection(section, title) {
             button.addEventListener('click', () => openLightbox(items, i, title));
             figure.appendChild(button);
         } else {
-            let media = item.back ? createFlip(src, item.back, caption || title) : createMedia(src, `${title}, image ${i + 1}`, true);
-            if (item.phone && media.tagName === 'IMG') media = forPhones(media, item.phone);
+            // a loop can give another version for phones (e.g. stacked instead of side by side)
+            const phoneLoop = item.phone && /\.mp4$/i.test(item.phone) && matchMedia('(max-width: 600px)').matches;
+            let media = item.back ? createFlip(src, item.back, caption || title) : createMedia(phoneLoop ? item.phone : src, `${title}, image ${i + 1}`, true);
+            if (item.phone && !phoneLoop && media.tagName === 'IMG') media = forPhones(media, item.phone);
             figure.appendChild(media);
             markPortrait(media.tagName === 'PICTURE' ? media.querySelector('img') : media, figure);
             // on black, the note sits under the band, like every other note
@@ -341,7 +343,7 @@ function buildPosts(el, grid, items, section, title) {
     row.appendChild(grid);
     // arrows to move through the posts (shown on every screen, so it's clear the row scrolls)
     const step = dir => grid.scrollBy({ left: dir * (grid.querySelector('.post').offsetWidth + 24), behavior: 'smooth' });
-    row.insertAdjacentHTML('beforeend', '<div class="posts-nav"><button type="button" class="posts-arrow prev" aria-label="previous post">←</button><button type="button" class="posts-arrow next" aria-label="next post">→</button></div>');
+    row.insertAdjacentHTML('beforeend', '<div class="posts-nav"><button type="button" class="posts-arrow prev" aria-label="previous post">←</button><span>scroll to move</span><button type="button" class="posts-arrow next" aria-label="next post">→</button></div>');
     row.querySelector('.posts-arrow.prev').addEventListener('click', () => step(-1));
     row.querySelector('.posts-arrow.next').addEventListener('click', () => step(1));
     const ends = () => {
@@ -349,6 +351,14 @@ function buildPosts(el, grid, items, section, title) {
         row.querySelector('.posts-arrow.next').disabled = grid.scrollLeft + grid.clientWidth > grid.scrollWidth - 8;
     };
     grid.addEventListener('scroll', ends, { passive: true });
+    // a normal (up/down) scroll over the row moves it sideways, until it reaches either end
+    grid.addEventListener('wheel', e => {
+        if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+        const atStart = grid.scrollLeft <= 0, atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+        if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) return;
+        e.preventDefault();
+        grid.scrollLeft += e.deltaY;
+    }, { passive: false });
     addEventListener('resize', ends);
     requestAnimationFrame(ends);
     el.appendChild(row);
@@ -362,7 +372,9 @@ function buildViewer(el, grid, items, title) {
     thumbs.className = 'viewer-thumbs';
     const stills = items.filter(item => !item.src.toLowerCase().endsWith('.mp4'));
     const show = i => {
-        const media = createMedia(items[i].src, items[i].caption || `${title}, image ${i + 1}`, false);
+        // an item can give another picture for phones (e.g. a 2x2 grid instead of a row of four)
+        const src = items[i].phone && matchMedia('(max-width: 600px)').matches ? items[i].phone : items[i].src;
+        const media = createMedia(src, items[i].caption || `${title}, image ${i + 1}`, false);
         if (media.tagName === 'IMG') {
             media.classList.add('zoomable');
             media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title));

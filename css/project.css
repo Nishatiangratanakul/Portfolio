@@ -408,14 +408,14 @@ figcaption {
 .posts-row { position: relative; }
 .layout-posts .section-media {
     display: flex; align-items: flex-start; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
-    padding: 28px 28px 8px; scrollbar-width: none;
+    padding: 40px 28px 22px; scrollbar-width: none; scroll-snap-type: x proximity;
 }
 .layout-posts .section-media::-webkit-scrollbar { display: none; }
 .post {
     flex: 0 0 min(300px, 74vw); scroll-snap-align: center; margin: 0;
     background: #fff; border-radius: 18px; overflow: hidden; color: #000;
     font: 400 13px/18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    box-shadow: 0 8px 24px rgba(40, 45, 20, 0.16);
+    box-shadow: 0 5px 14px rgba(40, 45, 20, 0.16);
 }
 .post b { font-weight: 600; }
 .post svg { width: 24px; height: 24px; fill: currentColor; display: block; }
@@ -441,14 +441,14 @@ figcaption {
 .post-caption.open { display: block; }
 .post-open { border: 0; background: none; padding: 0 12px; color: #737373; font: inherit; cursor: pointer; }
 .post-date { padding: 6px 12px 14px; margin: 0; color: #737373; font-size: 11px; letter-spacing: .02em; text-transform: uppercase; }
-.posts-nav { display: flex; justify-content: flex-end; gap: 18px; padding: 0 20px 16px; }
+.posts-nav { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 0 20px 20px; font-size: 11pt; color: var(--red); }
 .posts-arrow { border: 0; background: none; padding: 0; color: var(--red); font: inherit; font-size: 14pt; cursor: pointer; }
 .posts-arrow:disabled { opacity: 0.3; cursor: default; }
-.layout-posts { margin-bottom: 28px; }
+.layout-posts { margin-bottom: 28px; padding-bottom: 0 !important; }
 @media (max-width: 600px) { .tall .viewer-stage { aspect-ratio: 4 / 5; } }
 @media (min-width: 601px) {
-    .layout-posts .section-media { padding: 40px 72px 12px; gap: 28px; }
+    .layout-posts .section-media { padding: 60px 72px 22px; gap: 28px; }
     .post { flex-basis: 300px; }
-    .posts-nav { padding: 0 40px 24px; }
+    .posts-nav { padding: 0 40px 20px; }
     .layout-posts { margin-bottom: 40px; }
 }

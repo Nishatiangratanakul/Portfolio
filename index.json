@@ -278,7 +278,8 @@
                     {
                         "src": "wormandwhisk/p-afterhours.jpg",
                         "thumb": "wormandwhisk/p-afterhours-tile.jpg",
-                        "caption": "After Hours: the drinks, released one by one"
+                        "caption": "After Hours: the drinks, released one by one",
+                        "phone": "wormandwhisk/p-afterhours-grid.jpg"
                     },
                     {
                         "src": "wormandwhisk/p-youarecode.jpg",
@@ -288,7 +289,8 @@
                     {
                         "src": "wormandwhisk/p-illustrated.jpg",
                         "thumb": "wormandwhisk/p-illustrated-tile.jpg",
-                        "caption": "The second home café, illustrated by Carrie Kuo"
+                        "caption": "The second home café, illustrated by Carrie Kuo",
+                        "phone": "wormandwhisk/p-illustrated-grid.jpg"
                     }
                 ],
                 "tone": "dim",
@@ -362,7 +364,8 @@
                 "media": [
                     {
                         "src": "wormandwhisk/drink-reviews-v2.mp4",
-                        "caption": "Drink review cards from After Hours: arrival time, signature, and a rating."
+                        "caption": "Drink review cards from After Hours: arrival time, signature, and a rating.",
+                        "phone": "wormandwhisk/drink-reviews-phone.mp4"
                     }
                 ]
             }
