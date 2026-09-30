@@ -302,7 +302,7 @@ function buildPosts(el, grid, items, section, title) {
         card.className = 'post';
         card.innerHTML = `
             <div class="post-head">${avatar}<b>${esc(account)}</b><span class="post-more">${ICON.more}</span></div>
-            <div class="post-media"><div class="post-slides"></div>
+            <div class="post-media"${item.ratio ? ` style="aspect-ratio: ${item.ratio}"` : ''}><div class="post-slides"></div>
                 ${slides.length > 1 ? `<span class="post-count">1/${slides.length}</span>
                     <button type="button" class="post-step prev" aria-label="previous picture" hidden>‹</button>
                     <button type="button" class="post-step next" aria-label="next picture">›</button>` : ''}

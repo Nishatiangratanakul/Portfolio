@@ -407,7 +407,7 @@ figcaption {
 .layout-posts { background: #C2D0AF; }
 .posts-row { position: relative; }
 .layout-posts .section-media {
-    display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
+    display: flex; align-items: flex-start; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
     padding: 32px 56px; scrollbar-width: none;
 }
 .layout-posts .section-media::-webkit-scrollbar { display: none; }
