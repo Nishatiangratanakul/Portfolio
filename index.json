@@ -11,10 +11,6 @@
                 "designer & producer"
             ],
             [
-                "duration",
-                "9 months"
-            ],
-            [
                 "skills",
                 "research, interviewing, copywriting, InDesign, Illustrator, Photoshop, bookbinding"
             ],
@@ -23,16 +19,19 @@
                 "Prin Limphongpand, Ingrid Chou"
             ],
             [
-                "production",
-                "risograph, laser, screen print, large-format printing (posters), UV-printed cover, spray-painted edges, tape binding"
+                "printed",
+                "risograph, laser printed, screen print, large-format printing (posters), UV-printed cover, spray-painted edges"
+            ],
+            [
+                "bound",
+                "tape bound, with a Swiss binding (the cover attached at the back, so the spine stays open)"
             ]
         ],
         "deliverables": [
-            "A [book](#book) holding all six conversations: the transcripts, a chart for each person, and my closing thoughts on each, with an origami to fold.",
+            "A [book](#book) holding all six conversations: the transcripts, a chart for each person, and closing thoughts on each, with an origami to fold.",
             "A set of data-visualization [posters](#posters), the spoken and the unspoken, each drawn from one conversation.",
             "Take-home [letter packets](#letter-packets), handed out at *Making Space 2026*."
         ],
-        "hero": "unspokendialogue/hero.jpg",
         "sections": [
             {
                 "media": [
@@ -41,7 +40,8 @@
             },
             {
                 "label": "book",
-                "text": "The book gathers all six conversations. Each one opens with a chart of how that person thinks about death (practical, fearful, reflective, spiritual, secure), runs through the full transcript, and ends with my own closing thoughts and the origami that came out of it. Between them sit riso-printed skies, family photographs, fold-out pages laid over the transcripts, and an excerpt from Anne Boyer’s The Undying."
+                "text": "All six conversations in one book. Each opens with a chart of how that person thinks about death, runs through the full transcript, and ends with closing thoughts and an origami to fold. Riso-printed skies, family photographs and fold-out pages sit between them.",
+                "note": "All six conversations: a chart for each person, the full transcript, and closing thoughts with an origami to fold."
             },
             {
                 "media": [
@@ -79,7 +79,8 @@
             },
             {
                 "label": "posters",
-                "text": "Two sets of three posters, each drawn from one of the conversations. The spoken set charts what was said, straight from the transcripts. The unspoken set charts what wasn’t: silence, the rhythm of a conversation, the emotions underneath it. Putting something this heavy into the language of data was my way of trying to understand it."
+                "text": "Two sets of three posters, each drawn from one conversation. The spoken set charts what was said; the unspoken set charts what wasn’t: silence, rhythm, and the emotions underneath.",
+                "note": "Two sets of three. The spoken set charts what was said; the unspoken set charts silence, rhythm and emotion."
             },
             {
                 "layout": "viewer",
@@ -120,20 +121,23 @@
                         "thumb": "unspokendialogue/poster-emotions-tile.jpg",
                         "caption": "Unspoken: changes in emotion within dialogue"
                     }
-                ]
+                ],
+                "tall": true
             },
             {
                 "dark": true,
                 "media": [
                     {
                         "src": "unspokendialogue/origami.jpg",
-                        "caption": "Each poster with the origami from the same conversation."
+                        "caption": "Each poster with the origami from the same conversation.",
+                        "phone": "unspokendialogue/origami-grid.jpg"
                     }
                 ]
             },
             {
                 "label": "letter packets",
-                "text": "At *Making Space 2026*, visitors were given a take-home letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and instructions for folding an origami.\n\nEverything else in the project was about understanding other people’s experiences with death. The packet took that one step further, and asked people to sit with their own."
+                "text": "At *Making Space 2026*, visitors took home a letter packet: a letter, a reflection card, a graph for mapping their own relationship to death, a prompt card, and an origami to fold. It asked people to sit with their own experiences, not just read about others’.",
+                "note": "Handed out at *Making Space 2026*: a letter, a reflection card, a graph, a prompt card and an origami, asking people to sit with their own."
             },
             {
                 "layout": "viewer",
@@ -192,6 +196,186 @@
         "preview": "unspokendialogue/preview.mp4"
     },
     {
+        "title": "worm & whisk",
+        "subject": "branding",
+        "year": "2025–now",
+        "description": "Worm & Whisk is a series of café pop-ups built around matcha, hojicha and Asian flavours, with an identity made to stretch across each one.",
+        "summary": "Worm & Whisk is a series of café pop-ups built around matcha, hojicha and Asian flavours, with an identity made to stretch across each one. It began as a way to design around food and turned into a lesson in hosting: planning space and flow, handling a crowd, and making something communal, playful and a little silly.",
+        "deliverables": [
+            "An [identity](#identity): logo, type, colour and stickers.",
+            "Printed collateral for each pop-up: posters, menus, buttons, signs and recipe cards.",
+            "Posts and menu releases for social media.",
+            "Drink review cards for guests to fill in."
+        ],
+        "details": [
+            [
+                "role",
+                "co-creator, designer & producer"
+            ],
+            [
+                "with",
+                "Katelyn Lee"
+            ],
+            [
+                "skills",
+                "branding, event production, recipe development, Illustrator, InDesign, Photoshop"
+            ]
+        ],
+        "hero": "wormandwhisk/hero-collage-tall.jpg",
+        "sections": [
+            {
+                "media": [
+                    "wormandwhisk/yac-us-wide.jpg"
+                ]
+            },
+            {
+                "label": "identity",
+                "text": "The identity stays close to what’s in the cup: the greens and browns of matcha and hojicha, and a worm as a playful mascot, wrapped around a whisk. ZT Bros Oskon 90s lifts it a little, while its capitals keep things striking.\n\nAs the pop-ups changed, the identity bent with them: pixels for You Are Code, a pop-up inside a student exhibition, and capitals with a martini glass in place of the whisk for After Hours, an evening menu of cocktails.",
+                "note": "Greens and browns from matcha and hojicha, a worm for a mascot, and a look that bends with each pop-up."
+            },
+            {
+                "media": [
+                    {
+                        "src": "wormandwhisk/identity.jpg",
+                        "phone": "wormandwhisk/identity-phone.jpg"
+                    }
+                ]
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "tone": "dim",
+                "caption": "The menus we made, one for each pop-up.",
+                "media": [
+                    {
+                        "src": "wormandwhisk/m-afterhours.jpg",
+                        "thumb": "wormandwhisk/m-afterhours-tile.jpg",
+                        "caption": "After Hours: the cover and the drinks inside"
+                    },
+                    {
+                        "src": "wormandwhisk/m-youarecode.jpg",
+                        "thumb": "wormandwhisk/m-youarecode-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
+                    },
+                    {
+                        "src": "wormandwhisk/m-photo.jpg",
+                        "thumb": "wormandwhisk/m-photo-tile.jpg",
+                        "caption": "The second home café, with the drinks and bakes cut out"
+                    },
+                    {
+                        "src": "wormandwhisk/m-first.jpg",
+                        "thumb": "wormandwhisk/m-first-tile.jpg",
+                        "caption": "The first home café"
+                    }
+                ],
+                "tall": true
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "caption": "Posters for each pop-up.",
+                "media": [
+                    {
+                        "src": "wormandwhisk/p-afterhours.jpg",
+                        "thumb": "wormandwhisk/p-afterhours-tile2.jpg",
+                        "caption": "After Hours: the drinks, released one by one",
+                        "phone": "wormandwhisk/p-afterhours-grid.jpg"
+                    },
+                    {
+                        "src": "wormandwhisk/p-youarecode.jpg",
+                        "thumb": "wormandwhisk/p-youarecode-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
+                    },
+                    {
+                        "src": "wormandwhisk/p-illustrated.jpg",
+                        "thumb": "wormandwhisk/p-illustrated-tile2.jpg",
+                        "caption": "The second home café, illustrated by Carrie Kuo",
+                        "phone": "wormandwhisk/p-illustrated-grid.jpg"
+                    }
+                ],
+                "tone": "dim",
+                "tall": true
+            },
+            {
+                "layout": "posts",
+                "account": "wormandwhisk",
+                "avatar": "wormandwhisk/ig-icon.jpg",
+                "caption": "Posts for the pop-ups on social media.",
+                "media": [
+                    {
+                        "media": [
+                            "wormandwhisk/ig/stay-tuned-1.mp4"
+                        ],
+                        "ratio": 0.8,
+                        "likes": "36",
+                        "date": "April 19, 2025",
+                        "caption": "stay tuned\n\n—🪱 🍵"
+                    },
+                    {
+                        "media": [
+                            "wormandwhisk/ig/spring-1.jpg"
+                        ],
+                        "ratio": 0.802,
+                        "likes": "30",
+                        "date": "April 22, 2025",
+                        "caption": "happy spring🌸 Worm&Whisk🪱 is back with a brand new all-matcha menu! stop by—sip on something cozy, snack on something sweet, and hang out in good company. we’ve been whisking up new flavors we can’t wait for you to try 🪴🍵!\n\nRSVP link is live in bio! 💌"
+                    },
+                    {
+                        "media": [
+                            "wormandwhisk/ig/menu-release-1.mp4"
+                        ],
+                        "ratio": 0.8,
+                        "likes": "59",
+                        "date": "April 23, 2025",
+                        "caption": "Worm&Whisk🪱 🍵 4/27 menu:\n\ncoconut sago matcha\nyuzu matcha tonic\nmisugaru matcha\n\nlao gan ma focaccia\ntaiwanese pineapple bar\nshiso lime tart\n\nlink to RSVP in bio!"
+                    },
+                    {
+                        "media": [
+                            "wormandwhisk/ig/youarecode-1.jpg",
+                            "wormandwhisk/ig/youarecode-2.jpg",
+                            "wormandwhisk/ig/youarecode-3.jpg"
+                        ],
+                        "ratio": 0.801,
+                        "likes": "70",
+                        "date": "August 20, 2025",
+                        "caption": "happy summer! Worm&Whisk will be sharing new flavors at YouAreCode this Friday! hope to see you there!\n\n08.22 | 12–3 PM 📍 spaceLES, 155 Suffolk St.\n\nWorm&Whisk 🪱 🍵 8/22 menu:\n\nbanana pudding matcha\nmango sticky rice matcha"
+                    },
+                    {
+                        "media": [
+                            "wormandwhisk/ig/ww2-drinks-1.mp4"
+                        ],
+                        "ratio": 0.8,
+                        "likes": "31",
+                        "date": "May 2, 2025",
+                        "caption": "from Worm&Whisk #2! thanks again to everyone who showed up on sunday, it was great to see y’all! \n\n~🪱🍵"
+                    },
+                    {
+                        "media": [
+                            "wormandwhisk/ig/afterhours-1.jpg"
+                        ],
+                        "ratio": 0.802,
+                        "likes": "27",
+                        "date": "April 30, 2026",
+                        "caption": "Worm&Whisk: After Hours 🪱 🍸 \nAn evening edition. May 9, 4-7 PM EST.\nAn all new menu of cocktails and small bites.\n\nTickets now live in bio."
+                    }
+                ]
+            },
+            {
+                "media": [
+                    {
+                        "src": "wormandwhisk/drink-reviews-v2.mp4",
+                        "caption": "Drink review cards from After Hours: arrival time, signature, and a rating.",
+                        "phone": "wormandwhisk/drink-reviews-phone.mp4"
+                    }
+                ]
+            }
+        ],
+        "icon": "wormandwhisk/icon.jpg",
+        "preview": "wormandwhisk/preview-v2.mp4"
+    },
+    {
         "title": "contemplating death",
         "subject": "book design",
         "year": "2025",
@@ -203,19 +387,13 @@
         ],
         "media1": "contemplatingdeath/media-1.jpg",
         "media2": "contemplatingdeath/media-2.jpg",
-        "media4": "contemplatingdeath/media-4.mp4",
-        "media5": "contemplatingdeath/media-5.mp4",
         "media6": "contemplatingdeath/media-6.jpg",
         "icon": "contemplatingdeath/icon.jpg",
-        "preview": "contemplatingdeath/preview.mp4",
+        "preview": "contemplatingdeath/preview-v2.mp4",
         "details": [
             [
                 "role",
                 "designer & editor"
-            ],
-            [
-                "duration",
-                "1 month"
             ],
             [
                 "skills",
@@ -226,8 +404,12 @@
                 "Prin Limphongpand, Ingrid Chou"
             ],
             [
-                "production",
-                "laser print, risograph (black pages), large-format printing (index poster)"
+                "printed",
+                "laser printed, risograph (black pages), large-format printing (index poster)"
+            ],
+            [
+                "bound",
+                "sewn signatures, with a Swiss binding (the cover attached at the back, so the spine stays open)"
             ]
         ],
         "sections": [
@@ -244,7 +426,8 @@
                     "White pages pose the question, opening each chapter with images.",
                     "Grey pages widen it, bringing in outside voices to inform.",
                     "Black pages turn inward, with a reflection."
-                ]
+                ],
+                "note": "White pages pose the question. Grey pages bring in outside voices. Black pages turn inward."
             },
             {
                 "dark": true,
@@ -262,7 +445,8 @@
                     "Thresholds and Dreams",
                     "Sitting with Death"
                 ],
-                "text": "The chapters move from the most tangible forms of death to the most abstract. As the book goes on, the cycle loosens: some chapters lose their grey pages, some are almost all reflection, and colour slowly comes in."
+                "text": "Six chapters move from the most tangible forms of death to the most abstract. Along the way the cycle loosens, and colour slowly comes in.",
+                "note": "Six chapters, from the most tangible forms of death to the most abstract."
             },
             {
                 "layout": "pair",
@@ -329,7 +513,8 @@
             },
             {
                 "label": "index",
-                "text": "Every image in the book is catalogued on a double-sided poster. One side shows the images, the other their page numbers, titles and makers. The paper is thin enough that each side shows through the other, and the titles on either side overlap into new readings: *Contemplating Death*, *Image Catalogue*, *Contemplating Image*, *Death Catalogue*."
+                "text": "Every image in the book is catalogued on a double-sided poster: the images on one side, their page numbers, titles and makers on the other. The paper is thin enough that each side shows through.",
+                "note": "A double-sided poster cataloguing every image in the book; each side shows through the other."
             },
             {
                 "layout": "viewer",
@@ -360,13 +545,185 @@
         "subject": "typeface design",
         "year": "2025",
         "description": "Lego Sans is a modular typeface that emerged from the process of printing with Lego letterpress. Built using only two Lego pieces, a square and a quarter-circle, the type took shape through hands-on assembly and experimentation.",
-        "summary": "A modular typeface that grew out of printing with Lego letterpress.",
-        "deliverables": "A typeface built from only two Lego pieces, a square and a quarter-circle, worked out through hands-on assembly and experimentation.",
+        "summary": "Lego Sans is a modular typeface that grew out of printing with Lego letterpress. Every letter is built from just two Lego pieces, a square and a quarter-circle, and the alphabet took shape through hands-on assembly and experimentation: set on a baseplate, inked, and pulled on a proof press.",
+        "deliverables": [
+            "A modular typeface built from two Lego pieces, for now in print only.",
+            "An alphabet book, one letter per page, printed by Lego letterpress."
+        ],
         "media1": "legosans/media-1.jpg",
         "media2": "legosans/media-2.mp4",
-        "media3": "legosans/media-3.jpg",
         "icon": "legosans/icon.jpg",
-        "preview": "legosans/preview.mp4"
+        "preview": "legosans/preview-v2.mp4",
+        "details": [
+            [
+                "role",
+                "type designer & printer"
+            ],
+            [
+                "skills",
+                "type design, Illustrator, letterpress printing"
+            ],
+            [
+                "advisors",
+                "Maria Veronica San Martin, Amber Braverman"
+            ],
+            [
+                "printed",
+                "Lego letterpress"
+            ],
+            [
+                "bound",
+                "saddle stitched"
+            ]
+        ],
+        "sections": [
+            {
+                "media": [
+                    "legosans/media-2.mp4"
+                ]
+            },
+            {
+                "layout": "gallery",
+                "columns": 5,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "legosans/letter-a.jpg",
+                        "thumb": "legosans/letter-a-thumb.jpg",
+                        "caption": "A"
+                    },
+                    {
+                        "src": "legosans/letter-b.jpg",
+                        "thumb": "legosans/letter-b-thumb.jpg",
+                        "caption": "B"
+                    },
+                    {
+                        "src": "legosans/letter-c.jpg",
+                        "thumb": "legosans/letter-c-thumb.jpg",
+                        "caption": "C"
+                    },
+                    {
+                        "src": "legosans/letter-d.jpg",
+                        "thumb": "legosans/letter-d-thumb.jpg",
+                        "caption": "D"
+                    },
+                    {
+                        "src": "legosans/letter-e.jpg",
+                        "thumb": "legosans/letter-e-thumb.jpg",
+                        "caption": "E"
+                    },
+                    {
+                        "src": "legosans/letter-f.jpg",
+                        "thumb": "legosans/letter-f-thumb.jpg",
+                        "caption": "F"
+                    },
+                    {
+                        "src": "legosans/letter-g.jpg",
+                        "thumb": "legosans/letter-g-thumb.jpg",
+                        "caption": "G"
+                    },
+                    {
+                        "src": "legosans/letter-h.jpg",
+                        "thumb": "legosans/letter-h-thumb.jpg",
+                        "caption": "H"
+                    },
+                    {
+                        "src": "legosans/letter-j.jpg",
+                        "thumb": "legosans/letter-j-thumb.jpg",
+                        "caption": "J"
+                    },
+                    {
+                        "src": "legosans/letter-k.jpg",
+                        "thumb": "legosans/letter-k-thumb.jpg",
+                        "caption": "K"
+                    },
+                    {
+                        "src": "legosans/letter-l.jpg",
+                        "thumb": "legosans/letter-l-thumb.jpg",
+                        "caption": "L"
+                    },
+                    {
+                        "src": "legosans/letter-m.jpg",
+                        "thumb": "legosans/letter-m-thumb.jpg",
+                        "caption": "M"
+                    },
+                    {
+                        "src": "legosans/letter-n.jpg",
+                        "thumb": "legosans/letter-n-thumb.jpg",
+                        "caption": "N"
+                    },
+                    {
+                        "src": "legosans/letter-o.jpg",
+                        "thumb": "legosans/letter-o-thumb.jpg",
+                        "caption": "O"
+                    },
+                    {
+                        "src": "legosans/letter-p.jpg",
+                        "thumb": "legosans/letter-p-thumb.jpg",
+                        "caption": "P"
+                    },
+                    {
+                        "src": "legosans/letter-q.jpg",
+                        "thumb": "legosans/letter-q-thumb.jpg",
+                        "caption": "Q"
+                    },
+                    {
+                        "src": "legosans/letter-r.jpg",
+                        "thumb": "legosans/letter-r-thumb.jpg",
+                        "caption": "R"
+                    },
+                    {
+                        "src": "legosans/letter-s.jpg",
+                        "thumb": "legosans/letter-s-thumb.jpg",
+                        "caption": "S"
+                    },
+                    {
+                        "src": "legosans/letter-t.jpg",
+                        "thumb": "legosans/letter-t-thumb.jpg",
+                        "caption": "T"
+                    },
+                    {
+                        "src": "legosans/letter-u.jpg",
+                        "thumb": "legosans/letter-u-thumb.jpg",
+                        "caption": "U"
+                    },
+                    {
+                        "src": "legosans/letter-v.jpg",
+                        "thumb": "legosans/letter-v-thumb.jpg",
+                        "caption": "V"
+                    },
+                    {
+                        "src": "legosans/letter-w.jpg",
+                        "thumb": "legosans/letter-w-thumb.jpg",
+                        "caption": "W"
+                    },
+                    {
+                        "src": "legosans/letter-x.jpg",
+                        "thumb": "legosans/letter-x-thumb.jpg",
+                        "caption": "X"
+                    },
+                    {
+                        "src": "legosans/letter-y.jpg",
+                        "thumb": "legosans/letter-y-thumb.jpg",
+                        "caption": "Y"
+                    },
+                    {
+                        "src": "legosans/letter-z.jpg",
+                        "thumb": "legosans/letter-z-thumb.jpg",
+                        "caption": "Z"
+                    }
+                ]
+            },
+            {
+                "media": [
+                    {
+                        "src": "legosans/plate-built.jpg",
+                        "caption": "Each letter is built by hand on a Lego baseplate from squares and quarter-circles, mirrored so it prints the right way round.",
+                        "phone": "legosans/plate-built-phone.jpg"
+                    }
+                ]
+            }
+        ]
     },
     {
         "title": "kowloon",
@@ -374,32 +731,182 @@
         "year": "2025",
         "description": "Kowloon is a dual-layered  book that contrasts the historical reality of the Kowloon Walled City with its fictionalized portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often depicted as a chaotic, futuristic labyrinth.Designed as two books within one, the piece features perforated pages that readers can tear open, revealing the hidden \"fiction\" layer beneath the \"reality\" section.  The \"reality\" section takes an academic, text-based approach, while the \"fiction\" layer is more image-driven, reflecting how history transforms into myth.",
         "summary": "A book that contrasts the historical reality of the Kowloon Walled City with its fictional portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often shown as a chaotic, futuristic labyrinth.",
-        "deliverables": "Two books in one. Perforated pages tear open to reveal a hidden “fiction” layer beneath the “reality” section: the reality layer is academic and text-based, the fiction layer image-driven, showing how history turns into myth.",
+        "deliverables": [
+            "A two-in-one book: the reality of the Kowloon Walled City on the outside, and the media it has inspired hidden inside its perforated French folds."
+        ],
         "media1": "kowloon/media-1.jpg",
-        "media2": "kowloon/media-2.mp4",
-        "media3": "kowloon/media-3.mp4",
-        "media4": "kowloon/media-4.mp4",
-        "media5": "kowloon/media-5.jpg",
         "icon": "kowloon/icon.jpg",
-        "preview": "kowloon/preview.mp4"
+        "preview": "kowloon/preview.mp4",
+        "details": [
+            [
+                "role",
+                "designer & producer"
+            ],
+            [
+                "skills",
+                "editing, InDesign, Photoshop, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Ka Ming Lee"
+            ],
+            [
+                "printed",
+                "laser printed"
+            ],
+            [
+                "bound",
+                "tape bound, with perforated French folds"
+            ]
+        ],
+        "sections": [
+            {
+                "media": [
+                    "kowloon/cover-flip.mp4"
+                ]
+            },
+            {
+                "label": "a book in a book",
+                "text": "The outer book is academic and text-based: the walled city’s history, its architecture and daily life. The inner book, folded inside it, is image-driven: the city as films and games have imagined it.",
+                "note": "The history on the outside, the films and games it inspired folded inside."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "kowloon/spread3-reality-22.jpg",
+                        "thumb": "kowloon/spread3-reality-22-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-fiction-46.jpg",
+                        "thumb": "kowloon/spread3-fiction-46-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-reality-30.jpg",
+                        "thumb": "kowloon/spread3-reality-30-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-fiction-38.jpg",
+                        "thumb": "kowloon/spread3-fiction-38-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-reality-42.jpg",
+                        "thumb": "kowloon/spread3-reality-42-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-fiction-52.jpg",
+                        "thumb": "kowloon/spread3-fiction-52-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-reality-112.jpg",
+                        "thumb": "kowloon/spread3-reality-112-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-fiction-62.jpg",
+                        "thumb": "kowloon/spread3-fiction-62-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-reality-70.jpg",
+                        "thumb": "kowloon/spread3-reality-70-tile.jpg"
+                    },
+                    {
+                        "src": "kowloon/spread3-fiction-88.jpg",
+                        "thumb": "kowloon/spread3-fiction-88-tile.jpg"
+                    }
+                ],
+                "tone": "dim"
+            },
+            {
+                "layout": "pair",
+                "media": [
+                    "kowloon/tear.mp4",
+                    "kowloon/perforation.jpg"
+                ],
+                "caption": "Tearing along the perforation to reach the book inside."
+            }
+        ]
     },
     {
         "title": "76 cones",
         "subject": "book design",
         "year": "2024",
         "description": "76 Cones explores my psychogeographic journey documenting 76 traffic cones in New York City. The book unfolds in four parts: a layered flyer that introduces the cone as an object, a translucent paper booklet mapping my movement between each cone, an index cataloging my reflections at each site, and a fold-out sheet showing how, over time, the cones lost their objectivity and became simply the color orange. Bound in an orange file folder with office supply-inspired binding, the book evokes construction and urban spaces' bureaucratic and municipal nature.",
-        "summary": "A psychogeographic journey documenting 76 traffic cones across New York City, and how, over time, they stopped being objects and became simply the color orange.",
-        "deliverables": "A book in four parts, bound in an orange file folder with office-supply-inspired binding: a layered flyer introducing the cone as an object, a translucent booklet mapping the route between each cone, an index of reflections from each site, and a fold-out sheet of the cones turning into pure orange.",
+        "summary": "76 Cones is a psychogeographic walk through New York City, finding and documenting 76 traffic cones along the way. What started as a record of objects slowly became something else: over time the cones stopped reading as cones and became simply a colour, orange.\n\nThe book is filed like paperwork in an orange folder, borrowing the bureaucratic, municipal language of construction and of the city that puts cones on its streets.",
+        "deliverables": [
+            "A four-part book in an orange file folder: a layered flyer, a translucent map booklet, an index of reflections, and a fold-out sheet."
+        ],
         "media1": "76cones/media-1.jpg",
-        "media2": "76cones/media-2.jpg",
-        "media3": "76cones/media-3.jpg",
-        "media4": "76cones/media-4.mp4",
-        "media5": "76cones/media-5.mp4",
-        "media6": "76cones/media-6.mp4",
-        "media7": "76cones/media-7.mp4",
         "media8": "76cones/media-8.jpg",
         "icon": "76cones/icon.jpg",
-        "preview": "76cones/preview.mp4"
+        "preview": "76cones/preview-v3.mp4",
+        "details": [
+            [
+                "role",
+                "designer & producer"
+            ],
+            [
+                "skills",
+                "photography, writing, mapping, InDesign, Illustrator, bookbinding"
+            ],
+            [
+                "advisors",
+                "Ka Ming Lee"
+            ],
+            [
+                "bound",
+                "filed in an orange folder with office-supply binding"
+            ]
+        ],
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    "76cones/folder-open.jpg",
+                    "76cones/folder-flyer.jpg"
+                ]
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "caption": "All four parts at once, then each one up close: the flyer, the map of the route between cones, and the index of reflections from each site.",
+                "media": [
+                    {
+                        "src": "76cones/all-parts-v2.mp4",
+                        "thumb": "76cones/all-parts-v2-tile.jpg",
+                        "caption": "All four parts"
+                    },
+                    {
+                        "src": "76cones/flyer-v2.mp4",
+                        "thumb": "76cones/flyer-v2-tile.jpg",
+                        "caption": "The flyer"
+                    },
+                    {
+                        "src": "76cones/map-v2.mp4",
+                        "thumb": "76cones/map-v2-tile.jpg",
+                        "caption": "The map booklet"
+                    },
+                    {
+                        "src": "76cones/index-v2.mp4",
+                        "thumb": "76cones/index-v2-tile.jpg",
+                        "caption": "The index"
+                    },
+                    {
+                        "src": "76cones/overall-v3.mp4",
+                        "thumb": "76cones/overall-v3-tile.jpg",
+                        "caption": "The fold-out sheet"
+                    }
+                ],
+                "fill": true
+            },
+            {
+                "media": [
+                    "76cones/portrait-wide-v3.jpg"
+                ]
+            }
+        ]
     },
     {
         "title": "the joy luck supper club",
@@ -445,15 +952,75 @@
         "subject": "book design",
         "year": "2024",
         "description": "Wang Kar Wai is a tribute to the renowned filmmaker, celebrating his signature use of color and framing. The book features full-bleed pages and layered frame-within-a-frame layouts, with fold-out spreads that capture the fluid motion present in his films. His name is laser-cut in the cover with iconic stills from his films peeking through to represent his clever use of framing within his work. Small touches, like binding with red thread and spreads that recreate the typographic panels seen in his films, further alluded to his artistic style. ",
-        "summary": "A tribute to the filmmaker, celebrating his signature use of color and framing.",
-        "deliverables": "A book with full-bleed pages, layered frame-within-a-frame layouts, and fold-out spreads that capture the motion of his films. His name is laser-cut into the cover so stills peek through, the binding is sewn with red thread, and some spreads recreate the typographic panels from his films.",
+        "summary": "Wang Kar Wai is a tribute to the filmmaker and his use of colour and framing. Built as an archive project, it pairs stills drawn from an archive of his films with a critical text on colour in his cinema, sequenced so the pages move the way his films do.\n\nFull-bleed pages and frames-within-frames echo the way he composes a shot, fold-outs stretch scenes across the page, and some spreads recreate the typographic panels that appear in his films.",
+        "deliverables": [
+            "A hardcover book with fold-out spreads, its name laser-cut into the cover so stills show through."
+        ],
         "media1": "wangkarwai/media-1.jpg",
-        "media2": "wangkarwai/media-2.mp4",
-        "media3": "wangkarwai/media-3.jpg",
-        "media4": "wangkarwai/media-4.mp4",
-        "media5": "wangkarwai/media-5.mp4",
+        "media2": "wangkarwai/pages-flip.mp4",
         "icon": "wangkarwai/icon.jpg",
-        "preview": "wangkarwai/preview.mp4"
+        "preview": "wangkarwai/preview-v4.mp4",
+        "details": [
+            [
+                "role",
+                "designer & producer"
+            ],
+            [
+                "skills",
+                "archival research, image sequencing, InDesign, Photoshop, bookbinding"
+            ],
+            [
+                "advisors",
+                "Paul Carlos"
+            ],
+            [
+                "printed",
+                "laser printed; laser-cut cover"
+            ],
+            [
+                "bound",
+                "hardcover, sewn signatures with red thread, exposed spine"
+            ]
+        ],
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    {
+                        "src": "wangkarwai/cover-pair.jpg",
+                        "caption": "His name, laser-cut into the cover."
+                    },
+                    {
+                        "src": "wangkarwai/spine.jpg",
+                        "caption": "Sewn with red thread, the spine left open."
+                    }
+                ]
+            },
+            {
+                "media": [
+                    "wangkarwai/pages-flip.mp4"
+                ]
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "media": [
+                    {
+                        "src": "wangkarwai/fold-toc-open.mp4",
+                        "thumb": "wangkarwai/fold-toc-open-tile.jpg",
+                        "caption": "The table of contents, folding out"
+                    },
+                    {
+                        "src": "wangkarwai/fold-index-turn.mp4",
+                        "thumb": "wangkarwai/fold-index-turn-tile.jpg",
+                        "caption": "The index, with its translucent page"
+                    }
+                ],
+                "caption": "Fold-outs stretch a scene or a sequence past the edge of the book, giving a time-based feel to a medium that isn’t quite one."
+            }
+        ],
+        "hero": "wangkarwai/spreads.jpg"
     },
     {
         "title": "roshomon",

@@ -4,8 +4,9 @@
 const ROOT = new URL('..', document.currentScript.src).href;
 
 // Turns a project title into its URL name, e.g. "lego sans" -> "lego-sans".
+// a project's address: letters, numbers and dashes only ("worm & whisk" -> "worm-whisk")
 function slugify(title) {
-    return title.toLowerCase().replace(/\s+/g, '-');
+    return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 /* about: the "about" link in the header opens this. Edit your text here. */
