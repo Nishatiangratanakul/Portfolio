@@ -237,36 +237,6 @@
                 ]
             },
             {
-                "layout": "row",
-                "caption": "Drinks and bakes from the pop-ups.",
-                "media": [
-                    {
-                        "src": "wormandwhisk/drink-yuzu.jpg",
-                        "ratio": 0.667
-                    },
-                    {
-                        "src": "wormandwhisk/bake-tart.jpg",
-                        "ratio": 0.667
-                    },
-                    {
-                        "src": "wormandwhisk/drink-matcha.jpg",
-                        "ratio": 0.667
-                    },
-                    {
-                        "src": "wormandwhisk/bake-focaccia.jpg",
-                        "ratio": 0.667
-                    },
-                    {
-                        "src": "wormandwhisk/drink-banana.jpg",
-                        "ratio": 0.667
-                    },
-                    {
-                        "src": "wormandwhisk/bake-pineapple.jpg",
-                        "ratio": 0.667
-                    }
-                ]
-            },
-            {
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
@@ -289,9 +259,9 @@
                         "caption": "The second home café, with the drinks and bakes cut out"
                     },
                     {
-                        "src": "wormandwhisk/menu-youarecode.jpg",
-                        "thumb": "wormandwhisk/menu-youarecode-tile.jpg",
-                        "caption": "You Are Code: the backdrop, with both drinks"
+                        "src": "wormandwhisk/menu-youarecode-v2.jpg",
+                        "thumb": "wormandwhisk/menu-youarecode-v2-tile.jpg",
+                        "caption": "You Are Code: the two drinks"
                     }
                 ]
             },
@@ -302,19 +272,19 @@
                 "caption": "Posters for each pop-up.",
                 "media": [
                     {
-                        "src": "wormandwhisk/posters-illustrated.jpg",
-                        "thumb": "wormandwhisk/posters-illustrated-tile.jpg",
+                        "src": "wormandwhisk/posters-illustrated-v2.jpg",
+                        "thumb": "wormandwhisk/posters-illustrated-v2-tile.jpg",
                         "caption": "The second home café, illustrated by Carrie Kuo"
                     },
                     {
-                        "src": "wormandwhisk/posters-afterhours.jpg",
-                        "thumb": "wormandwhisk/posters-afterhours-tile.jpg",
-                        "caption": "After Hours: the poster, then the drinks released one by one"
+                        "src": "wormandwhisk/posters-afterhours-v2.jpg",
+                        "thumb": "wormandwhisk/posters-afterhours-v2-tile.jpg",
+                        "caption": "After Hours: the drinks, released one by one"
                     },
                     {
-                        "src": "wormandwhisk/posters-youarecode.jpg",
-                        "thumb": "wormandwhisk/posters-youarecode-tile.jpg",
-                        "caption": "You Are Code: the two drinks"
+                        "src": "wormandwhisk/posters-youarecode-v2.jpg",
+                        "thumb": "wormandwhisk/posters-youarecode-v2-tile.jpg",
+                        "caption": "You Are Code: the full wall of posters"
                     }
                 ],
                 "tone": "dim"
@@ -326,26 +296,25 @@
                 "caption": "Posts for the pop-ups on social media.",
                 "media": [
                     {
-                        "src": "wormandwhisk/menu-post-1.jpg",
-                        "caption": "Worm&Whisk: After Hours\nThe long awaited menu release:\n\nHojiberry\nOmija Spritz Mocktail*\nMango Sticky Rice\nBala*\n\n*Mocktail versions available\n\nMay 9, 4PM-7PM EST.\nOnly a few spots left, link to tickets in bio."
+                        "media": [
+                            "wormandwhisk/ig-yac-mango.jpg",
+                            "wormandwhisk/ig-yac-banana.jpg"
+                        ],
+                        "likes": "70",
+                        "date": "August 20, 2025",
+                        "caption": "happy summer! Worm&Whisk will be sharing new flavors at YouAreCode this Friday! hope to see you there!\n\n08.22 | 12–3 PM 📍 spaceLES, 155 Suffolk St.\n\nWorm&Whisk 🪱🍵 8/22 menu:\n\nbanana pudding matcha\nmango sticky rice matcha"
                     },
                     {
                         "src": "wormandwhisk/stop-motion.mp4"
                     },
                     {
-                        "src": "wormandwhisk/post-afterhours.jpg",
+                        "src": "wormandwhisk/ig-afterhours.jpg",
+                        "likes": "27",
+                        "date": "April 30, 2026",
                         "caption": "Worm&Whisk: After Hours 🪱🍸\nAn evening edition. May 9, 4-7 PM EST.\nAn all new menu of cocktails and small bites.\n\nTickets now live in bio."
                     },
                     {
-                        "src": "wormandwhisk/post-yac-banana.jpg",
-                        "caption": "happy summer! Worm&Whisk will be sharing new flavors at YouAreCode this Friday! hope to see you there!\n\n08.22 | 12–3 PM 📍 spaceLES, 155 Suffolk St.\n\nWorm&Whisk 🪱🍵 8/22 menu:\n\nbanana pudding matcha\nmango sticky rice matcha"
-                    },
-                    {
-                        "src": "wormandwhisk/poster-illustration-1.jpg",
-                        "caption": "shoutout to @carrie.kuo for doing our beautiful posters for the second Worm&Whisk 🪱🍵 popup!"
-                    },
-                    {
-                        "src": "wormandwhisk/post-home.jpg"
+                        "src": "wormandwhisk/ig-home.jpg"
                     }
                 ]
             },
@@ -718,7 +687,7 @@
         "description": "Kowloon is a dual-layered  book that contrasts the historical reality of the Kowloon Walled City with its fictionalized portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often depicted as a chaotic, futuristic labyrinth.Designed as two books within one, the piece features perforated pages that readers can tear open, revealing the hidden \"fiction\" layer beneath the \"reality\" section.  The \"reality\" section takes an academic, text-based approach, while the \"fiction\" layer is more image-driven, reflecting how history transforms into myth.",
         "summary": "A book that contrasts the historical reality of the Kowloon Walled City with its fictional portrayals in popular media. Once a self-regulated enclave shaped by geopolitical tensions, the city has become a cyberpunk icon, often shown as a chaotic, futuristic labyrinth.",
         "deliverables": [
-            "A two-in-one book: a text-based “reality” layer, with an image-driven “fiction” layer hidden inside its perforated French folds."
+            "A two-in-one book: the reality of the Kowloon Walled City on the outside, and the media it has inspired hidden inside its perforated French folds."
         ],
         "media1": "kowloon/media-1.jpg",
         "icon": "kowloon/icon.jpg",
@@ -752,9 +721,9 @@
                 ]
             },
             {
-                "label": "two layers",
-                "text": "The reality layer is academic and text-based: the walled city’s history, its architecture and daily life. The fiction layer, hidden inside it, is image-driven: the city as films and games have imagined it.",
-                "note": "Reality on the outside, fiction folded inside."
+                "label": "a book in a book",
+                "text": "The outer book is academic and text-based: the walled city’s history, its architecture and daily life. The inner book, folded inside it, is image-driven: the city as films and games have imagined it.",
+                "note": "The history on the outside, the films and games it inspired folded inside."
             },
             {
                 "layout": "viewer",
@@ -762,44 +731,44 @@
                 "dark": true,
                 "media": [
                     {
-                        "src": "kowloon/spread2-reality-22.jpg",
-                        "thumb": "kowloon/spread2-reality-22-tile.jpg"
+                        "src": "kowloon/spread3-reality-22.jpg",
+                        "thumb": "kowloon/spread3-reality-22-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-fiction-46.jpg",
-                        "thumb": "kowloon/spread2-fiction-46-tile.jpg"
+                        "src": "kowloon/spread3-fiction-46.jpg",
+                        "thumb": "kowloon/spread3-fiction-46-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-reality-30.jpg",
-                        "thumb": "kowloon/spread2-reality-30-tile.jpg"
+                        "src": "kowloon/spread3-reality-30.jpg",
+                        "thumb": "kowloon/spread3-reality-30-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-fiction-38.jpg",
-                        "thumb": "kowloon/spread2-fiction-38-tile.jpg"
+                        "src": "kowloon/spread3-fiction-38.jpg",
+                        "thumb": "kowloon/spread3-fiction-38-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-reality-42.jpg",
-                        "thumb": "kowloon/spread2-reality-42-tile.jpg"
+                        "src": "kowloon/spread3-reality-42.jpg",
+                        "thumb": "kowloon/spread3-reality-42-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-fiction-52.jpg",
-                        "thumb": "kowloon/spread2-fiction-52-tile.jpg"
+                        "src": "kowloon/spread3-fiction-52.jpg",
+                        "thumb": "kowloon/spread3-fiction-52-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-reality-112.jpg",
-                        "thumb": "kowloon/spread2-reality-112-tile.jpg"
+                        "src": "kowloon/spread3-reality-112.jpg",
+                        "thumb": "kowloon/spread3-reality-112-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-fiction-62.jpg",
-                        "thumb": "kowloon/spread2-fiction-62-tile.jpg"
+                        "src": "kowloon/spread3-fiction-62.jpg",
+                        "thumb": "kowloon/spread3-fiction-62-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-reality-70.jpg",
-                        "thumb": "kowloon/spread2-reality-70-tile.jpg"
+                        "src": "kowloon/spread3-reality-70.jpg",
+                        "thumb": "kowloon/spread3-reality-70-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread2-fiction-88.jpg",
-                        "thumb": "kowloon/spread2-fiction-88-tile.jpg"
+                        "src": "kowloon/spread3-fiction-88.jpg",
+                        "thumb": "kowloon/spread3-fiction-88-tile.jpg"
                     }
                 ],
                 "tone": "dim"
@@ -810,7 +779,7 @@
                     "kowloon/tear.mp4",
                     "kowloon/perforation.jpg"
                 ],
-                "caption": "Tearing along the perforation to reach the fiction layer."
+                "caption": "Tearing along the perforation to reach the book inside."
             }
         ]
     },
@@ -889,7 +858,7 @@
             },
             {
                 "media": [
-                    "76cones/portrait-wide-v2.jpg"
+                    "76cones/portrait-wide-v3.jpg"
                 ]
             }
         ]

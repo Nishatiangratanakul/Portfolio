@@ -281,29 +281,77 @@ function markPortrait(media, figure) {
 
 // viewer: one big image (the first item to start), with small thumbnails beside it; clicking a
 // thumbnail shows that item in the big spot, and clicking a big picture opens it full screen to zoom
-// posts: each picture or loop shown as a post on a phone (account name, the post, the usual
-// icons, its caption), in a row you can scroll sideways through
+// posts: each post drawn the way Instagram shows one (account, the picture or carousel or clip,
+// the icons, likes, the start of the caption, the date), in a row that scrolls sideways with arrows
 function buildPosts(el, grid, items, section, title) {
-    const icon = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
-    const icons = [
-        'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z',
-        'M4 5h16v11H9l-5 4z',
-        'M21 4 3 11l7 2 2 7z',
-    ];
+    const svg = (inner, box = '0 0 24 24') => `<svg viewBox="${box}" aria-hidden="true">${inner}</svg>`;
+    const stroke = 'fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"';
+    const ICON = {
+        like: svg('<path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"/>'),
+        comment: svg(`<path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" ${stroke}/>`),
+        share: svg(`<path d="M13.973 20.046 21.77 6.928C22.8 5.195 21.55 3 19.535 3H4.466C2.138 3 .984 5.825 2.646 7.456l4.842 4.752 1.723 7.121c.548 2.266 3.571 2.721 4.762.717Z" ${stroke}/><line ${stroke} stroke-linecap="round" x1="7.488" x2="15.515" y1="12.208" y2="7.641"/>`),
+        save: svg(`<polygon ${stroke} stroke-linecap="round" points="20 21 12 13.44 4 21 4 3 20 3 20 21"/>`),
+        more: svg('<circle cx="12" cy="12" r="1.5"/><circle cx="6" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/>'),
+        clip: svg('<path d="M22.942 7.464c-.062-1.36-.306-2.143-.511-2.671a5.366 5.366 0 0 0-1.272-1.952 5.364 5.364 0 0 0-1.951-1.27c-.53-.207-1.312-.45-2.673-.513-1.2-.054-1.557-.066-4.535-.066s-3.336.012-4.536.066c-1.36.062-2.143.306-2.672.511-.769.3-1.371.692-1.951 1.272s-.973 1.182-1.27 1.951c-.207.53-.45 1.312-.513 2.673C1.004 8.665.992 9.022.992 12s.012 3.336.066 4.536c.062 1.36.306 2.143.511 2.671.298.77.69 1.373 1.272 1.952.58.581 1.182.974 1.951 1.27.53.207 1.311.45 2.673.513 1.199.054 1.557.066 4.535.066s3.336-.012 4.536-.066c1.36-.062 2.143-.306 2.671-.511a5.368 5.368 0 0 0 1.953-1.273c.58-.58.972-1.181 1.27-1.95.206-.53.45-1.312.512-2.673.054-1.2.066-1.557.066-4.535s-.012-3.336-.066-4.536Zm-7.085 6.055-5.25 3c-1.167.667-2.619-.175-2.619-1.519V9c0-1.344 1.452-2.186 2.619-1.52l5.25 3c1.175.672 1.175 2.368 0 3.04Z"/>'),
+    };
     const account = section.account || '';
-    const avatar = section.avatar ? `assets/${section.avatar}` : '';
+    const avatar = section.avatar ? `<img class="post-avatar" src="assets/${section.avatar}" alt="" loading="lazy">` : '';
     items.forEach((item, i) => {
+        const slides = item.media || [item.src];
         const card = document.createElement('figure');
         card.className = 'post';
         card.innerHTML = `
-            <div class="post-head">${avatar ? `<img src="${avatar}" alt="" loading="lazy">` : ''}<b>${esc(account)}</b></div>
-            <div class="post-media"></div>
-            <div class="post-icons">${icons.map(icon).join('')}<span></span>${icon('M6 3h12v18l-6-5-6 5z')}</div>
-            ${item.caption ? `<p class="post-caption"><b>${esc(account)}</b> ${esc(item.caption).replace(/\n/g, '<br>')}</p>` : ''}`;
-        card.querySelector('.post-media').appendChild(createMedia(item.src, `${title}, post ${i + 1}`, true));
+            <div class="post-head">${avatar}<b>${esc(account)}</b><span class="post-more">${ICON.more}</span></div>
+            <div class="post-media"><div class="post-slides"></div>
+                ${slides.length > 1 ? `<span class="post-count">1/${slides.length}</span>
+                    <button type="button" class="post-step prev" aria-label="previous picture" hidden>‹</button>
+                    <button type="button" class="post-step next" aria-label="next picture">›</button>` : ''}
+                ${/\.mp4$/i.test(slides[0]) ? `<span class="post-clip">${ICON.clip}</span>` : ''}
+            </div>
+            ${slides.length > 1 ? `<div class="post-dots">${slides.map((_, k) => `<i${k ? '' : ' class="on"'}></i>`).join('')}</div>` : ''}
+            <div class="post-icons">${ICON.like}${ICON.comment}${ICON.share}<span></span>${ICON.save}</div>
+            ${item.likes ? `<p class="post-likes">${esc(item.likes)} likes</p>` : ''}
+            ${item.caption ? `<p class="post-caption"><b>${esc(account)}</b> <span>${esc(item.caption).replace(/\n/g, '<br>')}</span></p><button type="button" class="post-open">more</button>` : ''}
+            ${item.date ? `<p class="post-date">${esc(item.date)}</p>` : ''}`;
+        const box = card.querySelector('.post-slides');
+        slides.forEach((src, k) => box.appendChild(createMedia(src, `${title}, post ${i + 1}, picture ${k + 1}`, true)));
+        if (slides.length > 1) {
+            let at = 0;
+            const go = n => {
+                at = Math.max(0, Math.min(slides.length - 1, n));
+                box.style.transform = `translateX(${-100 * at}%)`;
+                card.querySelector('.post-count').textContent = `${at + 1}/${slides.length}`;
+                card.querySelectorAll('.post-dots i').forEach((d, k) => d.classList.toggle('on', k === at));
+                card.querySelector('.post-step.prev').hidden = at === 0;
+                card.querySelector('.post-step.next').hidden = at === slides.length - 1;
+            };
+            card.querySelector('.post-step.prev').addEventListener('click', () => go(at - 1));
+            card.querySelector('.post-step.next').addEventListener('click', () => go(at + 1));
+        }
+        const open = card.querySelector('.post-open');
+        if (open) {
+            const cap = card.querySelector('.post-caption');
+            requestAnimationFrame(() => { if (cap.scrollHeight <= cap.clientHeight + 2) open.remove(); });
+            open.addEventListener('click', () => { cap.classList.add('open'); open.remove(); });
+        }
         grid.appendChild(card);
     });
-    el.appendChild(grid);
+    const row = document.createElement('div');
+    row.className = 'posts-row';
+    row.appendChild(grid);
+    // arrows to move through the posts (shown on every screen, so it's clear the row scrolls)
+    const step = dir => grid.scrollBy({ left: dir * (grid.querySelector('.post').offsetWidth + 24), behavior: 'smooth' });
+    row.insertAdjacentHTML('beforeend', '<button type="button" class="posts-arrow prev" aria-label="previous post">←</button><button type="button" class="posts-arrow next" aria-label="next post">→</button>');
+    row.querySelector('.posts-arrow.prev').addEventListener('click', () => step(-1));
+    row.querySelector('.posts-arrow.next').addEventListener('click', () => step(1));
+    const ends = () => {
+        row.querySelector('.posts-arrow.prev').disabled = grid.scrollLeft < 8;
+        row.querySelector('.posts-arrow.next').disabled = grid.scrollLeft + grid.clientWidth > grid.scrollWidth - 8;
+    };
+    grid.addEventListener('scroll', ends, { passive: true });
+    addEventListener('resize', ends);
+    requestAnimationFrame(ends);
+    el.appendChild(row);
     if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
 }
 
