@@ -65,6 +65,9 @@ main {
         opacity: 1;
     }
 
+    /* years start at the left of their column, like the title and format */
+    .year { justify-self: start; }
+
     /* the big looping preview in the middle of the screen while hovering a row */
     .hover-preview {
         display: block;
