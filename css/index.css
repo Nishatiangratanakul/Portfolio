@@ -65,8 +65,8 @@ main {
         opacity: 1;
     }
 
-    /* years start at the left of their column, like the title and format */
-    .year { justify-self: start; }
+    /* years stay at the right, but start from the same point, so a longer one (2025–2026) runs on to the right */
+    .year { justify-self: end; width: 9.5ch; white-space: nowrap; text-align: left; }
 
     /* the big looping preview in the middle of the screen while hovering a row */
     .hover-preview {
