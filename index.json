@@ -376,6 +376,145 @@
         "preview": "wormandwhisk/preview-v2.mp4"
     },
     {
+        "title": "cooking as acts of care",
+        "subject": "cookbook design",
+        "year": "2025",
+        "summary": "Cooking as Acts of Care: Family Style is a cookbook of desserts, cakes and breads made to share: baked for birthdays, get-togethers and supper clubs. Each recipe sits with the memory it came from, alongside poems and small guides to the rituals of gathering, because food isn't just served, it's shared.\n\nA half-width page is bound in beside each recipe. One side holds a dated note from the day it was made; turn it over and it becomes the ingredients list.",
+        "deliverables": [
+            "A spiral-bound cookbook, written and designed, printed in an edition of seven."
+        ],
+        "icon": "cookbook/icon.jpg",
+        "preview": "cookbook/preview.mp4",
+        "hero": "cookbook/hero.jpg",
+        "details": [
+            [
+                "role",
+                "writer & designer"
+            ],
+            [
+                "printed on",
+                "Colorplan Natural"
+            ],
+            [
+                "typeset in",
+                "Dovetail MVB, PT Mono"
+            ],
+            [
+                "edition",
+                "7 copies"
+            ]
+        ],
+        "sections": [
+            {
+                "layout": "pair",
+                "media": [
+                    "cookbook/spread-25.jpg",
+                    "cookbook/spread-24.jpg"
+                ],
+                "caption": "The half page turns over: a note from the day the crepe cake was made, then the ingredients."
+            },
+            {
+                "layout": "viewer",
+                "centred": true,
+                "tone": "light",
+                "media": [
+                    {
+                        "src": "cookbook/spread-01.jpg",
+                        "thumb": "cookbook/spread-01-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-02.jpg",
+                        "thumb": "cookbook/spread-02-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-04.jpg",
+                        "thumb": "cookbook/spread-04-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-05.jpg",
+                        "thumb": "cookbook/spread-05-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-07.jpg",
+                        "thumb": "cookbook/spread-07-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-09.jpg",
+                        "thumb": "cookbook/spread-09-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-10.jpg",
+                        "thumb": "cookbook/spread-10-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-12.jpg",
+                        "thumb": "cookbook/spread-12-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-14.jpg",
+                        "thumb": "cookbook/spread-14-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-15.jpg",
+                        "thumb": "cookbook/spread-15-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-17.jpg",
+                        "thumb": "cookbook/spread-17-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-18.jpg",
+                        "thumb": "cookbook/spread-18-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-19.jpg",
+                        "thumb": "cookbook/spread-19-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-21.jpg",
+                        "thumb": "cookbook/spread-21-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-22.jpg",
+                        "thumb": "cookbook/spread-22-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-23.jpg",
+                        "thumb": "cookbook/spread-23-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-25.jpg",
+                        "thumb": "cookbook/spread-25-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-26.jpg",
+                        "thumb": "cookbook/spread-26-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-27.jpg",
+                        "thumb": "cookbook/spread-27-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-29.jpg",
+                        "thumb": "cookbook/spread-29-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-30.jpg",
+                        "thumb": "cookbook/spread-30-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-31.jpg",
+                        "thumb": "cookbook/spread-31-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/spread-32.jpg",
+                        "thumb": "cookbook/spread-32-tile.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "title": "contemplating death",
         "subject": "book design",
         "year": "2025",

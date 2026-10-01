@@ -24,8 +24,8 @@ const IDLE_AFTER = testMode ? 3000 : 60000; // ms without activity before it sta
 const IDLE_FILL_TIME = 180000;              // ms until a desktop screen is full; phones use the
                                             // same pace and fill sooner, as they hold fewer
 const IDLE_RAMP = 1.5;                      // >1 starts slower and speeds up; 1 is a steady pace
-const CLEAR_DELAY = 2000;                   // once you're back, only the cursor/finger erases for this long,
-const CLEAR_TIME = 6000;                    // then the rest disappears over this long, slowly at first
+const CLEAR_TIME = 5000;                    // once you're back, it all disappears over this long, starting
+                                            // straight away (the cursor/finger also clears what it passes)
 const ERASE_RADIUS = { phone: 50, desktop: 80 };  // px around the cursor/finger
 const JIGGLE = 10;                                // px of mouse movement that doesn't count as "back"
 
@@ -190,14 +190,13 @@ function fall() {
     }
 }
 
-// They're back: stop adding. The cursor/finger erases straight away; after CLEAR_DELAY the rest
-// start disappearing one at a time, a few at first and more towards the end of CLEAR_TIME
-// (the square root bunches the random moments towards the end).
+// They're back: stop adding. Shapes start disappearing one at a time straight away, at a steady
+// pace, so it's clear nothing needs doing; the cursor/finger just clears its path faster.
 function wake() {
     clearInterval(fallTimer);
     idleState = 'off';
     for (const p of placed.splice(0)) {
-        const delay = CLEAR_DELAY + CLEAR_TIME * Math.sqrt(Math.random());
+        const delay = CLEAR_TIME * Math.random();
         p.timeout = setTimeout(() => removeShape(p), delay);
         leaving.add(p);
     }
