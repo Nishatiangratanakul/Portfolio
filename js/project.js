@@ -181,6 +181,11 @@ function hoverNotes() {
         area.addEventListener('mouseleave', () => { tip.hidden = true; });
     };
     // a viewer's big picture shows the note of whichever picture is in it
+    // ...and each thumbnail shows the note of the picture it opens
+    container.querySelectorAll('.viewer-thumbs button[data-note]').forEach(b => {
+        b.addEventListener('mousemove', e => { if (!e.noteShown) { e.noteShown = true; show(b.dataset.note, e); } });
+        b.addEventListener('mouseleave', () => { tip.hidden = true; });
+    });
     container.querySelectorAll('.viewer-stage').forEach(stage => {
         stage.addEventListener('mousemove', e => { if (stage.dataset.note && !e.noteShown) { e.noteShown = true; show(stage.dataset.note, e); } });
         stage.addEventListener('mouseleave', () => { tip.hidden = true; });
@@ -414,6 +419,7 @@ function buildViewer(el, grid, items, title) {
         const button = document.createElement('button');
         button.type = 'button';
         button.setAttribute('aria-label', item.caption || `image ${i + 1}`);
+        if (item.caption) button.dataset.note = fmt(item.caption);
         button.appendChild(createImage(`assets/${item.thumb || item.src}`, '', false)); // small; load straight away
         button.addEventListener('click', () => show(i));
         thumbs.appendChild(button);
