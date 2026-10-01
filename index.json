@@ -909,59 +909,52 @@
         ]
     },
     {
-        "title": "cover studies",
+        "title": "five covers, five days",
         "subject": "book covers",
         "year": "2026",
-        "description": "Five book covers, each built from a single image or object taken from the book.",
-        "summary": "Five book covers, each built from a single image or object taken from the book: an empty plate for a food critic’s appetite, the onigiri wrapper a convenience store worker lives by, a fading family photograph, a sun too bright to look at for a book about facing death, and a donabe seen from above for a cookbook of one-pot recipes. Each was designed in about a day.",
+        "description": "Five book covers in five days: one a day, all at one trim size.",
+        "summary": "Five book covers in five days: one a day, all at the same trim size, as an exercise in designing jackets. Working this fast meant designing from what each book is about rather than a close read, so the work became finding the single detail, image or object that carries a book’s feeling.\n\nAcross the set: bold type, photography, image treatment and illustration, each a way of asking how a cover can catch the eye while staying true to what’s inside, and how to land a subtle idea for a specific audience without shutting anyone else out.",
         "deliverables": [
-            "Four jackets for fiction and nonfiction, and a cookbook cover in two directions."
+            "Five jackets, one a day, at a single trim size: three novels, a book on facing death, and a cookbook."
         ],
-        "hero": "coverstudies/hero.jpg",
+        "hero": "coverstudies/hero-black.jpg",
         "sections": [
             {
-                "layout": "row",
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "tall": true,
                 "media": [
                     {
-                        "src": "coverstudies/hunger.jpg",
-                        "ratio": 0.8,
+                        "src": "coverstudies/hunger-black.jpg",
+                        "thumb": "coverstudies/hunger-black-tile.jpg",
                         "caption": "A Certain Hunger: a clean, empty plate, for a food critic with a dangerous appetite."
                     },
                     {
-                        "src": "coverstudies/convenience.jpg",
-                        "ratio": 0.8,
+                        "src": "coverstudies/convenience-black.jpg",
+                        "thumb": "coverstudies/convenience-black-tile.jpg",
                         "caption": "Convenience Store Woman: the onigiri wrapper, pull tabs and all."
                     },
                     {
-                        "src": "coverstudies/gorgeous.jpg",
-                        "ratio": 0.8,
+                        "src": "coverstudies/gorgeous-black.jpg",
+                        "thumb": "coverstudies/gorgeous-black-tile.jpg",
                         "caption": "On Earth We’re Briefly Gorgeous: a family photograph, set into a quiet cloth cover."
-                    }
-                ]
-            },
-            {
-                "layout": "row",
-                "media": [
+                    },
                     {
-                        "src": "coverstudies/sun.jpg",
-                        "ratio": 0.8,
+                        "src": "coverstudies/sun-black.jpg",
+                        "thumb": "coverstudies/sun-black-tile.jpg",
                         "caption": "Staring at the Sun: a sun too bright to look at directly, for a book about facing death."
                     },
                     {
-                        "src": "coverstudies/donabe-a.jpg",
-                        "ratio": 0.8,
-                        "caption": "Simply Donabe: the pot from above, in brown."
-                    },
-                    {
-                        "src": "coverstudies/donabe-b.jpg",
-                        "ratio": 0.8,
-                        "caption": "Simply Donabe: a louder second direction."
+                        "src": "coverstudies/donabe-black.jpg",
+                        "thumb": "coverstudies/donabe-black-tile.jpg",
+                        "caption": "Simply Donabe: the pot from above."
                     }
                 ]
             }
         ],
         "icon": "coverstudies/icon.jpg",
-        "preview": "coverstudies/preview.mp4"
+        "preview": "coverstudies/preview-v2.mp4"
     },
     {
         "title": "the joy luck supper club",
