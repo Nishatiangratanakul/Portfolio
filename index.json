@@ -909,6 +909,61 @@
         ]
     },
     {
+        "title": "cover studies",
+        "subject": "book covers",
+        "year": "2026",
+        "description": "Five book covers, each built from a single image or object taken from the book.",
+        "summary": "Five book covers, each built from a single image or object taken from the book: an empty plate for a food critic’s appetite, the onigiri wrapper a convenience store worker lives by, a fading family photograph, a sun too bright to look at for a book about facing death, and a donabe seen from above for a cookbook of one-pot recipes. Each was designed in about a day.",
+        "deliverables": [
+            "Four jackets for fiction and nonfiction, and a cookbook cover in two directions."
+        ],
+        "hero": "coverstudies/hero.jpg",
+        "sections": [
+            {
+                "layout": "row",
+                "media": [
+                    {
+                        "src": "coverstudies/hunger.jpg",
+                        "ratio": 0.8,
+                        "caption": "A Certain Hunger: a clean, empty plate, for a food critic with a dangerous appetite."
+                    },
+                    {
+                        "src": "coverstudies/convenience.jpg",
+                        "ratio": 0.8,
+                        "caption": "Convenience Store Woman: the onigiri wrapper, pull tabs and all."
+                    },
+                    {
+                        "src": "coverstudies/gorgeous.jpg",
+                        "ratio": 0.8,
+                        "caption": "On Earth We’re Briefly Gorgeous: a family photograph, set into a quiet cloth cover."
+                    }
+                ]
+            },
+            {
+                "layout": "row",
+                "media": [
+                    {
+                        "src": "coverstudies/sun.jpg",
+                        "ratio": 0.8,
+                        "caption": "Staring at the Sun: a sun too bright to look at directly, for a book about facing death."
+                    },
+                    {
+                        "src": "coverstudies/donabe-a.jpg",
+                        "ratio": 0.8,
+                        "caption": "Simply Donabe: the pot from above, in brown."
+                    },
+                    {
+                        "src": "coverstudies/donabe-b.jpg",
+                        "ratio": 0.8,
+                        "caption": "Simply Donabe: a louder second direction."
+                    }
+                ]
+            }
+        ],
+        "icon": "coverstudies/icon.jpg",
+        "preview": "coverstudies/preview.mp4"
+    },
+    {
         "title": "the joy luck supper club",
         "subject": "print design",
         "year": "2024",
