@@ -33,7 +33,7 @@ function createMedia(project, lazy) {
     const video = document.createElement('video');
     Object.assign(video, {
         src: `assets/${project.preview}`,
-        poster: `assets/${project.icon}`,
+        poster: `assets/${project.preview.replace(/\.mp4$/i, '-poster.jpg')}`,   // the loop's own first frame
         muted: true, defaultMuted: true, loop: true, playsInline: true,
         preload: lazy ? 'none' : 'metadata',
     });
