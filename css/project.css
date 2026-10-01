@@ -348,6 +348,7 @@ figcaption {
        no taller than most of the screen; the thumbnails sit over the right edge, from the top */
     .centred.layout-viewer .section-media { display: block; position: relative; padding: 48px 140px; }
     .centred .viewer-stage { aspect-ratio: auto; height: min(72vh, 62vw); }
+    .tone-light.centred .viewer-stage { height: min(80vh, 66vw); }   /* the book covers: a little bigger */
     .centred .viewer-thumbs { position: absolute; right: 36px; top: 48px; width: 64px; gap: 8px; max-height: calc(100% - 96px); overflow-y: auto; scrollbar-width: none; }
     .centred .viewer-thumbs::-webkit-scrollbar { display: none; }
     /* "fill": the picture covers the whole band, running off its edges */
