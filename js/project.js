@@ -180,6 +180,11 @@ function hoverNotes() {
         area.addEventListener('mousemove', e => { if (!e.noteShown) { e.noteShown = true; show(html, e); } });
         area.addEventListener('mouseleave', () => { tip.hidden = true; });
     };
+    // a viewer's big picture shows the note of whichever picture is in it
+    container.querySelectorAll('.viewer-stage').forEach(stage => {
+        stage.addEventListener('mousemove', e => { if (stage.dataset.note && !e.noteShown) { e.noteShown = true; show(stage.dataset.note, e); } });
+        stage.addEventListener('mouseleave', () => { tip.hidden = true; });
+    });
     // notes on single pictures (these win over a part's note, being the innermost)
     {
         container.querySelectorAll('.project-section').forEach(section => {
@@ -383,6 +388,9 @@ function buildViewer(el, grid, items, title) {
         thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
         at = i;
         count.textContent = `${i + 1} / ${items.length}`;
+        // each picture's own note: on hover over the big picture (desktop), written under the arrows (phones)
+        stage.dataset.note = items[i].caption ? fmt(items[i].caption) : '';
+        note.innerHTML = stage.dataset.note;
     };
     // phones: no thumbnails, just arrows and a count under the picture (and swiping the picture)
     let at = 0;
@@ -390,6 +398,8 @@ function buildViewer(el, grid, items, title) {
     nav.className = 'viewer-nav';
     nav.innerHTML = '<button type="button" aria-label="previous">←</button><span></span><button type="button" aria-label="next">→</button>';
     const count = nav.querySelector('span');
+    const note = document.createElement('p');
+    note.className = 'viewer-note';
     const step = d => show((at + d + items.length) % items.length);
     nav.querySelector('[aria-label="previous"]').addEventListener('click', () => step(-1));
     nav.querySelector('[aria-label="next"]').addEventListener('click', () => step(1));
@@ -410,6 +420,7 @@ function buildViewer(el, grid, items, title) {
     });
     grid.append(stage, thumbs);
     if (items.length > 1) grid.appendChild(nav);
+    if (items.some(it => it.caption)) grid.appendChild(note);
     el.appendChild(grid);
     show(0);
     return el;

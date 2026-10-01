@@ -909,52 +909,52 @@
         ]
     },
     {
-        "title": "five covers, five days",
-        "subject": "book covers",
+        "title": "book jackets",
+        "subject": "five covers, five days",
         "year": "2026",
         "description": "Five book covers in five days: one a day, all at one trim size.",
         "summary": "Five book covers in five days: one a day, all at the same trim size, as an exercise in designing jackets. Working this fast meant designing from what each book is about rather than a close read, so the work became finding the single detail, image or object that carries a book’s feeling.\n\nAcross the set: bold type, photography, image treatment and illustration, each a way of asking how a cover can catch the eye while staying true to what’s inside, and how to land a subtle idea for a specific audience without shutting anyone else out.",
         "deliverables": [
             "Five jackets, one a day, at a single trim size: three novels, a book on facing death, and a cookbook."
         ],
-        "hero": "coverstudies/hero-black.jpg",
+        "hero": "coverstudies/hero-light.jpg",
         "sections": [
             {
                 "layout": "viewer",
                 "centred": true,
-                "dark": true,
                 "tall": true,
                 "media": [
                     {
-                        "src": "coverstudies/hunger-black.jpg",
-                        "thumb": "coverstudies/hunger-black-tile.jpg",
-                        "caption": "A Certain Hunger: a clean, empty plate, for a food critic with a dangerous appetite."
+                        "src": "coverstudies/hunger-light.jpg",
+                        "thumb": "coverstudies/hunger-light-tile.jpg",
+                        "caption": "A Certain Hunger: hunger as emptiness rather than a full plate, so a bare plate takes over the cover and the title runs off the edges. The type and colour lean toward a menu, for a novel narrated by a food critic."
                     },
                     {
-                        "src": "coverstudies/convenience-black.jpg",
-                        "thumb": "coverstudies/convenience-black-tile.jpg",
-                        "caption": "Convenience Store Woman: the onigiri wrapper, pull tabs and all."
+                        "src": "coverstudies/convenience-light.jpg",
+                        "thumb": "coverstudies/convenience-light-tile.jpg",
+                        "caption": "Convenience Store Woman: the onigiri, a konbini staple, for a woman whose whole life runs on the store’s routine. The orange is there to stand out on the shelf."
                     },
                     {
-                        "src": "coverstudies/gorgeous-black.jpg",
-                        "thumb": "coverstudies/gorgeous-black-tile.jpg",
-                        "caption": "On Earth We’re Briefly Gorgeous: a family photograph, set into a quiet cloth cover."
+                        "src": "coverstudies/gorgeous-light.jpg",
+                        "thumb": "coverstudies/gorgeous-light-tile.jpg",
+                        "caption": "On Earth We’re Briefly Gorgeous: a novel written as a son’s letter to his mother. A plain photograph of an ordinary suburban street, kept mundane against the title."
                     },
                     {
-                        "src": "coverstudies/sun-black.jpg",
-                        "thumb": "coverstudies/sun-black-tile.jpg",
-                        "caption": "Staring at the Sun: a sun too bright to look at directly, for a book about facing death."
+                        "src": "coverstudies/sun-light.jpg",
+                        "thumb": "coverstudies/sun-light-tile.jpg",
+                        "caption": "Staring at the Sun: Yalom takes his title from the idea that death, like the sun, can’t be stared at steadily. So the sun is a haze you can’t quite look at, made in gradients rather than a photograph."
                     },
                     {
-                        "src": "coverstudies/donabe-black.jpg",
-                        "thumb": "coverstudies/donabe-black-tile.jpg",
-                        "caption": "Simply Donabe: the pot from above."
+                        "src": "coverstudies/donabe-light.jpg",
+                        "thumb": "coverstudies/donabe-light-tile.jpg",
+                        "caption": "Simply Donabe: a cookbook without food photography. The clay pot from above in flat, one-dimensional illustration, against refined type to keep it from feeling childish."
                     }
-                ]
+                ],
+                "tone": "light"
             }
         ],
         "icon": "coverstudies/icon.jpg",
-        "preview": "coverstudies/preview-v2.mp4"
+        "preview": "coverstudies/preview-v3.mp4"
     },
     {
         "title": "the joy luck supper club",

@@ -194,10 +194,12 @@ figcaption {
 /* phones: arrows and a count instead of the thumbnails */
 .viewer-nav { display: flex; justify-content: center; align-items: center; gap: 18px; padding: 10px 0 14px; color: #fff; font-size: 11pt; }
 .viewer-nav button { border: 0; background: none; padding: 4px 8px; color: inherit; font: inherit; font-size: 14pt; cursor: pointer; }
-.layout-viewer:not(.dark):not([class*='tone-']) .viewer-nav { color: var(--red); }
+.layout-viewer:not(.dark):not([class*='tone-']) .viewer-nav, .tone-light .viewer-nav { color: var(--red); }
 .viewer-nav { padding: 2px 0 0; }
 @media (max-width: 600px) { .viewer-thumbs { display: none; } }
-@media (min-width: 601px) { .viewer-nav { display: none; } }
+@media (min-width: 601px) { .viewer-nav, .viewer-note { display: none; } }
+.viewer-note { margin: 0; padding: 0 4px 16px; font-size: 10.5pt; text-align: center; color: #fff; }
+.layout-viewer:not(.dark):not([class*='tone-']) .viewer-note, .tone-light .viewer-note { color: var(--red); }
 .viewer-thumbs button {
     display: block;
     width: 100%;
@@ -396,6 +398,9 @@ figcaption {
 
 /* a softer black band (the spreads sit on the same tone) */
 .tone-dim .section-media { background: #18191b; }
+/* a light band, the grey the cover mockups sit on */
+.tone-light .section-media { background: #f3f3f3; }
+.tone-light .viewer-thumbs button[aria-current="true"] { border-color: rgba(0, 0, 0, 0.35); }
 
 /* v3: the opening as the pages first were, one column: title, words, what was made, the facts */
 .made-plain { margin-top: 1em; }
