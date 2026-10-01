@@ -197,7 +197,9 @@ figcaption {
 .layout-viewer:not(.dark):not([class*='tone-']) .viewer-nav, .tone-light .viewer-nav { color: var(--red); }
 .viewer-nav { padding: 2px 0 0; }
 @media (max-width: 600px) { .viewer-thumbs { display: none; } }
-@media (min-width: 601px) { .viewer-nav, .viewer-note { display: none; } }
+@media (min-width: 601px) { .viewer-nav { display: none; } }
+/* with a mouse the note follows the cursor instead; touch screens of any size keep it under the picture */
+@media (min-width: 601px) and (hover: hover) and (pointer: fine) { .viewer-note { display: none; } }
 .viewer-note { margin: 0; padding: 0 4px 16px; font-size: 10.5pt; text-align: center; color: #fff; }
 .layout-viewer:not(.dark):not([class*='tone-']) .viewer-note, .tone-light .viewer-note { color: var(--red); }
 .viewer-thumbs button {

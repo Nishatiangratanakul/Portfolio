@@ -381,11 +381,12 @@ function buildViewer(el, grid, items, title) {
     const thumbs = document.createElement('div');
     thumbs.className = 'viewer-thumbs';
     const stills = items.filter(item => !item.src.toLowerCase().endsWith('.mp4'));
+    const noted = items.some(item => item.caption);
     const show = i => {
         // an item can give another picture for phones (e.g. a 2x2 grid instead of a row of four)
         const src = items[i].phone && matchMedia('(max-width: 600px)').matches ? items[i].phone : items[i].src;
         const media = createMedia(src, items[i].caption || `${title}, image ${i + 1}`, false);
-        if (media.tagName === 'IMG') {
+        if (media.tagName === 'IMG' && !noted) {   // pictures with notes stay as they are; no full screen
             media.classList.add('zoomable');
             media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title));
         }
