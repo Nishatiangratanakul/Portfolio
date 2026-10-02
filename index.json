@@ -385,7 +385,7 @@
         ],
         "icon": "cookbook/icon.jpg",
         "preview": "cookbook/preview-v3.mp4",
-        "hero": "cookbook/hero-v3.jpg",
+        "hero": "cookbook/hero-v4.jpg",
         "details": [
             [
                 "role",
@@ -410,154 +410,152 @@
         ],
         "sections": [
             {
-                "option": "1",
-                "dark": true,
-                "tone": "cocoa",
-                "media": [
-                    "cookbook/loop-cocoa.mp4"
-                ]
-            },
-            {
                 "option": "2",
                 "layout": "viewer",
                 "centred": true,
+                "fill": true,
+                "zoom": false,
                 "dark": true,
-                "tone": "cocoa",
+                "tone": "{tone}",
                 "media": [
                     {
-                        "src": "cookbook/closeup-recipe-cocoa.jpg",
-                        "thumb": "cookbook/closeup-recipe-cocoa-tile.jpg"
+                        "src": "cookbook/closeup-fill-recipe-{tone}.jpg",
+                        "thumb": "cookbook/closeup-fill-recipe-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-drawing-cocoa.jpg",
-                        "thumb": "cookbook/closeup-drawing-cocoa-tile.jpg"
+                        "src": "cookbook/closeup-fill-drawing-{tone}.jpg",
+                        "thumb": "cookbook/closeup-fill-drawing-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-birthday-girl-cocoa.jpg",
-                        "thumb": "cookbook/closeup-birthday-girl-cocoa-tile.jpg"
+                        "src": "cookbook/closeup-fill-birthday-girl-{tone}.jpg",
+                        "thumb": "cookbook/closeup-fill-birthday-girl-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-dessert-list-cocoa.jpg",
-                        "thumb": "cookbook/closeup-dessert-list-cocoa-tile.jpg"
+                        "src": "cookbook/closeup-fill-dessert-list-{tone}.jpg",
+                        "thumb": "cookbook/closeup-fill-dessert-list-{tone}-tile.jpg"
                     }
                 ]
             },
             {
-                "option": "2",
                 "dark": true,
-                "tone": "blush",
+                "tone": "{tone}",
                 "media": [
-                    "cookbook/loop-blush.mp4"
+                    "cookbook/loop-{tone}.mp4"
                 ]
             },
             {
                 "option": "1",
                 "layout": "pair",
                 "media": [
-                    "cookbook/closeup-recipe-blush.jpg",
-                    "cookbook/closeup-birthday-girl-blush.jpg"
+                    "cookbook/closeup-recipe-{tone}.jpg",
+                    "cookbook/closeup-birthday-girl-{tone}.jpg"
                 ]
             },
             {
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
-                "tone": "cocoa",
+                "tone": "{tone}",
                 "media": [
                     {
-                        "src": "cookbook/spread-01-c.jpg",
-                        "thumb": "cookbook/spread-01-c-tile.jpg"
+                        "src": "cookbook/spread-01-{tone}.jpg",
+                        "thumb": "cookbook/spread-01-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-02-c.jpg",
-                        "thumb": "cookbook/spread-02-c-tile.jpg"
+                        "src": "cookbook/spread-02-{tone}.jpg",
+                        "thumb": "cookbook/spread-02-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-04-c.jpg",
-                        "thumb": "cookbook/spread-04-c-tile.jpg"
+                        "src": "cookbook/spread-04-{tone}.jpg",
+                        "thumb": "cookbook/spread-04-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-05-c.jpg",
-                        "thumb": "cookbook/spread-05-c-tile.jpg"
+                        "src": "cookbook/spread-05-{tone}.jpg",
+                        "thumb": "cookbook/spread-05-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-07-c.jpg",
-                        "thumb": "cookbook/spread-07-c-tile.jpg"
+                        "src": "cookbook/spread-07-{tone}.jpg",
+                        "thumb": "cookbook/spread-07-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-09-c.jpg",
-                        "thumb": "cookbook/spread-09-c-tile.jpg"
+                        "src": "cookbook/spread-09-{tone}.jpg",
+                        "thumb": "cookbook/spread-09-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-10-c.jpg",
-                        "thumb": "cookbook/spread-10-c-tile.jpg"
+                        "src": "cookbook/spread-10-{tone}.jpg",
+                        "thumb": "cookbook/spread-10-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-12-c.jpg",
-                        "thumb": "cookbook/spread-12-c-tile.jpg"
+                        "src": "cookbook/spread-12-{tone}.jpg",
+                        "thumb": "cookbook/spread-12-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-14-c.jpg",
-                        "thumb": "cookbook/spread-14-c-tile.jpg"
+                        "src": "cookbook/spread-14-{tone}.jpg",
+                        "thumb": "cookbook/spread-14-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-15-c.jpg",
-                        "thumb": "cookbook/spread-15-c-tile.jpg"
+                        "src": "cookbook/spread-15-{tone}.jpg",
+                        "thumb": "cookbook/spread-15-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-17-c.jpg",
-                        "thumb": "cookbook/spread-17-c-tile.jpg"
+                        "src": "cookbook/spread-17-{tone}.jpg",
+                        "thumb": "cookbook/spread-17-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-18-c.jpg",
-                        "thumb": "cookbook/spread-18-c-tile.jpg"
+                        "src": "cookbook/spread-18-{tone}.jpg",
+                        "thumb": "cookbook/spread-18-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-19-c.jpg",
-                        "thumb": "cookbook/spread-19-c-tile.jpg"
+                        "src": "cookbook/spread-19-{tone}.jpg",
+                        "thumb": "cookbook/spread-19-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-21-c.jpg",
-                        "thumb": "cookbook/spread-21-c-tile.jpg"
+                        "src": "cookbook/spread-21-{tone}.jpg",
+                        "thumb": "cookbook/spread-21-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-22-c.jpg",
-                        "thumb": "cookbook/spread-22-c-tile.jpg"
+                        "src": "cookbook/spread-22-{tone}.jpg",
+                        "thumb": "cookbook/spread-22-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-23-c.jpg",
-                        "thumb": "cookbook/spread-23-c-tile.jpg"
+                        "src": "cookbook/spread-23-{tone}.jpg",
+                        "thumb": "cookbook/spread-23-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-25-c.jpg",
-                        "thumb": "cookbook/spread-25-c-tile.jpg"
+                        "src": "cookbook/spread-25-{tone}.jpg",
+                        "thumb": "cookbook/spread-25-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-26-c.jpg",
-                        "thumb": "cookbook/spread-26-c-tile.jpg"
+                        "src": "cookbook/spread-26-{tone}.jpg",
+                        "thumb": "cookbook/spread-26-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-27-c.jpg",
-                        "thumb": "cookbook/spread-27-c-tile.jpg"
+                        "src": "cookbook/spread-27-{tone}.jpg",
+                        "thumb": "cookbook/spread-27-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-29-c.jpg",
-                        "thumb": "cookbook/spread-29-c-tile.jpg"
+                        "src": "cookbook/spread-29-{tone}.jpg",
+                        "thumb": "cookbook/spread-29-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-30-c.jpg",
-                        "thumb": "cookbook/spread-30-c-tile.jpg"
+                        "src": "cookbook/spread-30-{tone}.jpg",
+                        "thumb": "cookbook/spread-30-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-31-c.jpg",
-                        "thumb": "cookbook/spread-31-c-tile.jpg"
+                        "src": "cookbook/spread-31-{tone}.jpg",
+                        "thumb": "cookbook/spread-31-{tone}-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-32-c.jpg",
-                        "thumb": "cookbook/spread-32-c-tile.jpg"
+                        "src": "cookbook/spread-32-{tone}.jpg",
+                        "thumb": "cookbook/spread-32-{tone}-tile.jpg"
                     }
                 ]
             }
+        ],
+        "tones": [
+            "blush",
+            "warmgrey",
+            "olive"
         ]
     },
     {

@@ -74,45 +74,33 @@ function showProject(project, visible) {
     if (hero) container.querySelector('.hero').appendChild(createMedia(hero, project.title, false));
     const sectionsEl = container.querySelector('.sections');
     // a page can carry two versions of some sections ("option": "1" or "2") to compare; a switch picks one
-    const sections = project.sections || defaultSections(rest);
-    const options = [...new Set(sections.map(s => s.option).filter(Boolean))];
-    const option = options.length ? pickedOption(project, options) : null;
+    // ...and "tones": the same sections in a few background colours; "{tone}" in a section stands for the chosen one
+    const tones = project.tones || [];
+    const tone = tones.length ? picked(project, 'tone', tones) : null;
+    let sections = project.sections || defaultSections(rest);
+    if (tone) sections = JSON.parse(JSON.stringify(sections).replaceAll('{tone}', tone));
+    const options = [...new Set(sections.map(s => s.option).filter(Boolean))].sort();
+    const option = options.length ? picked(project, 'option', options) : null;
     sections.filter(s => !s.option || s.option === option).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
     hoverNotes();
-    if (options.length) optionSwitcher(project, options, option);
+    if (options.length || tones.length) optionSwitcher(project, [['layout', 'option', options, option], ['colour', 'tone', tones, tone]]);
     if (new URLSearchParams(location.search).has('try')) sectionsSwitcher();
 }
 
-function pickedOption(project, options) {
+function picked(project, kind, values) {
     let v = null;
-    try { v = localStorage.getItem('option-' + slugify(project.title)); } catch (e) {}
-    return options.includes(v) ? v : options[0];
+    try { v = localStorage.getItem(kind + '-' + slugify(project.title)); } catch (e) {}
+    return values.includes(v) ? v : values[0];
 }
-function optionSwitcher(project, options, current) {
+function optionSwitcher(project, rows) {
     const box = document.createElement('div');
     box.className = 'look-switcher';
-    box.innerHTML = `<div><span>layout</span>${options.map(v => `<button type="button" data-val="${v}" aria-pressed="${v === current}">option ${v}</button>`).join('')}</div>`;
+    box.innerHTML = rows.filter(([, , values]) => values.length).map(([label, kind, values, current]) =>
+        `<div><span>${label}</span>${values.map(v => `<button type="button" data-kind="${kind}" data-val="${v}" aria-pressed="${v === current}">${kind === 'option' ? 'option ' + v : v}</button>`).join('')}</div>`).join('');
     box.addEventListener('click', e => {
         const b = e.target.closest('button'); if (!b) return;
-        try { localStorage.setItem('option-' + slugify(project.title), b.dataset.val); } catch (err) {}
-        location.reload();
-    });
-    document.body.appendChild(box);
-}
-
-// On desktop, each part's writing shows as text ("text", the default) or only as notes over its
-// pictures ("hover"). To compare, add ?try to the address: a small switcher appears.
-function sectionsLook() {
-    try { return localStorage.getItem('look-sections') === 'hover' ? 'hover' : 'text'; } catch (e) { return 'text'; }
-}
-function sectionsSwitcher() {
-    const box = document.createElement('div');
-    box.className = 'look-switcher';
-    box.innerHTML = `<div><span>sections</span>${['text', 'hover'].map(v => `<button type="button" data-val="${v}" aria-pressed="${sectionsLook() === v}">${v}</button>`).join('')}</div>`;
-    box.addEventListener('click', e => {
-        const b = e.target.closest('button'); if (!b) return;
-        try { localStorage.setItem('look-sections', b.dataset.val); } catch (err) {}
+        try { localStorage.setItem(b.dataset.kind + '-' + slugify(project.title), b.dataset.val); } catch (err) {}
         location.reload();
     });
     document.body.appendChild(box);
@@ -268,7 +256,7 @@ function createSection(section, title) {
         return el;
     }
     if (section.layout === 'viewer') {
-        buildViewer(el, grid, items, title);
+        buildViewer(el, grid, items, title, section.zoom !== false);
         if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
         return el;
     }
@@ -397,7 +385,7 @@ function buildPosts(el, grid, items, section, title) {
     if (section.caption) el.insertAdjacentHTML('beforeend', `<figcaption>${fmt(section.caption)}</figcaption>`);
 }
 
-function buildViewer(el, grid, items, title) {
+function buildViewer(el, grid, items, title, zoom = true) {
     const stage = document.createElement('div');
     stage.className = 'viewer-stage';
     const thumbs = document.createElement('div');
@@ -408,7 +396,7 @@ function buildViewer(el, grid, items, title) {
         // an item can give another picture for phones (e.g. a 2x2 grid instead of a row of four)
         const src = items[i].phone && matchMedia('(max-width: 600px)').matches ? items[i].phone : items[i].src;
         const media = createMedia(src, items[i].caption || `${title}, image ${i + 1}`, false);
-        if (media.tagName === 'IMG' && !noted) {   // pictures with notes stay as they are; no full screen
+        if (media.tagName === 'IMG' && !noted && zoom) {   // pictures with notes stay as they are; no full screen
             media.classList.add('zoomable');
             // full screen on the same black as the band, so scans on a dark band don't sit on a second black
             media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title, getComputedStyle(grid).backgroundColor));
