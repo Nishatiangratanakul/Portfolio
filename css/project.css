@@ -356,7 +356,7 @@ figcaption {
     /* "fill": the picture covers the whole band, running off its edges */
     .fill.layout-viewer .section-media { padding: 0; }
     .fill .viewer-stage img, .fill .viewer-stage video { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
-    .fill .viewer-stage { height: auto; aspect-ratio: 1.6; }
+    .fill .viewer-stage { height: auto; aspect-ratio: var(--stage-ratio, 1.6); }
     .fill .viewer-thumbs { top: 24px; max-height: calc(100% - 48px); }
     .has-columns .section-media { grid-auto-flow: row; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 32px; padding: 48px 12%; }
     .lb-stage { padding: 32px; }
@@ -401,15 +401,19 @@ figcaption {
 
 /* a softer black band (the spreads sit on the same tone) */
 .tone-dim .section-media { background: #18191b; }
-/* the cookbook's colours: blush (the hero's pink), warm grey, and olive (the cover's brown) */
+/* the cookbook's pink (the hero's background) */
 .tone-blush .section-media { background: #f3d5ce; }
-.tone-warmgrey .section-media { background: #3a3632; }
-.tone-olive .section-media { background: #686352; }
-/* "fill" on phones too: the picture covers the band, so its cut edges run off it */
-.fill.layout-viewer .section-media { padding: 0; }
-.fill .viewer-stage { aspect-ratio: 1.6; }
-.fill .viewer-stage img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+/* "bleed": a "fill" viewer that also covers the band on phones, so the pictures' cut edges always
+   run off it; on phones the arrows and count sit over the bottom of the picture, not in a bar under it */
+.bleed.layout-viewer .section-media { padding: 0; position: relative; }
+.bleed .viewer-stage { aspect-ratio: var(--stage-ratio, 1.6); }
+.bleed .viewer-stage img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+@media (max-width: 600px) {
+    .bleed .viewer-nav { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); padding: 0 2px; gap: 6px; font-size: 9.5pt; border-radius: 999px; background: rgba(243, 213, 206, 0.92); color: var(--red); }
+    .bleed .viewer-nav button { padding: 2px 8px; font-size: 11pt; }
+}
 .tone-blush .viewer-nav, .tone-blush .viewer-note { color: var(--red); }
+.tone-blush .viewer-thumbs button[aria-current="true"] { border-color: rgba(0, 0, 0, 0.35); }
 /* a light band, the grey the cover mockups sit on */
 .tone-light .section-media { background: #f3f3f3; }
 .tone-light .viewer-thumbs button[aria-current="true"] { border-color: rgba(0, 0, 0, 0.35); }

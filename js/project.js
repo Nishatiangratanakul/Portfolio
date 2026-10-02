@@ -257,7 +257,8 @@ function createSection(section, title) {
         return wrap.firstElementChild;
     }
     const el = document.createElement('section');
-    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}${section.fill ? ' fill' : ''}${section.tone ? ' tone-' + section.tone : ''}${section.tall ? ' tall' : ''}`;
+    el.className = `project-section layout-${section.layout || 'full'}${section.dark ? ' dark' : ''}${section.centred ? ' centred' : ''}${section.fill ? ' fill' : ''}${section.tone ? ' tone-' + section.tone : ''}${section.tall ? ' tall' : ''}${section.bleed ? ' bleed' : ''}`;
+    if (section.ratio) el.style.setProperty('--stage-ratio', section.ratio);   // the big picture's shape, for "fill"
     const grid = document.createElement('div');
     grid.className = 'section-media';
     if (section.columns) grid.style.setProperty('--cols', section.columns);
