@@ -73,10 +73,32 @@ function showProject(project, visible) {
 
     if (hero) container.querySelector('.hero').appendChild(createMedia(hero, project.title, false));
     const sectionsEl = container.querySelector('.sections');
-    (project.sections || defaultSections(rest)).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
+    // a page can carry two versions of some sections ("option": "1" or "2") to compare; a switch picks one
+    const sections = project.sections || defaultSections(rest);
+    const options = [...new Set(sections.map(s => s.option).filter(Boolean))];
+    const option = options.length ? pickedOption(project, options) : null;
+    sections.filter(s => !s.option || s.option === option).forEach(section => sectionsEl.appendChild(createSection(section, project.title)));
     showNextBar(project, visible);
     hoverNotes();
+    if (options.length) optionSwitcher(project, options, option);
     if (new URLSearchParams(location.search).has('try')) sectionsSwitcher();
+}
+
+function pickedOption(project, options) {
+    let v = null;
+    try { v = localStorage.getItem('option-' + slugify(project.title)); } catch (e) {}
+    return options.includes(v) ? v : options[0];
+}
+function optionSwitcher(project, options, current) {
+    const box = document.createElement('div');
+    box.className = 'look-switcher';
+    box.innerHTML = `<div><span>layout</span>${options.map(v => `<button type="button" data-val="${v}" aria-pressed="${v === current}">option ${v}</button>`).join('')}</div>`;
+    box.addEventListener('click', e => {
+        const b = e.target.closest('button'); if (!b) return;
+        try { localStorage.setItem('option-' + slugify(project.title), b.dataset.val); } catch (err) {}
+        location.reload();
+    });
+    document.body.appendChild(box);
 }
 
 // On desktop, each part's writing shows as text ("text", the default) or only as notes over its

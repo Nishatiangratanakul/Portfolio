@@ -401,6 +401,10 @@ figcaption {
 
 /* a softer black band (the spreads sit on the same tone) */
 .tone-dim .section-media { background: #18191b; }
+/* the cookbook's colours: cocoa behind spreads, blush (the hero's pink) behind details */
+.tone-cocoa .section-media { background: #4a3b32; }
+.tone-blush .section-media { background: #f3d5ce; }
+.tone-blush .viewer-nav, .tone-blush .viewer-note { color: var(--red); }
 /* a light band, the grey the cover mockups sit on */
 .tone-light .section-media { background: #f3f3f3; }
 .tone-light .viewer-thumbs button[aria-current="true"] { border-color: rgba(0, 0, 0, 0.35); }

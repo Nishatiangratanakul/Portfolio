@@ -379,13 +379,13 @@
         "title": "cooking as acts of care",
         "subject": "cookbook design",
         "year": "2025",
-        "summary": "Cooking as Acts of Care is a series of cookbooks that also hold stories: half recipe book, half artist's book. It looks at cooking as a way of caring for people, something that nourishes, brings people together and restores them.\n\nFamily Style is the first in the series. It gathers recipes I've made for other people, meant to be eaten together: cakes for birthdays, dishes for dinner parties and events, shared over good conversation. Alongside them are memories, poems and small guides, with simple, sketchy illustrations of my own. The palette is warm and inviting, so it works as a cookbook to cook from and as stories to sit down and read.",
+        "summary": "Cooking as Acts of Care is a series of cookbooks that also hold stories.\n\nFamily Style is the first in the series. It gathers recipes I've made for other people, meant to be eaten together: cakes for birthdays, dishes for dinner parties and events, shared over good conversation. Alongside them are memories, poems and small guides, with simple, sketchy illustrations of my own. The palette is warm and inviting, so it works as a cookbook to cook from and as stories to sit down and read.",
         "deliverables": [
-            "A spiral-bound cookbook, written, designed and illustrated by me, printed with laser, inkjet and risograph."
+            "A spiral-bound cookbook of recipes and stories."
         ],
         "icon": "cookbook/icon.jpg",
-        "preview": "cookbook/preview-v2.mp4",
-        "hero": "cookbook/hero-collage.jpg",
+        "preview": "cookbook/preview-v3.mp4",
+        "hero": "cookbook/hero-v3.jpg",
         "details": [
             [
                 "role",
@@ -410,109 +410,151 @@
         ],
         "sections": [
             {
+                "option": "1",
                 "dark": true,
-                "tone": "dim",
+                "tone": "cocoa",
                 "media": [
-                    "cookbook/flipthrough.mp4"
+                    "cookbook/loop-cocoa.mp4"
+                ]
+            },
+            {
+                "option": "2",
+                "layout": "viewer",
+                "centred": true,
+                "dark": true,
+                "tone": "cocoa",
+                "media": [
+                    {
+                        "src": "cookbook/closeup-recipe-cocoa.jpg",
+                        "thumb": "cookbook/closeup-recipe-cocoa-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/closeup-drawing-cocoa.jpg",
+                        "thumb": "cookbook/closeup-drawing-cocoa-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/closeup-birthday-girl-cocoa.jpg",
+                        "thumb": "cookbook/closeup-birthday-girl-cocoa-tile.jpg"
+                    },
+                    {
+                        "src": "cookbook/closeup-dessert-list-cocoa.jpg",
+                        "thumb": "cookbook/closeup-dessert-list-cocoa-tile.jpg"
+                    }
+                ]
+            },
+            {
+                "option": "2",
+                "dark": true,
+                "tone": "blush",
+                "media": [
+                    "cookbook/loop-blush.mp4"
+                ]
+            },
+            {
+                "option": "1",
+                "layout": "pair",
+                "media": [
+                    "cookbook/closeup-recipe-blush.jpg",
+                    "cookbook/closeup-birthday-girl-blush.jpg"
                 ]
             },
             {
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
-                "tone": "dim",
+                "tone": "cocoa",
                 "media": [
                     {
-                        "src": "cookbook/spread-01.jpg",
-                        "thumb": "cookbook/spread-01-tile.jpg"
+                        "src": "cookbook/spread-01-c.jpg",
+                        "thumb": "cookbook/spread-01-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-02.jpg",
-                        "thumb": "cookbook/spread-02-tile.jpg"
+                        "src": "cookbook/spread-02-c.jpg",
+                        "thumb": "cookbook/spread-02-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-04.jpg",
-                        "thumb": "cookbook/spread-04-tile.jpg"
+                        "src": "cookbook/spread-04-c.jpg",
+                        "thumb": "cookbook/spread-04-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-05.jpg",
-                        "thumb": "cookbook/spread-05-tile.jpg"
+                        "src": "cookbook/spread-05-c.jpg",
+                        "thumb": "cookbook/spread-05-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-07.jpg",
-                        "thumb": "cookbook/spread-07-tile.jpg"
+                        "src": "cookbook/spread-07-c.jpg",
+                        "thumb": "cookbook/spread-07-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-09.jpg",
-                        "thumb": "cookbook/spread-09-tile.jpg"
+                        "src": "cookbook/spread-09-c.jpg",
+                        "thumb": "cookbook/spread-09-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-10.jpg",
-                        "thumb": "cookbook/spread-10-tile.jpg"
+                        "src": "cookbook/spread-10-c.jpg",
+                        "thumb": "cookbook/spread-10-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-12.jpg",
-                        "thumb": "cookbook/spread-12-tile.jpg"
+                        "src": "cookbook/spread-12-c.jpg",
+                        "thumb": "cookbook/spread-12-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-14.jpg",
-                        "thumb": "cookbook/spread-14-tile.jpg"
+                        "src": "cookbook/spread-14-c.jpg",
+                        "thumb": "cookbook/spread-14-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-15.jpg",
-                        "thumb": "cookbook/spread-15-tile.jpg"
+                        "src": "cookbook/spread-15-c.jpg",
+                        "thumb": "cookbook/spread-15-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-17.jpg",
-                        "thumb": "cookbook/spread-17-tile.jpg"
+                        "src": "cookbook/spread-17-c.jpg",
+                        "thumb": "cookbook/spread-17-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-18.jpg",
-                        "thumb": "cookbook/spread-18-tile.jpg"
+                        "src": "cookbook/spread-18-c.jpg",
+                        "thumb": "cookbook/spread-18-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-19.jpg",
-                        "thumb": "cookbook/spread-19-tile.jpg"
+                        "src": "cookbook/spread-19-c.jpg",
+                        "thumb": "cookbook/spread-19-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-21.jpg",
-                        "thumb": "cookbook/spread-21-tile.jpg"
+                        "src": "cookbook/spread-21-c.jpg",
+                        "thumb": "cookbook/spread-21-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-22.jpg",
-                        "thumb": "cookbook/spread-22-tile.jpg"
+                        "src": "cookbook/spread-22-c.jpg",
+                        "thumb": "cookbook/spread-22-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-23.jpg",
-                        "thumb": "cookbook/spread-23-tile.jpg"
+                        "src": "cookbook/spread-23-c.jpg",
+                        "thumb": "cookbook/spread-23-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-25.jpg",
-                        "thumb": "cookbook/spread-25-tile.jpg"
+                        "src": "cookbook/spread-25-c.jpg",
+                        "thumb": "cookbook/spread-25-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-26.jpg",
-                        "thumb": "cookbook/spread-26-tile.jpg"
+                        "src": "cookbook/spread-26-c.jpg",
+                        "thumb": "cookbook/spread-26-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-27.jpg",
-                        "thumb": "cookbook/spread-27-tile.jpg"
+                        "src": "cookbook/spread-27-c.jpg",
+                        "thumb": "cookbook/spread-27-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-29.jpg",
-                        "thumb": "cookbook/spread-29-tile.jpg"
+                        "src": "cookbook/spread-29-c.jpg",
+                        "thumb": "cookbook/spread-29-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-30.jpg",
-                        "thumb": "cookbook/spread-30-tile.jpg"
+                        "src": "cookbook/spread-30-c.jpg",
+                        "thumb": "cookbook/spread-30-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-31.jpg",
-                        "thumb": "cookbook/spread-31-tile.jpg"
+                        "src": "cookbook/spread-31-c.jpg",
+                        "thumb": "cookbook/spread-31-c-tile.jpg"
                     },
                     {
-                        "src": "cookbook/spread-32.jpg",
-                        "thumb": "cookbook/spread-32-tile.jpg"
+                        "src": "cookbook/spread-32-c.jpg",
+                        "thumb": "cookbook/spread-32-c-tile.jpg"
                     }
                 ]
             }
