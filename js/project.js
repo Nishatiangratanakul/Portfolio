@@ -388,7 +388,8 @@ function buildViewer(el, grid, items, title) {
         const media = createMedia(src, items[i].caption || `${title}, image ${i + 1}`, false);
         if (media.tagName === 'IMG' && !noted) {   // pictures with notes stay as they are; no full screen
             media.classList.add('zoomable');
-            media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title));
+            // full screen on the same black as the band, so scans on a dark band don't sit on a second black
+            media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title, getComputedStyle(grid).backgroundColor));
         }
         stage.replaceChildren(media);
         thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
@@ -447,7 +448,7 @@ function createFlip(front, back, alt) {
 // Full screen on black: < > in the middle (or arrow keys) to step, Esc or × (top right) to close.
 // Clicking the image zooms in to about its real size; move the mouse (or drag on a phone) to look around.
 let lightbox;
-function openLightbox(items, start, title) {
+function openLightbox(items, start, title, background) {
     if (!lightbox) {
         lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
@@ -466,6 +467,7 @@ function openLightbox(items, start, title) {
             </div>`;
         document.body.appendChild(lightbox);
     }
+    lightbox.style.background = background && background !== 'rgba(0, 0, 0, 0)' ? background : '';
     const stage = lightbox.querySelector('.lb-stage');
     const img = stage.querySelector('img');
     let at = start;
