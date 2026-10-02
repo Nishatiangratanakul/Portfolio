@@ -414,28 +414,33 @@
                 "centred": true,
                 "fill": true,
                 "bleed": true,
-                "ratio": 2,
+                "ratio": 1.6667,
                 "zoom": false,
                 "dark": true,
                 "tone": "blush",
                 "media": [
                     {
-                        "src": "cookbook/closeup-recipe-v2.jpg",
-                        "thumb": "cookbook/closeup-recipe-v2-tile.jpg"
+                        "src": "cookbook/closeup-recipe-v3.jpg",
+                        "phone": "cookbook/closeup-recipe-v3-phone.jpg",
+                        "thumb": "cookbook/closeup-recipe-v3-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-drawing-v2.jpg",
-                        "thumb": "cookbook/closeup-drawing-v2-tile.jpg"
+                        "src": "cookbook/closeup-drawing-v3.jpg",
+                        "phone": "cookbook/closeup-drawing-v3-phone.jpg",
+                        "thumb": "cookbook/closeup-drawing-v3-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-birthday-girl-v2.jpg",
-                        "thumb": "cookbook/closeup-birthday-girl-v2-tile.jpg"
+                        "src": "cookbook/closeup-birthday-girl-v3.jpg",
+                        "phone": "cookbook/closeup-birthday-girl-v3-phone.jpg",
+                        "thumb": "cookbook/closeup-birthday-girl-v3-tile.jpg"
                     },
                     {
-                        "src": "cookbook/closeup-dessert-list-v2.jpg",
-                        "thumb": "cookbook/closeup-dessert-list-v2-tile.jpg"
+                        "src": "cookbook/closeup-dessert-list-v3.jpg",
+                        "phone": "cookbook/closeup-dessert-list-v3-phone.jpg",
+                        "thumb": "cookbook/closeup-dessert-list-v3-tile.jpg"
                     }
-                ]
+                ],
+                "phoneRatio": 1.3333
             },
             {
                 "dark": true,

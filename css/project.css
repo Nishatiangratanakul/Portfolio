@@ -409,8 +409,8 @@ figcaption {
 .bleed .viewer-stage { aspect-ratio: var(--stage-ratio, 1.6); }
 .bleed .viewer-stage img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
 @media (max-width: 600px) {
-    .bleed .viewer-nav { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); padding: 0 2px; gap: 6px; font-size: 9.5pt; border-radius: 999px; background: rgba(243, 213, 206, 0.92); color: var(--red); }
-    .bleed .viewer-nav button { padding: 2px 8px; font-size: 11pt; }
+    .bleed .viewer-stage { aspect-ratio: var(--stage-ratio-phone, var(--stage-ratio, 1.6)); }
+    .bleed .viewer-nav { position: absolute; left: 0; right: 0; bottom: 4px; padding: 0; color: var(--red); text-shadow: 0 0 6px rgba(243, 213, 206, 0.95), 0 0 2px rgba(243, 213, 206, 0.95); }
 }
 .tone-blush .viewer-nav, .tone-blush .viewer-note { color: var(--red); }
 .tone-blush .viewer-thumbs button[aria-current="true"] { border-color: rgba(0, 0, 0, 0.35); }
