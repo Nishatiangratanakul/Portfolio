@@ -384,7 +384,7 @@
             "A spiral-bound cookbook of recipes and stories."
         ],
         "icon": "cookbook/icon.jpg",
-        "preview": "cookbook/preview-v4.mp4",
+        "preview": "cookbook/preview-v5.mp4",
         "hero": "cookbook/hero-v6.jpg",
         "details": [
             [
@@ -446,7 +446,7 @@
                 "dark": true,
                 "tone": "blush",
                 "media": [
-                    "cookbook/loop-v2.mp4"
+                    "cookbook/loop-v3.mp4"
                 ]
             },
             {
