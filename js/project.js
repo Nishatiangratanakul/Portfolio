@@ -329,6 +329,7 @@ function buildPosts(el, grid, items, section, title) {
     const stroke = 'fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"';
     const ICON = {
         like: svg('<path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"/>'),
+        liked: svg('<path fill="#ff3040" d="M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"/>', '0 0 48 48'),
         comment: svg(`<path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" ${stroke}/>`),
         share: svg(`<path d="M13.973 20.046 21.77 6.928C22.8 5.195 21.55 3 19.535 3H4.466C2.138 3 .984 5.825 2.646 7.456l4.842 4.752 1.723 7.121c.548 2.266 3.571 2.721 4.762.717Z" ${stroke}/><line ${stroke} stroke-linecap="round" x1="7.488" x2="15.515" y1="12.208" y2="7.641"/>`),
         save: svg(`<polygon ${stroke} stroke-linecap="round" points="20 21 12 13.44 4 21 4 3 20 3 20 21"/>`),
@@ -350,7 +351,7 @@ function buildPosts(el, grid, items, section, title) {
                 ${/\.mp4$/i.test(slides[0]) ? `<span class="post-clip">${ICON.clip}</span>` : ''}
             </div>
             ${slides.length > 1 ? `<div class="post-dots">${slides.map((_, k) => `<i${k ? '' : ' class="on"'}></i>`).join('')}</div>` : ''}
-            <div class="post-icons">${ICON.like}${ICON.comment}${ICON.share}<span></span>${ICON.save}</div>
+            <div class="post-icons"><button type="button" class="post-like" aria-label="like" aria-pressed="false">${ICON.like}</button>${ICON.comment}${ICON.share}<span></span>${ICON.save}</div>
             ${item.likes ? `<p class="post-likes">${esc(item.likes)} likes</p>` : ''}
             ${item.caption ? `<p class="post-caption"><b>${esc(account)}</b> <span>${esc(item.caption).replace(/\n/g, '<br>')}</span></p><button type="button" class="post-open">more</button>` : ''}
             ${item.date ? `<p class="post-date">${esc(item.date)}</p>` : ''}`;
@@ -369,6 +370,36 @@ function buildPosts(el, grid, items, section, title) {
             card.querySelector('.post-step.prev').addEventListener('click', () => go(at - 1));
             card.querySelector('.post-step.next').addEventListener('click', () => go(at + 1));
         }
+        // the heart works like Instagram's: tap it to like (and again to unlike), or double-tap the photo
+        // (nothing is sent anywhere; it just counts one more like on the page)
+        const likeButton = card.querySelector('.post-like');
+        const likesLine = card.querySelector('.post-likes');
+        const baseLikes = parseInt(String(item.likes || '0').replace(/[^0-9]/g, ''), 10) || 0;
+        let liked = false;
+        const setLiked = on => {
+            liked = on;
+            likeButton.innerHTML = on ? ICON.liked : ICON.like;
+            likeButton.setAttribute('aria-pressed', on);
+            likeButton.classList.remove('pop'); void likeButton.offsetWidth; if (on) likeButton.classList.add('pop');
+            if (likesLine) likesLine.textContent = `${(baseLikes + (on ? 1 : 0)).toLocaleString('en-US')} likes`;
+        };
+        likeButton.addEventListener('click', () => setLiked(!liked));
+        const mediaBox = card.querySelector('.post-media');
+        const burst = () => {
+            const heart = document.createElement('span');
+            heart.className = 'post-burst';
+            heart.innerHTML = ICON.liked;
+            mediaBox.appendChild(heart);
+            setTimeout(() => heart.remove(), 900);
+        };
+        const doubleTap = () => { setLiked(true); burst(); };
+        mediaBox.addEventListener('dblclick', e => { if (!e.target.closest('button')) doubleTap(); });
+        let lastTap = 0;
+        mediaBox.addEventListener('touchend', e => {
+            if (e.target.closest('button')) return;
+            const now = Date.now();
+            if (now - lastTap < 300) { e.preventDefault(); doubleTap(); lastTap = 0; } else lastTap = now;
+        });
         const open = card.querySelector('.post-open');
         if (open) {
             const cap = card.querySelector('.post-caption');
@@ -411,7 +442,11 @@ function buildViewer(el, grid, items, title, zoom = true) {
     thumbs.className = 'viewer-thumbs';
     const stills = items.filter(item => !item.src.toLowerCase().endsWith('.mp4'));
     const noted = items.some(item => item.caption);
-    const show = i => {
+    // each item is made once and kept, so going back to one is instant; the next and previous ones
+    // are made ahead of time (loops loaded but paused) once the viewer is on screen
+    const made = new Map();
+    const mediaFor = i => {
+        if (made.has(i)) return made.get(i);
         // an item can give another picture for phones (e.g. a 2x2 grid instead of a row of four)
         const src = items[i].phone && matchMedia('(max-width: 600px)').matches ? items[i].phone : items[i].src;
         const media = createMedia(src, items[i].caption || `${title}, image ${i + 1}`, false);
@@ -420,7 +455,26 @@ function buildViewer(el, grid, items, title, zoom = true) {
             // full screen on the same black as the band, so scans on a dark band don't sit on a second black
             media.addEventListener('click', () => openLightbox(stills, stills.indexOf(items[i]), title, getComputedStyle(grid).backgroundColor));
         }
+        made.set(i, media);
+        return media;
+    };
+    let near = false;   // true once the viewer has come on screen
+    const preloadAround = i => {
+        if (!near || items.length < 2) return;
+        [(i + 1) % items.length, (i - 1 + items.length) % items.length].forEach(j => {
+            if (made.has(j)) return;
+            const media = mediaFor(j);
+            if (media.tagName === 'VIDEO') { media.preload = 'auto'; media.pause(); }
+        });
+    };
+    new IntersectionObserver(([entry], observer) => {
+        if (entry.isIntersecting) { near = true; preloadAround(at); observer.disconnect(); }
+    }, { rootMargin: '300px' }).observe(stage);
+    const show = i => {
+        const media = mediaFor(i);
         stage.replaceChildren(media);
+        if (media.tagName === 'VIDEO') { media.currentTime = 0; media.play().catch(() => {}); }
+        preloadAround(i);
         thumbs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-current', i === j));
         at = i;
         count.textContent = `${i + 1} / ${items.length}`;

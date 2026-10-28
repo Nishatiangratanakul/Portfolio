@@ -89,7 +89,8 @@
                     {
                         "src": "unspokendialogue/posters-all.jpg",
                         "thumb": "unspokendialogue/posters-all-thumb.jpg",
-                        "caption": "All six posters: spoken on top, unspoken below"
+                        "caption": "All six posters: spoken on top, unspoken below",
+                        "phone": "unspokendialogue/posters-all-phone.jpg"
                     },
                     {
                         "src": "unspokendialogue/poster-questions.jpg",
@@ -174,7 +175,7 @@
                         "caption": "Graph card: mapping your own relationship to death"
                     },
                     {
-                        "src": "unspokendialogue/packet-prompt.jpg",
+                        "src": "unspokendialogue/packet-prompt-v2.jpg",
                         "thumb": "unspokendialogue/packet-prompt-thumb.jpg",
                         "caption": "Prompt card"
                     },
@@ -251,22 +252,22 @@
                     {
                         "src": "wormandwhisk/m-afterhours.jpg",
                         "thumb": "wormandwhisk/m-afterhours-tile.jpg",
-                        "caption": "After Hours: the cover and the drinks inside"
+                        "caption": "Worm & Whisk After Hours: the cover and the drinks inside"
                     },
                     {
                         "src": "wormandwhisk/m-youarecode.jpg",
                         "thumb": "wormandwhisk/m-youarecode-tile.jpg",
-                        "caption": "You Are Code: the two drinks"
+                        "caption": "Worm & Whisk × You Are Code: the two drinks"
                     },
                     {
                         "src": "wormandwhisk/m-photo.jpg",
                         "thumb": "wormandwhisk/m-photo-tile.jpg",
-                        "caption": "The second home café, with the drinks and bakes cut out"
+                        "caption": "Worm & Whisk: the drinks and bakes, cut out"
                     },
                     {
                         "src": "wormandwhisk/m-first.jpg",
                         "thumb": "wormandwhisk/m-first-tile.jpg",
-                        "caption": "The first home café"
+                        "caption": "Worm & Whisk: the first menu"
                     }
                 ],
                 "tall": true
@@ -280,18 +281,18 @@
                     {
                         "src": "wormandwhisk/p-afterhours.jpg",
                         "thumb": "wormandwhisk/p-afterhours-tile2.jpg",
-                        "caption": "After Hours: the drinks, released one by one",
+                        "caption": "Worm & Whisk After Hours: the drinks, released one by one",
                         "phone": "wormandwhisk/p-afterhours-grid.jpg"
                     },
                     {
                         "src": "wormandwhisk/p-youarecode.jpg",
                         "thumb": "wormandwhisk/p-youarecode-tile.jpg",
-                        "caption": "You Are Code: the two drinks"
+                        "caption": "Worm & Whisk × You Are Code: the two drinks"
                     },
                     {
                         "src": "wormandwhisk/p-illustrated.jpg",
                         "thumb": "wormandwhisk/p-illustrated-tile2.jpg",
-                        "caption": "The second home café, illustrated by Carrie Kuo",
+                        "caption": "Worm & Whisk: posters illustrated by Carrie Kuo",
                         "phone": "wormandwhisk/p-illustrated-grid.jpg"
                     }
                 ],
@@ -367,7 +368,7 @@
                     {
                         "src": "wormandwhisk/drink-reviews-v2.mp4",
                         "caption": "Drink review cards from After Hours: arrival time, signature, and a rating.",
-                        "phone": "wormandwhisk/drink-reviews-phone.mp4"
+                        "phone": "wormandwhisk/drink-reviews-phone-v2.mp4"
                     }
                 ]
             }
@@ -952,43 +953,43 @@
                 "dark": true,
                 "media": [
                     {
-                        "src": "kowloon/spread3-reality-22.jpg",
+                        "src": "kowloon/spread3-reality-22-v2.jpg",
                         "thumb": "kowloon/spread3-reality-22-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-fiction-46.jpg",
+                        "src": "kowloon/spread3-fiction-46-v2.jpg",
                         "thumb": "kowloon/spread3-fiction-46-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-reality-30.jpg",
+                        "src": "kowloon/spread3-reality-30-v2.jpg",
                         "thumb": "kowloon/spread3-reality-30-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-fiction-38.jpg",
+                        "src": "kowloon/spread3-fiction-38-v2.jpg",
                         "thumb": "kowloon/spread3-fiction-38-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-reality-42.jpg",
+                        "src": "kowloon/spread3-reality-42-v2.jpg",
                         "thumb": "kowloon/spread3-reality-42-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-fiction-52.jpg",
+                        "src": "kowloon/spread3-fiction-52-v2.jpg",
                         "thumb": "kowloon/spread3-fiction-52-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-reality-112.jpg",
+                        "src": "kowloon/spread3-reality-112-v2.jpg",
                         "thumb": "kowloon/spread3-reality-112-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-fiction-62.jpg",
+                        "src": "kowloon/spread3-fiction-62-v2.jpg",
                         "thumb": "kowloon/spread3-fiction-62-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-reality-70.jpg",
+                        "src": "kowloon/spread3-reality-70-v2.jpg",
                         "thumb": "kowloon/spread3-reality-70-tile.jpg"
                     },
                     {
-                        "src": "kowloon/spread3-fiction-88.jpg",
+                        "src": "kowloon/spread3-fiction-88-v2.jpg",
                         "thumb": "kowloon/spread3-fiction-88-tile.jpg"
                     }
                 ],

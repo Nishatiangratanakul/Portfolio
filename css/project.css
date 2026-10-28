@@ -464,6 +464,15 @@ figcaption {
 .post-dots i.on { background: #0095f6; }
 .post-icons { display: flex; align-items: center; gap: 16px; padding: 12px 12px 6px; }
 .post-icons span { flex: 1; }
+.post-like { display: grid; place-items: center; border: 0; padding: 0; background: none; color: inherit; cursor: pointer; }
+.post-like svg { width: 24px; height: 24px; }
+.post-like.pop svg { animation: like-pop 0.35s ease-out; }
+@keyframes like-pop { 0% { transform: scale(1); } 40% { transform: scale(1.25); } 100% { transform: scale(1); } }
+.post-media { touch-action: manipulation; }   /* a double-tap likes the post instead of zooming the page */
+.post-burst { position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; margin: -40px 0 0 -40px; pointer-events: none; z-index: 2; animation: like-burst 0.9s ease-out forwards; filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.25)); }
+.post-burst svg { width: 100%; height: 100%; }
+.post-burst path { fill: #fff; }
+@keyframes like-burst { 0% { transform: scale(0); opacity: 0; } 15% { transform: scale(1.15); opacity: 1; } 30% { transform: scale(0.95); } 45% { transform: scale(1); } 80% { opacity: 1; } 100% { transform: scale(1); opacity: 0; } }
 .post-likes { padding: 0 12px; font-weight: 600; margin: 0; }
 .post-caption { padding: 4px 12px 0; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .post-caption.open { display: block; }
@@ -473,7 +482,13 @@ figcaption {
 .posts-arrow { border: 0; background: none; padding: 0; color: var(--red); font: inherit; font-size: 14pt; cursor: pointer; }
 .posts-arrow:disabled { opacity: 0.3; cursor: default; }
 .layout-posts { margin-bottom: 28px; padding-bottom: 0 !important; }
-@media (max-width: 600px) { .tall .viewer-stage { aspect-ratio: 4 / 5; } }
+/* phones: the big spot is a fixed frame that a tall picture can't stretch, and every picture or loop
+   is fitted and centred inside it, so each one sits in the same place as you flip through */
+@media (max-width: 600px) {
+    .viewer-stage { position: relative; min-height: 0; overflow: hidden; }
+    .viewer-stage > img, .viewer-stage > video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; }
+    .tall .viewer-stage { aspect-ratio: 1 / 1; }
+}
 @media (min-width: 601px) {
     .layout-posts .section-media { padding: 60px 72px 22px; gap: 28px; }
     .post { flex-basis: 300px; }

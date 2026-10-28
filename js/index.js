@@ -12,6 +12,7 @@ document.body.appendChild(hoverPreview);
 const PREVIEW_AREA = 0.25;  // fraction of the screen
 const PREVIEW_MAX_W = 0.55; // never wider than this share of the screen…
 const PREVIEW_MAX_H = 0.7;  // …or taller than this
+const phone = matchMedia('(max-width: 600px)').matches;
 
 fetch('index.json')
     .then(response => response.json())
@@ -54,17 +55,21 @@ function createRow(project) {
     row.querySelector('.title').textContent = project.title;
     row.querySelector('.format').textContent = project.format || project.subject;
 
-    // phones: inline preview that plays only while it's on screen
-    const inline = createMedia(project, true);
-    row.querySelector('.row-preview').appendChild(inline);
-    if (inline.tagName === 'VIDEO') playWhenVisible(inline);
-
-    // desktop: one big preview per project, shown on hover
-    const big = createMedia(project, false);
-    big.hidden = true;
-    hoverPreview.appendChild(big);
-    row.addEventListener('mouseenter', () => showPreview(big));
-    row.addEventListener('mouseleave', () => hidePreview(big));
+    // only the previews this screen uses are made, so a phone never downloads the desktop ones
+    if (phone) {
+        // phones: inline preview that plays only while it's on screen
+        const inline = createMedia(project, true);
+        if (inline.tagName === 'IMG') inline.loading = 'lazy';
+        row.querySelector('.row-preview').appendChild(inline);
+        if (inline.tagName === 'VIDEO') playWhenVisible(inline);
+    } else {
+        // desktop: one big preview per project, shown on hover
+        const big = createMedia(project, false);
+        big.hidden = true;
+        hoverPreview.appendChild(big);
+        row.addEventListener('mouseenter', () => showPreview(big));
+        row.addEventListener('mouseleave', () => hidePreview(big));
+    }
 
     return row;
 }
@@ -102,5 +107,5 @@ const visibility = new IntersectionObserver(entries => entries.forEach(entry => 
 }), { threshold: 0.4 });
 
 function playWhenVisible(video) {
-    if (matchMedia('(max-width: 600px)').matches) visibility.observe(video);
+    visibility.observe(video);
 }
