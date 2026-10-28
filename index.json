@@ -279,10 +279,9 @@
                 "caption": "Posters for each pop-up.",
                 "media": [
                     {
-                        "src": "wormandwhisk/p-afterhours.jpg",
+                        "src": "wormandwhisk/p-afterhours-grid.jpg",
                         "thumb": "wormandwhisk/p-afterhours-tile2.jpg",
-                        "caption": "Worm & Whisk After Hours posters",
-                        "phone": "wormandwhisk/p-afterhours-grid.jpg"
+                        "caption": "Worm & Whisk After Hours posters"
                     },
                     {
                         "src": "wormandwhisk/p-youarecode.jpg",
@@ -290,10 +289,9 @@
                         "caption": "Worm & Whisk × You Are Code posters"
                     },
                     {
-                        "src": "wormandwhisk/p-illustrated.jpg",
+                        "src": "wormandwhisk/p-illustrated-grid.jpg",
                         "thumb": "wormandwhisk/p-illustrated-tile2.jpg",
-                        "caption": "Worm & Whisk posters, illustrated by Carrie Kuo",
-                        "phone": "wormandwhisk/p-illustrated-grid.jpg"
+                        "caption": "Worm & Whisk posters, illustrated by Carrie Kuo"
                     }
                 ],
                 "tone": "dim",
@@ -1010,7 +1008,7 @@
         "description": "76 Cones explores my psychogeographic journey documenting 76 traffic cones in New York City. The book unfolds in four parts: a layered flyer that introduces the cone as an object, a translucent paper booklet mapping my movement between each cone, an index cataloging my reflections at each site, and a fold-out sheet showing how, over time, the cones lost their objectivity and became simply the color orange. Bound in an orange file folder with office supply-inspired binding, the book evokes construction and urban spaces' bureaucratic and municipal nature.",
         "summary": "76 Cones is a psychogeographic walk through New York City, finding and documenting 76 traffic cones along the way. What started as a record of objects slowly became something else: over time the cones stopped reading as cones and became simply a colour, orange.\n\nThe book is filed like paperwork in an orange folder, borrowing the bureaucratic, municipal language of construction and of the city that puts cones on its streets.",
         "deliverables": [
-            "A four-part book in an orange file folder: a flyer, a map booklet, an index of reflections and a fold-out."
+            "A four-part book in an orange file folder: a layered flyer, a translucent map booklet, an index of reflections, and a fold-out sheet."
         ],
         "media1": "76cones/media-1.jpg",
         "media8": "76cones/media-8.jpg",
@@ -1046,7 +1044,7 @@
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
-                "caption": "All four parts together, then each one up close.",
+                "caption": "All four parts at once, then each one up close: the flyer, the map of the route between cones, and the index of reflections from each site.",
                 "media": [
                     {
                         "src": "76cones/all-parts-v2.mp4",
@@ -1071,7 +1069,7 @@
                     {
                         "src": "76cones/overall-v3.mp4",
                         "thumb": "76cones/overall-v3-tile.jpg",
-                        "caption": "The fold-out"
+                        "caption": "The fold-out sheet"
                     }
                 ],
                 "fill": true,
@@ -1230,12 +1228,12 @@
                     {
                         "src": "wangkarwai/fold-toc-open.mp4",
                         "thumb": "wangkarwai/fold-toc-open-tile.jpg",
-                        "caption": "The table of contents, folding out"
+                        "caption": "Table of contents fold-out"
                     },
                     {
                         "src": "wangkarwai/fold-index-turn.mp4",
                         "thumb": "wangkarwai/fold-index-turn-tile.jpg",
-                        "caption": "The index, with its translucent page"
+                        "caption": "The index: a timeline of his career"
                     }
                 ],
                 "caption": "Fold-outs stretch a scene or a sequence past the edge of the book, giving a time-based feel to a medium that isn’t quite one."
