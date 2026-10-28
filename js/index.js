@@ -38,6 +38,7 @@ function createMedia(project, lazy) {
         muted: true, defaultMuted: true, loop: true, playsInline: true,
         preload: lazy ? 'none' : 'metadata',
     });
+    video.style.backgroundImage = `url("${video.poster}")`;   // never blank while it loads
     return video;
 }
 

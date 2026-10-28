@@ -214,3 +214,6 @@ footer {
 }
 
 html { scroll-behavior: smooth; }
+
+/* looping videos carry their first frame as a background (set in the scripts), shown until the video paints */
+video { background: center / contain no-repeat; }

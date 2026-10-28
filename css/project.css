@@ -123,7 +123,7 @@ figcaption.noted { display: none; }
 
 /* a full-width loop stays full width but never taller than most of the screen, so its note still fits
    (a little of its top and bottom is trimmed on short screens) */
-.layout-full .section-media video { max-height: 78vh; object-fit: cover; }
+.layout-full .section-media video { max-height: 78vh; object-fit: cover; background-size: cover; }
 
 /* a single image fills the width; an upright (portrait) one never gets taller than the screen and sits centred */
 .layout-full .portrait img,
@@ -409,6 +409,7 @@ figcaption {
 .bleed.layout-viewer .section-media { padding: 0; position: relative; }
 .bleed .viewer-stage { aspect-ratio: var(--stage-ratio, 1.6); }
 .bleed .viewer-stage img, .bleed .viewer-stage video { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+.bleed .viewer-stage video, .fill .viewer-stage video { background-size: cover; }
 @media (max-width: 600px) {
     .bleed .viewer-stage { aspect-ratio: var(--stage-ratio-phone, var(--stage-ratio, 1.6)); }
     .bleed .viewer-nav { position: absolute; left: 0; right: 0; bottom: 4px; padding: 0; color: #fff; text-shadow: 0 0 6px rgba(0, 0, 0, 0.7), 0 0 2px rgba(0, 0, 0, 0.7); }
