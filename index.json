@@ -252,22 +252,22 @@
                     {
                         "src": "wormandwhisk/m-afterhours.jpg",
                         "thumb": "wormandwhisk/m-afterhours-tile.jpg",
-                        "caption": "Worm & Whisk After Hours: the cover and the drinks inside"
+                        "caption": "Worm & Whisk After Hours menu"
                     },
                     {
                         "src": "wormandwhisk/m-youarecode.jpg",
                         "thumb": "wormandwhisk/m-youarecode-tile.jpg",
-                        "caption": "Worm & Whisk × You Are Code: the two drinks"
+                        "caption": "Worm & Whisk × You Are Code menu"
                     },
                     {
                         "src": "wormandwhisk/m-photo.jpg",
                         "thumb": "wormandwhisk/m-photo-tile.jpg",
-                        "caption": "Worm & Whisk: the drinks and bakes, cut out"
+                        "caption": "Worm & Whisk spring menu"
                     },
                     {
                         "src": "wormandwhisk/m-first.jpg",
                         "thumb": "wormandwhisk/m-first-tile.jpg",
-                        "caption": "Worm & Whisk: the first menu"
+                        "caption": "Worm & Whisk menu"
                     }
                 ],
                 "tall": true
@@ -281,18 +281,18 @@
                     {
                         "src": "wormandwhisk/p-afterhours.jpg",
                         "thumb": "wormandwhisk/p-afterhours-tile2.jpg",
-                        "caption": "Worm & Whisk After Hours: the drinks, released one by one",
+                        "caption": "Worm & Whisk After Hours posters",
                         "phone": "wormandwhisk/p-afterhours-grid.jpg"
                     },
                     {
                         "src": "wormandwhisk/p-youarecode.jpg",
                         "thumb": "wormandwhisk/p-youarecode-tile.jpg",
-                        "caption": "Worm & Whisk × You Are Code: the two drinks"
+                        "caption": "Worm & Whisk × You Are Code posters"
                     },
                     {
                         "src": "wormandwhisk/p-illustrated.jpg",
                         "thumb": "wormandwhisk/p-illustrated-tile2.jpg",
-                        "caption": "Worm & Whisk: posters illustrated by Carrie Kuo",
+                        "caption": "Worm & Whisk posters, illustrated by Carrie Kuo",
                         "phone": "wormandwhisk/p-illustrated-grid.jpg"
                     }
                 ],
@@ -368,7 +368,7 @@
                     {
                         "src": "wormandwhisk/drink-reviews-v2.mp4",
                         "caption": "Drink review cards from After Hours: arrival time, signature, and a rating.",
-                        "phone": "wormandwhisk/drink-reviews-phone-v2.mp4"
+                        "phone": "wormandwhisk/drink-reviews-phone-v3.mp4"
                     }
                 ]
             }
@@ -699,21 +699,19 @@
                 "media": [
                     {
                         "src": "contemplatingdeath/index.mp4",
-                        "thumb": "contemplatingdeath/index-loop-thumb.jpg",
-                        "caption": "The index poster"
+                        "thumb": "contemplatingdeath/index-loop-thumb.jpg"
                     },
                     {
                         "src": "contemplatingdeath/index-front.jpg",
-                        "thumb": "contemplatingdeath/index-front-thumb.jpg",
-                        "caption": "Images side"
+                        "thumb": "contemplatingdeath/index-front-thumb.jpg"
                     },
                     {
                         "src": "contemplatingdeath/index-back.jpg",
-                        "thumb": "contemplatingdeath/index-back-thumb.jpg",
-                        "caption": "Index side"
+                        "thumb": "contemplatingdeath/index-back-thumb.jpg"
                     }
                 ],
-                "centred": true
+                "centred": true,
+                "phoneRatio": 0.7
             }
         ]
     },
@@ -1012,7 +1010,7 @@
         "description": "76 Cones explores my psychogeographic journey documenting 76 traffic cones in New York City. The book unfolds in four parts: a layered flyer that introduces the cone as an object, a translucent paper booklet mapping my movement between each cone, an index cataloging my reflections at each site, and a fold-out sheet showing how, over time, the cones lost their objectivity and became simply the color orange. Bound in an orange file folder with office supply-inspired binding, the book evokes construction and urban spaces' bureaucratic and municipal nature.",
         "summary": "76 Cones is a psychogeographic walk through New York City, finding and documenting 76 traffic cones along the way. What started as a record of objects slowly became something else: over time the cones stopped reading as cones and became simply a colour, orange.\n\nThe book is filed like paperwork in an orange folder, borrowing the bureaucratic, municipal language of construction and of the city that puts cones on its streets.",
         "deliverables": [
-            "A four-part book in an orange file folder: a layered flyer, a translucent map booklet, an index of reflections, and a fold-out sheet."
+            "A four-part book in an orange file folder: a flyer, a map booklet, an index of reflections and a fold-out."
         ],
         "media1": "76cones/media-1.jpg",
         "media8": "76cones/media-8.jpg",
@@ -1048,7 +1046,7 @@
                 "layout": "viewer",
                 "centred": true,
                 "dark": true,
-                "caption": "All four parts at once, then each one up close: the flyer, the map of the route between cones, and the index of reflections from each site.",
+                "caption": "All four parts together, then each one up close.",
                 "media": [
                     {
                         "src": "76cones/all-parts-v2.mp4",
@@ -1073,10 +1071,11 @@
                     {
                         "src": "76cones/overall-v3.mp4",
                         "thumb": "76cones/overall-v3-tile.jpg",
-                        "caption": "The fold-out sheet"
+                        "caption": "The fold-out"
                     }
                 ],
-                "fill": true
+                "fill": true,
+                "bleed": true
             },
             {
                 "media": [
