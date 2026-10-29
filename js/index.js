@@ -14,9 +14,14 @@ const PREVIEW_MAX_W = 0.55; // never wider than this share of the screen…
 const PREVIEW_MAX_H = 0.7;  // …or taller than this
 const phone = matchMedia('(max-width: 600px)').matches;
 
-fetch('index.json')
-    .then(response => response.json())
-    .then(projects => {
+// each preview's width and height (assets/video-sizes.json), so it has its shape before it loads
+let videoSizes = {};
+Promise.all([
+    fetch('index.json').then(response => response.json()),
+    fetch('assets/video-sizes.json').then(response => response.ok ? response.json() : {}).catch(() => ({})),
+])
+    .then(([projects, sizes]) => {
+        videoSizes = sizes;
         projects
             .filter(project => !project.hidden)
             .forEach(project => projectList.appendChild(createRow(project)));
@@ -39,6 +44,8 @@ function createMedia(project, lazy) {
         preload: lazy ? 'none' : 'metadata',
     });
     video.style.backgroundImage = `url("${video.poster}")`;   // never blank while it loads
+    const size = videoSizes[project.preview];
+    if (size) { video.width = size[0]; video.height = size[1]; video.style.aspectRatio = `${size[0]} / ${size[1]}`; }
     return video;
 }
 

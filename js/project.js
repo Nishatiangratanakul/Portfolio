@@ -30,9 +30,15 @@
 const slug = new URLSearchParams(location.search).get('p');
 const container = document.querySelector('.project');
 
-fetch('index.json')
-    .then(response => response.json())
-    .then(projects => {
+// every looping video's width and height (assets/video-sizes.json, made by tools/video-sizes.py), so each
+// one gets its exact shape before it loads instead of starting small and jumping to size
+let videoSizes = {};
+Promise.all([
+    fetch('index.json').then(response => response.json()),
+    fetch('assets/video-sizes.json').then(response => response.ok ? response.json() : {}).catch(() => ({})),
+])
+    .then(([projects, sizes]) => {
+        videoSizes = sizes;
         const project = projects.find(p => slugify(p.title) === slug);
         if (project) {
             showProject(project, projects.filter(p => !p.hidden));
@@ -627,12 +633,22 @@ function createImage(src, alt, lazy) {
 // Plays like a GIF: silent, looping, no controls. Each video has a still of its first frame
 // beside it (media-2.mp4 -> media-2-poster.jpg), shown while it loads and used instead if the
 // browser won't autoplay (e.g. iPhones in Low Power Mode), so a play button never appears.
+// gives a video its real width and height (and shape) up front, from assets/video-sizes.json
+function sizeVideo(video, src) {
+    const size = videoSizes[src.replace(/^assets\//, '')];
+    if (!size) return;
+    video.width = size[0];
+    video.height = size[1];
+    video.style.aspectRatio = `${size[0]} / ${size[1]}`;
+}
+
 function createLoopingVideo(src, alt) {
     const poster = src.replace(/\.mp4$/i, '-poster.jpg');
     const video = document.createElement('video');
     // defaultMuted sets the muted attribute too, which Safari needs before it will autoplay.
     Object.assign(video, { src, poster, autoplay: true, loop: true, muted: true, defaultMuted: true, playsInline: true });
     video.setAttribute('aria-label', alt);
+    sizeVideo(video, src);
     // the first frame also sits behind the video, so there's never a blank (white) moment while it loads
     // or when the phone switches from the still to the playing video
     video.style.backgroundImage = `url("${poster}")`;
